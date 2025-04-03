@@ -1,0 +1,30 @@
+/*════════════════════════════════════════════
+    Barebones Theme Framework V1.0 by @pseudo
+    https://anilist.co/user/pseudo/
+    Modular: PARTIALLY (Read Description)
+════════════════════════════════════════════*/
+
+/*════════════════════════════════════════════
+This snippet redefines AniList profile colour variables according to my own preferences.
+It relies on Anzu's Simple Theme Framework (https://anzuftnw.github.io/files/simple-theme-framework.css) as a dependency.
+If you wish to use this stylesheet into your own profile, make sure to import this AFTER Anzu's.
+
+This is *technically* modular, but if you're wanting to make your own adjustments, it's probably best to copy the contents here and paste them in your stylesheet itself.
+Furthermore, this is offloaded as an @import since I basically never need to touch this, and it's more convenient to just save a bit of space.
+════════════════════════════════════════════*/
+body,
+.site-theme-dark,
+.site-theme-contrast,
+:root {
+    --color-text: 255, 255, 255;
+    --color-text-light: 255, 255, 255;
+    --color-text-lighter: 255, 255, 255;
+    --color-foreground-grey-dark: 10, 10, 10, 0.6 !important;
+    --color-nav-text: 255, 255, 255;
+    --color-shadow-blue: 0, 0, 0;
+    --color-gray-100: 20, 20, 20, 0.9;
+    --color-gray-600: 255, 255, 255;
+    --color-gray-700: 255, 255, 255;
+    --color-nav-transparent-text: 255, 255, 255;
+    --color-overlay: 10, 10, 10;
+}
