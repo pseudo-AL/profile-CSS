@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Border-Radius Styling V1.0.5 by @pseudo
+    Border-Radius Styling V1.0.6 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: YES
 ════════════════════════════════════════════*/
@@ -60,6 +60,11 @@ body:has(.stats-wrap > .overview > .highlights) .tooltip .title {
 
 /*═══ Turning off overflow on Quick Search for hover border-radius to display as intended ═══*/
 .quick-search.visible > .results > .result-col {
+    overflow: hidden;
+}
+
+/*═══ Turning off overflow for dropdowns ═══*/
+.el-select-dropdown.el-popper {
     overflow: hidden;
 }
 
