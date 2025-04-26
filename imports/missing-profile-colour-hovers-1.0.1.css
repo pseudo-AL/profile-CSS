@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Missing Profile Colour Hovers V1.0.1 by @pseudo
+    Missing Profile Colour Hovers V1.1 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: PARTIALLY (Read Description)
 ════════════════════════════════════════════*/
@@ -31,6 +31,24 @@ You're free to adjust or remove those yourself, of course; I just wanted to make
 .el-dropdown-menu__item:not(.is-disabled):hover svg {
     color: var(--profile-color);
     transition: var(--master-transition-timer) ease-in-out;
+}
+.void-static-tooltip.void-interactable:hover, .void-has-icon.void-icon-mr:hover {
+    color: var(--profile-color) !important;
+}
+.tooltip .circle.lv-1[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 75%);
+}
+.tooltip .circle.lv-3[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 45%);
+}
+.tooltip .circle.lv-5[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 22%);
+}
+.tooltip .circle.lv-7[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 9%);
+}
+.tooltip .circle.lv-9[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 0.1%);
 }
 
 /*--- Media List Dropdowns ---*/
@@ -81,4 +99,11 @@ body > div.el-message-box__wrapper > div > div.el-message-box__btns > button.el-
 }
 .el-date-table td.current:not(.disabled) span, .el-picker-panel .el-date-table td.current:not(.disabled) span {
     background-color: var(--profile-color);
+}
+
+/*--- Social Tab Numbers (only visible with Automail) ---*/
+
+.user-social .filter-group > span.active > span, .user-social .filter-group > span:nth-child(2) > span, .user-social .filter-group > span:nth-child(3) > span, .user-social .filter-group > span:nth-child(6) > span, .user-social .filter-group > span:nth-child(7) > span, .user-social .filter-group > span:nth-child(8) > span {
+    color: var(--profile-color);
+    font-weight: 550;
 }
