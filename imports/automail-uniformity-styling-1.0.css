@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Automail Uniformity Styling V1.0 by @pseudo
+    Automail Uniformity Styling V1.0 by @hoh and @Reina (compiled by @pseudo)
     https://anilist.co/user/pseudo/
     Modular: PARTIALLY (Read Description)
 ════════════════════════════════════════════*/
@@ -33,7 +33,7 @@ In addition, if you want to keep some elements which are set to display: none, t
     border-radius: var(--border-radius) !important; /* Makes the score on profile overview adhere to my --border-radius variable */
 }
 
-/*═══ Automail/Reina's Hollow Unliked Hearts ═══*/
+/*═══ Automail/@Reina's Hollow Unliked Hearts ═══*/
 .action.likes .button,
 .like-wrap.thread_comment .button {
 	color: rgb(var(--color-blue-dim));
@@ -82,7 +82,7 @@ In addition, if you want to keep some elements which are set to display: none, t
 	color: rgb(var(--color-red));
 }
 
-/*═══ Automail's List Counters ═══*/
+/*═══ @hoh's/Automail's List Counters ═══*/
 .list-wrap {
 	counter-reset: listCounter;
 }
