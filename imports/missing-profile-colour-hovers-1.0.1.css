@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Missing Profile Colour Hovers V1.0 by @pseudo
+    Missing Profile Colour Hovers V1.0.1 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: PARTIALLY (Read Description)
 ════════════════════════════════════════════*/
@@ -16,17 +16,21 @@ The reason that this is only partially modular is because I have some properties
 Examples include forced white text styling and bold styling to keep things consistent across the entire profile (which I am too lazy to part out).
 You're free to adjust or remove those yourself, of course; I just wanted to make that fact known as a heads up in case you intend to modify some of this.
 ════════════════════════════════════════════*/
+
+/*--- Navbar and Overview ---*/
 #nav .primary-link-text {
     color: #ffffff;
 }
-
 #app > div > div > div > .link:hover, .link[data-v-62eacfff]:hover, .primary-link .icon[data-v-38edf8f8]:hover, .primary-link-text[data-v-38edf8f8]:hover, .secondary-links a[data-v-38edf8f8]:hover, .primary-link:hover .icon[data-v-38edf8f8], .footer a[data-v-38edf8f8]:hover, .footer a:hover .icon[data-v-38edf8f8], .search[data-v-62eacfff]:hover svg, .primary-link[data-v-04b245e6]:hover, .primary-link:hover .icon[data-v-04b245e6], .secondary-link[data-v-04b245e6]:hover {
     color: var(--profile-color) !important;
     transition: var(--master-transition-timer) ease-in-out;
 }
-
 * {
     scrollbar-color: rgb(var(--profile-color-rgb)) rgba(1, 1, 1, 0.1) !important;
+}
+.el-dropdown-menu__item:not(.is-disabled):hover svg {
+    color: var(--profile-color);
+    transition: var(--master-transition-timer) ease-in-out;
 }
 
 /*--- Media List Dropdowns ---*/
