@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Missing Profile Colour Hovers V1.1 by @pseudo
+    Missing Profile Colour Hovers V1.0.3 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: PARTIALLY (Read Description)
 ════════════════════════════════════════════*/
@@ -36,16 +36,16 @@ You're free to adjust or remove those yourself, of course; I just wanted to make
     color: var(--profile-color) !important;
 }
 .tooltip .circle.lv-1[data-v-b79eb0f0] {
-    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 75%);
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 65%);
 }
 .tooltip .circle.lv-3[data-v-b79eb0f0] {
     background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 45%);
 }
 .tooltip .circle.lv-5[data-v-b79eb0f0] {
-    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 22%);
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 25%);
 }
 .tooltip .circle.lv-7[data-v-b79eb0f0] {
-    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 9%);
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 5%);
 }
 .tooltip .circle.lv-9[data-v-b79eb0f0] {
     background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 0.1%);
