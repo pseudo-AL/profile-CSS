@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Automail Uniformity Styling V1.0 by @hoh and @Reina (compiled by @pseudo)
+    Automail Uniformity Styling V1.0.1 by @hoh and @Reina (compiled by @pseudo)
     https://anilist.co/user/pseudo/
     Modular: PARTIALLY (Read Description)
 ════════════════════════════════════════════*/
@@ -97,5 +97,5 @@ In addition, if you want to keep some elements which are set to display: none, t
     width: 25px;
     min-width: 25px;
     font-size: 70%;
-    color: color-mix(in srgb,rgb(var(--color-blue)) 80%, white);
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--list-items-mix), white);
 }
