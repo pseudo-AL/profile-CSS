@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.0.5 by @pseudo
+    Yuno Widget V1.0.6 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO
 ════════════════════════════════════════════*/
@@ -202,6 +202,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:
 
 .overview .about a[href="finalshadowtooltip"]::before {
     content: "sae hiro sotsugyou-hen (final)"; 
+    font-weight: 700;
     position: absolute;
     bottom: 90px; 
     left: -20%;
@@ -277,7 +278,8 @@ body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover)
 }
 
 .overview .about a[href="honeycombshadowtooltip"]::before {
-    content: "honeycomb (S4)"; 
+    content: "honeycomb (S4)";
+    font-weight: 700;
     position: absolute;
     bottom: 90px; 
     left: 30%;
@@ -353,7 +355,8 @@ body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover)
 }
 
 .overview .about a[href="hoshimittsushadowtooltip"]::before {
-    content: "hoshimittsu (S3)"; 
+    content: "hoshimittsu (S3)";
+    font-weight: 700;
     position: absolute;
     bottom: 90px; 
     left: 30%;
@@ -429,7 +432,8 @@ body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover)
 }
 
 .overview .about a[href="365shadowtooltip"]::before {
-    content: "365 (S2)"; 
+    content: "365 (S2)";
+    font-weight: 700;
     position: absolute;
     bottom: 90px; 
     left: 48%;
@@ -505,7 +509,8 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
 }
 
 .overview .about a[href="S1shadowtooltip"]::before {
-    content: "hidamari sketch (S1)"; 
+    content: "hidamari sketch (S1)";
+    font-weight: 700;
     position: absolute;
     bottom: 90px; 
     left: 18%;
