@@ -1,18 +1,10 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.0.4 by @pseudo
+    Yuno Widget V1.0.5 by @pseudo
     https://anilist.co/user/pseudo/
-    Modular: NO (Read Description)
+    Modular: NO
 ════════════════════════════════════════════*/
-
-/*════════════════════════════════════════════
-This snippet contains everything related to my Yuno styles and consequent hover styles fixed at the bottom of my profile.
-The setup is proprietary and everything here is entirely my work. PLEASE DO NOT COPY 1:1.
-I'm very open for most of my CSS to be copied 1:1, but this is the one snippet that I'd request stays unique to me.
-
-If you want something similar on your profile, you're always welcome to reach out to me and I'd be happy to help you get started.
-However, direct copying, in this lone instance, will rub me the wrong way. Thanks for your understanding.
-════════════════════════════════════════════*/
-@keyframes jump { /* Jump Animation */
+/*════════ Animation: Yuno Jump ════════*/
+@keyframes jump {
   0% {
     transform: translateY(0);
     animation-timing-function: ease-out; 
@@ -31,7 +23,8 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
   }
 }
 
-@keyframes impactFade { /* Impact Marks Animation */
+/*════════ Animation: Impact Marks ════════*/
+@keyframes impactFade {
   0% {
     opacity: 0;
   }
@@ -55,6 +48,7 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
   }
 }
 
+/*════════ Animation: Write-up Float ════════*/
 @keyframes circlefloat {
     0%, 100% {
         transform: translateY(0);
@@ -64,7 +58,8 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
     }
 }
 
-.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] { /* Yuno */
+/*════════ Yuno ════════*/
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
     position: fixed;
     bottom: 45px; 
     right: 25px; 
@@ -78,7 +73,8 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
     animation: jump 0.8s infinite;
 }
 
-.overview .about a[href="jumpmarks"] { /* Impact marks at jump start */
+/*════════ Impact Marks ════════*/
+.overview .about a[href="jumpmarks"] {
   position: fixed;
   transform: rotate(-135deg);
   bottom: 38px;
@@ -94,7 +90,8 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
   animation: impactFade 0.8s infinite;
 }
 
-.overview .about a[href="footertext1"]::after { /* Bolded Text */
+/*════════ Bolded Text, Top Line ════════*/
+.overview .about a[href="footertext1"]::after {
     content: "current ♥️:";
     position: fixed;
     bottom: 35px;
@@ -108,7 +105,8 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
     z-index: 999;
 }
 
-.overview .about a[href="footertext2"]::after { /* Regular Text */
+/*════════ Regular Text, Top Line ════════*/
+.overview .about a[href="footertext2"]::after {
     content: "hidamari sketch️";
     position: fixed;
     bottom: 35px;
@@ -123,7 +121,8 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
     z-index: 999;
 }
 
-.overview .about a[href="footertext3"]::after { /* Hover Yuno Text */
+/*════════ Regular Text, Middle Line ════════*/
+.overview .about a[href="footertext3"]::after {
     content: "h️over Yuno for write-ups";
     position: fixed;
     bottom: 20px;
@@ -138,7 +137,8 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
     z-index: 999;
 }
 
-.overview .about a[href="footertext4"]::after { /* Click Yuno Text */
+/*════════ Regular Text, Bottom Line ════════*/
+.overview .about a[href="footertext4"]::after {
     content: "click Yuno for ♬";
     position: fixed;
     bottom: 5px;
@@ -153,6 +153,7 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
     z-index: 999;
 }
 
+/*════════ Reveal Clickable Circles on Yuno Hover ════════*/
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
 .overview .about a[href="https://anilist.co/activity/893752043"], body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
 .overview .about a[href="https://anilist.co/activity/893349303"], body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
@@ -164,7 +165,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:
     transition: opacity var(--master-transition-timer) 0s ease-in-out, clip-path var(--master-transition-timer) 0s ease-in-out;
 }
 
-/*════════ Final ════════*/
+/*════════ Sae Hiro Sotsugyou-hen (Final) ════════*/
 .overview .about a[href="https://anilist.co/activity/893752043"] {
     position: fixed;
     bottom: 230px;
@@ -200,7 +201,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:
 }
 
 .overview .about a[href="finalshadowtooltip"]::before {
-    content: "Sae Hiro Sotsugyou-hen (Final)"; 
+    content: "sae hiro sotsugyou-hen (final)"; 
     position: absolute;
     bottom: 90px; 
     left: -20%;
@@ -240,7 +241,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover)
     box-shadow: var(--box-shadow) #fbf4e3;
 }
 
-/*════════ Honeycomb ════════*/
+/*════════ Honeycomb (S4) ════════*/
 .overview .about a[href="https://anilist.co/activity/893349303"] {
     position: fixed;
     bottom: 320px;
@@ -276,7 +277,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover)
 }
 
 .overview .about a[href="honeycombshadowtooltip"]::before {
-    content: "Honeycomb (S4)"; 
+    content: "honeycomb (S4)"; 
     position: absolute;
     bottom: 90px; 
     left: 30%;
@@ -316,7 +317,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover)
     box-shadow: var(--box-shadow) #89d191;
 }
 
-/*════════ Hoshimittsu ════════*/
+/*════════ Hoshimittsu (S3) ════════*/
 .overview .about a[href="https://anilist.co/activity/887326979"] {
     position: fixed;
     bottom: 410px;
@@ -352,7 +353,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover)
 }
 
 .overview .about a[href="hoshimittsushadowtooltip"]::before {
-    content: "Hoshimittsu (S3)"; 
+    content: "hoshimittsu (S3)"; 
     position: absolute;
     bottom: 90px; 
     left: 30%;
@@ -392,7 +393,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover)
     box-shadow: var(--box-shadow) #fbf4e3;
 }
 
-/*════════ 365 ════════*/
+/*════════ 365 (S2) ════════*/
 .overview .about a[href="https://anilist.co/activity/877931220"] {
     position: fixed;
     bottom: 500px;
@@ -468,7 +469,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
     box-shadow: var(--box-shadow) #ee7477;
 }
 
-/*════════ S1 ════════*/
+/*════════ Hidamari Sketch (S1) ════════*/
 .overview .about a[href="https://anilist.co/activity/865005471"] {
     position: fixed;
     bottom: 590px;
@@ -504,7 +505,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
 }
 
 .overview .about a[href="S1shadowtooltip"]::before {
-    content: "Hidamari Sketch (S1)"; 
+    content: "hidamari sketch (S1)"; 
     position: absolute;
     bottom: 90px; 
     left: 18%;
@@ -539,7 +540,6 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
 body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"]::after {
     opacity: 1;
 }
-
 body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"] {
     box-shadow: var(--box-shadow) #6b9aeb;
 }
