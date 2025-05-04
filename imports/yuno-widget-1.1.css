@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.0.8 by @pseudo
+    Yuno Widget V1.1 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO
 ════════════════════════════════════════════*/
@@ -69,7 +69,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 999; 
+    z-index: 99; 
     animation: jump 0.8s infinite;
 }
 
@@ -85,7 +85,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 9999;
+  z-index: 100;
   opacity: 0; 
   animation: impactFade 0.8s infinite;
 }
@@ -102,7 +102,7 @@
     white-space: nowrap;
     pointer-events: none;
     opacity: 0.4;
-    z-index: 999;
+    z-index: 99;
 }
 
 /*════════ Regular Text, Top Line ════════*/
@@ -118,7 +118,7 @@
     white-space: nowrap;
     pointer-events: none;
     opacity: 0.4;
-    z-index: 999;
+    z-index: 99;
 }
 
 /*════════ Regular Text, Middle Line ════════*/
@@ -134,7 +134,7 @@
     white-space: nowrap;
     pointer-events: none;
     opacity: 0.4;
-    z-index: 999;
+    z-index: 99;
 }
 
 /*════════ Regular Text, Bottom Line ════════*/
@@ -150,7 +150,7 @@
     white-space: nowrap;
     pointer-events: none;
     opacity: 0.4;
-    z-index: 999;
+    z-index: 99;
 }
 
 /*════════ Reveal Clickable Circles on Yuno Hover ════════*/
@@ -194,7 +194,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:
     background: transparent;
     pointer-events: none !important;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 100;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
     animation: circlefloat 6.5s linear infinite;
     animation-delay: 0s !important;
@@ -271,7 +271,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover)
     background: transparent;
     pointer-events: none !important;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 100;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
     animation: circlefloat 6.5s linear infinite;
     animation-delay: 0s !important;
@@ -348,7 +348,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover)
     background: transparent;
     pointer-events: none !important;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 100;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
     animation: circlefloat 6.5s linear infinite;
     animation-delay: 0s !important;
@@ -425,7 +425,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover)
     background: transparent;
     pointer-events: none !important;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 100;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
     animation: circlefloat 6.5s linear infinite;
     animation-delay: 0s !important;
@@ -502,7 +502,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
     background: transparent;
     pointer-events: none !important;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 100;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
     animation: circlefloat 6.5s linear infinite;
     animation-delay: 0s !important;
