@@ -1,0 +1,532 @@
+/*════════════════════════════════════════════
+    Yuno Widget V1.0 by @pseudo
+    https://anilist.co/user/pseudo/
+    Modular: NO (Read Description)
+════════════════════════════════════════════*/
+
+/*════════════════════════════════════════════
+This snippet contains everything related to my Yuno styles and consequent hover styles fixed at the bottom of my profile.
+The setup is proprietary and everything here is entirely my work. PLEASE DO NOT COPY 1:1.
+I'm very open for most of my CSS to be copied 1:1, but this is the one snippet that I'd request stays unique to me.
+
+If you want something similar on your profile, you're always welcome to reach out to me and I'd be happy to help you get started.
+However, direct copying, in this lone instance, will rub me the wrong way. Thanks for your understanding.
+════════════════════════════════════════════*/
+
+/*════════ Bottom Right Animated Character (Yuno) ════════*/
+@keyframes jump { /* Jump Animation */
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out; 
+  }
+  40% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in; 
+  }
+  80% {
+    transform: translateY(-10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes impactFade { /* Impact Marks Animation */
+  0% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 0; 
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.4; 
+  }
+  45% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] { /* Yuno */
+    position: fixed;
+    bottom: 45px; 
+    right: 25px; 
+    width: 91px; 
+    height: 130px; 
+    background: url("https://i.imgur.com/nQFnIbu.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 999; 
+    animation: jump 0.8s infinite;
+}
+
+.overview .about strong a[href="jumpmarks"] { /* Impact marks at jump start */
+  position: fixed;
+  transform: rotate(-135deg);
+  bottom: 38px;
+  right: 53px;
+  width: 15px;
+  height: 15px;
+  background: url("https://i.imgur.com/4V7bfvR.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999;
+  opacity: 0; 
+  animation: impactFade 0.8s infinite;
+}
+
+.overview .about strong a[href="footertext1"]::after { /* Bolded Text */
+    content: "current ♥️:";
+    position: fixed;
+    bottom: 35px;
+    right: 97px;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--footer-mix), white);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 999;
+}
+
+.overview .about strong a[href="footertext2"]::after { /* Regular Text */
+    content: "hidamari sketch️";
+    position: fixed;
+    bottom: 35px;
+    right: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 999;
+}
+
+.overview .about strong a[href="footertext3"]::after { /* Hover Yuno Text */
+    content: "h️over Yuno for write-ups";
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 999;
+}
+
+.overview .about strong a[href="footertext4"]::after { /* Click Yuno Text */
+    content: "click Yuno for ♬";
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 999;
+}
+
+body:has(.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about strong a[href="https://anilist.co/activity/893752043"], body:has(.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about strong a[href="https://anilist.co/activity/893349303"], body:has(.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about strong a[href="https://anilist.co/activity/887326979"], body:has(.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about strong a[href="https://anilist.co/activity/877931220"], body:has(.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about strong a[href="https://anilist.co/activity/865005471"] {
+    opacity: 1;
+    clip-path: inset(0%);
+    transition: opacity var(--master-transition-timer) 0s ease-in-out, clip-path var(--master-transition-timer) 0s ease-in-out;
+}
+
+/*════════ Final ════════*/
+.overview .about strong a[href="https://anilist.co/activity/893752043"] {
+    position: fixed;
+    bottom: 230px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17739-RWF701d4svmX.jpg");
+    background-size: 90px;
+    background-position: 20% 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
+    animation: rotate-circle 7s linear infinite;
+}
+
+.overview .about strong a[href="finalshadowtooltip"] {
+    position: fixed;
+    bottom: 230px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 999;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about strong a[href="finalshadowtooltip"]::before {
+    content: "Sae Hiro Sotsugyou-hen (Final)"; 
+    position: absolute;
+    bottom: 90px; 
+    left: -20%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+.overview .about strong a[href="finalshadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/893752043"]:hover) .overview .about strong a[href="finalshadowtooltip"]::before, body:has(.overview .about strong a[href="https://anilist.co/activity/893752043"]:hover) .overview .about strong a[href="finalshadowtooltip"]::after {
+    opacity: 1;
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/893752043"]:hover) .overview .about strong a[href="finalshadowtooltip"] {
+    box-shadow: var(--box-shadow) #fbf4e3;
+}
+
+/*════════ Honeycomb ════════*/
+.overview .about strong a[href="https://anilist.co/activity/893349303"] {
+    position: fixed;
+    bottom: 320px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx11239-JysRplnD2e0P.jpg");
+    background-size: 90px;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
+    animation: rotate-circle 7s linear infinite;
+}
+
+.overview .about strong a[href="honeycombshadowtooltip"] {
+    position: fixed;
+    bottom: 320px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 999;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about strong a[href="honeycombshadowtooltip"]::before {
+    content: "Honeycomb (S4)"; 
+    position: absolute;
+    bottom: 90px; 
+    left: 30%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+.overview .about strong a[href="honeycombshadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/893349303"]:hover) .overview .about strong a[href="honeycombshadowtooltip"]::before, body:has(.overview .about strong a[href="https://anilist.co/activity/893349303"]:hover) .overview .about strong a[href="honeycombshadowtooltip"]::after {
+    opacity: 1;
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/893349303"]:hover) .overview .about strong a[href="honeycombshadowtooltip"] {
+    box-shadow: var(--box-shadow) #89d191;
+}
+
+/*════════ Hoshimittsu ════════*/
+.overview .about strong a[href="https://anilist.co/activity/887326979"] {
+    position: fixed;
+    bottom: 410px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7062-YPlTCLD2yCl2.png");
+    background-size: 90px;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
+    animation: rotate-circle 7s linear infinite;
+}
+
+.overview .about strong a[href="hoshimittsushadowtooltip"] {
+    position: fixed;
+    bottom: 410px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 999;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about strong a[href="hoshimittsushadowtooltip"]::before {
+    content: "Hoshimittsu (S3)"; 
+    position: absolute;
+    bottom: 90px; 
+    left: 30%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+.overview .about strong a[href="hoshimittsushadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/887326979"]:hover) .overview .about strong a[href="hoshimittsushadowtooltip"]::before, body:has(.overview .about strong a[href="https://anilist.co/activity/887326979"]:hover) .overview .about strong a[href="hoshimittsushadowtooltip"]::after {
+    opacity: 1;
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/887326979"]:hover) .overview .about strong a[href="hoshimittsushadowtooltip"] {
+    box-shadow: var(--box-shadow) #fbf4e3;
+}
+
+/*════════ 365 ════════*/
+.overview .about strong a[href="https://anilist.co/activity/877931220"] {
+    position: fixed;
+    bottom: 500px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3604-kQzUwfzAcgTF.png");
+    background-size: 90px;
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
+    animation: rotate-circle 7s linear infinite;
+}
+
+.overview .about strong a[href="365shadowtooltip"] {
+    position: fixed;
+    bottom: 500px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 999;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about strong a[href="365shadowtooltip"]::before {
+    content: "365 (S2)"; 
+    position: absolute;
+    bottom: 90px; 
+    left: 48%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+.overview .about strong a[href="365shadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/877931220"]:hover) .overview .about strong a[href="365shadowtooltip"]::before, body:has(.overview .about strong a[href="https://anilist.co/activity/877931220"]:hover) .overview .about strong a[href="365shadowtooltip"]::after {
+    opacity: 1;
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/877931220"]:hover) .overview .about strong a[href="365shadowtooltip"] {
+    box-shadow: var(--box-shadow) #ee7477;
+}
+
+/*════════ S1 ════════*/
+.overview .about strong a[href="https://anilist.co/activity/865005471"] {
+    position: fixed;
+    bottom: 590px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1852-N3qrLcuVdUTF.png");
+    background-size: 75px;
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
+    animation: rotate-circle 7s linear infinite;
+}
+
+.overview .about strong a[href="S1shadowtooltip"] {
+    position: fixed;
+    bottom: 590px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 999;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about strong a[href="S1shadowtooltip"]::before {
+    content: "Hidamari Sketch (S1)"; 
+    position: absolute;
+    bottom: 90px; 
+    left: 18%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+.overview .about strong a[href="S1shadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/865005471"]:hover) .overview .about strong a[href="S1shadowtooltip"]::before, body:has(.overview .about strong a[href="https://anilist.co/activity/865005471"]:hover) .overview .about strong a[href="S1shadowtooltip"]::after {
+    opacity: 1;
+}
+
+body:has(.overview .about strong a[href="https://anilist.co/activity/865005471"]:hover) .overview .about strong a[href="S1shadowtooltip"] {
+    box-shadow: var(--box-shadow) #6b9aeb;
+}
