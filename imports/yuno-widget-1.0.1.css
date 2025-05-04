@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.0 by @pseudo
+    Yuno Widget V1.0.1 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO (Read Description)
 ════════════════════════════════════════════*/
@@ -12,8 +12,6 @@ I'm very open for most of my CSS to be copied 1:1, but this is the one snippet t
 If you want something similar on your profile, you're always welcome to reach out to me and I'd be happy to help you get started.
 However, direct copying, in this lone instance, will rub me the wrong way. Thanks for your understanding.
 ════════════════════════════════════════════*/
-
-/*════════ Bottom Right Animated Character (Yuno) ════════*/
 @keyframes jump { /* Jump Animation */
   0% {
     transform: translateY(0);
@@ -57,12 +55,12 @@ However, direct copying, in this lone instance, will rub me the wrong way. Thank
   }
 }
 
-@keyframes rotate-circle {
-    0% {
-        transform: rotate(0deg);
+@keyframes circlefloat {
+    0%, 100% {
+        transform: translateY(0);
     }
-    100% {
-        transform: rotate(360deg);
+    50% {
+        transform: translateY(-15px); /* Amount of upward movement */
     }
 }
 
@@ -174,7 +172,7 @@ body:has(.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZ
     width: 75px;
     height: 75px;
     background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17739-RWF701d4svmX.jpg");
-    background-size: 90px;
+    background-size: 95px;
     background-position: 20% 100%;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -182,7 +180,8 @@ body:has(.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZ
     opacity: 0;
     clip-path: inset(50%);
     transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
-    animation: rotate-circle 7s linear infinite;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="finalshadowtooltip"] {
@@ -196,6 +195,8 @@ body:has(.overview .about strong a[href="https://www.youtube.com/watch?v=i7zYUvZ
     border-radius: 50%;
     z-index: 999;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="finalshadowtooltip"]::before {
@@ -247,15 +248,16 @@ body:has(.overview .about strong a[href="https://anilist.co/activity/893752043"]
     width: 75px;
     height: 75px;
     background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx11239-JysRplnD2e0P.jpg");
-    background-size: 90px;
-    background-position: 50% 15%;
+    background-size: 80px;
+    background-position: 50% 25%;
     background-repeat: no-repeat;
     border-radius: 50%;
     z-index: 99;
     opacity: 0;
     clip-path: inset(50%);
     transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
-    animation: rotate-circle 7s linear infinite;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="honeycombshadowtooltip"] {
@@ -269,6 +271,8 @@ body:has(.overview .about strong a[href="https://anilist.co/activity/893752043"]
     border-radius: 50%;
     z-index: 999;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="honeycombshadowtooltip"]::before {
@@ -320,15 +324,16 @@ body:has(.overview .about strong a[href="https://anilist.co/activity/893349303"]
     width: 75px;
     height: 75px;
     background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7062-YPlTCLD2yCl2.png");
-    background-size: 90px;
-    background-position: 50% 15%;
+    background-size: 75px;
+    background-position: 55% 15%;
     background-repeat: no-repeat;
     border-radius: 50%;
     z-index: 99;
     opacity: 0;
     clip-path: inset(50%);
     transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
-    animation: rotate-circle 7s linear infinite;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="hoshimittsushadowtooltip"] {
@@ -342,6 +347,8 @@ body:has(.overview .about strong a[href="https://anilist.co/activity/893349303"]
     border-radius: 50%;
     z-index: 999;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="hoshimittsushadowtooltip"]::before {
@@ -394,14 +401,15 @@ body:has(.overview .about strong a[href="https://anilist.co/activity/887326979"]
     height: 75px;
     background: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3604-kQzUwfzAcgTF.png");
     background-size: 90px;
-    background-position: 50% 45%;
+    background-position: 63% 60%;
     background-repeat: no-repeat;
     border-radius: 50%;
     z-index: 99;
     opacity: 0;
     clip-path: inset(50%);
     transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
-    animation: rotate-circle 7s linear infinite;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="365shadowtooltip"] {
@@ -415,6 +423,8 @@ body:has(.overview .about strong a[href="https://anilist.co/activity/887326979"]
     border-radius: 50%;
     z-index: 999;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="365shadowtooltip"]::before {
@@ -474,7 +484,8 @@ body:has(.overview .about strong a[href="https://anilist.co/activity/877931220"]
     opacity: 0;
     clip-path: inset(50%);
     transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out;
-    animation: rotate-circle 7s linear infinite;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="S1shadowtooltip"] {
@@ -488,6 +499,8 @@ body:has(.overview .about strong a[href="https://anilist.co/activity/877931220"]
     border-radius: 50%;
     z-index: 999;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat 4s linear infinite;
+    animation-delay: 0s !important;
 }
 
 .overview .about strong a[href="S1shadowtooltip"]::before {
