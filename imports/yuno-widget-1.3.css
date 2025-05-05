@@ -1,8 +1,21 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.2 by @pseudo
+    Yuno Widget V1.3 by @pseudo
     https://anilist.co/user/pseudo/
-    Modular: NO
+    Modular: NO (Please read description)
 ════════════════════════════════════════════*/
+
+/*════════════════════════════════════════════
+This snippet contains everything related to my Yuno styles and consequent hover styles fixed at the bottom-right of my profile.
+The setup and pretty much everything here is entirely my work. PLEASE DO NOT COPY 1:1 WITHOUT ASKING ME FIRST.
+
+If you're looking for something similar on your profile, you're always welcome to reach out to me and I'd be happy to help you get started.
+Of course, if you're just taking inspiration, but are able to devise your own solutions/behaviours, you don't need to loop me in. It'd be your work, after all.
+However, direct copying without letting me know will rub me the wrong way. Thanks for your understanding.
+
+Light inspiration taken from @sekuji, but as aforementioned, selector structures and behaviours are mine.
+https://anilist.co/user/sekuji/
+════════════════════════════════════════════*/
+
 /*════════ Animation: Yuno Jump ════════*/
 @keyframes jump {
   0% {
@@ -54,41 +67,42 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-25px); /* Amount of upward movement */
+        transform: translateY(var(--circle-float)); 
     }
 }
 
 /*════════ Yuno ════════*/
 .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
     position: fixed;
-    bottom: 45px; 
-    right: 25px; 
-    width: 91px; 
-    height: 130px; 
-    background: url("https://i.imgur.com/nQFnIbu.png"); 
+    bottom: 45px;
+    right: 25px;
+    width: 91px;
+    height: 130px;
+    background: url("https://i.imgur.com/nQFnIbu.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 99; 
-    animation: jump 0.8s infinite;
+    z-index: 99;
+    animation: jump var(--widget-animation-length) infinite;
 }
 
 /*════════ Impact Marks ════════*/
 .overview .about a[href="jumpmarks"] {
-  position: fixed;
-  transform: rotate(-135deg);
-  bottom: 38px;
-  right: 53px;
-  width: 15px;
-  height: 15px;
-  background: url("https://i.imgur.com/4V7bfvR.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0; 
-  animation: impactFade 0.8s infinite;
+    position: fixed;
+    transform: rotate(-135deg);
+    bottom: 35px;
+    right: 53px;
+    width: 15px;
+    height: 15px;
+    background: url("https://i.imgur.com/4V7bfvR.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    animation: impactFade var(--widget-animation-length) infinite;
+    animation-delay: 0.025s;
 }
 
 /*════════ Bolded Text, Top Line ════════*/
@@ -96,13 +110,13 @@
     content: "current ♥️:";
     position: fixed;
     bottom: 35px;
-    right: 97px;
+    right: 88px;
     color: color-mix(in srgb,rgb(var(--color-blue)) var(--footer-mix), white);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700 !important;
     white-space: nowrap;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: var(--text-opacity);
     z-index: 99;
 }
 
@@ -113,12 +127,12 @@
     bottom: 35px;
     right: 10px;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
     font-style: italic;
     white-space: nowrap;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: var(--text-opacity);
     z-index: 99;
 }
 
@@ -129,12 +143,11 @@
     bottom: 20px;
     right: 10px;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
-    font-style: italic;
     white-space: nowrap;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: var(--text-opacity);
     z-index: 99;
 }
 
@@ -145,12 +158,11 @@
     bottom: 5px;
     right: 10px;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
-    font-style: italic;
     white-space: nowrap;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: var(--text-opacity);
     z-index: 99;
 }
 
@@ -166,339 +178,11 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:
     transition: opacity var(--master-transition-timer) 0s ease-in-out, clip-path var(--master-transition-timer) 0s ease-in-out;
 }
 
-/*════════ Sae Hiro Sotsugyou-hen (Final) ════════*/
-.overview .about a[href="https://anilist.co/activity/893752043"] {
-    position: fixed;
-    bottom: 230px;
-    right: 35px;
-    width: 75px;
-    height: 75px;
-    background: url("https://i.imgur.com/hmVtqrI.png");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    z-index: 99;
-    opacity: 0;
-    clip-path: inset(50%);
-    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
-    animation-delay: 0s !important;
-    filter: var(--cover-saturation);
-}
+/*════════════════════════════════════════════
+    Hidamari Sketch (S1)
+════════════════════════════════════════════*/
 
-.overview .about a[href="https://anilist.co/activity/893752043"]:hover {
-    background-size: 112%;
-    filter: var(--cover-saturation-hover);
-}
-
-.overview .about a[href="finalshadowtooltip"] {
-    position: fixed;
-    bottom: 230px;
-    right: 35px;
-    width: 75px;
-    height: 75px;
-    background: transparent;
-    pointer-events: none !important;
-    border-radius: 50%;
-    z-index: 100;
-    transition: box-shadow var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
-    animation-delay: 0s !important;
-}
-
-.overview .about a[href="finalshadowtooltip"]::before {
-    content: "sae hiro sotsugyou-hen (final)"; 
-    font-weight: 700 !important;
-    position: absolute;
-    bottom: 90px; 
-    left: -20%;
-    transform: translateX(-50%) translateY(10px);
-    font-size: 13px;
-    background: rgba(10, 10, 10, 0.9);
-    padding: 9px 12px;
-    border-radius: var(--border-radius);
-    white-space: nowrap;
-    color: white;
-    font-weight: 500;
-    font-size: 12px;
-    opacity: 0; 
-    pointer-events: none !important;
-    transition: opacity var(--master-transition-timer) ease-in-out; 
-}
-
-.overview .about a[href="finalshadowtooltip"]::after {
-    content: "";
-    position: absolute;
-    bottom: 68px; 
-    left: 50%;
-    transform: translateX(-50%) translateY(0); 
-    border-width: 6px;
-    border-style: solid;
-    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
-    opacity: 0; 
-    pointer-events: none !important; 
-    transition: opacity var(--master-transition-timer) ease-in-out; 
-}
-
-body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"]::after {
-    opacity: 1;
-}
-
-body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"] {
-    box-shadow: var(--box-shadow) #fbf4e3;
-}
-
-/*════════ Honeycomb (S4) ════════*/
-.overview .about a[href="https://anilist.co/activity/893349303"] {
-    position: fixed;
-    bottom: 320px;
-    right: 35px;
-    width: 75px;
-    height: 75px;
-    background: url("https://i.imgur.com/PQpcIYR.png");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    z-index: 99;
-    opacity: 0;
-    clip-path: inset(50%);
-    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
-    animation-delay: 0s !important;
-    filter: var(--cover-saturation);
-}
-
-.overview .about a[href="https://anilist.co/activity/893349303"]:hover {
-    background-size: 112%;
-    filter: var(--cover-saturation-hover);
-}
-
-.overview .about a[href="honeycombshadowtooltip"] {
-    position: fixed;
-    bottom: 320px;
-    right: 35px;
-    width: 75px;
-    height: 75px;
-    background: transparent;
-    pointer-events: none !important;
-    border-radius: 50%;
-    z-index: 100;
-    transition: box-shadow var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
-    animation-delay: 0s !important;
-}
-
-.overview .about a[href="honeycombshadowtooltip"]::before {
-    content: "honeycomb (S4)";
-    font-weight: 700 !important;
-    position: absolute;
-    bottom: 90px; 
-    left: 30%;
-    transform: translateX(-50%) translateY(10px);
-    font-size: 13px;
-    background: rgba(10, 10, 10, 0.9);
-    padding: 9px 12px;
-    border-radius: var(--border-radius);
-    white-space: nowrap;
-    color: white;
-    font-weight: 500;
-    font-size: 12px;
-    opacity: 0; 
-    pointer-events: none !important;
-    transition: opacity var(--master-transition-timer) ease-in-out; 
-}
-
-.overview .about a[href="honeycombshadowtooltip"]::after {
-    content: "";
-    position: absolute;
-    bottom: 68px; 
-    left: 50%;
-    transform: translateX(-50%) translateY(0); 
-    border-width: 6px;
-    border-style: solid;
-    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
-    opacity: 0; 
-    pointer-events: none !important; 
-    transition: opacity var(--master-transition-timer) ease-in-out; 
-}
-
-body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"]::after {
-    opacity: 1;
-}
-
-body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"] {
-    box-shadow: var(--box-shadow) #89d191;
-}
-
-/*════════ Hoshimittsu (S3) ════════*/
-.overview .about a[href="https://anilist.co/activity/887326979"] {
-    position: fixed;
-    bottom: 410px;
-    right: 35px;
-    width: 75px;
-    height: 75px;
-    background: url("https://i.imgur.com/Nr91GjP.png");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    z-index: 99;
-    opacity: 0;
-    clip-path: inset(50%);
-    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
-    animation-delay: 0s !important;
-    filter: var(--cover-saturation);
-}
-
-.overview .about a[href="https://anilist.co/activity/887326979"]:hover {
-    background-size: 112%;
-    filter: var(--cover-saturation-hover);
-}
-
-.overview .about a[href="hoshimittsushadowtooltip"] {
-    position: fixed;
-    bottom: 410px;
-    right: 35px;
-    width: 75px;
-    height: 75px;
-    background: transparent;
-    pointer-events: none !important;
-    border-radius: 50%;
-    z-index: 100;
-    transition: box-shadow var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
-    animation-delay: 0s !important;
-}
-
-.overview .about a[href="hoshimittsushadowtooltip"]::before {
-    content: "hoshimittsu (S3)";
-    font-weight: 700 !important;
-    position: absolute;
-    bottom: 90px; 
-    left: 30%;
-    transform: translateX(-50%) translateY(10px);
-    font-size: 13px;
-    background: rgba(10, 10, 10, 0.9);
-    padding: 9px 12px;
-    border-radius: var(--border-radius);
-    white-space: nowrap;
-    color: white;
-    font-weight: 500;
-    font-size: 12px;
-    opacity: 0; 
-    pointer-events: none !important;
-    transition: opacity var(--master-transition-timer) ease-in-out; 
-}
-
-.overview .about a[href="hoshimittsushadowtooltip"]::after {
-    content: "";
-    position: absolute;
-    bottom: 68px; 
-    left: 50%;
-    transform: translateX(-50%) translateY(0); 
-    border-width: 6px;
-    border-style: solid;
-    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
-    opacity: 0; 
-    pointer-events: none !important; 
-    transition: opacity var(--master-transition-timer) ease-in-out; 
-}
-
-body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"]::after {
-    opacity: 1;
-}
-
-body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"] {
-    box-shadow: var(--box-shadow) #fbf4e3;
-}
-
-/*════════ 365 (S2) ════════*/
-.overview .about a[href="https://anilist.co/activity/877931220"] {
-    position: fixed;
-    bottom: 500px;
-    right: 35px;
-    width: 75px;
-    height: 75px;
-    background: url("https://i.imgur.com/4H5MQ5T.png");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    z-index: 99;
-    opacity: 0;
-    clip-path: inset(50%);
-    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
-    animation-delay: 0s !important;
-    filter: var(--cover-saturation);
-}
-
-.overview .about a[href="https://anilist.co/activity/877931220"]:hover {
-    background-size: 112%;
-    filter: var(--cover-saturation-hover);
-}
-
-.overview .about a[href="365shadowtooltip"] {
-    position: fixed;
-    bottom: 500px;
-    right: 35px;
-    width: 75px;
-    height: 75px;
-    background: transparent;
-    pointer-events: none !important;
-    border-radius: 50%;
-    z-index: 100;
-    transition: box-shadow var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
-    animation-delay: 0s !important;
-}
-
-.overview .about a[href="365shadowtooltip"]::before {
-    content: "365 (S2)";
-    font-weight: 700 !important;
-    position: absolute;
-    bottom: 90px; 
-    left: 48%;
-    transform: translateX(-50%) translateY(10px);
-    font-size: 13px;
-    background: rgba(10, 10, 10, 0.9);
-    padding: 9px 12px;
-    border-radius: var(--border-radius);
-    white-space: nowrap;
-    color: white;
-    font-weight: 500;
-    font-size: 12px;
-    opacity: 0; 
-    pointer-events: none !important;
-    transition: opacity var(--master-transition-timer) ease-in-out; 
-}
-
-.overview .about a[href="365shadowtooltip"]::after {
-    content: "";
-    position: absolute;
-    bottom: 68px; 
-    left: 50%;
-    transform: translateX(-50%) translateY(0); 
-    border-width: 6px;
-    border-style: solid;
-    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
-    opacity: 0; 
-    pointer-events: none !important; 
-    transition: opacity var(--master-transition-timer) ease-in-out; 
-}
-
-body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"]::after {
-    opacity: 1;
-}
-
-body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"] {
-    box-shadow: var(--box-shadow) #ee7477;
-}
-
-/*════════ Hidamari Sketch (S1) ════════*/
+/*════════ Clickable ════════*/
 .overview .about a[href="https://anilist.co/activity/865005471"] {
     position: fixed;
     bottom: 590px;
@@ -514,16 +198,12 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
     opacity: 0;
     clip-path: inset(50%);
     transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
+    animation: circlefloat var(--float-duration) linear infinite;
     animation-delay: 0s !important;
     filter: var(--cover-saturation);
 }
 
-.overview .about a[href="https://anilist.co/activity/865005471"]:hover {
-    background-size: 112%;
-    filter: var(--cover-saturation-hover);
-}
-
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
 .overview .about a[href="S1shadowtooltip"] {
     position: fixed;
     bottom: 590px;
@@ -535,13 +215,21 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
     border-radius: 50%;
     z-index: 100;
     transition: box-shadow var(--master-transition-timer) ease-in-out;
-    animation: circlefloat 6.5s linear infinite;
+    animation: circlefloat var(--float-duration) linear infinite;
     animation-delay: 0s !important;
 }
 
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/865005471"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
 .overview .about a[href="S1shadowtooltip"]::before {
     content: "hidamari sketch (S1)";
     font-weight: 700 !important;
+    font-size: 13px !important;
     position: absolute;
     bottom: 90px; 
     left: 18%;
@@ -559,6 +247,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
     transition: opacity var(--master-transition-timer) ease-in-out; 
 }
 
+/*════════ Tooltip Arrow ════════*/
 .overview .about a[href="S1shadowtooltip"]::after {
     content: "";
     position: absolute;
@@ -573,9 +262,388 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
     transition: opacity var(--master-transition-timer) ease-in-out; 
 }
 
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
 body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"]::after {
     opacity: 1;
 }
+
+/*════════ Box Shadow on Clickable Hover ════════*/
 body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"] {
     box-shadow: var(--box-shadow) #6b9aeb;
+}
+
+/*════════════════════════════════════════════
+    365 (S2)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/877931220"] {
+    position: fixed;
+    bottom: 500px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/4H5MQ5T.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="365shadowtooltip"] {
+    position: fixed;
+    bottom: 500px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/877931220"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="365shadowtooltip"]::before {
+    content: "365 (S2)";
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: 48%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="365shadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"]::after {
+    opacity: 1;
+}
+
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"] {
+    box-shadow: var(--box-shadow) #ee7477;
+}
+
+/*════════════════════════════════════════════
+    Hoshimittsu (S3)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/887326979"] {
+    position: fixed;
+    bottom: 410px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/Nr91GjP.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="hoshimittsushadowtooltip"] {
+    position: fixed;
+    bottom: 410px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/887326979"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="hoshimittsushadowtooltip"]::before {
+    content: "hoshimittsu (S3)";
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: 30%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="hoshimittsushadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"]::after {
+    opacity: 1;
+}
+
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"] {
+    box-shadow: var(--box-shadow) #fbf4e3;
+}
+
+/*════════════════════════════════════════════
+    Honeycomb (S4)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/893349303"] {
+    position: fixed;
+    bottom: 320px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/PQpcIYR.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="honeycombshadowtooltip"] {
+    position: fixed;
+    bottom: 320px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/893349303"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="honeycombshadowtooltip"]::before {
+    content: "honeycomb (S4)";
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: 30%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="honeycombshadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"]::after {
+    opacity: 1;
+}
+
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"] {
+    box-shadow: var(--box-shadow) #89d191;
+}
+
+/*════════════════════════════════════════════
+    Sae Hiro Sotsugyou-hen (Final)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/893752043"] {
+    position: fixed;
+    bottom: 230px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/hmVtqrI.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="finalshadowtooltip"] {
+    position: fixed;
+    bottom: 230px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/893752043"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="finalshadowtooltip"]::before {
+    content: "sae hiro sotsugyou-hen (final)"; 
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: -20%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="finalshadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"]::after {
+    opacity: 1;
+}
+
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"] {
+    box-shadow: var(--box-shadow) #fbf4e3;
 }
