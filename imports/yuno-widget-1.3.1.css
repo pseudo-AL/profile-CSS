@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.3 by @pseudo
+    Yuno Widget V1.3.1 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO (Please read description)
 ════════════════════════════════════════════*/
@@ -36,31 +36,6 @@ https://anilist.co/user/sekuji/
   }
 }
 
-/*════════ Animation: Impact Marks ════════*/
-@keyframes impactFade {
-  0% {
-    opacity: 0;
-  }
-  7% {
-    opacity: 0; 
-  }
-  10% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0.4; 
-  }
-  45% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0; 
-  }
-  100% {
-    opacity: 0; 
-  }
-}
-
 /*════════ Animation: Write-up Float ════════*/
 @keyframes circlefloat {
     0%, 100% {
@@ -74,7 +49,7 @@ https://anilist.co/user/sekuji/
 /*════════ Yuno ════════*/
 .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
     position: fixed;
-    bottom: 45px;
+    bottom: 42px;
     right: 25px;
     width: 91px;
     height: 130px;
@@ -86,33 +61,14 @@ https://anilist.co/user/sekuji/
     animation: jump var(--widget-animation-length) infinite;
 }
 
-/*════════ Impact Marks ════════*/
-.overview .about a[href="jumpmarks"] {
-    position: fixed;
-    transform: rotate(-135deg);
-    bottom: 35px;
-    right: 53px;
-    width: 15px;
-    height: 15px;
-    background: url("https://i.imgur.com/4V7bfvR.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 100;
-    pointer-events: none;
-    opacity: 0;
-    animation: impactFade var(--widget-animation-length) infinite;
-    animation-delay: 0.025s;
-}
-
 /*════════ Bolded Text, Top Line ════════*/
 .overview .about a[href="footertext1"]::after {
     content: "current ♥️:";
     position: fixed;
-    bottom: 35px;
-    right: 88px;
+    bottom: 32px;
+    right: 80px;
     color: color-mix(in srgb,rgb(var(--color-blue)) var(--footer-mix), white);
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700 !important;
     white-space: nowrap;
     pointer-events: none;
@@ -124,10 +80,10 @@ https://anilist.co/user/sekuji/
 .overview .about a[href="footertext2"]::after {
     content: "hidamari sketch️";
     position: fixed;
-    bottom: 35px;
-    right: 10px;
+    bottom: 32px;
+    right: 8px;
     color: white;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 400;
     font-style: italic;
     white-space: nowrap;
@@ -140,10 +96,10 @@ https://anilist.co/user/sekuji/
 .overview .about a[href="footertext3"]::after {
     content: "h️over Yuno for write-ups";
     position: fixed;
-    bottom: 20px;
-    right: 10px;
+    bottom: 18px;
+    right: 8px;
     color: white;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 400;
     white-space: nowrap;
     pointer-events: none;
@@ -155,10 +111,10 @@ https://anilist.co/user/sekuji/
 .overview .about a[href="footertext4"]::after {
     content: "click Yuno for ♬";
     position: fixed;
-    bottom: 5px;
-    right: 10px;
+    bottom: 4px;
+    right: 8px;
     color: white;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 400;
     white-space: nowrap;
     pointer-events: none;
