@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.3.1 by @pseudo
+    Yuno Widget V1.4 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO (Please read description)
 ════════════════════════════════════════════*/
@@ -15,6 +15,12 @@ However, direct copying without letting me know will rub me the wrong way. Thank
 Light inspiration taken from @sekuji, but as aforementioned, selector structures and behaviours are mine.
 https://anilist.co/user/sekuji/
 ════════════════════════════════════════════*/
+
+/*════════ Variables ════════*/
+:root {
+    --character-image: url(https://i.imgur.com/nQFnIbu.png); /* Main Yuno Image */
+    --character-swtich: 10000s; /* Effectively permanent until refreshed */
+}
 
 /*════════ Animation: Yuno Jump ════════*/
 @keyframes jump {
@@ -46,26 +52,32 @@ https://anilist.co/user/sekuji/
     }
 }
 
-/*════════ Yuno ════════*/
+/*════════ Character Main ════════*/
 .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
     position: fixed;
-    bottom: 42px;
+    bottom: 76px;
     right: 25px;
     width: 91px;
     height: 130px;
-    background: url("https://i.imgur.com/nQFnIbu.png");
+    background: var(--character-image);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 99;
     animation: jump var(--widget-animation-length) infinite;
+    transition: background var(--master-transition-timer) var(--character-swtich) ease-in-out;
+}
+
+body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
+    transition-delay: 0s;
+    transition-property: background;
 }
 
 /*════════ Bolded Text, Top Line ════════*/
 .overview .about a[href="footertext1"]::after {
     content: "current ♥️:";
     position: fixed;
-    bottom: 32px;
+    bottom: 66px;
     right: 80px;
     color: color-mix(in srgb,rgb(var(--color-blue)) var(--footer-mix), white);
     font-size: 10px;
@@ -80,7 +92,7 @@ https://anilist.co/user/sekuji/
 .overview .about a[href="footertext2"]::after {
     content: "hidamari sketch️";
     position: fixed;
-    bottom: 32px;
+    bottom: 66px;
     right: 8px;
     color: white;
     font-size: 10px;
@@ -94,9 +106,9 @@ https://anilist.co/user/sekuji/
 
 /*════════ Regular Text, Middle Line ════════*/
 .overview .about a[href="footertext3"]::after {
-    content: "h️over Yuno for write-ups";
+    content: "h️over character for write-ups";
     position: fixed;
-    bottom: 18px;
+    bottom: 52px;
     right: 8px;
     color: white;
     font-size: 10px;
@@ -109,9 +121,9 @@ https://anilist.co/user/sekuji/
 
 /*════════ Regular Text, Bottom Line ════════*/
 .overview .about a[href="footertext4"]::after {
-    content: "click Yuno for ♬";
+    content: "switch characters by hovering below";
     position: fixed;
-    bottom: 4px;
+    bottom: 38px;
     right: 8px;
     color: white;
     font-size: 10px;
@@ -120,6 +132,186 @@ https://anilist.co/user/sekuji/
     pointer-events: none;
     opacity: var(--text-opacity);
     z-index: 99;
+}
+
+/*════════ Character Switcher, Nazuna ════════*/
+.overview .about a[href="https://anilist.co/character/14913/Nazuna"]::before {
+    content: "nazuna";
+    position: fixed;
+    bottom: 4px;
+    right: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    opacity: var(--text-opacity-characters);
+    z-index: 99;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
+    --character-image: url(https://i.imgur.com/AnlplOx.png);
+}
+
+/*════════ Divider Between Nazuna and Nori ════════*/
+.overview .about a[href="https://anilist.co/character/2528/Yuno"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 4px;
+    right: 43px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    opacity: var(--text-opacity);
+    z-index: 99;
+}
+
+/*════════ Character Switcher, Nori ════════*/
+.overview .about a[href="https://anilist.co/character/14914/Nori"]::before {
+    content: "nori";
+    position: fixed;
+    bottom: 4px;
+    right: 51px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    opacity: var(--text-opacity-characters);
+    z-index: 99;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/14914/Nori"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
+    --character-image: url(https://i.imgur.com/SuEuEQW.png);
+}
+
+/*════════ Divider Between Nori and Hiro ════════*/
+.overview .about a[href="https://anilist.co/character/14914/Nori"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 4px;
+    right: 71px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    opacity: var(--text-opacity);
+    z-index: 99;
+}
+
+/*════════ Character Switcher, Hiro ════════*/
+.overview .about a[href="https://anilist.co/character/3216/Hiro"]::before {
+    content: "hiro";
+    position: fixed;
+    bottom: 4px;
+    right: 79px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    opacity: var(--text-opacity-characters);
+    z-index: 99;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
+    --character-image: url(https://i.imgur.com/kxWMvHr.png);
+}
+
+/*════════ Character Switcher, Sae ════════*/
+.overview .about a[href="https://anilist.co/character/3215/Sae"]::before {
+    content: "sae";
+    position: fixed;
+    bottom: 20px;
+    right: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    opacity: var(--text-opacity-characters);
+    z-index: 99;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
+    --character-image: url(https://i.imgur.com/aR6UVbA.png);
+}
+
+/*════════ Divider Between Sae and Miyako ════════*/
+.overview .about a[href="https://anilist.co/character/3215/Sae"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 20px;
+    right: 26px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    opacity: var(--text-opacity);
+    z-index: 99;
+}
+
+/*════════ Character Switcher, Miyako ════════*/
+.overview .about a[href="https://anilist.co/character/2627/Miyako"]::before {
+    content: "miyako";
+    position: fixed;
+    bottom: 20px;
+    right: 34px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    opacity: var(--text-opacity-characters);
+    z-index: 99;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
+    --character-image: url(https://i.imgur.com/3S4rHUI.png);
+}
+
+/*════════ Divider Between Miyako and Yuno ════════*/
+.overview .about a[href="https://anilist.co/character/2627/Miyako"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 20px;
+    right: 69px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    opacity: var(--text-opacity);
+    z-index: 99;
+}
+
+/*════════ Character Switcher, Yuno ════════*/
+.overview .about a[href="https://anilist.co/character/2528/Yuno"]::before {
+    content: "yuno";
+    position: fixed;
+    bottom: 20px;
+    right: 77px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    opacity: var(--text-opacity-characters);
+    z-index: 99;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/2528/Yuno"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
+    --character-image: url(https://i.imgur.com/kkb9TIZ.png);
 }
 
 /*════════ Reveal Clickable Circles on Yuno Hover ════════*/
@@ -141,7 +333,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:
 /*════════ Clickable ════════*/
 .overview .about a[href="https://anilist.co/activity/865005471"] {
     position: fixed;
-    bottom: 590px;
+    bottom: 620px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -162,7 +354,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:
 /*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
 .overview .about a[href="S1shadowtooltip"] {
     position: fixed;
-    bottom: 590px;
+    bottom: 620px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -235,7 +427,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover)
 /*════════ Clickable ════════*/
 .overview .about a[href="https://anilist.co/activity/877931220"] {
     position: fixed;
-    bottom: 500px;
+    bottom: 530px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -256,7 +448,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover)
 /*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
 .overview .about a[href="365shadowtooltip"] {
     position: fixed;
-    bottom: 500px;
+    bottom: 530px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -329,7 +521,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
 /*════════ Clickable ════════*/
 .overview .about a[href="https://anilist.co/activity/887326979"] {
     position: fixed;
-    bottom: 410px;
+    bottom: 440px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -350,7 +542,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover)
 /*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
 .overview .about a[href="hoshimittsushadowtooltip"] {
     position: fixed;
-    bottom: 410px;
+    bottom: 440px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -423,7 +615,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover)
 /*════════ Clickable ════════*/
 .overview .about a[href="https://anilist.co/activity/893349303"] {
     position: fixed;
-    bottom: 320px;
+    bottom: 350px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -444,7 +636,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover)
 /*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
 .overview .about a[href="honeycombshadowtooltip"] {
     position: fixed;
-    bottom: 320px;
+    bottom: 350px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -517,7 +709,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover)
 /*════════ Clickable ════════*/
 .overview .about a[href="https://anilist.co/activity/893752043"] {
     position: fixed;
-    bottom: 230px;
+    bottom: 260px;
     right: 35px;
     width: 75px;
     height: 75px;
@@ -538,7 +730,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover)
 /*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
 .overview .about a[href="finalshadowtooltip"] {
     position: fixed;
-    bottom: 230px;
+    bottom: 260px;
     right: 35px;
     width: 75px;
     height: 75px;
