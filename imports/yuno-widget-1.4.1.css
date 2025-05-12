@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.4 by @pseudo
+    Yuno Widget V1.4.1 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO (Please read description)
 ════════════════════════════════════════════*/
@@ -55,7 +55,7 @@ https://anilist.co/user/sekuji/
 /*════════ Character Main ════════*/
 .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
     position: fixed;
-    bottom: 76px;
+    bottom: 45px;
     right: 25px;
     width: 91px;
     height: 130px;
@@ -77,7 +77,7 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 .overview .about a[href="footertext1"]::after {
     content: "current ♥️:";
     position: fixed;
-    bottom: 66px;
+    bottom: 36px;
     right: 80px;
     color: color-mix(in srgb,rgb(var(--color-blue)) var(--footer-mix), white);
     font-size: 10px;
@@ -92,7 +92,7 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 .overview .about a[href="footertext2"]::after {
     content: "hidamari sketch️";
     position: fixed;
-    bottom: 66px;
+    bottom: 36px;
     right: 8px;
     color: white;
     font-size: 10px;
@@ -108,7 +108,7 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 .overview .about a[href="footertext3"]::after {
     content: "h️over character for write-ups";
     position: fixed;
-    bottom: 52px;
+    bottom: 22px;
     right: 8px;
     color: white;
     font-size: 10px;
@@ -121,9 +121,9 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 
 /*════════ Regular Text, Bottom Line ════════*/
 .overview .about a[href="footertext4"]::after {
-    content: "switch characters by hovering below";
+    content: "switch characters by hovering their name";
     position: fixed;
-    bottom: 38px;
+    bottom: 8px;
     right: 8px;
     color: white;
     font-size: 10px;
@@ -138,8 +138,8 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 .overview .about a[href="https://anilist.co/character/14913/Nazuna"]::before {
     content: "nazuna";
     position: fixed;
-    bottom: 4px;
-    right: 8px;
+    bottom: 60px;
+    right: 16px;
     color: white;
     font-size: 10px;
     font-weight: 400;
@@ -147,6 +147,25 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
     pointer-events: auto;
     opacity: var(--text-opacity-characters);
     z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+}
+
+/*════════ Divider Between Nazuna and Nori ════════*/
+.overview .about a[href="https://anilist.co/character/2528/Yuno"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 96px;
+    right: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    opacity: var(--text-opacity);
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
 }
 
 body:has(.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:hover) 
@@ -154,27 +173,12 @@ body:has(.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:ho
     --character-image: url(https://i.imgur.com/AnlplOx.png);
 }
 
-/*════════ Divider Between Nazuna and Nori ════════*/
-.overview .about a[href="https://anilist.co/character/2528/Yuno"]::after {
-    content: "|";
-    position: fixed;
-    bottom: 4px;
-    right: 43px;
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    white-space: nowrap;
-    pointer-events: none !important;
-    opacity: var(--text-opacity);
-    z-index: 99;
-}
-
 /*════════ Character Switcher, Nori ════════*/
 .overview .about a[href="https://anilist.co/character/14914/Nori"]::before {
     content: "nori";
     position: fixed;
-    bottom: 4px;
-    right: 51px;
+    bottom: 105px;
+    right: 16px;
     color: white;
     font-size: 10px;
     font-weight: 400;
@@ -182,6 +186,25 @@ body:has(.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:ho
     pointer-events: auto;
     opacity: var(--text-opacity-characters);
     z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+}
+
+/*════════ Divider Between Nori and Hiro ════════*/
+.overview .about a[href="https://anilist.co/character/14914/Nori"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 126px;
+    right: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    opacity: var(--text-opacity);
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
 }
 
 body:has(.overview .about a[href="https://anilist.co/character/14914/Nori"]:hover) 
@@ -189,27 +212,12 @@ body:has(.overview .about a[href="https://anilist.co/character/14914/Nori"]:hove
     --character-image: url(https://i.imgur.com/SuEuEQW.png);
 }
 
-/*════════ Divider Between Nori and Hiro ════════*/
-.overview .about a[href="https://anilist.co/character/14914/Nori"]::after {
-    content: "|";
-    position: fixed;
-    bottom: 4px;
-    right: 71px;
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    white-space: nowrap;
-    pointer-events: none !important;
-    opacity: var(--text-opacity);
-    z-index: 99;
-}
-
 /*════════ Character Switcher, Hiro ════════*/
 .overview .about a[href="https://anilist.co/character/3216/Hiro"]::before {
     content: "hiro";
     position: fixed;
-    bottom: 4px;
-    right: 79px;
+    bottom: 134px;
+    right: 16px;
     color: white;
     font-size: 10px;
     font-weight: 400;
@@ -217,6 +225,25 @@ body:has(.overview .about a[href="https://anilist.co/character/14914/Nori"]:hove
     pointer-events: auto;
     opacity: var(--text-opacity-characters);
     z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+}
+
+/*════════ Divider Between Hiro and Sae ════════*/
+.overview .about a[href="https://anilist.co/character/3216/Hiro"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 155px;
+    right: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    opacity: var(--text-opacity);
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
 }
 
 body:has(.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover) 
@@ -228,8 +255,8 @@ body:has(.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover
 .overview .about a[href="https://anilist.co/character/3215/Sae"]::before {
     content: "sae";
     position: fixed;
-    bottom: 20px;
-    right: 8px;
+    bottom: 164px;
+    right: 16px;
     color: white;
     font-size: 10px;
     font-weight: 400;
@@ -237,19 +264,16 @@ body:has(.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover
     pointer-events: auto;
     opacity: var(--text-opacity-characters);
     z-index: 99;
-}
-
-body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover) 
-.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
-    --character-image: url(https://i.imgur.com/aR6UVbA.png);
+    transform: rotate(90deg);
+    transform-origin: bottom right;
 }
 
 /*════════ Divider Between Sae and Miyako ════════*/
 .overview .about a[href="https://anilist.co/character/3215/Sae"]::after {
     content: "|";
     position: fixed;
-    bottom: 20px;
-    right: 26px;
+    bottom: 184px;
+    right: 17px;
     color: white;
     font-size: 11px;
     font-weight: 700;
@@ -257,14 +281,21 @@ body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover)
     pointer-events: none !important;
     opacity: var(--text-opacity);
     z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
+    --character-image: url(https://i.imgur.com/aR6UVbA.png);
 }
 
 /*════════ Character Switcher, Miyako ════════*/
 .overview .about a[href="https://anilist.co/character/2627/Miyako"]::before {
     content: "miyako";
     position: fixed;
-    bottom: 20px;
-    right: 34px;
+    bottom: 193px;
+    right: 16px;
     color: white;
     font-size: 10px;
     font-weight: 400;
@@ -272,6 +303,8 @@ body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover)
     pointer-events: auto;
     opacity: var(--text-opacity-characters);
     z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
 }
 
 body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hover) 
@@ -283,8 +316,8 @@ body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hov
 .overview .about a[href="https://anilist.co/character/2627/Miyako"]::after {
     content: "|";
     position: fixed;
-    bottom: 20px;
-    right: 69px;
+    bottom: 229px;
+    right: 17px;
     color: white;
     font-size: 11px;
     font-weight: 700;
@@ -292,14 +325,16 @@ body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hov
     pointer-events: none !important;
     opacity: var(--text-opacity);
     z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
 }
 
 /*════════ Character Switcher, Yuno ════════*/
 .overview .about a[href="https://anilist.co/character/2528/Yuno"]::before {
     content: "yuno";
     position: fixed;
-    bottom: 20px;
-    right: 77px;
+    bottom: 237px;
+    right: 16px;
     color: white;
     font-size: 10px;
     font-weight: 400;
@@ -307,6 +342,8 @@ body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hov
     pointer-events: auto;
     opacity: var(--text-opacity-characters);
     z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
 }
 
 body:has(.overview .about a[href="https://anilist.co/character/2528/Yuno"]:hover) 
