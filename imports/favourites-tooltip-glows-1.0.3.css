@@ -1,3 +1,18 @@
+/*════════════════════════════════════════════
+    Favourites Profile Tooltip Glows by @pseudo
+    https://anilist.co/user/pseudo/
+    Modular: PARTIALLY (Read Description)
+════════════════════════════════════════════*/
+
+/*════════════════════════════════════════════
+This snippet consists of a bunch of colour-specific (for my use-case) glow animations.
+Only the keyframes are here — the actual declarations are in my CSS.
+You're welcome to borrow these, but depending on if I/you use a custom cover(s) for a certain media, the values might not line up with what you expect.
+
+Inspiration taken from @Sekuji, but implementation and precise values/stacking of shadows are mine.
+https://anilist.co/user/sekuji/
+════════════════════════════════════════════*/
+
 @keyframes ariaoverview {
   0% {
     text-shadow:
