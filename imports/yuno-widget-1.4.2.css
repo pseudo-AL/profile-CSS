@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V1.4.1 by @pseudo
+    Yuno Widget V1.4.2 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO (Please read description)
 ════════════════════════════════════════════*/
@@ -55,7 +55,7 @@ https://anilist.co/user/sekuji/
 /*════════ Character Main ════════*/
 .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"] {
     position: fixed;
-    bottom: 45px;
+    bottom: 40px;
     right: 25px;
     width: 91px;
     height: 130px;
@@ -77,7 +77,7 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 .overview .about a[href="footertext1"]::after {
     content: "current ♥️:";
     position: fixed;
-    bottom: 36px;
+    bottom: 31px;
     right: 80px;
     color: color-mix(in srgb,rgb(var(--color-blue)) var(--footer-mix), white);
     font-size: 10px;
@@ -92,7 +92,7 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 .overview .about a[href="footertext2"]::after {
     content: "hidamari sketch️";
     position: fixed;
-    bottom: 36px;
+    bottom: 31px;
     right: 8px;
     color: white;
     font-size: 10px;
@@ -108,7 +108,7 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 .overview .about a[href="footertext3"]::after {
     content: "h️over character for write-ups";
     position: fixed;
-    bottom: 22px;
+    bottom: 17px;
     right: 8px;
     color: white;
     font-size: 10px;
@@ -121,9 +121,9 @@ body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overv
 
 /*════════ Regular Text, Bottom Line ════════*/
 .overview .about a[href="footertext4"]::after {
-    content: "switch characters by hovering their name";
+    content: "hover names to switch characters";
     position: fixed;
-    bottom: 8px;
+    bottom: 3px;
     right: 8px;
     color: white;
     font-size: 10px;
