@@ -1,0 +1,1016 @@
+/*════════════════════════════════════════════
+    Yuno Widget V2 V1.0 by @pseudo
+    https://anilist.co/user/pseudo/
+    Modular: NO (Please read description)
+════════════════════════════════════════════*/
+
+/*════════════════════════════════════════════
+This snippet contains everything related to my Yuno styles and consequent hover styles fixed at the bottom-right of my profile.
+It's essentially the same as the other Yuno widget, but this one hides the widget behind the donator badge hover.
+I want to preserve both in case I wish to switch between both.
+The setup and pretty much everything here is entirely my work. PLEASE DO NOT COPY 1:1 WITHOUT ASKING ME FIRST.
+
+If you're looking for something similar on your profile, you're always welcome to reach out to me and I'd be happy to help you get started.
+Of course, if you're just taking inspiration, but are able to devise your own solutions/behaviours, you don't need to loop me in. It'd be your work, after all.
+However, direct copying without letting me know will rub me the wrong way. Thanks for your understanding.
+
+Light inspiration taken from @sekuji, but as aforementioned, selector structures and behaviours are mine.
+https://anilist.co/user/sekuji/
+════════════════════════════════════════════*/
+
+/*════════ Variables ════════*/
+:root {
+    --character-image: url(https://i.imgur.com/nQFnIbu.png); /* Main Yuno Image */
+    --character-switch: 100000s; /* Effectively permanent until refreshed */
+}
+
+/*════════ Animation: Yuno Jump ════════*/
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out; 
+  }
+  40% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in; 
+  }
+  80% {
+    transform: translateY(-10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+}
+
+/*════════ Animation: Write-up Float ════════*/
+@keyframes circlefloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(var(--circle-float)); 
+    }
+}
+
+/*════════ Restyling the Donor Badge to be the trigger ════════*/
+
+@keyframes badgeglow {
+    0% {
+        box-shadow: 0 0 1px 0px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 6px 3px rgba(255, 255, 255, 1);
+    }
+}
+
+.nav-btn.donator-badge {
+    position: relative;
+    color: transparent;
+    width: 207px;
+    pointer-events: auto !important;
+    transition: width var(--master-transition-timer) var(--character-switch) ease-in-out;
+    animation: badgeglow var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.nav-btn.donator-badge::before {
+    content: "hover to reveal yuno widget";
+    color: white;
+    position: absolute;
+    white-space: nowrap;
+    left: 12px;
+    opacity: 1;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+.nav-btn.donator-badge::after {
+    content: "yuno widget activated!";
+    color: white;
+    position: absolute;
+    white-space: nowrap;
+    left: 12px;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+.nav-btn.donator-badge:hover {
+    transition-delay: 0s; 
+    width: 175px;
+}
+
+.nav-btn.donator-badge:hover::before {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.nav-btn.donator-badge:hover::after {
+    opacity: 1;
+    transition-delay: 0s; 
+}
+
+/*════════ Character Main ════════*/
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    content: "";
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    width: 91px;
+    height: 130px;
+    background: var(--character-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 99;
+    animation: jump var(--widget-animation-length) infinite;
+    transition: background var(--master-transition-timer) var(--character-switch) ease-in-out, opacity var(--master-transition-timer) var(--character-switch) ease-in-out, visibility var(--master-transition-timer) var(--character-switch) ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+body:has(.overview .about a[href*="https://anilist.co/character/"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    transition-delay: 0s;
+}
+
+/*════════ Bolded Text, Top Line ════════*/
+.overview .about a[href="footertext1"]::after {
+    content: "current ♥️:";
+    position: fixed;
+    bottom: 31px;
+    right: 80px;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--footer-mix), white);
+    font-size: 10px;
+    font-weight: 700 !important;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="footertext1"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+/*════════ Regular Text, Top Line ════════*/
+.overview .about a[href="footertext2"]::after {
+    content: "hidamari sketch️";
+    position: fixed;
+    bottom: 31px;
+    right: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    font-style: italic;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="footertext2"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+/*════════ Regular Text, Middle Line ════════*/
+.overview .about a[href="footertext3"]::after {
+    content: "h️over character for write-ups";
+    position: fixed;
+    bottom: 17px;
+    right: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="footertext3"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+/*════════ Regular Text, Bottom Line ════════*/
+.overview .about a[href="footertext4"]::after {
+    content: "hover names to switch characters";
+    position: fixed;
+    bottom: 3px;
+    right: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="footertext4"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+/*════════ Character Switcher, Nazuna ════════*/
+.overview .about a[href="https://anilist.co/character/14913/Nazuna"]::before {
+    content: "nazuna";
+    position: fixed;
+    bottom: 60px;
+    right: 16px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out, visibility var(--master-transition-timer) var(--character-switch) ease-in-out;
+    visibility: hidden;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/14913/Nazuna"]::before {
+    visibility: visible;
+    opacity: var(--text-opacity-characters);
+    transition-delay: 0s;
+    transition-property: opacity, visibility;
+}
+
+/*════════ Divider Between Nazuna and Nori ════════*/
+.overview .about a[href="https://anilist.co/character/2528/Yuno"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 96px;
+    right: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/2528/Yuno"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    --character-image: url(https://i.imgur.com/AnlplOx.png);
+}
+
+/*════════ Character Switcher, Nori ════════*/
+.overview .about a[href="https://anilist.co/character/14914/Nori"]::before {
+    content: "nori";
+    position: fixed;
+    bottom: 105px;
+    right: 16px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out, visibility var(--master-transition-timer) var(--character-switch) ease-in-out;
+    visibility: hidden;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/14914/Nori"]::before {
+    visibility: visible;
+    opacity: var(--text-opacity-characters);
+    transition-delay: 0s;
+    transition-property: opacity, visibility;
+}
+
+/*════════ Divider Between Nori and Hiro ════════*/
+.overview .about a[href="https://anilist.co/character/14914/Nori"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 126px;
+    right: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/14914/Nori"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/14914/Nori"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    --character-image: url(https://i.imgur.com/SuEuEQW.png);
+}
+
+/*════════ Character Switcher, Hiro ════════*/
+.overview .about a[href="https://anilist.co/character/3216/Hiro"]::before {
+    content: "hiro";
+    position: fixed;
+    bottom: 134px;
+    right: 16px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out, visibility var(--master-transition-timer) var(--character-switch) ease-in-out;
+    visibility: hidden;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/3216/Hiro"]::before {
+    visibility: visible;
+    opacity: var(--text-opacity-characters);
+    transition-delay: 0s;
+    transition-property: opacity, visibility;
+}
+
+/*════════ Divider Between Hiro and Sae ════════*/
+.overview .about a[href="https://anilist.co/character/3216/Hiro"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 155px;
+    right: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/3216/Hiro"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    --character-image: url(https://i.imgur.com/kxWMvHr.png);
+}
+
+/*════════ Character Switcher, Sae ════════*/
+.overview .about a[href="https://anilist.co/character/3215/Sae"]::before {
+    content: "sae";
+    position: fixed;
+    bottom: 164px;
+    right: 16px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out, visibility var(--master-transition-timer) var(--character-switch) ease-in-out;
+    visibility: hidden;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/3215/Sae"]::before {
+    visibility: visible;
+    opacity: var(--text-opacity-characters);
+    transition-delay: 0s;
+    transition-property: opacity, visibility;
+}
+
+/*════════ Divider Between Sae and Miyako ════════*/
+.overview .about a[href="https://anilist.co/character/3215/Sae"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 184px;
+    right: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/3215/Sae"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    --character-image: url(https://i.imgur.com/aR6UVbA.png);
+}
+
+/*════════ Character Switcher, Miyako ════════*/
+.overview .about a[href="https://anilist.co/character/2627/Miyako"]::before {
+    content: "miyako";
+    position: fixed;
+    bottom: 193px;
+    right: 16px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out, visibility var(--master-transition-timer) var(--character-switch) ease-in-out;
+    visibility: hidden;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/2627/Miyako"]::before {
+    visibility: visible;
+    opacity: var(--text-opacity-characters);
+    transition-delay: 0s;
+    transition-property: opacity, visibility;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    --character-image: url(https://i.imgur.com/3S4rHUI.png);
+}
+
+/*════════ Divider Between Miyako and Yuno ════════*/
+.overview .about a[href="https://anilist.co/character/2627/Miyako"]::after {
+    content: "|";
+    position: fixed;
+    bottom: 229px;
+    right: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none !important;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/2627/Miyako"]::after {
+    opacity: var(--text-opacity);
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+
+/*════════ Character Switcher, Yuno ════════*/
+.overview .about a[href="https://anilist.co/character/2528/Yuno"]::before {
+    content: "yuno";
+    position: fixed;
+    bottom: 237px;
+    right: 16px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: auto;
+    z-index: 99;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out, visibility var(--master-transition-timer) var(--character-switch) ease-in-out;
+    visibility: hidden;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="https://anilist.co/character/2528/Yuno"]::before {
+    visibility: visible;
+    opacity: var(--text-opacity-characters);
+    transition-delay: 0s;
+    transition-property: opacity, visibility;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/2528/Yuno"]:hover) 
+.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
+    --character-image: url(https://i.imgur.com/kkb9TIZ.png);
+}
+
+/*════════ Reveal Clickable Circles on Yuno Hover ════════*/
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about a[href="https://anilist.co/activity/893752043"], body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about a[href="https://anilist.co/activity/893349303"], body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about a[href="https://anilist.co/activity/887326979"], body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about a[href="https://anilist.co/activity/877931220"], body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover)
+.overview .about a[href="https://anilist.co/activity/865005471"] {
+    opacity: 1;
+    clip-path: inset(0%);
+    transition: opacity var(--master-transition-timer) 0s ease-in-out, clip-path var(--master-transition-timer) 0s ease-in-out;
+}
+
+/*════════════════════════════════════════════
+    Hidamari Sketch (S1)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/865005471"] {
+    position: fixed;
+    bottom: 620px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/HOtVO3a.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="S1shadowtooltip"] {
+    position: fixed;
+    bottom: 620px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/865005471"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="S1shadowtooltip"]::before {
+    content: "hidamari sketch (S1)";
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: 18%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="S1shadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"]::after {
+    opacity: 1;
+}
+
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/865005471"]:hover) .overview .about a[href="S1shadowtooltip"] {
+    box-shadow: var(--box-shadow) #6b9aeb;
+}
+
+/*════════════════════════════════════════════
+    365 (S2)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/877931220"] {
+    position: fixed;
+    bottom: 530px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/4H5MQ5T.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="365shadowtooltip"] {
+    position: fixed;
+    bottom: 530px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/877931220"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="365shadowtooltip"]::before {
+    content: "365 (S2)";
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: 48%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="365shadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"]::after {
+    opacity: 1;
+}
+
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/877931220"]:hover) .overview .about a[href="365shadowtooltip"] {
+    box-shadow: var(--box-shadow) #ee7477;
+}
+
+/*════════════════════════════════════════════
+    Hoshimittsu (S3)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/887326979"] {
+    position: fixed;
+    bottom: 440px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/Nr91GjP.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="hoshimittsushadowtooltip"] {
+    position: fixed;
+    bottom: 440px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/887326979"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="hoshimittsushadowtooltip"]::before {
+    content: "hoshimittsu (S3)";
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: 30%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="hoshimittsushadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"]::after {
+    opacity: 1;
+}
+
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/887326979"]:hover) .overview .about a[href="hoshimittsushadowtooltip"] {
+    box-shadow: var(--box-shadow) #fbf4e3;
+}
+
+/*════════════════════════════════════════════
+    Honeycomb (S4)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/893349303"] {
+    position: fixed;
+    bottom: 350px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/PQpcIYR.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="honeycombshadowtooltip"] {
+    position: fixed;
+    bottom: 350px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/893349303"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="honeycombshadowtooltip"]::before {
+    content: "honeycomb (S4)";
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: 30%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="honeycombshadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"]::after {
+    opacity: 1;
+}
+
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/893349303"]:hover) .overview .about a[href="honeycombshadowtooltip"] {
+    box-shadow: var(--box-shadow) #89d191;
+}
+
+/*════════════════════════════════════════════
+    Sae Hiro Sotsugyou-hen (Final)
+════════════════════════════════════════════*/
+
+/*════════ Clickable ════════*/
+.overview .about a[href="https://anilist.co/activity/893752043"] {
+    position: fixed;
+    bottom: 260px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: url("https://i.imgur.com/hmVtqrI.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    clip-path: inset(50%);
+    transition: opacity var(--master-transition-timer) var(--clickable-delay) ease-in-out, clip-path var(--master-transition-timer) var(--clickable-delay) ease-in-out, background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+    filter: var(--cover-saturation);
+}
+
+/*════════ Clickable Sibling (for Tooltip and Box Shadow) ════════*/
+.overview .about a[href="finalshadowtooltip"] {
+    position: fixed;
+    bottom: 260px;
+    right: 35px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    pointer-events: none !important;
+    border-radius: 50%;
+    z-index: 100;
+    transition: box-shadow var(--master-transition-timer) ease-in-out;
+    animation: circlefloat var(--float-duration) linear infinite;
+    animation-delay: 0s !important;
+}
+
+/*════════ Hover Saturation + Zoom ════════*/
+.overview .about a[href="https://anilist.co/activity/893752043"]:hover {
+    background-size: var(--widget-background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+/*════════ Tooltip Content ════════*/
+.overview .about a[href="finalshadowtooltip"]::before {
+    content: "sae hiro sotsugyou-hen (final)"; 
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    position: absolute;
+    bottom: 90px; 
+    left: -20%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0; 
+    pointer-events: none !important;
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Tooltip Arrow ════════*/
+.overview .about a[href="finalshadowtooltip"]::after {
+    content: "";
+    position: absolute;
+    bottom: 68px; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0; 
+    pointer-events: none !important; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+}
+
+/*════════ Reveal Tooltip on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"]::before, body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"]::after {
+    opacity: 1;
+}
+/*════════ Box Shadow on Clickable Hover ════════*/
+body:has(.overview .about a[href="https://anilist.co/activity/893752043"]:hover) .overview .about a[href="finalshadowtooltip"] {
+    box-shadow: var(--box-shadow) #fbf4e3;
+}
