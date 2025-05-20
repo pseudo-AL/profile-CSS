@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V2 V1.1 by @pseudo
+    Yuno Widget V2 V1.1.1 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO (Please read description)
 ════════════════════════════════════════════*/
@@ -54,8 +54,7 @@ https://anilist.co/user/sekuji/
     }
 }
 
-/*════════ Restyling the Donor Badge to be the trigger ════════*/
-
+/*════════ Animation: Donor Badge Glow ════════*/
 @keyframes badgeglow {
     0% {
         box-shadow: 0 0 1px 0px rgba(255, 255, 255, 0.1);
@@ -64,6 +63,9 @@ https://anilist.co/user/sekuji/
         box-shadow: 0 0 6px 3px rgba(255, 255, 255, 1);
     }
 }
+
+
+/*════════ Restyling the Donor Badge to be the trigger ════════*/
 
 body:has(.overview .about) .nav-btn.donator-badge {
     position: relative;
@@ -109,6 +111,43 @@ body:has(.overview .about) .nav-btn.donator-badge:hover::after {
     opacity: 1;
     transition-delay: 0s; 
 }
+
+.overview .about a[href="donorbadgetooltip"]::before {
+    content: "click on a different profile\A section, then click back here,\A to re-hide the widget";
+    position: absolute;
+    top: -168px;
+    left: 1030px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: pre;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    color: white;
+}
+
+.overview .about a[href="donorbadgetooltip"]::after {
+    content: "";
+    position: absolute;
+    top: -133px;
+    left: 1030px;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out, visibility var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+}
+
+body:has(.nav-btn.donator-badge:hover) .overview .about a[href="donorbadgetooltip"]::before, body:has(.nav-btn.donator-badge:hover) .overview .about a[href="donorbadgetooltip"]::after {
+    opacity: 1;
+}
+
 
 /*════════ Character Main ════════*/
 .overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]::before {
