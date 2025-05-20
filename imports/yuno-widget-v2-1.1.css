@@ -1,5 +1,5 @@
 /*════════════════════════════════════════════
-    Yuno Widget V2 V1.0 by @pseudo
+    Yuno Widget V2 V1.1 by @pseudo
     https://anilist.co/user/pseudo/
     Modular: NO (Please read description)
 ════════════════════════════════════════════*/
@@ -65,7 +65,7 @@ https://anilist.co/user/sekuji/
     }
 }
 
-.nav-btn.donator-badge {
+body:has(.overview .about) .nav-btn.donator-badge {
     position: relative;
     color: transparent;
     width: 207px;
@@ -75,7 +75,7 @@ https://anilist.co/user/sekuji/
     animation-delay: 0s !important;
 }
 
-.nav-btn.donator-badge::before {
+body:has(.overview .about) .nav-btn.donator-badge::before {
     content: "hover to reveal yuno widget";
     color: white;
     position: absolute;
@@ -85,7 +85,7 @@ https://anilist.co/user/sekuji/
     transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
 }
 
-.nav-btn.donator-badge::after {
+body:has(.overview .about) .nav-btn.donator-badge::after {
     content: "yuno widget activated!";
     color: white;
     position: absolute;
@@ -95,17 +95,17 @@ https://anilist.co/user/sekuji/
     transition: opacity var(--master-transition-timer) var(--character-switch) ease-in-out;
 }
 
-.nav-btn.donator-badge:hover {
+body:has(.overview .about) .nav-btn.donator-badge:hover {
     transition-delay: 0s; 
     width: 175px;
 }
 
-.nav-btn.donator-badge:hover::before {
+body:has(.overview .about) .nav-btn.donator-badge:hover::before {
     opacity: 0;
     transition-delay: 0s;
 }
 
-.nav-btn.donator-badge:hover::after {
+body:has(.overview .about) .nav-btn.donator-badge:hover::after {
     opacity: 1;
     transition-delay: 0s; 
 }
