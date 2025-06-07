@@ -1,0 +1,616 @@
+.activity-history.content-wrap {
+    margin-bottom: 640px !important;
+}
+
+.overview .about a[href="https://anilist.co/user/pseudo/"]::before {
+    position: absolute;
+    content: "layout changer (hover an image)"; 
+    color: white;
+    top: -35px;
+    left: 80px;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.overview .about a[href="https://anilist.co/user/pseudo/"] {
+    position: absolute;
+    background-image: url("https://i.imgur.com/Q5rNmoI.png");
+    background-position: center; 
+    background-size: 100%;
+    width: 376px;
+    height: 120px;
+    top: 815px; 
+    left: 16px;
+    border-radius: var(--border-radius);
+    z-index: 1;
+    transition: background-size var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+    filter: var(--cover-saturation);
+}
+
+.overview .about a[href="https://anilist.co/user/pseudo/"]:hover {
+    box-shadow: var(--box-shadow) #a8c4cd;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="mainlayouttooltip"]::before {
+    content: "main layout";
+    position: absolute;
+    top: 779px; 
+    left: 156px;
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    color: white;
+    font-weight: 700;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.overview .about a[href="mainlayouttooltip"]::after {
+    content: "";
+    position: absolute;
+    top: 809px; 
+    left: 198px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    z-index: 99;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+}
+
+body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .overview .about a[href="mainlayouttooltip"]::before, body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .overview .about a[href="mainlayouttooltip"]::after {
+    opacity: 1;
+}
+
+.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kasaki"] {
+    position: absolute;
+    background-image: url("https://i.imgur.com/bVGVFpH.jpeg");
+    background-position: center; 
+    background-size: 100%;
+    width: 182px;
+    height: 120px;
+    top: 948px; 
+    left: 16px;
+    border-radius: var(--border-radius);
+    z-index: 1;
+    transition: background-size var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+    filter: var(--cover-saturation);
+}
+
+.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover {
+    box-shadow: var(--box-shadow) #f1f3f4;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="nozomitooltip"]::before {
+    content: "nozomi";
+    position: absolute;
+    top: 912px; 
+    left: 72px;
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    color: white;
+    font-weight: 700;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.overview .about a[href="nozomitooltip"]::after {
+    content: "";
+    position: absolute;
+    top: 942px; 
+    left: 101px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    z-index: 99;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover) .overview .about a[href="nozomitooltip"]::before, body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover) .overview .about a[href="nozomitooltip"]::after {
+    opacity: 1;
+}
+
+.overview .about a[href="https://anilist.co/character/125960/Mizore-Yoroizuka"] {
+    position: absolute;
+    background-image: url("https://i.imgur.com/2sQztIu.jpeg");
+    background-position: center; 
+    background-size: 100%;
+    width: 182px;
+    height: 120px;
+    top: 948px; 
+    left: 210px;
+    border-radius: var(--border-radius);
+    z-index: 1;
+    transition: background-size var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+    filter: var(--cover-saturation);
+}
+
+.overview .about a[href="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover {
+    box-shadow: var(--box-shadow) #f1f3f4;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="mizoretooltip"]::before {
+    content: "mizore";
+    position: absolute;
+    top: 912px; 
+    left: 268px;
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    color: white;
+    font-weight: 700;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.overview .about a[href="mizoretooltip"]::after {
+    content: "";
+    position: absolute;
+    top: 942px; 
+    left: 295px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    z-index: 99;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover) .overview .about a[href="mizoretooltip"]::before, body:has(.overview .about a[href="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover) .overview .about a[href="mizoretooltip"]::after {
+    opacity: 1;
+}
+
+body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .banner .avatar {
+    transition-delay: 0s;
+    transition-property: background;
+    --avatar-url: url(https://i.imgur.com/s7dhPMQ.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover)::before {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --banner-url: url(https://i.imgur.com/77Y4EJe.jpeg); 
+}
+
+body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .banner-content::before {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --banner-bubble: url(https://i.imgur.com/jx6Nv0M.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .banner-content > .name-wrapper::before {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --nozomi-avatar: url(https://i.imgur.com/kGmcF6a.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .banner-content > .name-wrapper::after {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --nozomi-bubble: url(https://i.imgur.com/G4vasLi.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover) .banner .avatar {
+    transition-delay: 0s;
+    transition-property: background;
+    --avatar-url: url(https://i.imgur.com/qkhUaMF.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover)::before {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --banner-url: url(https://i.imgur.com/cjSSKQt.jpeg); 
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover) .banner-content::before {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --banner-bubble: url(https://i.imgur.com/05ggF3s.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover) .banner-content > .name-wrapper::after {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --nozomi-bubble: url(https://i.imgur.com/nOKWYuv.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover) .banner .avatar {
+    transition-delay: 0s;
+    transition-property: background;
+    --avatar-url: url(https://i.imgur.com/X3i4qBd.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover)::before {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --banner-url: url(https://i.imgur.com/fjujwyh.jpeg); 
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover) .banner-content::before {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --banner-bubble: url(https://i.imgur.com/K13Fi89.png);
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover) .banner-content > .name-wrapper::after {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+    --nozomi-bubble: url(https://i.imgur.com/nOKWYuv.png);
+}
+
+:root {
+    --nozomi-avatar: url(https://i.imgur.com/Pwwyq2E.png);
+    --nozomi-bubble: url(https://i.imgur.com/bg5a7Ww.png);
+}
+
+.banner-content > .name-wrapper {
+    position: relative;
+}
+
+.banner-content > .name-wrapper::before {
+    content: var(--nozomi-avatar);
+    position: absolute;
+    top: -257px;
+    left: 400px;
+    display: block;
+    transform: scale(0.29);
+    transform-origin: top left; 
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    transition: visibility 0s var(--layout-delay), opacity var(--master-transition-timer); 
+}
+
+.banner-content > .name-wrapper::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 217px;
+    height: 125px;
+    background: var(--nozomi-bubble);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 200px;
+    bottom: 170px;
+    z-index: 5;
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    transition: visibility 0s var(--layout-delay), opacity var(--master-transition-timer);
+}
+
+.banner-content:hover > .name-wrapper::before {
+    opacity: 1;
+}
+
+.banner-content:hover > .name-wrapper::after {
+    opacity: 1;
+    transition-delay: 1.4s;
+}
+
+.banner-content > .actions > .nav-btn.donator-badge, .banner-content > .name-wrapper > .name, .banner-content > .mod-badge-wrap.follower-badge {
+    opacity: 1;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+}
+.banner-content > .actions > .nav-btn.donator-badge {
+    z-index: 1;
+}
+
+.banner-content:hover > .actions > .nav-btn.donator-badge, .banner-content:hover > .name-wrapper > .name, .banner-content:hover > .mod-badge-wrap.follower-badge {
+    opacity: 0 !important;
+}
+
+.banner-content > .actions > .nav-btn {
+    z-index: 10;
+    position: relative;
+}
+
+body:has(a.favourite[href*="character/67065"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="character/67065"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="character/67067"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="character/67067"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="character/67069"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="character/67069"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="anime/3297"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="anime/3297"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="anime/457"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="anime/457"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="anime/100178"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="anime/100178"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="manga/86218"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="manga/86218"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="manga/70171"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="manga/70171"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="manga/105388"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="manga/105388"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="manga/30004"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="manga/30004"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="studio/2"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="studio/2"]:hover) .banner-content > .name-wrapper::after, body:has(a.favourite[href*="studio/132"]:hover) .banner-content > .name-wrapper::before, body:has(a.favourite[href*="studio/132"]:hover) .banner-content > .name-wrapper::after, body:has(.overview .about a[href*="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover) .banner-content > .name-wrapper::before, body:has(.overview .about a[href*="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover) .banner-content > .name-wrapper::after, body:has(.overview .about a[href*="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover) .banner-content > .name-wrapper::before, body:has(.overview .about a[href*="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover) .banner-content > .name-wrapper::after {
+    visibility: hidden; 
+    transition-delay: 0s !important; 
+}
+
+body:has(.overview .about a[href*="https://anilist.co/character/120724/Nozomi-Kasaki"]:hover) .banner-content::before, body:has(.overview .about a[href*="https://anilist.co/character/125960/Mizore-Yoroizuka"]:hover) .banner-content::before {
+    transition: margin-left var(--master-transition-timer) 0s ease-in-out, bottom var(--master-transition-timer) 0s ease-in-out;
+    margin-left: -80px;
+    bottom: 200px;
+}
+
+@keyframes gifFade {
+  0%, 80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+html:not(:has(.container > .activity-entry))::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("https://i.imgur.com/9DdxNln.gif") center/cover no-repeat;
+    z-index: 9999;
+    pointer-events: none;
+    animation: gifFade 2.50s ease-out forwards;
+}
+
+.overview .about a[href="messagepopup"] {
+    position: fixed;
+    background-image: url(https://i.imgur.com/tnGiwbm.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    bottom: -50%;
+    left: 39%;
+    z-index: 999;
+    pointer-events: none;
+    transition: bottom 0.4s ease;
+}
+
+body:has(.overview > .section:last-child .activity-feed-wrap > .activity-edit .el-textarea__inner:focus) .overview .about a[href="messagepopup"] {
+    bottom: 0;
+    animation: hideMessage 0.4s ease 5s forwards;
+}
+
+@keyframes hideMessage {
+    to { bottom: -50%; }
+}
+
+.overview .about [href="leaf"] {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 87px;
+    height: 87px;
+    border-radius: var(--border-radius) var(--border-radius) 4px var(--border-radius);
+    background-image: url(https://i.imgur.com/wWh7hG1.png);
+    background-size: cover;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 1;
+    transition: opacity 0.15s ease-out 0.075s;
+}
+.overview .about [href="slideshowtrigger"] {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: var(--border-radius) var(--border-radius) 4px var(--border-radius);
+    width: 80px;
+    height: 80px;
+    background: rgba(10,10,10,0.8);
+    z-index: 4;
+    transition: width 0.45s cubic-bezier(0.25,0.9,0.2,1), height 0.45s cubic-bezier(0.25,0.9,0.2,1);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+}
+.overview .about [href="slideshowtrigger"]:hover {
+    width: 470px;
+    height: 634px;
+    transform-origin: bottom right;
+}
+body:has(.overview .about [href="slideshowtrigger"]:hover) .overview .about [href="leaf"] {
+    opacity: 0;
+    transition-delay: 0s;
+}
+.overview .about [href^="img"] {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    bottom: 30px;
+    right: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    pointer-events: none;
+    border-radius: var(--border-radius) var(--border-radius) 4px var(--border-radius);
+    transition: width 0.45s cubic-bezier(0.25,0.9,0.2,1), height 0.45s cubic-bezier(0.25,0.9,0.2,1);
+}
+body:has(.overview .about [href="slideshowtrigger"]:hover) .overview .about [href^="img"] {
+    visibility: visible;
+    width: 450px;
+    height: 615px;
+}
+@keyframes fade1 {
+    0% { opacity: 1; }
+    7.870% { opacity: 1; }
+    8.333% { opacity: 0; }
+    99.537% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fade2 {
+    0% { opacity: 0; }
+    7.870% { opacity: 0; }
+    8.333% { opacity: 1; }
+    16.204% { opacity: 1; }
+    16.667% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade3 {
+    0% { opacity: 0; }
+    16.204% { opacity: 0; }
+    16.667% { opacity: 1; }
+    24.537% { opacity: 1; }
+    25.000% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade4 {
+    0% { opacity: 0; }
+    24.537% { opacity: 0; }
+    25.000% { opacity: 1; }
+    32.870% { opacity: 1; }
+    33.333% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade5 {
+    0% { opacity: 0; }
+    32.870% { opacity: 0; }
+    33.333% { opacity: 1; }
+    41.204% { opacity: 1; }
+    41.667% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade6 {
+    0% { opacity: 0; }
+    41.204% { opacity: 0; }
+    41.667% { opacity: 1; }
+    49.537% { opacity: 1; }
+    50.000% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade7 {
+    0% { opacity: 0; }
+    49.537% { opacity: 0; }
+    50.000% { opacity: 1; }
+    57.870% { opacity: 1; }
+    58.333% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade8 {
+    0% { opacity: 0; }
+    57.870% { opacity: 0; }
+    58.333% { opacity: 1; }
+    66.204% { opacity: 1; }
+    66.667% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade9 {
+    0% { opacity: 0; }
+    66.204% { opacity: 0; }
+    66.667% { opacity: 1; }
+    74.537% { opacity: 1; }
+    75.000% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade10 {
+    0% { opacity: 0; }
+    74.537% { opacity: 0; }
+    75.000% { opacity: 1; }
+    82.870% { opacity: 1; }
+    83.333% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade11 {
+    0% { opacity: 0; }
+    82.870% { opacity: 0; }
+    83.333% { opacity: 1; }
+    91.204% { opacity: 1; }
+    91.667% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade12 {
+    0% { opacity: 0; }
+    91.204% { opacity: 0; }
+    91.667% { opacity: 1; }
+    99.537% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.overview .about [href="img1"]  { background-image: url(https://i.imgur.com/N3s55VA.jpeg); animation: fade1 89s linear infinite; }
+.overview .about [href="img2"]  { background-image: url(https://i.imgur.com/udGmEPe.jpeg); animation: fade2 89s linear infinite; }
+.overview .about [href="img3"]  { background-image: url(https://i.imgur.com/lDYYShB.jpeg); animation: fade3 89s linear infinite; }
+.overview .about [href="img4"]  { background-image: url(https://i.imgur.com/2U8aUz7.jpeg); animation: fade4 89s linear infinite; }
+.overview .about [href="img5"]  { background-image: url(https://i.imgur.com/9BYgP52.jpeg); animation: fade5 89s linear infinite; }
+.overview .about [href="img6"]  { background-image: url(https://i.imgur.com/l6ivjx0.jpeg); animation: fade6 89s linear infinite; }
+.overview .about [href="img7"]  { background-image: url(https://i.imgur.com/fFZF8mf.jpeg); animation: fade7 89s linear infinite; }
+.overview .about [href="img8"]  { background-image: url(https://i.imgur.com/iNeS9QM.jpeg); animation: fade8 89s linear infinite; }
+.overview .about [href="img9"]  { background-image: url(https://i.imgur.com/yfbfHPf.jpeg); animation: fade9 89s linear infinite; }
+.overview .about [href="img10"] { background-image: url(https://i.imgur.com/9M94Wk2.jpeg); animation: fade10 89s linear infinite; }
+.overview .about [href="img11"] { background-image: url(https://i.imgur.com/AEhSEPp.jpeg); animation: fade11 89s linear infinite; }
+.overview .about [href="img12"] { background-image: url(https://i.imgur.com/ugq6PoP.jpeg); animation: fade12 89s linear infinite; }
+.overview .about a[href="nozomipopup"],
+.overview .about a[href="mizorepopup"] {
+    position: fixed;
+    right: 405px;
+    width: 160px;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(-40deg) translateX(50%) translateY(30%);
+}
+.overview .about a[href="mizorepopup"] {
+    bottom: 160px;
+    background-image: url(https://i.imgur.com/zSOBN4I.png);
+}
+.overview .about a[href="nozomipopup"] {
+    bottom: 460px;
+    background-image: url(https://i.imgur.com/wbo5QPe.png);
+}
+.overview .about a[href="nozomipopup"]::before,
+.overview .about a[href="mizorepopup"]::before {
+    content: "";
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(40deg) translateX(0) translateY(0);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.overview .about a[href="nozomipopup"]::before {
+    right: 100px;
+    bottom: 80px;
+    background-image: url(https://i.imgur.com/uQnSEPK.png);
+}
+.overview .about a[href="mizorepopup"]::before {
+    right: 85px;
+    bottom: 80px;
+    background-image: url(https://i.imgur.com/8rK9yq8.png);
+}
+body:has(.overview .about [href="slideshowtrigger"]:hover) .overview .about a[href="nozomipopup"] {
+    animation: nozomiPopupAnim 7s ease-out both;
+}
+body:has(.overview .about [href="slideshowtrigger"]:hover) .overview .about a[href="nozomipopup"]::before {
+    animation: nozomiPopupBefore 7s ease-out both;
+}
+body:has(.overview .about [href="slideshowtrigger"]:hover) .overview .about a[href="mizorepopup"] {
+    animation: mizorePopupAnim 7s ease-out both;
+}
+body:has(.overview .about [href="slideshowtrigger"]:hover) .overview .about a[href="mizorepopup"]::before {
+    animation: mizorePopupBefore 7s ease-out both;
+}
+@keyframes nozomiPopupAnim {
+    0%,5.714% { opacity: 0; visibility: hidden; transform: rotate(-40deg) translateX(50%) translateY(30%); }
+    8.571%,97.14% { opacity: 1; visibility: visible; transform: rotate(-40deg) translateX(0) translateY(0); }
+    100% { opacity: 0; visibility: hidden; transform: rotate(-40deg) translateX(0) translateY(0); }
+}
+@keyframes nozomiPopupBefore {
+    0%,8.57% { opacity: 0; visibility: hidden; }
+    11.43%,97.14% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+}
+@keyframes mizorePopupAnim {
+    0%,7.143%   { opacity: 0; visibility: hidden; transform: rotate(-40deg) translateX(50%) translateY(30%); }
+    10.000%,97.143% { opacity: 1; visibility: visible; transform: rotate(-40deg) translateX(0) translateY(0); }
+    100%        { opacity: 0; visibility: hidden; transform: rotate(-40deg) translateX(0) translateY(0); }
+}
+@keyframes mizorePopupBefore {
+    0%,10.71% { opacity: 0; visibility: hidden; }
+    13.57%,97.14% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+}
