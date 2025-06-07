@@ -1,9 +1,5 @@
 /*════════ Credit @Sekuji for inspiring the hover widget (near the bottom of the stylesheet) ════════*/
 
-.activity-history.content-wrap {
-    margin-bottom: 640px !important;
-}
-
 .overview .about a[href="https://anilist.co/user/pseudo/"]::before {
     position: absolute;
     content: "layout changer (hover an image)"; 
@@ -23,7 +19,7 @@
     background-size: 100%;
     width: 376px;
     height: 120px;
-    top: 815px; 
+    top: 890px; 
     left: 16px;
     border-radius: var(--border-radius);
     z-index: 1;
@@ -40,7 +36,7 @@
 .overview .about a[href="mainlayouttooltip"]::before {
     content: "main layout";
     position: absolute;
-    top: 779px; 
+    top: 854px; 
     left: 156px;
     font-size: 13px;
     background: rgba(10, 10, 10, 0.9);
@@ -58,7 +54,7 @@
 .overview .about a[href="mainlayouttooltip"]::after {
     content: "";
     position: absolute;
-    top: 809px; 
+    top: 884px; 
     left: 198px;
     border-width: 6px;
     border-style: solid;
@@ -79,7 +75,7 @@ body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .over
     background-size: 100%;
     width: 182px;
     height: 120px;
-    top: 948px; 
+    top: 1023px; 
     left: 16px;
     border-radius: var(--border-radius);
     z-index: 1;
@@ -96,7 +92,7 @@ body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .over
 .overview .about a[href="nozomitooltip"]::before {
     content: "nozomi";
     position: absolute;
-    top: 912px; 
+    top: 987px; 
     left: 72px;
     font-size: 13px;
     background: rgba(10, 10, 10, 0.9);
@@ -114,7 +110,7 @@ body:has(.overview .about a[href="https://anilist.co/user/pseudo/"]:hover) .over
 .overview .about a[href="nozomitooltip"]::after {
     content: "";
     position: absolute;
-    top: 942px; 
+    top: 1017px; 
     left: 101px;
     border-width: 6px;
     border-style: solid;
@@ -135,7 +131,7 @@ body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kas
     background-size: 100%;
     width: 182px;
     height: 120px;
-    top: 948px; 
+    top: 1023px;  
     left: 210px;
     border-radius: var(--border-radius);
     z-index: 1;
@@ -152,7 +148,7 @@ body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kas
 .overview .about a[href="mizoretooltip"]::before {
     content: "mizore";
     position: absolute;
-    top: 912px; 
+    top: 987px;
     left: 268px;
     font-size: 13px;
     background: rgba(10, 10, 10, 0.9);
@@ -170,7 +166,7 @@ body:has(.overview .about a[href="https://anilist.co/character/120724/Nozomi-Kas
 .overview .about a[href="mizoretooltip"]::after {
     content: "";
     position: absolute;
-    top: 942px; 
+    top: 1017px; 
     left: 295px;
     border-width: 6px;
     border-style: solid;
