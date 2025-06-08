@@ -353,7 +353,7 @@ body:has(.overview .about a[href*="https://anilist.co/character/120724/Nozomi-Ka
   }
 }
 
-html:not(:has(.container > .activity-entry))::after {
+body:has(.overview .about)::after {
     content: "";
     position: fixed;
     top: 0;
