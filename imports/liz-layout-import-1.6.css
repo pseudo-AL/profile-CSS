@@ -528,18 +528,19 @@ body:has(.overview .about [href="slideshowtrigger"]:hover) .overview .about [hre
     99.537% { opacity: 1; }
     100% { opacity: 0; }
 }
-.overview .about [href="img1"]  { background-image: url(https://i.imgur.com/N3s55VA.jpeg); animation: fade1 89s linear infinite; }
-.overview .about [href="img2"]  { background-image: url(https://i.imgur.com/udGmEPe.jpeg); animation: fade2 89s linear infinite; }
-.overview .about [href="img3"]  { background-image: url(https://i.imgur.com/lDYYShB.jpeg); animation: fade3 89s linear infinite; }
-.overview .about [href="img4"]  { background-image: url(https://i.imgur.com/2U8aUz7.jpeg); animation: fade4 89s linear infinite; }
-.overview .about [href="img5"]  { background-image: url(https://i.imgur.com/9BYgP52.jpeg); animation: fade5 89s linear infinite; }
-.overview .about [href="img6"]  { background-image: url(https://i.imgur.com/l6ivjx0.jpeg); animation: fade6 89s linear infinite; }
-.overview .about [href="img7"]  { background-image: url(https://i.imgur.com/fFZF8mf.jpeg); animation: fade7 89s linear infinite; }
-.overview .about [href="img8"]  { background-image: url(https://i.imgur.com/iNeS9QM.jpeg); animation: fade8 89s linear infinite; }
-.overview .about [href="img9"]  { background-image: url(https://i.imgur.com/yfbfHPf.jpeg); animation: fade9 89s linear infinite; }
-.overview .about [href="img10"] { background-image: url(https://i.imgur.com/9M94Wk2.jpeg); animation: fade10 89s linear infinite; }
-.overview .about [href="img11"] { background-image: url(https://i.imgur.com/AEhSEPp.jpeg); animation: fade11 89s linear infinite; }
-.overview .about [href="img12"] { background-image: url(https://i.imgur.com/ugq6PoP.jpeg); animation: fade12 89s linear infinite; }
+.overview .about [href="img1"]  { background-image: url(https://i.imgur.com/yfbfHPf.jpeg); animation: fade1 89s linear infinite; }
+.overview .about [href="img2"]  { background-image: url(https://i.imgur.com/ugq6PoP.jpeg); animation: fade2 89s linear infinite; }
+.overview .about [href="img3"]  { background-image: url(https://i.imgur.com/N3s55VA.jpeg); animation: fade3 89s linear infinite; }
+.overview .about [href="img4"]  { background-image: url(https://i.imgur.com/iNeS9QM.jpeg); animation: fade4 89s linear infinite; }
+.overview .about [href="img5"]  { background-image: url(https://i.imgur.com/fFZF8mf.jpeg); animation: fade5 89s linear infinite; }
+.overview .about [href="img6"]  { background-image: url(https://i.imgur.com/udGmEPe.jpeg); animation: fade6 89s linear infinite; }
+.overview .about [href="img7"]  { background-image: url(https://i.imgur.com/9M94Wk2.jpeg); animation: fade7 89s linear infinite; }
+.overview .about [href="img8"]  { background-image: url(https://i.imgur.com/AEhSEPp.jpeg); animation: fade8 89s linear infinite; }
+.overview .about [href="img9"]  { background-image: url(https://i.imgur.com/l6ivjx0.jpeg); animation: fade9 89s linear infinite; }
+.overview .about [href="img10"] { background-image: url(https://i.imgur.com/2U8aUz7.jpeg); animation: fade10 89s linear infinite; }
+.overview .about [href="img11"] { background-image: url(https://i.imgur.com/9BYgP52.jpeg); animation: fade11 89s linear infinite; }
+.overview .about [href="img12"] { background-image: url(https://i.imgur.com/lDYYShB.jpeg); animation: fade12 89s linear infinite; }
+
 .overview .about a[href="nozomipopup"],
 .overview .about a[href="mizorepopup"] {
     position: fixed;
