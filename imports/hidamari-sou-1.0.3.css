@@ -41,7 +41,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
     top: calc(var(--about-height) + 2156px);
     left: 64.5px;
     border-radius: var(--border-radius);
-    background-image: url(https://i.imgur.com/CzliX2s.jpeg);
+    background-image: url(https://i.imgur.com/dap0cK3.jpeg);
     background-size: 100%;
     background-position: center;
     filter: var(--cover-saturation);
@@ -103,7 +103,7 @@ body:has(.overview .about a[href="https://anilist.co/character/2528/Yuno"]:hover
     top: calc(var(--about-height) + 2156px);
     left: 161.5px;
     border-radius: var(--border-radius);
-    background-image: url(https://i.imgur.com/0hnkMur.jpeg);
+    background-image: url(https://i.imgur.com/TkuRBXX.jpeg);
     background-size: 100%;
     background-position: center;
     filter: var(--cover-saturation);
@@ -165,7 +165,7 @@ body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hov
     top: calc(var(--about-height) + 2156px);
     left: 258.5px;
     border-radius: var(--border-radius);
-    background-image: url(https://i.imgur.com/JbU6TcZ.jpeg);
+    background-image: url(https://i.imgur.com/7DVMeWq.jpeg);
     background-size: 100%;
     background-position: center;
     filter: var(--cover-saturation);
@@ -227,7 +227,7 @@ body:has(.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:ho
     top: calc(var(--about-height) + 2288px);
     left: 64.5px;
     border-radius: var(--border-radius);
-    background-image: url(https://i.imgur.com/kruKC7j.jpeg);
+    background-image: url(https://i.imgur.com/O95CzJZ.jpeg);
     background-size: 100%;
     background-position: center;
     filter: var(--cover-saturation);
@@ -289,7 +289,7 @@ body:has(.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover
     top: calc(var(--about-height) + 2288px);
     left: 161.5px;
     border-radius: var(--border-radius);
-    background-image: url(https://i.imgur.com/6wkK6wH.jpeg);
+    background-image: url(https://i.imgur.com/iF51WzL.jpeg);
     background-size: 100%;
     background-position: center;
     filter: var(--cover-saturation);
@@ -351,7 +351,7 @@ body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover)
     top: calc(var(--about-height) + 2288px);
     left: 258.5px;
     border-radius: var(--border-radius);
-    background-image: url(https://i.imgur.com/Uk4WT8H.jpeg);
+    background-image: url(https://i.imgur.com/dsDhEwR.jpeg);
     background-size: 100%;
     background-position: center;
     filter: var(--cover-saturation);
