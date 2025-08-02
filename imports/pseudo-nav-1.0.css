@@ -1,0 +1,144 @@
+/*════════ Transparent Global Navbar Styling ════════*/
+#nav.nav { /* Sets height and width */
+    height: 40px !important;
+    background-color: var(--global-nav-background) !important;
+    transition: all 0s ease 0s, top 0.3s ease 0s !important;
+    left: calc((100% - var(--nav-width)) / 2);
+    width: var(--nav-width);
+}
+
+#nav.nav:not(:has(.quick-search.visible)) { /* Fixes Navbar blur fucking with Quick Search */
+    backdrop-filter: var(--global-nav-blur);
+}
+
+#nav .link, #nav .browse-wrap { /* Adjusts "Browse" */
+    position: relative;
+    z-index: 1; 
+    margin-bottom: 1.5px;
+}
+
+#nav .link:after { /* Adds background on link hover */
+    content: "";
+    position: absolute;
+    top: 21%;
+    left: 0;
+    width: 100%;
+    height: 60%; 
+    background: var(--foreground);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    border-radius: var(--border-radius);
+}
+
+#nav .logo { /* Adds background on AL hover */
+    position: relative;
+    z-index: 1; 
+    margin-bottom: 4px;
+}
+
+#nav .logo:after {
+    content: "";
+    position: absolute;
+    left: -4.5px;
+    width: 120%;
+    height: 80%; 
+    background: var(--foreground);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    border-radius: var(--border-radius);
+}
+
+#nav .user { /* Adds background on avatar hover */
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+}
+
+#nav .user:after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -6px;
+    width: 74px;
+    height: 71%; 
+    background: var(--foreground);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    border-radius: var(--border-radius);
+    pointer-events: none;
+}
+
+#nav .user:has(.notification-dot):after { /* Avatar hover with notifications */
+    width: 80px;
+}
+
+#nav .void-quick-start-nav-button { /* Adds background to VoidVerified Quick Start hover */
+    position: relative;
+}
+
+#nav .void-quick-start-nav-button:after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -8px;
+    width: 40px;
+    height: 31.2px; 
+    background: var(--foreground);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    border-radius: var(--border-radius);
+    pointer-events: none;  
+}
+
+#nav .user:hover:after, #nav .link:hover:after, #nav .logo:hover:after, #nav:has(.dropdown[data-v-38edf8f8]:hover) .browse-wrap .link:after, #nav:has(.dropdown[data-v-04b245e6]:hover) .user:after, #nav .void-quick-start-nav-button:hover:after {
+    opacity: 1; /* Preserves link hover backgrounds on respective dropdown hovers */
+}
+
+#nav:has(.dropdown[data-v-38edf8f8]:hover) .browse-wrap .link { /* Above, for hover colours */
+    color: var(--profile-color) !important;
+}
+
+#nav .wrap .search { /* Extend Search Button */
+    grid-row-start: 1;
+    grid-column-start: 3;
+    width: var(--search-width);
+    padding: 10px 14px;
+    background: rgb(35, 35, 35, 0.0);
+    border-radius: 35px;
+    margin: 0 5px 0 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--master-transition-timer) ease-in-out;
+    position: relative; 
+}
+#nav .wrap .search:hover { /* Hover styles */
+    width: var(--search-width-hover);
+    background: var(--foreground);
+    cursor: pointer;
+}
+#nav .wrap .search:after { /* Add Text */
+    content: var(--search-text);
+    margin-left: 10px;
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+.transparent .search[data-v-62eacfff] svg, .search[data-v-62eacfff] svg { /* Initial svg */
+    color: #ffffff;
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+#nav .dropdown { /* Dropdown Background Colours */
+    background: var(--global-nav-dropdown);
+    transition: opacity var(--master-transition-timer) ease-in-out;
+}
+#nav .dropdown::before {
+    border-bottom-color: var(--global-nav-dropdown) !important;
+    color: var(--global-nav-dropdown) !important;
+}

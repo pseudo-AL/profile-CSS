@@ -1,0 +1,124 @@
+/*--- Favourites Tab All Styling ---*/
+.favourites:not(.overview .favourites) {
+    margin-top: 39px;
+    margin-bottom: -9px !important;
+}
+
+.favourites .favourites:nth-child(1) .section-header::before {
+    position: absolute;
+    font-size: 16px;
+    font-style: italic;
+    top: -44px;
+    left: 371px;
+    visibility: visible;
+    color: var(--profile-color);
+    content: "(scroll down to load characters, staff, and studios)";
+    white-space: nowrap;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.anime {
+    display: grid !important;
+    grid-gap: 12px !important;
+    grid-template-columns: repeat(5, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important;
+    column-gap: 17px !important;
+    padding: 13px !important;
+    padding-top: 18px !important;
+    justify-content: center !important;
+    width: 530px !important;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.manga {
+    display: grid !important;
+    grid-gap: 12px !important;
+    grid-template-columns: repeat(5, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important;
+    column-gap: 17px !important;
+    padding: 13px !important;
+    padding-top: 18px !important;
+    justify-content: center !important;
+    width: 530px !important;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.characters {
+    position: absolute !important;
+    top: 95px !important;
+    left: 635px !important;
+    display: grid !important;
+    grid-gap: 12px !important;
+    grid-template-columns: repeat(5, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important;
+    column-gap: 17px !important;
+    padding: 13px !important;
+    padding-top: 18px !important;
+    justify-content: center !important;
+    width: 530px !important;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.staff {
+    position: absolute !important;
+    top: 698px !important;
+    left: 635px;
+    display: grid !important;
+    grid-gap: 12px !important;
+    grid-template-columns: repeat(5, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important;
+    column-gap: 17px !important;
+    padding: 13px !important;
+    padding-top: 18px !important;
+    justify-content: center;
+    width: 530px !important;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.studios {
+    margin-top: -93px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 376px) !important; 
+    grid-template-rows: unset !important;
+    grid-auto-rows: minmax(120px, auto) !important;
+    justify-items: center; 
+    justify-content: center; 
+    max-width: 100%; 
+    width: 100%; 
+    column-gap: 119px !important; 
+}
+
+.favourites:not(.overview .favourites) .favourite.studio {
+    min-height: 115px;
+    font-size: 1.8rem;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    color: transparent;
+    margin-bottom: 12px !important;
+    box-shadow: none !important;
+    width: 416px !important; 
+}
+.favourites .favourites:nth-child(3) .section-header::after {
+    top: -942.5px;
+    left: 561px;
+}
+.favourites .favourites:nth-child(4) .section-header::after {
+    top: -518.5px;
+    left: 561px;
+}
+.favourites .favourites:nth-child(5) .section-header::after {
+    top: -93px;
+}
+.favourite:hover .delete[data-v-0317d914] {
+    z-index: 1;
+}
+
+.favourites:not(.overview .favourites) .favourites:nth-child(1) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(2) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(3) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(4) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(5) .section-header .actions {
+    display: none !important;
+}
+
+.favourites .favourites:nth-child(1) .section-header, .favourites .favourites:nth-child(2) .section-header, .favourites .favourites:nth-child(3) .section-header, .favourites .favourites:nth-child(4) .section-header, .favourites .favourites:nth-child(5) .section-header {
+    position: relative !important;
+    visibility: hidden !important;
+}

@@ -1,0 +1,405 @@
+/*════════ Hidamari-Sou Grid ════════*/
+
+/*════ Title ════*/
+
+.overview .about a[href="hidamarisou"]::before {
+    content: "hidamari-sou";
+    position: absolute;
+    top: calc(var(--about-height) + 2122px);
+    left: 160px;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    pointer-events: none;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+}
+
+/*════ Hide Elements When Favourites Grids/Clickbables Are Hovered ════*/
+
+body:has(.favourites.preview .favourites-wrap:not(.studios):hover) .overview .about a[href="hidamarisou"]::before, body:has(.favourites.preview .favourites-wrap:not(.studios):hover) .overview .about a[href="https://anilist.co/character/2528/Yuno"], body:has(.favourites.preview .favourites-wrap:not(.studios):hover) .overview .about a[href="https://anilist.co/character/2627/Miyako"], body:has(.favourites.preview .favourites-wrap:not(.studios):hover) .overview .about a[href="https://anilist.co/character/14913/Nazuna"], body:has(.favourites.preview .favourites-wrap:not(.studios):hover) .overview .about a[href="https://anilist.co/character/3216/Hiro"], body:has(.favourites.preview .favourites-wrap:not(.studios):hover) .overview .about a[href="https://anilist.co/character/3215/Sae"], body:has(.favourites.preview .favourites-wrap:not(.studios):hover) .overview .about a[href="https://anilist.co/character/14914/Nori"] {
+    opacity: 0;
+}
+
+body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover) .overview .about a[href="hidamarisou"]::before, body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover) .overview .about a[href="https://anilist.co/character/2528/Yuno"], body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover) .overview .about a[href="https://anilist.co/character/2627/Miyako"], body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover) .overview .about a[href="https://anilist.co/character/14913/Nazuna"], body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover) .overview .about a[href="https://anilist.co/character/3216/Hiro"], body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover) .overview .about a[href="https://anilist.co/character/3215/Sae"], body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover) .overview .about a[href="https://anilist.co/character/14914/Nori"] {
+    opacity: 0;
+}
+
+body:has(.overview .about a[href^="https://www.youtube.com/watch?v="]:hover) .overview .about a[href="hidamarisou"]::before, body:has(.overview .about a[href^="https://www.youtube.com/watch?v="]:hover) .overview .about a[href="https://anilist.co/character/2528/Yuno"], body:has(.overview .about a[href^="https://www.youtube.com/watch?v="]:hover) .overview .about a[href="https://anilist.co/character/2627/Miyako"], body:has(.overview .about a[href^="https://www.youtube.com/watch?v="]:hover) .overview .about a[href="https://anilist.co/character/14913/Nazuna"], body:has(.overview .about a[href^="https://www.youtube.com/watch?v="]:hover) .overview .about a[href="https://anilist.co/character/3216/Hiro"], body:has(.overview .about a[href^="https://www.youtube.com/watch?v="]:hover) .overview .about a[href="https://anilist.co/character/3215/Sae"], body:has(.overview .about a[href^="https://www.youtube.com/watch?v="]:hover) .overview .about a[href="https://anilist.co/character/14914/Nori"] {
+    opacity: 0;
+}
+
+body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="hidamarisou"]::before, body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="https://anilist.co/character/2528/Yuno"], body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="https://anilist.co/character/2627/Miyako"], body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="https://anilist.co/character/14913/Nazuna"], body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="https://anilist.co/character/3216/Hiro"], body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="https://anilist.co/character/3215/Sae"], body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="https://anilist.co/character/14914/Nori"] {
+    opacity: 0;
+}
+
+/*════ Yuno (201/Top Left) ════*/
+
+.overview .about a[href="https://anilist.co/character/2528/Yuno"] {
+    position: absolute;
+    width: 85px;
+    height: 120px;
+    top: calc(var(--about-height) + 2156px);
+    left: 64.5px;
+    border-radius: var(--border-radius);
+    background-image: url(https://i.imgur.com/CzliX2s.jpeg);
+    background-size: 100%;
+    background-position: center;
+    filter: var(--cover-saturation);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about a[href="https://anilist.co/character/2528/Yuno"]:hover {
+    box-shadow: var(--box-shadow) #e4caaf;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="yunotooltip"]::before {
+    text-align: center;
+    content: "yunocchi";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2134px);
+    left: 107px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15; 
+}
+
+.overview .about a[href="yunotooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2155px);
+    left: 107px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.95) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/2528/Yuno"]:hover) .overview .about a[href="yunotooltip"]::before, body:has(.overview .about a[href="https://anilist.co/character/2528/Yuno"]:hover) .overview .about a[href="yunotooltip"]::after {
+    opacity: 1;
+}
+
+/*════ Miya (202/Top Middle) ════*/
+
+.overview .about a[href="https://anilist.co/character/2627/Miyako"] {
+    position: absolute;
+    width: 85px;
+    height: 120px;
+    top: calc(var(--about-height) + 2156px);
+    left: 161.5px;
+    border-radius: var(--border-radius);
+    background-image: url(https://i.imgur.com/0hnkMur.jpeg);
+    background-size: 100%;
+    background-position: center;
+    filter: var(--cover-saturation);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hover {
+    box-shadow: var(--box-shadow) #f7eaae;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="miyatooltip"]::before {
+    text-align: center;
+    content: "miya";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2134px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15; 
+}
+
+.overview .about a[href="miyatooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2155px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.95) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hover) .overview .about a[href="miyatooltip"]::before, body:has(.overview .about a[href="https://anilist.co/character/2627/Miyako"]:hover) .overview .about a[href="miyatooltip"]::after {
+    opacity: 1;
+}
+
+/*════ Nazuna (203/Top Right) ════*/
+
+.overview .about a[href="https://anilist.co/character/14913/Nazuna"] {
+    position: absolute;
+    width: 85px;
+    height: 120px;
+    top: calc(var(--about-height) + 2156px);
+    left: 258.5px;
+    border-radius: var(--border-radius);
+    background-image: url(https://i.imgur.com/JbU6TcZ.jpeg);
+    background-size: 100%;
+    background-position: center;
+    filter: var(--cover-saturation);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:hover {
+    box-shadow: var(--box-shadow) #fdfbef;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="nazunatooltip"]::before {
+    text-align: center;
+    content: "nazuna";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2134px);
+    left: 301px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15; 
+}
+
+.overview .about a[href="nazunatooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2155px);
+    left: 301px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.95) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:hover) .overview .about a[href="nazunatooltip"]::before, body:has(.overview .about a[href="https://anilist.co/character/14913/Nazuna"]:hover) .overview .about a[href="nazunatooltip"]::after {
+    opacity: 1;
+}
+
+/*════ Hiro (101/Bottom Left) ════*/
+
+.overview .about a[href="https://anilist.co/character/3216/Hiro"] {
+    position: absolute;
+    width: 85px;
+    height: 120px;
+    top: calc(var(--about-height) + 2288px);
+    left: 64.5px;
+    border-radius: var(--border-radius);
+    background-image: url(https://i.imgur.com/kruKC7j.jpeg);
+    background-size: 100%;
+    background-position: center;
+    filter: var(--cover-saturation);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover {
+    box-shadow: var(--box-shadow) #e7a1a3;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="hirotooltip"]::before {
+    text-align: center;
+    content: "hiro";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2266px);
+    left: 107px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15; 
+}
+
+.overview .about a[href="hirotooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2287px);
+    left: 107px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.95) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover) .overview .about a[href="hirotooltip"]::before, body:has(.overview .about a[href="https://anilist.co/character/3216/Hiro"]:hover) .overview .about a[href="hirotooltip"]::after {
+    opacity: 1;
+}
+
+/*════ Sae (202/Bottom Middle) ════*/
+
+.overview .about a[href="https://anilist.co/character/3215/Sae"] {
+    position: absolute;
+    width: 85px;
+    height: 120px;
+    top: calc(var(--about-height) + 2288px);
+    left: 161.5px;
+    border-radius: var(--border-radius);
+    background-image: url(https://i.imgur.com/6wkK6wH.jpeg);
+    background-size: 100%;
+    background-position: center;
+    filter: var(--cover-saturation);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover {
+    box-shadow: var(--box-shadow) #716fc3;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="saetooltip"]::before {
+    text-align: center;
+    content: "sae";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2266px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15; 
+}
+
+.overview .about a[href="saetooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2287px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.95) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover) .overview .about a[href="saetooltip"]::before, body:has(.overview .about a[href="https://anilist.co/character/3215/Sae"]:hover) .overview .about a[href="saetooltip"]::after {
+    opacity: 1;
+}
+
+/*════ Nori (203/Bottom Right) ════*/
+
+.overview .about a[href="https://anilist.co/character/14914/Nori"] {
+    position: absolute;
+    width: 85px;
+    height: 120px;
+    top: calc(var(--about-height) + 2288px);
+    left: 258.5px;
+    border-radius: var(--border-radius);
+    background-image: url(https://i.imgur.com/Uk4WT8H.jpeg);
+    background-size: 100%;
+    background-position: center;
+    filter: var(--cover-saturation);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about a[href="https://anilist.co/character/14914/Nori"]:hover {
+    box-shadow: var(--box-shadow) #cae7f5;
+    background-size: var(--background-zoom);
+    filter: var(--cover-saturation-hover);
+}
+
+.overview .about a[href="noritooltip"]::before {
+    text-align: center;
+    content: "norippe";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2266px);
+    left: 301px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15; 
+}
+
+.overview .about a[href="noritooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2287px);
+    left: 301px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.95) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+
+body:has(.overview .about a[href="https://anilist.co/character/14914/Nori"]:hover) .overview .about a[href="noritooltip"]::before, body:has(.overview .about a[href="https://anilist.co/character/14914/Nori"]:hover) .overview .about a[href="noritooltip"]::after {
+    opacity: 1;
+}
