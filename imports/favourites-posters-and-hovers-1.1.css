@@ -1,7 +1,8 @@
 /*--- Hidamari Sketch x Honeycomb (HidaSketch) ---*/
 .favourites.preview a.favourite[href*="anime/11239"] {
-    background-image: url(https://i.imgur.com/uIFOXkn.jpeg) !important;
+    background-image: url(https://i.imgur.com/Drih9ok.jpeg) !important;
     grid-column: 1 / 5;
+    min-height: 150px !important;
 }
 .favourites.preview a.favourite[href*="anime/11239"]:hover {
     box-shadow: var(--box-shadow) #978b53;
@@ -17,8 +18,9 @@ body:has(a.favourite[href*="anime/11239"]:hover) {
 /*--- Aria the Origination ---*/
 
 .favourites.preview a.favourite[href*="anime/3297"] {
-    background-image: url(https://i.imgur.com/dJFABXS.jpeg) !important;
+    background-image: url(https://i.imgur.com/WdZRZ8z.jpeg) !important;
     grid-column: 1 / 5;
+    min-height: 150px !important;
 }
 .favourites.preview a.favourite[href*="anime/3297"]:hover {
     box-shadow: var(--box-shadow) #bea5a7;
@@ -164,6 +166,7 @@ body:has(a.favourite[href*="anime/3297"]:hover) {
 .favourites.preview a.favourite[href*="manga/86218"] {
     background-image: url(https://i.imgur.com/7fwkqQA.jpeg) !important;
     grid-column: 1 / 5;
+    min-height: 150px !important;
 }
 .favourites.preview a.favourite[href*="manga/86218"]:hover {
     box-shadow: var(--box-shadow) #e79a70;
@@ -178,8 +181,12 @@ body:has(a.favourite[href*="manga/86218"]:hover) {
 
 /*--- Oregairu (Light Novel) ---*/
 .favourites.preview a.favourite[href*="manga/70171"] {
-    background-image: url(https://i.imgur.com/WmkpUpG.jpeg) !important;
+    background-image: url(https://i.imgur.com/hxS2lAL.jpeg) !important;
     grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="manga/70171"]:hover {
+    box-shadow: var(--box-shadow) #95879f;
 }
 .favourites a.favourite[href*="manga/70171"]:hover {
     box-shadow: var(--box-shadow) #9c99ad;
@@ -461,7 +468,7 @@ body:has(a.favourite[href*="manga/70171"]:hover) {
 
 /*--- Kyoto Animation (KyoAni) ---*/
 a.favourite[href*="studio/2/"] {
-    background-image: url("https://i.imgur.com/ElcEDNh.jpeg") !important;
+    background-image: url("https://i.imgur.com/tiEbPVD.jpeg") !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
