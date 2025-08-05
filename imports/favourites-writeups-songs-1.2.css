@@ -3,14 +3,14 @@
 ════════════════════════════════════════════*/
 
 :root {
-    --anime-writeup-row-1: calc(var(--about-height) + 664px);
-    --anime-writeup-row-2: calc(var(--about-height) + 796px);
-    --anime-writeup-row-3: calc(var(--about-height) + 937px);
-    --anime-writeup-row-4: calc(var(--about-height) + 1069px);
-    --anime-writeup-row-5: calc(var(--about-height) + 1201px);
-    --anime-writeup-row-6: calc(var(--about-height) + 1333px);
-    --anime-writeup-row-7: calc(var(--about-height) + 1465px);
-    --anime-writeup-row-8: calc(var(--about-height) + 1597px);
+    --anime-writeup-row-1: calc(var(--about-height) + 538px);
+    --anime-writeup-row-2: calc(var(--about-height) + 700px);
+    --anime-writeup-row-3: calc(var(--about-height) + 840px);
+    --anime-writeup-row-4: calc(var(--about-height) + 972px);
+    --anime-writeup-row-5: calc(var(--about-height) + 1104px);
+    --anime-writeup-row-6: calc(var(--about-height) + 1236px);
+    --anime-writeup-row-7: calc(var(--about-height) + 1368px);
+    --anime-writeup-row-8: calc(var(--about-height) + 1500px);
 
     --anime-song-row-1: calc(var(--anime-writeup-row-1) + 2px);
     --anime-song-row-2: calc(var(--anime-writeup-row-2) + 2px);
@@ -21,10 +21,10 @@
     --anime-song-row-7: calc(var(--anime-writeup-row-7) + 1px);
     --anime-song-row-8: calc(var(--anime-writeup-row-8) + 1px);
 
-    --manga-writeup-row-1: calc(var(--about-height) + 980px);
-    --manga-writeup-row-2: calc(var(--about-height) + 1112px);
-    --manga-writeup-row-3: calc(var(--about-height) + 1253px);
-    --manga-writeup-row-4: calc(var(--about-height) + 1385px);
+    --manga-writeup-row-1: calc(var(--about-height) + 946px);
+    --manga-writeup-row-2: calc(var(--about-height) + 1108px);
+    --manga-writeup-row-3: calc(var(--about-height) + 1249px);
+    --manga-writeup-row-4: calc(var(--about-height) + 1381px);
 
     --manga-song-row-1: calc(var(--manga-writeup-row-1) + 2px);
     --manga-song-row-2: calc(var(--manga-writeup-row-2) + 2px);
@@ -99,7 +99,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/929944813"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/929944813"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/929944813"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -167,7 +169,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -240,7 +244,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/814482862"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/814482862"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/814482862"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -308,7 +314,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=OLfxdOGGsyU"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=OLfxdOGGsyU"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=OLfxdOGGsyU"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -382,7 +390,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/627732874"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/627732874"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/627732874"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -451,7 +461,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=5fw8duwM5pQ"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=5fw8duwM5pQ"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=5fw8duwM5pQ"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -525,7 +537,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/666950538"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/666950538"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/666950538"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -594,7 +608,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=5RHFSsQSEmA"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=5RHFSsQSEmA"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=5RHFSsQSEmA"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -668,7 +684,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/683463783"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/683463783"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/683463783"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -737,7 +755,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=FsEVKZy6fzM"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=FsEVKZy6fzM"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=FsEVKZy6fzM"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -811,7 +831,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/684950577"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/684950577"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/684950577"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -880,7 +902,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=h5Cnp42d8qk"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=h5Cnp42d8qk"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=h5Cnp42d8qk"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -954,7 +978,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/688150912"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/688150912"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/688150912"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -1023,7 +1049,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=cKoB_R3paik"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=cKoB_R3paik"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=cKoB_R3paik"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -1097,7 +1125,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/708527293"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/708527293"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/708527293"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -1166,7 +1196,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=Y-JUFg2gAIw"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=Y-JUFg2gAIw"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=Y-JUFg2gAIw"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -1240,7 +1272,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/642641416"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/642641416"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/642641416"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -1309,7 +1343,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=Nnn64Jj4PsE"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=Nnn64Jj4PsE"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=Nnn64Jj4PsE"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -1383,7 +1419,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/810987551"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/810987551"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/810987551"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -1452,7 +1490,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=BX_t045HSK8"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=BX_t045HSK8"]:hover) .favourites.preview .favourites-wrap.anime { /* Preserves Grid Expansion on Hover */
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=BX_t045HSK8"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -1526,7 +1566,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/842415319"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/842415319"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/842415319"]:hover) .favourite.media:nth-child(n+3) {
@@ -1595,7 +1637,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=DvNVdo8Tchw"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=DvNVdo8Tchw"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=DvNVdo8Tchw"]:hover) .favourite.media:nth-child(n+3) {
@@ -1669,7 +1713,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/721543803"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/721543803"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/721543803"]:hover) .favourite.media:nth-child(n+3) {
@@ -1738,7 +1784,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=wxlb4_FdYZA"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=wxlb4_FdYZA"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=wxlb4_FdYZA"]:hover) .favourite.media:nth-child(n+3) {
@@ -1813,7 +1861,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/758500795"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/758500795"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/758500795"]:hover) .favourite.media:nth-child(n+3) {
@@ -1882,7 +1932,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=1Ne7oNIMJyA"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=1Ne7oNIMJyA"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=1Ne7oNIMJyA"]:hover) .favourite.media:nth-child(n+3) {
@@ -1956,7 +2008,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/581216046"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/581216046"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/581216046"]:hover) .favourite.media:nth-child(n+3) {
@@ -2025,7 +2079,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=nxTFAVAKT78"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=nxTFAVAKT78"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=nxTFAVAKT78"]:hover) .favourite.media:nth-child(n+3) {
@@ -2099,7 +2155,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/698237502"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/698237502"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/698237502"]:hover) .favourite.media:nth-child(n+3) {
@@ -2168,7 +2226,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=iCi3aJACsSE"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=iCi3aJACsSE"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=iCi3aJACsSE"]:hover) .favourite.media:nth-child(n+3) {
@@ -2242,7 +2302,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/562322060"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/562322060"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/562322060"]:hover) .favourite.media:nth-child(n+3) {
@@ -2311,7 +2373,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=K6hEjB6pt-E"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=K6hEjB6pt-E"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=K6hEjB6pt-E"]:hover) .favourite.media:nth-child(n+3) {
@@ -2385,7 +2449,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/694817758"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/694817758"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/694817758"]:hover) .favourite.media:nth-child(n+3) {
@@ -2454,7 +2520,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=cs4qzCzJTKk"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=cs4qzCzJTKk"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=cs4qzCzJTKk"]:hover) .favourite.media:nth-child(n+3) {
@@ -2528,7 +2596,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/564866741"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/564866741"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/564866741"]:hover) .favourite.media:nth-child(n+3) {
@@ -2597,7 +2667,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=NuBIDwIMh6A"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=NuBIDwIMh6A"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=NuBIDwIMh6A"]:hover) .favourite.media:nth-child(n+3) {
@@ -2671,7 +2743,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/822523988"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/822523988"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/822523988"]:hover) .favourite.media:nth-child(n+3) {
@@ -2740,7 +2814,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=dWKO7kzMh4M"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=dWKO7kzMh4M"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=dWKO7kzMh4M"]:hover) .favourite.media:nth-child(n+3) {
@@ -2814,7 +2890,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/663962372"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/663962372"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/663962372"]:hover) .favourite.media:nth-child(n+3) {
@@ -2883,7 +2961,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=NKNv8QKLJeE"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=NKNv8QKLJeE"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=NKNv8QKLJeE"]:hover) .favourite.media:nth-child(n+3) {
@@ -2957,7 +3037,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/659449448"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/659449448"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/659449448"]:hover) .favourite.media:nth-child(n+3) {
@@ -3026,7 +3108,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=oV4IbZpvSmE"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=oV4IbZpvSmE"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=oV4IbZpvSmE"]:hover) .favourite.media:nth-child(n+3) {
@@ -3100,7 +3184,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/719361603"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/719361603"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/719361603"]:hover) .favourite.media:nth-child(n+3) {
@@ -3169,7 +3255,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=D94MDszmlWg"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=D94MDszmlWg"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=D94MDszmlWg"]:hover) .favourite.media:nth-child(n+3) {
@@ -3243,7 +3331,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover) .favourite.media:nth-child(n+3) {
@@ -3312,7 +3402,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .favourite.media:nth-child(n+3) {
@@ -3386,7 +3478,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/813301277"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/813301277"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/813301277"]:hover) .favourite.media:nth-child(n+3) {
@@ -3455,7 +3549,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=traMXzjqYTA"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=traMXzjqYTA"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=traMXzjqYTA"]:hover) .favourite.media:nth-child(n+3) {
@@ -3529,7 +3625,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/730542107"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/730542107"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/730542107"]:hover) .favourite.media:nth-child(n+3) {
@@ -3598,7 +3696,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=_gZFTyPzeO4"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=_gZFTyPzeO4"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=_gZFTyPzeO4"]:hover) .favourite.media:nth-child(n+3) {
@@ -3670,7 +3770,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/705507281"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/705507281"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/705507281"]:hover) .favourite.media:nth-child(n+3) {
@@ -3740,7 +3842,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=E0d2uEQJbXs"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=E0d2uEQJbXs"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=E0d2uEQJbXs"]:hover) .favourite.media:nth-child(n+3) {
@@ -3816,7 +3920,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -3878,7 +3984,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -3925,7 +4033,7 @@ body:has(a.favourite[href*="manga/70171"]:hover) .overview .about a[href="https:
 .overview .about a[href="https://anilist.co/activity/866858072"]:hover::before { /* Clickable Hover Styling */
     opacity: 1;
     visibility: visible;
-    color: #9c99ad;
+    color: #95879f;
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/866858072"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]::before { /* Preserves Song Clickable Visibility on Hover */
@@ -3936,7 +4044,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/866858072"]:hover)
 body:has(.overview .about a[href="https://anilist.co/activity/866858072"]:hover) a.favourite[href*="manga/70171"] { /* Preserves Manga Hover Styles on Hover */
     filter: var(--cover-saturation-hover);
     background-size: var(--background-zoom) !important; 
-    box-shadow: var(--box-shadow) #9c99ad;
+    box-shadow: var(--box-shadow) #95879f;
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/866858072"]:hover) { /* Preserves Background Change on Hover */
@@ -3945,7 +4053,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/866858072"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/866858072"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/866858072"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -3987,7 +4097,7 @@ body:has(a.favourite[href*="manga/70171"]:hover) .overview .about a[href="https:
 .overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]:hover::before { /* Clickable Hover Styling */
     opacity: 1;
     visibility: visible;
-    color: #9c99ad;
+    color: #95879f;
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]:hover) .overview .about a[href="https://anilist.co/activity/866858072"]::before { /* Preserves Write-Up Clickable Visibility on Hover */
@@ -3998,7 +4108,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]:
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]:hover) a.favourite[href*="manga/70171"] { /* Preserves Manga Hover Styles on Hover */
     filter: var(--cover-saturation-hover);
     background-size: var(--background-zoom) !important; 
-    box-shadow: var(--box-shadow) #9c99ad;
+    box-shadow: var(--box-shadow) #95879f;
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]:hover) { /* Preserves Background Change on Hover */
@@ -4007,7 +4117,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=AkeKfUHaCTY"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -4075,7 +4187,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/833815935"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/833815935"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/833815935"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -4138,7 +4252,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=T5mbj7cP6h4"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=T5mbj7cP6h4"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=T5mbj7cP6h4"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -4200,7 +4316,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/921770293"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/921770293"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/921770293"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -4268,7 +4386,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/778294816"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/778294816"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/778294816"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -4331,7 +4451,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=E3zbRnWEhdg"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=E3zbRnWEhdg"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=E3zbRnWEhdg"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -4399,7 +4521,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/880081926"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/880081926"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/880081926"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -4462,7 +4586,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=bUL1oBuYK14"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=bUL1oBuYK14"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=bUL1oBuYK14"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
@@ -4524,7 +4650,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/839232559"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/839232559"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/839232559"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -4592,7 +4720,9 @@ body:has(.overview .about a[href="https://anilist.co/activity/774275832"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/774275832"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/774275832"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
@@ -4655,7 +4785,9 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=diUtUNCZmO0"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=diUtUNCZmO0"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=diUtUNCZmO0"]:hover) .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion on Hover */
