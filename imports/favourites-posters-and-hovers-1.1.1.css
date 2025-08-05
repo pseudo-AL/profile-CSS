@@ -407,55 +407,8 @@ body:has(a.favourite[href*="manga/70171"]:hover) {
 }
 
 /*--- Akiyuki Shinbou ---*/
-.favourites a.favourite[href*="staff/100089"] {
-    z-index: 4;
-}
 .favourites a.favourite[href*="staff/100089"]:hover {
     box-shadow: var(--box-shadow) #e2dcdf;
-}
-.favourites a.favourite[href*="staff/100089"]::before {
-    text-align: center;
-    content: "you like shinbou because of monogatari,\A madoka, and 3-gatsu. i like him because\A of hidamari sketch. we are not the same";
-    white-space: pre !important;
-    font-weight: 700;
-    position: absolute;
-    top: 155px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 13px;
-    background: rgba(10, 10, 10, 0.9);
-    padding: 9px 12px;
-    border-radius: var(--border-radius);
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity var(--master-transition-timer) ease-in-out;
-    pointer-events: none;
-    color: white;
-    line-height: 1.3;
-}
-.favourites a.favourite[href*="staff/100089"]::after {
-    content: "";
-    top: 109px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent transparent rgba(10, 10, 10, 0.9) transparent;
-    opacity: 0;
-    transition: opacity var(--master-transition-timer) ease-in-out;
-}
-
-.favourites a.favourite[href*="staff/100089"]:hover::before, .favourites a.favourite[href*="staff/100089"]:hover::after {
-    opacity: 1;
-}
-
-.favourites.preview .favourites-wrap.staff:hover {
-    overflow: visible;
-    transition-delay: overflow var(--staff-grid-timer);
-}
-.favourites.preview .favourites-wrap.staff:hover .favourite.staff:nth-child(n+13) {
-    visibility: hidden;
 }
 
 /*--- Ume Aoki ---*/
