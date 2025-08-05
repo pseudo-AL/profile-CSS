@@ -65,6 +65,7 @@ body { /* Optional fallback background colour if there's a gap in transitions */
     transition: all var(--master-transition-timer) ease-in-out;
     background-size: 100% !important;
     background-color: transparent !important;
+    height: unset !important;
 }
 
 .favourites a.favourite:hover {
@@ -87,7 +88,7 @@ body { /* Optional fallback background colour if there's a gap in transitions */
 .overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
     content: "";
     position: absolute;
-    top: 300px;
+    top: 364px;
     left: 50%;
     transform: translateX(-50%);
     width: 12px;
@@ -109,10 +110,12 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
 }
 
 .favourites.preview .favourites-wrap.anime {
-    max-height: 275px;
+    max-height: 367px;
     overflow: hidden;
-    transition: max-height var(--anime-grid-timer) ease-in-out;
+    transition: max-height var(--anime-grid-timer) ease-in-out, border var(--anime-grid-timer) ease-in-out, box-shadow var(--anime-grid-timer) ease-in-out;
     transition-delay: overflow calc(--anime-grid-timer - 0.05s);
+    border: 1.5px solid rgb(var(--color-blue));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue)), inset 0 0 6px 2px rgb(var(--color-blue));
 }
 .favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3) {
     opacity: 0;
@@ -135,8 +138,10 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
     transform: translateY(120px);
 }
 .favourites.preview .favourites-wrap.anime:hover {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
     overflow: visible;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 .favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+3) {
     opacity: 1;
@@ -170,7 +175,7 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
 
 .overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"] {
     position: absolute;
-    top: calc(var(--about-height) + 1499px);
+    top: calc(var(--about-height) + 1403.5px);
     left: 307px;
     width: 85px;
     height: 120px;
@@ -203,7 +208,9 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[hr
 }
 
 body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1070px !important;
+    max-height: 1165px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .favourite.media:nth-child(n+3) {
@@ -221,7 +228,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
     white-space: nowrap;
     font-weight: 700;
     position: absolute;
-    top: calc(var(--about-height) + 1478px);
+    top: calc(var(--about-height) + 1382.5px);
     left: 349px;
     transform: translate(-50%, -50%);
     font-size: 13px;
@@ -239,7 +246,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
 .overview .about a[href="frierentooltip"]::after {
     content: "";
     position: absolute;
-    top: calc(var(--about-height) + 1499px);
+    top: calc(var(--about-height) + 1403.5px);
     left: 349px;
     transform: translate(-50%, -50%);
     border-width: 6px;
@@ -259,7 +266,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
 .overview div.favourites:nth-child(5) > h2:nth-child(1)::before {
     content: "";
     position: absolute;
-    top: 300px;
+    top: 364px;
     left: 50%;
     transform: translateX(-50%);
     width: 12px;
@@ -281,9 +288,11 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
 }
 
 .favourites.preview .favourites-wrap.manga {
-    max-height: 275px;
+    max-height: 367px;
     overflow: hidden;
-    transition: max-height var(--manga-grid-timer) ease-in-out;
+    transition: max-height var(--manga-grid-timer) ease-in-out, border var(--manga-grid-timer) ease-in-out, box-shadow var(--manga-grid-timer) ease-in-out;
+    border: 1.5px solid rgb(var(--color-blue));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue)), inset 0 0 6px 2px rgb(var(--color-blue));
 }
 .favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+3) {
     opacity: 0;
@@ -294,7 +303,9 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
     transform: translateY(40px);
 }
 .favourites.preview .favourites-wrap.manga:hover {
-    max-height: 540px !important;
+    max-height: 630px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 .favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+3) {
     opacity: 1;
@@ -316,7 +327,7 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
 .overview div.favourites:nth-child(6) > h2:nth-child(1)::before {
     content: "";
     position: absolute;
-    top: 295px;
+    top: 302px;
     left: 50%;
     transform: translateX(-50%);
     width: 12px;
@@ -338,9 +349,11 @@ body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.fa
 }
 
 .favourites.preview .favourites-wrap.characters {
-    max-height: 275px;
+    max-height: 305px;
     overflow: hidden;
-    transition: max-height var(--characters-grid-timer) ease-in-out;
+    transition: max-height var(--characters-grid-timer) ease-in-out, border var(--characters-grid-timer) ease-in-out, box-shadow var(--characters-grid-timer) ease-in-out;
+    border: 1.5px solid rgb(var(--color-blue));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue)), inset 0 0 6px 2px rgb(var(--color-blue));
 }
 .favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+9) {
     opacity: 0;
@@ -354,7 +367,9 @@ body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.fa
     transform: translateY(60px);
 }
 .favourites.preview .favourites-wrap.characters:hover {
-    max-height: 670px !important;
+    max-height: 680px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 .favourites.preview .favourites-wrap.characters:hover .favourite.character:nth-child(n+9) {
     opacity: 1;
@@ -379,7 +394,7 @@ body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.fa
 .overview div.favourites:nth-child(7) > h2:nth-child(1)::before {
     content: "";
     position: absolute;
-    top: 295px;
+    top: 302px;
     left: 50%;
     transform: translateX(-50%);
     width: 12px;
@@ -401,9 +416,11 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
 }
 
 .favourites.preview .favourites-wrap.staff {
-    max-height: 275px;
+    max-height: 305px;
     overflow: hidden;
-    transition: max-height var(--staff-grid-timer) ease-in-out;
+    transition: max-height var(--staff-grid-timer) ease-in-out, border var(--staff-grid-timer) ease-in-out, box-shadow var(--staff-grid-timer) ease-in-out;
+    border: 1.5px solid rgb(var(--color-blue));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue)), inset 0 0 6px 2px rgb(var(--color-blue));
 }
 .favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+9) {
     opacity: 0;
@@ -411,7 +428,9 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     transition: opacity var(--staff-grid-timer) ease-in-out, transform var(--staff-grid-timer) ease-in-out;
 }
 .favourites.preview .favourites-wrap.staff:hover {
-    max-height: 410px !important;
+    max-height: 420px !important;
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 .favourites.preview .favourites-wrap.staff:hover .favourite.staff:nth-child(n+9) {
     opacity: 1;
@@ -430,9 +449,11 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
 .favourites.preview .favourites-wrap.studios {
     background: unset !important;
     margin-top: -5px;
+    border: 1.5px solid rgb(var(--color-blue));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue)), inset 0 0 6px 2px rgb(var(--color-blue));
 }
 .overview .favourite.studio {
-    min-height: 120px;
+    min-height: 150px;
     font-size: 1.8rem;
     display: grid;
     grid-gap: 10px;
@@ -483,7 +504,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
 .overview .favourites > .favourites-wrap.studios {
     column-gap: 25px !important;
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    height: 285px !important;
+    height: 355px !important;
     row-gap: 17px !important;
     width: 408px !important;
     padding: 15px !important;
@@ -501,15 +522,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     position: relative;
     visibility: hidden;
 }
-.overview div.favourites:nth-child(4) > h2:nth-child(1)::after {
-    right: 153px;
-    top: 11px;
-    content: "anime (ordered)";
-    font-style: italic;
-    position: absolute;
-    visibility: visible;
-    text-transform: lowercase;
-}
+
 .favourites .favourites:nth-child(1) .section-header::after {
     content: "anime (ordered, looser as you go down)";
     font-style: italic;
@@ -521,15 +534,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     position: relative;
     visibility: hidden;
 }
-.overview div.favourites:nth-child(5) > h2:nth-child(1)::after {
-    right: 150px;
-    top: 11px;
-    content: "manga (ordered)";
-    font-style: italic;
-    position: absolute;
-    visibility: visible;
-    text-transform: lowercase;
-}
+
 .favourites .favourites:nth-child(2) .section-header::after {
     content: "manga (ordered, looser as you go down)";
     font-style: italic;
@@ -541,7 +546,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     position: relative;
     visibility: hidden;
 }
-.overview div.favourites:nth-child(6) > h2:nth-child(1)::after, .favourites .favourites:nth-child(3) .section-header::after {
+.favourites .favourites:nth-child(3) .section-header::after {
     content: "characters (very loosely ordered)";
     font-style: italic;
     position: absolute;
@@ -560,7 +565,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     position: relative;
     visibility: hidden;
 }
-.overview div.favourites:nth-child(7) > h2:nth-child(1)::after, .favourites .favourites:nth-child(4) .section-header::after {
+.favourites .favourites:nth-child(4) .section-header::after {
     content: "staff (very loosely ordered)";
     font-style: italic;
     position: absolute;
@@ -576,7 +581,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     position: relative;
     visibility: hidden;
 }
-.overview div.favourites:nth-child(8) > h2:nth-child(1)::after, .favourites .favourites:nth-child(5) .section-header::after {
+.favourites .favourites:nth-child(5) .section-header::after {
     content: "studios (ordered)";
     font-style: italic;
     position: absolute;
@@ -591,7 +596,4 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
 /*--- Fix Margins for Titles/Wraps ---*/
 .overview div.favourites h2:not(.favourites:nth-child(4) > h2:nth-child(1)) {
     margin-top: -25px;
-}
-.overview div.favourites:nth-child(4) > h2:nth-child(1)::after, .overview div.favourites:nth-child(5) > h2:nth-child(1)::after, .overview div.favourites:nth-child(6) > h2:nth-child(1)::after, .overview div.favourites:nth-child(7) > h2:nth-child(1)::after, .overview div.favourites:nth-child(8) > h2:nth-child(1)::after {
-    margin-bottom: -19px;
 }
