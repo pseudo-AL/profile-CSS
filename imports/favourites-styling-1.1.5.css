@@ -455,6 +455,11 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     margin-top: -5px;
     border: 1.5px solid rgb(var(--color-blue));
     box-shadow: 0 0 6px 2px rgb(var(--color-blue)), inset 0 0 6px 2px rgb(var(--color-blue));
+    transition: border var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+.favourites.preview .favourites-wrap.studios:hover {
+    border: 1.5px solid rgb(var(--color-blue-dim));
+    box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 .overview .favourite.studio {
     min-height: 150px;
