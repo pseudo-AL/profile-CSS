@@ -3915,7 +3915,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover)
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) { /* Preserves Background Change on Hover */
-    --banner-url: url(https://i.imgur.com/RUlQTHx.jpeg);
+    --banner-url: url(https://i.imgur.com/qEXK4U3.jpeg);
     --banner-bubble: url(https://i.imgur.com/ravRHjM.png);
 }
 
@@ -3979,7 +3979,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) { /* Preserves Background Change on Hover */
-    --banner-url: url(https://i.imgur.com/RUlQTHx.jpeg);
+    --banner-url: url(https://i.imgur.com/qEXK4U3.jpeg);
     --banner-bubble: url(https://i.imgur.com/ravRHjM.png);
 }
 
