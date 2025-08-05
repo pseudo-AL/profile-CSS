@@ -445,7 +445,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
 }
 
-.favourites.preview .favourites-wrap.staff:hover .favourite.staff:nth-child(n+13) {
+.favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+13) {
     visibility: hidden;
 }
 
