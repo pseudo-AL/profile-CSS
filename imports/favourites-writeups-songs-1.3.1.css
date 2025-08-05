@@ -3900,7 +3900,7 @@ body:has(a.favourite[href*="manga/86218"]:hover) .overview .about a[href="https:
 .overview .about a[href="https://anilist.co/activity/831145330"]:hover::before { /* Clickable Hover Styling */
     opacity: 1;
     visibility: visible;
-    color: #e79a70;
+    color: #29325a;
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]::before { /* Preserves Song Clickable Visibility on Hover */
@@ -3911,7 +3911,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover)
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) a.favourite[href*="manga/86218"] { /* Preserves Manga Hover Styles on Hover */
     filter: var(--cover-saturation-hover);
     background-size: var(--background-zoom) !important; 
-    box-shadow: var(--box-shadow) #e79a70;
+    box-shadow: var(--box-shadow) #29325a;
 }
 
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) { /* Preserves Background Change on Hover */
@@ -3964,7 +3964,7 @@ body:has(a.favourite[href*="manga/86218"]:hover) .overview .about a[href="https:
 .overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover::before { /* Clickable Hover Styling */
     opacity: 1;
     visibility: visible;
-    color: #e79a70;
+    color: #29325a;
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="https://anilist.co/activity/831145330"]::before { /* Preserves Write-Up Clickable Visibility on Hover */
@@ -3975,7 +3975,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) a.favourite[href*="manga/86218"] { /* Preserves Manga Hover Styles on Hover */
     filter: var(--cover-saturation-hover);
     background-size: var(--background-zoom) !important; 
-    box-shadow: var(--box-shadow) #e79a70;
+    box-shadow: var(--box-shadow) #29325a;
 }
 
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) { /* Preserves Background Change on Hover */
