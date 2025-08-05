@@ -213,7 +213,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
     box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
-body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .favourite.media:nth-child(n+3) {
+body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3) {
     opacity: 1;
     transform: translateY(0);
 }
