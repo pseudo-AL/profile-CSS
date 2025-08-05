@@ -164,12 +164,12 @@ body:has(a.favourite[href*="anime/3297"]:hover) {
 
 /*--- Bloom Into You (Manga)---*/
 .favourites.preview a.favourite[href*="manga/86218"] {
-    background-image: url(https://i.imgur.com/7fwkqQA.jpeg) !important;
+    background-image: url(https://i.imgur.com/BoMyBZW.jpeg) !important;
     grid-column: 1 / 5;
     min-height: 150px !important;
 }
 .favourites.preview a.favourite[href*="manga/86218"]:hover {
-    box-shadow: var(--box-shadow) #e79a70;
+    box-shadow: var(--box-shadow) #29325a;
 }
 .favourites a.favourite[href*="manga/86218"]:hover {
     box-shadow: var(--box-shadow) #e9978c;
