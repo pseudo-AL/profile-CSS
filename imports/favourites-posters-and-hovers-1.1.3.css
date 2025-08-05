@@ -175,7 +175,7 @@ body:has(a.favourite[href*="anime/3297"]:hover) {
     box-shadow: var(--box-shadow) #e9978c;
 }
 body:has(a.favourite[href*="manga/86218"]:hover) {
-    --banner-url: url(https://i.imgur.com/yM39bna.jpeg);
+    --banner-url: url(https://i.imgur.com/RUlQTHx.jpeg);
     --banner-bubble: url(https://i.imgur.com/ravRHjM.png);
 }
 
@@ -421,16 +421,16 @@ body:has(a.favourite[href*="manga/70171"]:hover) {
 
 /*--- Kyoto Animation (KyoAni) ---*/
 a.favourite[href*="studio/2/"] {
-    background-image: url("https://i.imgur.com/tiEbPVD.jpeg") !important;
+    background-image: url(https://i.imgur.com/gEHSbUA.jpeg) !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
 .favourites a.favourite.studio[href*="studio/2/"]:hover {
     color: #ffffff;
-    text-shadow: rgb(120, 158, 205) 1px 0px 0px, rgb(120, 158, 205) 0.540302px 0.841471px 0px, rgb(120, 158, 205) -0.416147px 0.909297px 0px, rgb(120, 158, 205) -0.989992px 0.14112px 0px, rgb(120, 158, 205) -0.653644px -0.756802px 0px, rgb(120, 158, 205) 0.283662px -0.958924px 0px, rgb(120, 158, 205) 0.96017px -0.279415px 0px !important;
+    text-shadow: rgb(144, 89, 74) 1px 0px 0px, rgb(144, 89, 74) 0.540302px 0.841471px 0px, rgb(144, 89, 74) -0.416147px 0.909297px 0px, rgb(144, 89, 74) -0.989992px 0.14112px 0px, rgb(144, 89, 74) -0.653644px -0.756802px 0px, rgb(144, 89, 74) 0.283662px -0.958924px 0px, rgb(144, 89, 74) 0.96017px -0.279415px 0px !important;
 }
 .favourites a.favourite.studio[href*="studio/2/"]:hover::after {
-    box-shadow: var(--box-shadow) #afa4b9 !important;
+    box-shadow: var(--box-shadow) #c9aea7 !important;
 }
 body:has(a.favourite[href*="studio/2"]:hover) {
     --banner-url: url(https://i.imgur.com/tFGqZQ9.jpeg);
@@ -439,7 +439,7 @@ body:has(a.favourite[href*="studio/2"]:hover) {
 
 /*--- P.A. Works (PA Works) ---*/
 a.favourite[href*="studio/132/"] {
-    background-image: url("https://i.imgur.com/sAq5vSb.jpeg") !important;
+    background-image: url("https://i.imgur.com/VSpqiBv.jpeg") !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
