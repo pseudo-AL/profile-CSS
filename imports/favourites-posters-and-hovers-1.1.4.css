@@ -175,7 +175,7 @@ body:has(a.favourite[href*="anime/3297"]:hover) {
     box-shadow: var(--box-shadow) #e9978c;
 }
 body:has(a.favourite[href*="manga/86218"]:hover) {
-    --banner-url: url(https://i.imgur.com/RUlQTHx.jpeg);
+    --banner-url: url(https://i.imgur.com/qEXK4U3.jpeg);
     --banner-bubble: url(https://i.imgur.com/ravRHjM.png);
 }
 
