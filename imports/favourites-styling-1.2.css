@@ -47,7 +47,7 @@ body { /* Optional fallback background colour if there's a gap in transitions */
     padding-top: 15px !important;
     padding-bottom: 15px !important;
     margin-bottom: 40px !important;
-    background: unset !important;
+    background: var(--foreground) !important;
     justify-content: center !important;
     width: 408px !important;
 }
@@ -451,7 +451,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
 
 /*--- Favourites Studio Styling (Wrap, Grid) ---*/
 .favourites.preview .favourites-wrap.studios {
-    background: unset !important;
+    background: var(--foreground) !important;
     margin-top: -5px;
     border: 1.5px solid rgb(var(--color-blue));
     box-shadow: 0 0 6px 2px rgb(var(--color-blue)), inset 0 0 6px 2px rgb(var(--color-blue));
