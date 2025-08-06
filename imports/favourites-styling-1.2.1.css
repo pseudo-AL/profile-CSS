@@ -84,6 +84,10 @@ body { /* Optional fallback background colour if there's a gap in transitions */
     }
 }
 
+@keyframes enablePointerEvents {
+    to { pointer-events: auto; }
+}
+
 /*════════ Anime Grid ════════*/
 .overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
     content: "";
@@ -121,6 +125,8 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
     opacity: 0;
     transform: translateY(20px);
     transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out;
+    pointer-events: none;
+    animation: none;
 }
 .favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+7) {
     transform: translateY(40px);
@@ -149,6 +155,7 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
     filter: var(--cover-saturation);
     background-size: 100% !important;
     transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s 0.2s forwards;
 }
 .favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+7):nth-child(-n+10) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
@@ -298,6 +305,8 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
     opacity: 0;
     transform: translateY(20px);
     transition: opacity var(--manga-grid-timer) ease-in-out, transform var(--manga-grid-timer) ease-in-out;
+    pointer-events: none;
+    animation: none;
 }
 .favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+7) {
     transform: translateY(40px);
@@ -321,6 +330,7 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
     background-size: var(--background-zoom) !important;
     filter: var(--cover-saturation-hover);
     transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s 0.2s forwards;
 }
 
 /*════════ Characters Grid ════════*/
@@ -359,6 +369,8 @@ body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.fa
     opacity: 0;
     transform: translateY(20px);
     transition: opacity var(--characters-grid-timer) ease-in-out, transform var(--characters-grid-timer) ease-in-out;
+    pointer-events: none;
+    animation: none;
 }
 .favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+13) {
     transform: translateY(40px);
@@ -377,6 +389,7 @@ body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.fa
     filter: var(--cover-saturation);
     background-size: 100% !important;
     transition: opacity var(--characters-grid-timer) ease-in-out, transform var(--characters-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s 0.2s forwards;
 }
 .favourites.preview .favourites-wrap.characters:hover .favourite.character:nth-child(n+13):nth-child(-n+16) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
@@ -426,6 +439,8 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     opacity: 0;
     transform: translateY(20px);
     transition: opacity var(--staff-grid-timer) ease-in-out, transform var(--staff-grid-timer) ease-in-out;
+    pointer-events: none;
+    animation: none;
 }
 .favourites.preview .favourites-wrap.staff:hover {
     max-height: 420px !important;
@@ -443,6 +458,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     background-size: var(--background-zoom) !important;
     filter: var(--cover-saturation-hover);
     transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s 0.2s forwards;
 }
 
 .favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+13) {
