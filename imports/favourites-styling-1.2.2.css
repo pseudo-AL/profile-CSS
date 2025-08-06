@@ -322,6 +322,7 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
     filter: var(--cover-saturation);
     background-size: 100% !important;
     transition: opacity var(--manga-grid-timer) ease-in-out, transform var(--manga-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s 0.2s forwards;
 }
 .favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+7) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
@@ -330,7 +331,6 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
     background-size: var(--background-zoom) !important;
     filter: var(--cover-saturation-hover);
     transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
-    animation: enablePointerEvents 0s 0.2s forwards;
 }
 
 /*════════ Characters Grid ════════*/
@@ -453,12 +453,12 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     filter: var(--cover-saturation);
     background-size: 100% !important;
     transition: opacity var(--staff-grid-timer) ease-in-out, transform var(--staff-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s 0.2s forwards;
 }
 .favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+9):hover {
     background-size: var(--background-zoom) !important;
     filter: var(--cover-saturation-hover);
     transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
-    animation: enablePointerEvents 0s 0.2s forwards;
 }
 
 .favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+13) {
