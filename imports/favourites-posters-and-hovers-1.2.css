@@ -10,10 +10,6 @@
 .favourites a.favourite[href*="anime/11239"]:hover {
     box-shadow: var(--box-shadow) #89d191;
 }
-body:has(a.favourite[href*="anime/11239"]:hover) {
-    --banner-url: url(https://i.imgur.com/carA3LN.jpeg);
-    --banner-bubble: url(https://i.imgur.com/vghbKgZ.png);
-}
 
 /*--- Aria the Origination ---*/
 
@@ -27,10 +23,6 @@ body:has(a.favourite[href*="anime/11239"]:hover) {
 }
 .favourites a.favourite[href*="anime/3297"]:hover {
     box-shadow: var(--box-shadow) #5191f3;
-}
-body:has(a.favourite[href*="anime/3297"]:hover) {
-    --banner-url: url(https://i.imgur.com/ngz2asu.jpeg);
-    --banner-bubble: url(https://i.imgur.com/mS1bwGf.png);
 }
 
 /*--- Mushishi ---*/
@@ -174,10 +166,6 @@ body:has(a.favourite[href*="anime/3297"]:hover) {
 .favourites a.favourite[href*="manga/86218"]:hover {
     box-shadow: var(--box-shadow) #e9978c;
 }
-body:has(a.favourite[href*="manga/86218"]:hover) {
-    --banner-url: url(https://i.imgur.com/qEXK4U3.jpeg);
-    --banner-bubble: url(https://i.imgur.com/ravRHjM.png);
-}
 
 /*--- Oregairu (Light Novel) ---*/
 .favourites.preview a.favourite[href*="manga/70171"] {
@@ -190,10 +178,6 @@ body:has(a.favourite[href*="manga/86218"]:hover) {
 }
 .favourites a.favourite[href*="manga/70171"]:hover {
     box-shadow: var(--box-shadow) #9c99ad;
-}
-body:has(a.favourite[href*="manga/70171"]:hover) {
-    --banner-url: url(https://i.imgur.com/aPpnHr3.jpeg);
-    --banner-bubble: url(https://i.imgur.com/AxVHQFG.png);
 }
 
 /*--- Yokohama Kaidashi Kikou (YKK) ---*/
@@ -432,10 +416,6 @@ a.favourite[href*="studio/2/"] {
 .favourites a.favourite.studio[href*="studio/2/"]:hover::after {
     box-shadow: var(--box-shadow) #c9aea7 !important;
 }
-body:has(a.favourite[href*="studio/2"]:hover) {
-    --banner-url: url(https://i.imgur.com/tFGqZQ9.jpeg);
-    --banner-bubble: url(https://i.imgur.com/gT5xyq9.png);
-}
 
 /*--- P.A. Works (PA Works) ---*/
 a.favourite[href*="studio/132/"] {
@@ -449,8 +429,4 @@ a.favourite[href*="studio/132/"] {
 }
 .favourites a.favourite.studio[href*="studio/132/"]:hover::after {
     box-shadow: var(--box-shadow) #ffffff !important;
-}
-body:has(a.favourite[href*="studio/132"]:hover) {
-    --banner-url: url(https://i.imgur.com/ZlvGhgL.jpeg);
-    --banner-bubble: url(https://i.imgur.com/1jgRv0i.png);
 }
