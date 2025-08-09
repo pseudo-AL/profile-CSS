@@ -499,7 +499,6 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     height: 100%;
     background: inherit;
     z-index: -1;
-    filter: blur(0px) brightness(1);
     transition: filter var(--master-transition-timer) ease-in-out, transform var(--master-transition-timer) ease-in-out;
     transform: scale(1);
     border-radius: var(--border-radius) !important;
@@ -519,10 +518,6 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     border-radius: var(--border-radius) !important;
 }
 
-.favourites a.favourite.studio:hover::before {
-    filter: blur(1.5px) brightness(0.8);
-    transform: scale(1.01, 1.03);
-}
 /*--- Stuff to Specifically Fix Automail 5-Width Fuckery For Studios ---*/
 .overview .favourites > .favourites-wrap.studios {
     column-gap: 25px !important;
