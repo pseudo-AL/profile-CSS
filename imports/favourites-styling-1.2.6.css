@@ -244,7 +244,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
     border-radius: var(--border-radius);
     white-space: nowrap;
     opacity: 0;
-    transition: opacity var(--master-transition-timer) ease-in-out;
+    transition: opacity 0.26s ease-in-out;
     pointer-events: none;
     color: white;
     z-index: 15;
@@ -260,7 +260,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
     border-style: solid;
     border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
     opacity: 0;
-    transition: opacity var(--master-transition-timer) ease-in-out;
+    transition: opacity 0.26s ease-in-out;
     z-index: 15;
     pointer-events: none;
 }
