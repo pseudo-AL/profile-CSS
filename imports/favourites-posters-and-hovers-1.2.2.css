@@ -423,7 +423,7 @@ a.favourite[href*="studio/2/"] {
     transform: translate(-50%, -50%);
     font-size: 13px;
     background: rgba(10, 10, 10, 0.9);
-    padding: 6px 12px;
+    padding: 6px 11px 6px 12px;
     border-radius: var(--border-radius);
     white-space: nowrap;
     opacity: 0;
@@ -470,7 +470,7 @@ a.favourite[href*="studio/132/"] {
     transform: translate(-50%, -50%);
     font-size: 13px;
     background: rgba(10, 10, 10, 0.9);
-    padding: 6px 12px;
+    padding: 6px 11px 6px 12px;
     border-radius: var(--border-radius);
     white-space: nowrap;
     opacity: 0;
@@ -493,7 +493,6 @@ a.favourite[href*="studio/132/"] {
     z-index: 15;
     pointer-events: none;
 }
-
 body:has(.favourites a.favourite.studio[href*="studio/132/"]:hover) .overview .about a[href="paworkstooltip"]::before, body:has(.favourites a.favourite.studio[href*="studio/132/"]:hover) .overview .about a[href="paworkstooltip"]::after {
     opacity: 1;
 }
