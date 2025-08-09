@@ -240,7 +240,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
     transform: translate(-50%, -50%);
     font-size: 13px;
     background: rgba(10, 10, 10, 0.9);
-    padding: 6px 12px;
+    padding: 6px 11px 6px 12px;
     border-radius: var(--border-radius);
     white-space: nowrap;
     opacity: 0;
