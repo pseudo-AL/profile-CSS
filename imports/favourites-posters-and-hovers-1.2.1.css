@@ -409,12 +409,45 @@ a.favourite[href*="studio/2/"] {
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
-.favourites a.favourite.studio[href*="studio/2/"]:hover {
-    color: #ffffff;
-    text-shadow: rgb(144, 89, 74) 1px 0px 0px, rgb(144, 89, 74) 0.540302px 0.841471px 0px, rgb(144, 89, 74) -0.416147px 0.909297px 0px, rgb(144, 89, 74) -0.989992px 0.14112px 0px, rgb(144, 89, 74) -0.653644px -0.756802px 0px, rgb(144, 89, 74) 0.283662px -0.958924px 0px, rgb(144, 89, 74) 0.96017px -0.279415px 0px !important;
-}
 .favourites a.favourite.studio[href*="studio/2/"]:hover::after {
     box-shadow: var(--box-shadow) #c9aea7 !important;
+}
+.overview .about a[href="kyoanitooltip"]::before {
+    text-align: center;
+    content: "kyoto animation";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 1904px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15;
+}
+.overview .about a[href="kyoanitooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 1925px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+body:has(.favourites a.favourite.studio[href*="studio/2/"]:hover) .overview .about a[href="kyoanitooltip"]::before, body:has(.favourites a.favourite.studio[href*="studio/2/"]:hover) .overview .about a[href="kyoanitooltip"]::after {
+    opacity: 1;
 }
 
 /*--- P.A. Works (PA Works) ---*/
@@ -423,10 +456,44 @@ a.favourite[href*="studio/132/"] {
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
-.favourites a.favourite.studio[href*="studio/132/"]:hover {
-    color: #ffffff;
-    text-shadow: rgb(125, 102, 189) 1px 0px 0px, rgb(125, 102, 189) 0.540302px 0.841471px 0px, rgb(125, 102, 189) -0.416147px 0.909297px 0px, rgb(125, 102, 189) -0.989992px 0.14112px 0px, rgb(125, 102, 189) -0.653644px -0.756802px 0px, rgb(125, 102, 189) 0.283662px -0.958924px 0px, rgb(125, 102, 189) 0.96017px -0.279415px 0px !important;
-}
 .favourites a.favourite.studio[href*="studio/132/"]:hover::after {
     box-shadow: var(--box-shadow) #ffffff !important;
+}
+.overview .about a[href="paworkstooltip"]::before {
+    text-align: center;
+    content: "p.a. works";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2066px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15;
+}
+.overview .about a[href="paworkstooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2087px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+
+body:has(.favourites a.favourite.studio[href*="studio/132/"]:hover) .overview .about a[href="paworkstooltip"]::before, body:has(.favourites a.favourite.studio[href*="studio/132/"]:hover) .overview .about a[href="paworkstooltip"]::after {
+    opacity: 1;
 }
