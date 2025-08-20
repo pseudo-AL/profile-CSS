@@ -4232,7 +4232,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=T5mbj7cP6h4"]:
 
 /*════════ Write-Up ════════*/
 
-.overview .about a[href="https://anilist.co/activity/774275832"]::before { /* Main Clickable */
+.overview .about a[href="https://anilist.co/activity/944730697"]::before { /* Main Clickable */
     content: "✍︎";
     font-weight: 700;
     color: white;
@@ -4253,46 +4253,46 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=T5mbj7cP6h4"]:
     text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
 }
 
-body:has(a.favourite[href*="manga/169725"]:hover) .overview .about a[href="https://anilist.co/activity/774275832"]::before { /* Activates Visibility on Manga Hover */
+body:has(a.favourite[href*="manga/169725"]:hover) .overview .about a[href="https://anilist.co/activity/944730697"]::before { /* Activates Visibility on Manga Hover */
     opacity: 1;
     visibility: visible;
 }
 
-body:has(.favourites.preview .favourites-wrap.manga:hover) .overview .about a[href="https://anilist.co/activity/774275832"]::before {
+body:has(.favourites.preview .favourites-wrap.manga:hover) .overview .about a[href="https://anilist.co/activity/944730697"]::before {
     display: flex;
 }
 
-.overview .about a[href="https://anilist.co/activity/774275832"]:hover::before { /* Clickable Hover Styling */
+.overview .about a[href="https://anilist.co/activity/944730697"]:hover::before { /* Clickable Hover Styling */
     opacity: 1;
     visibility: visible;
     color: #9ac2c7;
     display: flex;
 }
 
-body:has(.overview .about a[href="https://anilist.co/activity/774275832"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=DAvsLZL_snw"]::before { /* Preserves Song Clickable Visibility on Hover */
+body:has(.overview .about a[href="https://anilist.co/activity/944730697"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=DAvsLZL_snw"]::before { /* Preserves Song Clickable Visibility on Hover */
     opacity: 1;
     visibility: visible;
     display: flex;
 }
 
-body:has(.overview .about a[href="https://anilist.co/activity/774275832"]:hover) a.favourite[href*="manga/169725"] { /* Preserves Manga Hover Styles on Hover */
+body:has(.overview .about a[href="https://anilist.co/activity/944730697"]:hover) a.favourite[href*="manga/169725"] { /* Preserves Manga Hover Styles on Hover */
     filter: var(--cover-saturation-hover);
     background-size: var(--background-zoom) !important; 
     box-shadow: var(--box-shadow) #9ac2c7;
 }
 
-body:has(.overview .about a[href="https://anilist.co/activity/774275832"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
+body:has(.overview .about a[href="https://anilist.co/activity/944730697"]:hover) .favourites.preview .favourites-wrap.manga { /* Preserves Grid Expansion on Hover */
     max-height: 630px !important;
     border: 1.5px solid rgb(var(--color-blue-dim));
     box-shadow: 0 0 6px 2px rgb(var(--color-blue-dim)), inset 0 0 6px 2px rgb(var(--color-blue-dim));
 }
 
-body:has(.overview .about a[href="https://anilist.co/activity/774275832"]:hover) .favourites-wrap.manga .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
+body:has(.overview .about a[href="https://anilist.co/activity/944730697"]:hover) .favourites-wrap.manga .favourite.media:nth-child(n+3) { /* Preserves Grid Expansion Styles on Hover */
     opacity: 1;
     transform: translateY(0);
 }
 
-body:has(.overview .about a[href="https://anilist.co/activity/774275832"]:hover) .overview div.favourites:nth-child(5) > h2:nth-child(1)::before { /* Preserves Grid Expansion Styles on Hover */
+body:has(.overview .about a[href="https://anilist.co/activity/944730697"]:hover) .overview div.favourites:nth-child(5) > h2:nth-child(1)::before { /* Preserves Grid Expansion Styles on Hover */
     opacity: 0;
 }
 
@@ -4334,7 +4334,7 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview .about a[hr
     display: flex;
 }
 
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=DAvsLZL_snw"]:hover) .overview .about a[href="https://anilist.co/activity/774275832"]::before { /* Preserves Write-Up Clickable Visibility on Hover */
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=DAvsLZL_snw"]:hover) .overview .about a[href="https://anilist.co/activity/944730697"]::before { /* Preserves Write-Up Clickable Visibility on Hover */
     opacity: 1;
     visibility: visible;
     display: flex;
