@@ -314,9 +314,9 @@
     box-shadow: var(--box-shadow) #9baeb4;
 }
 
-/*--- Nana Oosaki (Nana) ---*/
-.favourites a.favourite[href*="character/702"]:hover {
-    box-shadow: var(--box-shadow) #3f3773;
+/*--- Shimamura (AdaShima) ---*/
+.favourites a.favourite[href*="character/144718"]:hover {
+    box-shadow: var(--box-shadow) #d6c8bf;
 }
 
 /*--- Naoko Yamada ---*/
