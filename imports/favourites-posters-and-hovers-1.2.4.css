@@ -180,6 +180,11 @@
     box-shadow: var(--box-shadow) #9c99ad;
 }
 
+/*--- Adachi and Shimamura 99.9 ---*/
+.favourites a.favourite[href*="manga/169725"]:hover {
+    box-shadow: var(--box-shadow) #9ac2c7;
+}
+
 /*--- Yokohama Kaidashi Kikou (YKK) ---*/
 .favourites a.favourite[href*="manga/30004"]:hover {
     box-shadow: var(--box-shadow) #abd2d9;
@@ -208,11 +213,6 @@
 /*--- Hyouka/Koten-bu (Light Novel) ---*/
 .favourites a.favourite[href*="manga/65513"]:hover {
     box-shadow: var(--box-shadow) #95cc41;
-}
-
-/*--- Scum's Wish ---*/
-.favourites a.favourite[href*="manga/74929"]:hover {
-    box-shadow: var(--box-shadow) #583e8f;
 }
 
 /*--- Kamigami no Itadaki (The Summit of the Gods) ---*/
