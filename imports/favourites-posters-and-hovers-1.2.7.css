@@ -109,11 +109,11 @@
 }
 
 /*--- Yuru Camp ---*/
-#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(17) {
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(16) {
     background-size: 102% !important;
 }
 
-#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(17):hover {
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(16):hover {
     background-size: 110% !important;
 }
 
