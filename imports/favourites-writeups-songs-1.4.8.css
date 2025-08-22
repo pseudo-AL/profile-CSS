@@ -2275,7 +2275,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/694817758"]:hover)
     display: flex;
 }
 
-body:has(.overview .about a[href="https://anilist.co/activity/694817758"]:hover) #app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(17) {
+body:has(.overview .about a[href="https://anilist.co/activity/694817758"]:hover) #app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(16) {
     filter: var(--cover-saturation-hover);
     background-size: 110% !important;
     box-shadow: var(--box-shadow) #6f62a9;
@@ -2346,7 +2346,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=cs4qzCzJTKk"]:
     display: flex;
 }
 
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=cs4qzCzJTKk"]:hover) #app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(17) {
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=cs4qzCzJTKk"]:hover) #app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(16) {
     filter: var(--cover-saturation-hover);
     background-size: 110% !important;
     box-shadow: var(--box-shadow) #6f62a9;
