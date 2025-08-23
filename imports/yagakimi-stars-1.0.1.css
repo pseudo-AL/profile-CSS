@@ -36,7 +36,7 @@
   animation: sparkle-glow 1.35s ease infinite alternate;
   animation-delay: 0.3s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -53,7 +53,7 @@
   animation: sparkle-glow 0.92s ease infinite alternate;
   animation-delay: 0.9s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -70,7 +70,7 @@
   animation: sparkle-glow 1.48s ease infinite alternate;
   animation-delay: 0.2s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -87,7 +87,7 @@
   animation: sparkle-glow 1.73s ease infinite alternate;
   animation-delay: 1.1s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -104,7 +104,7 @@
   animation: sparkle-glow 1.17s ease infinite alternate;
   animation-delay: 0.6s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -121,7 +121,7 @@
   animation: sparkle-glow 1.6s ease infinite alternate;
   animation-delay: 0.1s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -138,7 +138,7 @@
   animation: sparkle-glow 1.58s ease infinite alternate;
   animation-delay: 1.4s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -155,7 +155,7 @@
   animation: sparkle-glow 1.41s ease infinite alternate;
   animation-delay: 0.5s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -172,7 +172,7 @@
   animation: sparkle-glow 0.74s ease infinite alternate;
   animation-delay: 0.7s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -189,7 +189,7 @@
   animation: sparkle-glow 1.67s ease infinite alternate;
   animation-delay: 1.2s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -206,7 +206,7 @@
   animation: sparkle-glow 1.29s ease infinite alternate;
   animation-delay: 0.95s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -223,7 +223,7 @@
   animation: sparkle-glow 1.8s ease infinite alternate;
   animation-delay: 0.15s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -240,7 +240,7 @@
   animation: sparkle-glow 0.96s ease infinite alternate;
   animation-delay: 0.65s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -257,7 +257,7 @@
   animation: sparkle-glow 1.44s ease infinite alternate;
   animation-delay: 0.05s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -274,7 +274,7 @@
   animation: sparkle-glow 1.09s ease infinite alternate;
   animation-delay: 1.0s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -291,7 +291,7 @@
   animation: sparkle-glow 1.62s ease infinite alternate;
   animation-delay: 0.55s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -308,7 +308,7 @@
   animation: sparkle-glow 1.38s ease infinite alternate;
   animation-delay: 1.35s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -325,7 +325,7 @@
   animation: sparkle-glow 0.88s ease infinite alternate;
   animation-delay: 0.45s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -342,7 +342,7 @@
   animation: sparkle-glow 1.52s ease infinite alternate;
   animation-delay: 0.85s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -359,7 +359,7 @@
   animation: sparkle-glow 1.07s ease infinite alternate;
   animation-delay: 1.25s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -376,7 +376,7 @@
   animation: sparkle-glow 1.33s ease infinite alternate;
   animation-delay: 0.35s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -393,7 +393,7 @@
   animation: sparkle-glow 1.67s ease infinite alternate;
   animation-delay: 1.15s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -410,7 +410,7 @@
   animation: sparkle-glow 1.46s ease infinite alternate;
   animation-delay: 0.05s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -427,7 +427,7 @@
   animation: sparkle-glow 1.57s ease infinite alternate;
   animation-delay: 0.5s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -444,7 +444,7 @@
   animation: sparkle-glow 1.57s ease infinite alternate;
   animation-delay: 0.5s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -461,7 +461,7 @@
   animation: sparkle-glow 1.3s ease infinite alternate;
   animation-delay: 0.2s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
@@ -478,7 +478,7 @@
   animation: sparkle-glow 1.3s ease infinite alternate;
   animation-delay: 0.2s;
   filter: opacity(1);
-  transition: filter 0.2s ease 0.2s;
+  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
   will-change: filter;
 }
 
