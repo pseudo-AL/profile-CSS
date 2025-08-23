@@ -1,0 +1,490 @@
+@keyframes sparkle-glow {
+    0% {
+        transform: scale(0.0);
+        text-shadow:
+          0 0 0px white,
+          0 0 0px white,
+          0 0 0px white,
+          0 0 0px white,
+          0 0 0px rgba(255,255,255,0.0),
+          0 0 0px rgba(255,255,255,0.0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1);
+        text-shadow:
+          0 0 2px  white,
+          0 0 4px  white,
+          0 0 8px  white,
+          0 0 12px white,
+          0 0 16px rgba(255,255,255,0.8),
+          0 0 24px rgba(255,255,255,0.6);
+        opacity: 1;
+    }
+}
+
+.overview .about a[href="star1"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1095px;
+  left: 236px;
+  font-size: 7px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.35s ease infinite alternate;
+  animation-delay: 0.3s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star2"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1227px;
+  left: 367px;
+  font-size: 6px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 0.92s ease infinite alternate;
+  animation-delay: 0.9s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star3"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1134px;
+  left: 41px;
+  font-size: 8px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.48s ease infinite alternate;
+  animation-delay: 0.2s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star4"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1158px;
+  left: 321px;
+  font-size: 7px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.73s ease infinite alternate;
+  animation-delay: 1.1s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star5"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1095px;
+  left: 145px;
+  font-size: 9px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.17s ease infinite alternate;
+  animation-delay: 0.6s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star6"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1225px;
+  left: 100px;
+  font-size: 7px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.6s ease infinite alternate;
+  animation-delay: 0.1s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star7"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1158px;
+  left: 372px;
+  font-size: 8px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.58s ease infinite alternate;
+  animation-delay: 1.4s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star8"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1216px;
+  left: 22px;
+  font-size: 5px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.41s ease infinite alternate;
+  animation-delay: 0.5s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star9"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1120px;
+  left: 358px;
+  font-size: 7px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 0.74s ease infinite alternate;
+  animation-delay: 0.7s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star10"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1172px;
+  left: 41px;
+  font-size: 6px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.67s ease infinite alternate;
+  animation-delay: 1.2s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star11"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1101px;
+  left: 26px;
+  font-size: 7px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.29s ease infinite alternate;
+  animation-delay: 0.95s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star12"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1222px;
+  left: 259px;
+  font-size: 10px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.8s ease infinite alternate;
+  animation-delay: 0.15s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star13"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1112px;
+  left: 266px;
+  font-size: 8px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 0.96s ease infinite alternate;
+  animation-delay: 0.65s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star14"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1150px;
+  left: 272px;
+  font-size: 5px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.44s ease infinite alternate;
+  animation-delay: 0.05s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star15"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1141px;
+  left: 131px;
+  font-size: 7px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.09s ease infinite alternate;
+  animation-delay: 1.0s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star16"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1202px;
+  left: 297px;
+  font-size: 6px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.62s ease infinite alternate;
+  animation-delay: 0.55s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star17"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1103px;
+  left: 322px;
+  font-size: 8px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.38s ease infinite alternate;
+  animation-delay: 1.35s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star18"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1186px;
+  left: 341px;
+  font-size: 9px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 0.88s ease infinite alternate;
+  animation-delay: 0.45s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star19"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1136px;
+  left: 301px;
+  font-size: 6px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.52s ease infinite alternate;
+  animation-delay: 0.85s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star20"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1201px;
+  left: 68px;
+  font-size: 7px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.07s ease infinite alternate;
+  animation-delay: 1.25s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star21"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1118px;
+  left: 78px;
+  font-size: 5px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.33s ease infinite alternate;
+  animation-delay: 0.35s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star22"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1122px;
+  left: 104px;
+  font-size: 8px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.67s ease infinite alternate;
+  animation-delay: 1.15s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star23"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1156px;
+  left: 88px;
+  font-size: 7px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.46s ease infinite alternate;
+  animation-delay: 0.05s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star24"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1109px;
+  left: 193px;
+  font-size: 6px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.57s ease infinite alternate;
+  animation-delay: 0.5s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star25"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1229px;
+  left: 52px;
+  font-size: 9px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.57s ease infinite alternate;
+  animation-delay: 0.5s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star26"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1219px;
+  left: 312px;
+  font-size: 9px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.3s ease infinite alternate;
+  animation-delay: 0.2s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+.overview .about a[href="star27"]::before {
+  content: "✦";
+  position: absolute;
+  top: 1142px;
+  left: 345px;
+  font-size: 6px;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  animation: sparkle-glow 1.3s ease infinite alternate;
+  animation-delay: 0.2s;
+  filter: opacity(1);
+  transition: filter 0.2s ease 0.2s;
+  will-change: filter;
+}
+
+/* Consolidated hover hide */
+body:has(.favourites.preview .favourites-wrap.anime:hover)
+  .overview .about a[href^="star"]::before {
+  filter: opacity(0);
+  transition: filter 0s linear 0s;
+}
