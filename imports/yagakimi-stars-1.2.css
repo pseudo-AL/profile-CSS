@@ -482,11 +482,59 @@
   will-change: filter;
 }
 
-body:has(.favourites.preview .favourites-wrap.anime:hover)
-  .overview .about a[href^="star"]::before, body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover)
-  .overview .about a[href^="star"]::before, body:has(.overview .about a[href^="https://www.youtube.com/watch"]:hover)
-  .overview .about a[href^="star"]::before, body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover)
-  .overview .about a[href^="star"]::before {
+body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[href^="star"]::before, body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href^="star"]::before, 
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=i7zYUvZW9Xo"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/929944813"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=OLfxdOGGsyU"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/814482862"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=5fw8duwM5pQ"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/627732874"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=5RHFSsQSEmA"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/666950538"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=FsEVKZy6fzM"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/683463783"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=h5Cnp42d8qk"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/684950577"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=cKoB_R3paik"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/688150912"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=Y-JUFg2gAIw"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/708527293"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=Nnn64Jj4PsE"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/642641416"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=BX_t045HSK8"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/810987551"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=DvNVdo8Tchw"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/842415319"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=wxlb4_FdYZA"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/721543803"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=1Ne7oNIMJyA"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/758500795"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=nxTFAVAKT78"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/581216046"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=iCi3aJACsSE"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/698237502"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=cs4qzCzJTKk"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/694817758"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=K6hEjB6pt-E"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/562322060"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=NuBIDwIMh6A"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/564866741"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=dWKO7kzMh4M"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/822523988"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=NKNv8QKLJeE"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/663962372"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=oV4IbZpvSmE"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/659449448"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=D94MDszmlWg"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/719361603"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=traMXzjqYTA"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/813301277"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=_gZFTyPzeO4"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/730542107"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=E0d2uEQJbXs"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/705507281"]:hover) .overview .about a[href^="star"]::before {
   filter: opacity(0);
   transition: filter 0s linear 0s;
 }
