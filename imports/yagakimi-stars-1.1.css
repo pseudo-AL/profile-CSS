@@ -482,8 +482,9 @@
   will-change: filter;
 }
 
-/* Consolidated hover hide */
 body:has(.favourites.preview .favourites-wrap.anime:hover)
+  .overview .about a[href^="star"]::before, body:has(.overview .about a[href^="https://anilist.co/activity/"]:hover)
+  .overview .about a[href^="star"]::before, body:has(.overview .about a[href^="https://www.youtube.com/watch"]:hover)
   .overview .about a[href^="star"]::before {
   filter: opacity(0);
   transition: filter 0s linear 0s;
