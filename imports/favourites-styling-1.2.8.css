@@ -182,7 +182,7 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
 
 .overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"] {
     position: absolute;
-    top: calc(var(--about-height) + 1403.5px);
+    top: calc(var(--about-height) + 1401px);
     left: 307px;
     width: 85px;
     height: 120px;
@@ -235,7 +235,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
     white-space: nowrap;
     font-weight: 700;
     position: absolute;
-    top: calc(var(--about-height) + 1382.5px);
+    top: calc(var(--about-height) + 1380px);
     left: 349px;
     transform: translate(-50%, -50%);
     font-size: 13px;
@@ -253,7 +253,7 @@ body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frie
 .overview .about a[href="frierentooltip"]::after {
     content: "";
     position: absolute;
-    top: calc(var(--about-height) + 1403.5px);
+    top: calc(var(--about-height) + 1401px);
     left: 349px;
     transform: translate(-50%, -50%);
     border-width: 6px;
