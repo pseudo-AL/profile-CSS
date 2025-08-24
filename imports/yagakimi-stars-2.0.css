@@ -28,7 +28,7 @@
   pointer-events: none;
   transform-origin: center;
   z-index: 9;
-  transition: margin-top var(--anime-grid-timer) ease-in-out;
+  transition: margin-top var(--anime-grid-timer) ease-in-out, top var(--master-transition-timer) ease-in-out, left var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
 }
 
 .overview .about a[href="star1"]::before {
@@ -301,4 +301,160 @@ body:has(.overview .about a[href="https://anilist.co/activity/730542107"]:hover)
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=E0d2uEQJbXs"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/705507281"]:hover) .overview .about a[href^="star"]::before {
     margin-top: 770px;
+}
+
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star1"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star1"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star1"]::before {
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star2"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star2"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star2"]::before {
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star3"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star3"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star3"]::before {
+  top: calc(var(--about-height) + 864.40px);
+  left: 26.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star4"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star4"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star4"]::before {
+  top: calc(var(--about-height) + 890.80px);
+  left: 334.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star5"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star5"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star5"]::before {
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star6"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star6"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star6"]::before {
+  top: calc(var(--about-height) + 964.50px);
+  left: 91.20px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star7"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star7"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star7"]::before {
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star8"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star8"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star8"]::before {
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star9"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star9"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star9"]::before {
+  top: calc(var(--about-height) + 849.00px);
+  left: 375.00px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star10"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star10"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star10"]::before {
+  top: calc(var(--about-height) + 906.20px);
+  left: 26.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star11"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star11"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star11"]::before {
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star12"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star12"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star12"]::before {
+  top: calc(var(--about-height) + 961.20px);
+  left: 266.10px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star13"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star13"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star13"]::before {
+  top: calc(var(--about-height) + 840.20px);
+  left: 273.80px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star14"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star14"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star14"]::before {
+  top: calc(var(--about-height) + 882.00px);
+  left: 280.40px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star15"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star15"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star15"]::before {
+  top: calc(var(--about-height) + 872.10px);
+  left: 125.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star16"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star16"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star16"]::before {
+  top: calc(var(--about-height) + 939.20px);
+  left: 307.90px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star17"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star17"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star17"]::before {
+  top: calc(var(--about-height) + 830.30px);
+  left: 335.40px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star18"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star18"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star18"]::before {
+  top: calc(var(--about-height) + 921.60px);
+  left: 356.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star19"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star19"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star19"]::before {
+  top: calc(var(--about-height) + 866.60px);
+  left: 312.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star20"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star20"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star20"]::before {
+  top: calc(var(--about-height) + 938.10px);
+  left: 56.00px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star21"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star21"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star21"]::before {
+  top: calc(var(--about-height) + 846.80px);
+  left: 67.00px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star22"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star22"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star22"]::before {
+  top: calc(var(--about-height) + 851.20px);
+  left: 95.60px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star23"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star23"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star23"]::before {
+  top: calc(var(--about-height) + 866.60px);
+  left: 78.00px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star24"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star24"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star24"]::before {
+  top: calc(var(--about-height) + 836.90px);
+  left: 193.50px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star25"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star25"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star25"]::before {
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star26"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star26"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star26"]::before {
+  top: calc(var(--about-height) + 957.90px);
+  left: 324.40px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star27"]::before,
+body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star27"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star27"]::before {
+  top: calc(var(--about-height) + 873.20px);
+  left: 360.70px;
 }
