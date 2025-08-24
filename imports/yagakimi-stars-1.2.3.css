@@ -302,5 +302,5 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=_gZFTyPzeO4"]:
 body:has(.overview .about a[href="https://anilist.co/activity/730542107"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=E0d2uEQJbXs"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/705507281"]:hover) .overview .about a[href^="star"]::before {
-    margin-top: 798px;
+    margin-top: 770px;
 }
