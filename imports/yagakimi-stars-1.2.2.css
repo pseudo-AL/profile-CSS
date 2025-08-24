@@ -30,9 +30,7 @@
   pointer-events: none;
   transform-origin: center;
   z-index: 9;
-  filter: opacity(1);
-  transition: filter var(--anime-grid-timer) ease var(--anime-grid-timer);
-  will-change: filter;
+  transition: margin-top var(--anime-grid-timer) ease-in-out;
 }
 
 .overview .about a[href="star1"]::before {
@@ -304,6 +302,5 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=_gZFTyPzeO4"]:
 body:has(.overview .about a[href="https://anilist.co/activity/730542107"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=E0d2uEQJbXs"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/705507281"]:hover) .overview .about a[href^="star"]::before {
-  filter: opacity(0);
-  transition: filter 0s linear 0s;
+    margin-top: 798px;
 }
