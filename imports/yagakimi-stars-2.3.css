@@ -37,7 +37,7 @@
   font-size: 6px;
   animation: sparkle-glow 1.35s ease infinite alternate;
   animation-delay: 0.3s;
-  transform: rotate(12deg) !important;
+  rotate: 12deg;
 }
 
 .overview .about a[href="star2"]::before {
@@ -46,7 +46,7 @@
   font-size: 5px;
   animation: sparkle-glow 0.92s ease infinite alternate;
   animation-delay: 0.9s;
-  transform: rotate(77deg) !important;
+  rotate: 77deg;
 }
 
 .overview .about a[href="star3"]::before {
@@ -55,7 +55,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.48s ease infinite alternate;
   animation-delay: 0.2s;
-  transform: rotate(45deg) !important;
+  rotate: 45deg;
 }
 
 .overview .about a[href="star4"]::before {
@@ -64,7 +64,7 @@
   font-size: 6px;
   animation: sparkle-glow 1.73s ease infinite alternate;
   animation-delay: 1.1s;
-  transform: rotate(30deg) !important;
+  rotate: 30deg;
 }
 
 .overview .about a[href="star5"]::before {
@@ -73,7 +73,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.17s ease infinite alternate;
   animation-delay: 0.6s;
-  transform: rotate(63deg) !important;
+  rotate: 63deg;
 }
 
 .overview .about a[href="star6"]::before {
@@ -82,7 +82,7 @@
   font-size: 6px;
   animation: sparkle-glow 1.6s ease infinite alternate;
   animation-delay: 0.1s;
-  transform: rotate(18deg) !important;
+  rotate: 18deg;
 }
 
 .overview .about a[href="star7"]::before {
@@ -91,7 +91,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.58s ease infinite alternate;
   animation-delay: 1.4s;
-  transform: rotate(85deg) !important;
+  rotate: 85deg;
 }
 
 .overview .about a[href="star8"]::before {
@@ -100,7 +100,7 @@
   font-size: 5px;
   animation: sparkle-glow 1.41s ease infinite alternate;
   animation-delay: 0.5s;
-  transform: rotate(9deg) !important;
+  rotate: 9deg;
 }
 
 .overview .about a[href="star9"]::before {
@@ -109,7 +109,7 @@
   font-size: 6px;
   animation: sparkle-glow 0.74s ease infinite alternate;
   animation-delay: 0.7s;
-  transform: rotate(70deg) !important;
+  rotate: 70deg;
 }
 
 .overview .about a[href="star10"]::before {
@@ -118,7 +118,7 @@
   font-size: 6px;
   animation: sparkle-glow 1.67s ease infinite alternate;
   animation-delay: 1.2s;
-  transform: rotate(41deg) !important;
+  rotate: 41deg;
 }
 
 .overview .about a[href="star11"]::before {
@@ -127,7 +127,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.29s ease infinite alternate;
   animation-delay: 0.95s;
-  transform: rotate(22deg) !important;
+  rotate: 22deg;
 }
 
 .overview .about a[href="star12"]::before {
@@ -136,7 +136,7 @@
   font-size: 8px;
   animation: sparkle-glow 1.8s ease infinite alternate;
   animation-delay: 0.15s;
-  transform: rotate(88deg) !important;
+  rotate: 88deg;
 }
 
 .overview .about a[href="star13"]::before {
@@ -145,7 +145,7 @@
   font-size: 7px;
   animation: sparkle-glow 0.96s ease infinite alternate;
   animation-delay: 0.65s;
-  transform: rotate(37deg) !important;
+  rotate: 37deg;
 }
 
 .overview .about a[href="star14"]::before {
@@ -154,7 +154,7 @@
   font-size: 5px;
   animation: sparkle-glow 1.44s ease infinite alternate;
   animation-delay: 0.05s;
-  transform: rotate(15deg) !important;
+  rotate: 15deg;
 }
 
 .overview .about a[href="star15"]::before {
@@ -163,7 +163,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.09s ease infinite alternate;
   animation-delay: 1.0s;
-  transform: rotate(59deg) !important;
+  rotate: 59deg;
 }
 
 .overview .about a[href="star16"]::before {
@@ -172,7 +172,7 @@
   font-size: 6px;
   animation: sparkle-glow 1.62s ease infinite alternate;
   animation-delay: 0.55s;
-  transform: rotate(27deg) !important;
+  rotate: 27deg;
 }
 
 .overview .about a[href="star17"]::before {
@@ -181,7 +181,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.38s ease infinite alternate;
   animation-delay: 1.35s;
-  transform: rotate(74deg) !important;
+  rotate: 74deg;
 }
 
 .overview .about a[href="star18"]::before {
@@ -190,7 +190,7 @@
   font-size: 7px;
   animation: sparkle-glow 0.88s ease infinite alternate;
   animation-delay: 0.45s;
-  transform: rotate(34deg) !important;
+  rotate: 34deg;
 }
 
 .overview .about a[href="star19"]::before {
@@ -199,7 +199,7 @@
   font-size: 6px;
   animation: sparkle-glow 1.52s ease infinite alternate;
   animation-delay: 0.85s;
-  transform: rotate(11deg) !important;
+  rotate: 11deg;
 }
 
 .overview .about a[href="star20"]::before {
@@ -208,7 +208,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.07s ease infinite alternate;
   animation-delay: 1.25s;
-  transform: rotate(81deg) !important;
+  rotate: 81deg;
 }
 
 .overview .about a[href="star21"]::before {
@@ -217,7 +217,7 @@
   font-size: 5px;
   animation: sparkle-glow 1.33s ease infinite alternate;
   animation-delay: 0.35s;
-  transform: rotate(24deg) !important;
+  rotate: 24deg;
 }
 
 .overview .about a[href="star22"]::before {
@@ -226,7 +226,7 @@
   font-size: 5px;
   animation: sparkle-glow 1.67s ease infinite alternate;
   animation-delay: 1.15s;
-  transform: rotate(67deg) !important;
+  rotate: 67deg;
 }
 
 .overview .about a[href="star23"]::before {
@@ -235,7 +235,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.46s ease infinite alternate;
   animation-delay: 0.05s;
-  transform: rotate(39deg) !important;
+  rotate: 39deg;
 }
 
 .overview .about a[href="star24"]::before {
@@ -244,7 +244,7 @@
   font-size: 6px;
   animation: sparkle-glow 1.57s ease infinite alternate;
   animation-delay: 0.5s;
-  transform: rotate(20deg) !important;
+  rotate: 20deg;
 }
 
 .overview .about a[href="star25"]::before {
@@ -253,7 +253,7 @@
   font-size: 8px;
   animation: sparkle-glow 1.57s ease infinite alternate;
   animation-delay: 0.5s;
-  transform: rotate(90deg) !important;
+  rotate: 88deg;
 }
 
 .overview .about a[href="star26"]::before {
@@ -262,7 +262,7 @@
   font-size: 7px;
   animation: sparkle-glow 1.3s ease infinite alternate;
   animation-delay: 0.2s;
-  transform: rotate(52deg) !important;
+  rotate: 52deg;
 }
 
 .overview .about a[href="star27"]::before {
@@ -271,7 +271,7 @@
   font-size: 6px;
   animation: sparkle-glow 1.3s ease infinite alternate;
   animation-delay: 0.2s;
-  transform: rotate(29deg) !important;
+  rotate: 29deg;
 }
 
 body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[href^="star"]::before, body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href^="star"]::before, 
