@@ -333,11 +333,15 @@ body:has(.overview .about a[href="https://anilist.co/activity/705507281"]:hover)
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star1"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star1"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star1"]::before {
+  top: calc(var(--about-height) + 821.50px);
+  left: 240.80px;
   filter: opacity(0);
 }
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star2"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star2"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star2"]::before {
+  top: calc(var(--about-height) + 966.70px);
+  left: 384.90px;
   filter: opacity(0);
 }
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star3"]::before,
@@ -355,6 +359,8 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star5"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star5"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star5"]::before {
+  top: calc(var(--about-height) + 821.50px);
+  left: 140.70px;
   filter: opacity(0);
 }
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star6"]::before,
@@ -366,11 +372,15 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star7"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star7"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star7"]::before {
+  top: calc(var(--about-height) + 890.80px);
+  left: 390.40px;
   filter: opacity(0);
 }
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star8"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star8"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star8"]::before {
+  top: calc(var(--about-height) + 954.60px);
+  left: 5.40px;
   filter: opacity(0);
 }
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star9"]::before,
@@ -388,6 +398,8 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star11"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star11"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star11"]::before {
+  top: calc(var(--about-height) + 828.10px);
+  left: 9.80px;
   filter: opacity(0);
 }
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star12"]::before,
@@ -471,6 +483,8 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star25"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/831145330"]:hover) .overview .about a[href="star25"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=mqa_TGYd3E4"]:hover) .overview .about a[href="star25"]::before {
+  top: calc(var(--about-height) + 968.90px);
+  left: 38.40px;
   filter: opacity(0);
 }
 body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star26"]::before,
