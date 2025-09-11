@@ -269,9 +269,9 @@
     box-shadow: var(--box-shadow) #a3a1b1;
 }
 
-/*--- Koguma (Super Cub) ---*/
-.favourites a.favourite[href*="character/133946"]:hover {
-    box-shadow: var(--box-shadow) #61636d;
+/*--- Yoshino (Sakura Quest) ---*/
+.favourites a.favourite[href*="character/121530"]:hover {
+    box-shadow: var(--box-shadow) #f2c3c4;
 }
 
 /*--- Ginko (Mushishi) ---*/
