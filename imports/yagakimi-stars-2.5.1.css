@@ -319,7 +319,7 @@ body:has(.overview .about a[href="https://www.youtube.com/watch?v=oV4IbZpvSmE"]:
 body:has(.overview .about a[href="https://anilist.co/activity/659449448"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=D94MDszmlWg"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/719361603"]:hover) .overview .about a[href^="star"]::before,
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .overview .about a[href^="star"]::before,
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://www.youtube.com/watch?v=traMXzjqYTA"]:hover) .overview .about a[href^="star"]::before,
 body:has(.overview .about a[href="https://anilist.co/activity/813301277"]:hover) .overview .about a[href^="star"]::before,
