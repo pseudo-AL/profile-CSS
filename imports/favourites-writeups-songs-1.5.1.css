@@ -3298,7 +3298,7 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[hr
     display: flex;
 }
 
-body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]::before {
+body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]::before {
     opacity: 1;
     visibility: visible;
     display: flex;
@@ -3333,7 +3333,7 @@ body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover)
 
 /*════════ Song ════════*/
 
-.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]::before {
+.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]::before {
     content: "♬";
     color: white;
     width: 15px;
@@ -3353,50 +3353,50 @@ body:has(.overview .about a[href="https://anilist.co/activity/761833173"]:hover)
     text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
 }
 
-body:has(a.favourite[href*="anime/97903"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]::before {
+body:has(a.favourite[href*="anime/97903"]:hover) .overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]::before {
     opacity: 1;
     visibility: visible;
 }
 
-body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]::before {
+body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]::before {
     display: flex;
 }
 
-.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover::before {
+.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]:hover::before {
     opacity: 1;
     visibility: visible;
     color: #c0cc68;
     display: flex;
 }
 
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .overview .about a[href="https://anilist.co/activity/761833173"]::before {
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]:hover) .overview .about a[href="https://anilist.co/activity/761833173"]::before {
     opacity: 1;
     visibility: visible;
     display: flex;
 }
 
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) a.favourite[href*="anime/97903"] {
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]:hover) a.favourite[href*="anime/97903"] {
     filter: var(--cover-saturation-hover);
     background-size: var(--background-zoom) !important;
     box-shadow: var(--box-shadow) #c0cc68;
 }
 
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .favourites.preview .favourites-wrap.anime {
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]:hover) .favourites.preview .favourites-wrap.anime {
     max-height: 1165px !important;
     
     
 }
 
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .favourites-wrap.anime .favourite.media:nth-child(n+3) {
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]:hover) .favourites-wrap.anime .favourite.media:nth-child(n+3) {
     opacity: 1;
     transform: translateY(0);
 }
 
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]:hover) .overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
     opacity: 0;
 }
 
-body:has(.overview .about a[href="https://www.youtube.com/watch?v=dF1LpKBXmDs"]:hover) .overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"] {
+body:has(.overview .about a[href="https://www.youtube.com/watch?v=IvtRtpv71gc"]:hover) .overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"] {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
