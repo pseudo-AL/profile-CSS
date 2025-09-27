@@ -274,9 +274,9 @@
     box-shadow: var(--box-shadow) #f2c3c4;
 }
 
-/*--- Ginko (Mushishi) ---*/
-.favourites a.favourite[href*="character/425"]:hover {
-    box-shadow: var(--box-shadow) #eff0ed;
+/*--- Touko Nanami (Bloom Into You/Yagate Kimi Ni Naru/YagaKimi) ---*/
+.favourites a.favourite[href*="character/123529"]:hover {
+    box-shadow: var(--box-shadow) #847676;
 }
 
 /*--- Saeki Sayaka (Character) (Bloom Into You/Saeki Sayaka ni Tsuite) ---*/
@@ -294,9 +294,9 @@
     box-shadow: var(--box-shadow) #f1c8a5;
 }
 
-/*--- Kao/Kaoru Hanawa (Tamayura) ---*/
-.favourites a.favourite[href*="character/35469"]:hover {
-    box-shadow: var(--box-shadow) #76414d;
+/*--- Hachiman Hikigaya (Oregairu) ---*/
+.favourites a.favourite[href*="character/67065"]:hover {
+    box-shadow: var(--box-shadow) #575b5e;
 }
 
 /*--- Renge Miyauchi (Non Non Biyori) ---*/
