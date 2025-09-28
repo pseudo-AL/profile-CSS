@@ -304,9 +304,9 @@
     box-shadow: var(--box-shadow) #bdaec8;
 }
 
-/*--- Sae (Hidamari Sketch/HidaSketch) ---*/
-.favourites a.favourite[href*="character/3215"]:hover {
-    box-shadow: var(--box-shadow) #756a89;
+/*--- Yui Yuigahama (Oregairu) ---*/
+.favourites a.favourite[href*="character/67069"]:hover {
+    box-shadow: var(--box-shadow) #e78479;
 }
 
 /*--- Nori (Hidamari Sketch) ---*/
