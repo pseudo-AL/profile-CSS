@@ -339,8 +339,11 @@
 }
 
 /*--- Hitoma Iruma ---*/
+.favourites a.favourite[href*="staff/99956"] {
+    background-image: url(https://i.imgur.com/KSDg3ur.jpeg) !important;
+}
 .favourites a.favourite[href*="staff/99956"]:hover {
-    box-shadow: var(--box-shadow) #d6d99b;
+    box-shadow: var(--box-shadow) #8e7888;
 }
 
 /*--- Reiko Yoshida ---*/
