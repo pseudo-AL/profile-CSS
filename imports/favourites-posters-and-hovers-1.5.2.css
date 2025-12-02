@@ -121,6 +121,11 @@
     box-shadow: var(--box-shadow) #6f62a9;
 }
 
+/*--- Hunter x Hunter (1999) ---*/
+.favourites a.favourite[href*="anime/136"]:hover {
+    box-shadow: var(--box-shadow) #7aa845;
+}
+
 /*--- Texhnolyze ---*/
 .favourites a.favourite[href*="anime/26"]:hover {
     box-shadow: var(--box-shadow) #65907b;
@@ -137,11 +142,6 @@
 
 #app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(25):hover {
     background-size: 113% !important;
-}
-
-/*--- Aquatope ---*/
-.favourites a.favourite[href*="anime/128545"]:hover {
-    box-shadow: var(--box-shadow) #2d69de;
 }
 
 /*--- Sakura Quest ---*/
