@@ -65,13 +65,16 @@ body { /* Optional fallback background colour if there's a gap in transitions */
     transition: all var(--master-transition-timer) ease-in-out;
     background-size: 100% !important;
     background-color: transparent !important;
-    height: unset !important;
 }
 
 .favourites a.favourite:hover {
     box-shadow: var(--box-shadow) color-mix(in srgb,rgb(var(--color-blue)) var(--box-shadow-mix), white);
     background-size: var(--background-zoom) !important;
     filter: var(--cover-saturation-hover);
+}
+
+.favourites.preview a.favourite {
+    height: unset !important;
 }
 /*--- Hide Favs Until Hover Grid Styling ---*/
 
