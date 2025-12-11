@@ -520,45 +520,17 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     all: unset !important;
 }
 /*--- Section Headers for Favourites ---*/
-
 .overview div.favourites:nth-child(4) > h2:nth-child(1) {
     position: relative;
     visibility: hidden;
-}
-
-.favourites .favourites:nth-child(1) .section-header::after {
-    content: "anime (ordered, looser as you go down)";
-    font-style: italic;
-    position: absolute;
-    visibility: visible;
-    text-transform: lowercase;
 }
 .overview div.favourites:nth-child(5) > h2:nth-child(1) {
     position: relative;
     visibility: hidden;
 }
-
-.favourites .favourites:nth-child(2) .section-header::after {
-    content: "manga (ordered, looser as you go down)";
-    font-style: italic;
-    position: absolute;
-    visibility: visible;
-    text-transform: lowercase;
-}
 .overview div.favourites:nth-child(6) > h2:nth-child(1) {
     position: relative;
     visibility: hidden;
-}
-.favourites .favourites:nth-child(3) .section-header::after {
-    content: "characters (very loosely ordered)";
-    font-style: italic;
-    position: absolute;
-    visibility: visible;
-    text-transform: lowercase;
-}
-.favourites:not(.overview .favourites) .favourites:nth-child(3) .section-header::after {
-    position: absolute;
-    top: -1074px;
 }
 .overview div.favourites:nth-child(6) > h2:nth-child(1)::after {
     top: 11px;
@@ -568,34 +540,18 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     position: relative;
     visibility: hidden;
 }
-.favourites .favourites:nth-child(4) .section-header::after {
-    content: "staff (very loosely ordered)";
-    font-style: italic;
-    position: absolute;
-    visibility: visible;
-    text-transform: lowercase;
-}
 .overview div.favourites:nth-child(7) > h2:nth-child(1)::after {
     top: 11px;
     right: 116px;
 }
-
 .overview div.favourites:nth-child(8) > h2:nth-child(1) {
     position: relative;
     visibility: hidden;
-}
-.favourites .favourites:nth-child(5) .section-header::after {
-    content: "studios (ordered)";
-    font-style: italic;
-    position: absolute;
-    visibility: visible;
-    text-transform: lowercase;
 }
 .overview div.favourites:nth-child(8) > h2:nth-child(1)::after {
     top: 11px;
     right: 149px;
 }
-
 /*--- Fix Margins for Titles/Wraps ---*/
 .overview div.favourites h2:not(.favourites:nth-child(4) > h2:nth-child(1)) {
     margin-top: -25px;
