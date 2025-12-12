@@ -45,7 +45,7 @@
     left: 94px;
     width: 1054px;
     height: 524px;
-    background: url(https://i.imgur.com/2HnejMo.jpeg);
+    background: url(https://i.imgur.com/ufGkqzT.jpeg);
     background-position: center !important;
     background-repeat: no-repeat !important;
     border-radius: var(--border-radius);
@@ -112,7 +112,7 @@ body:has(a.favourite:hover) .favourites .favourites:nth-child(1)::after {
     left: 94px;
     width: 1054px;
     height: 524px;
-    background: url(https://i.imgur.com/jRgt1X9.jpeg);
+    background: url(https://i.imgur.com/cfq1gDT.jpeg);
     background-position: center !important;
     background-repeat: no-repeat !important;
     border-radius: var(--border-radius);
@@ -234,22 +234,22 @@ body:has(a.favourite:hover) .favourites .favourites:nth-child(2)::after {
 
 /*════════ Hidamari Sketch ════════*/
 body:has(a.favourite[href*="anime/11239/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/Zb33uyr.jpeg);
+    background: url(https://i.imgur.com/N5LDIa5.jpeg);
 }
 
 /*════════ Aria ════════*/
 body:has(a.favourite[href*="anime/3297/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/buXNEe1.jpeg);
+    background: url(https://i.imgur.com/Rc1lhHC.jpeg);
 }
 
 /*════════ Mushishi ════════*/
 body:has(a.favourite[href*="anime/457/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/AucvO6e.jpeg);
+    background: url(https://i.imgur.com/qQSJ8ZH.jpeg);
 }
 
 /*════════ Liz ════════*/
 body:has(a.favourite[href*="anime/100178/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/Ec5TtQQ.jpeg);
+    background: url(https://i.imgur.com/R7dQHM6.jpeg);
 }
 
 /*════════ Tamayura ════════*/
@@ -274,7 +274,7 @@ body:has(a.favourite[href*="anime/17549/"]:hover) .favourites .favourites:nth-ch
 
 /*════════ Tamako Love Story ════════*/
 body:has(a.favourite[href*="anime/20519/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/NiVBRH1.jpeg);
+    background: url(https://i.imgur.com/HdxRCtD.jpeg);
 }
 
 /*════════ Hyouka ════════*/
@@ -294,17 +294,17 @@ body:has(a.favourite[href*="anime/20698/"]:hover) .favourites .favourites:nth-ch
 
 /*════════ Chihayafuru ════════*/
 body:has(a.favourite[href*="anime/10800/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/oIax2Tj.jpeg);
+    background: url(https://i.imgur.com/G4mdONT.jpeg);
 }
 
 /*════════ Sakura Quest ════════*/
 body:has(a.favourite[href*="anime/97903/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/2byRkpk.jpeg);
+    background: url(https://i.imgur.com/3mMsdmO.jpeg);
 }
 
 /*════════ Girls' Last Tour ════════*/
 body:has(a.favourite[href*="anime/99420/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/pOBlniN.jpeg);
+    background: url(https://i.imgur.com/l6Nxgoy.jpeg);
 }
 
 /*════════ Shirobako ════════*/
@@ -324,7 +324,7 @@ body:has(a.favourite[href*="anime/15227/"]:hover) .favourites .favourites:nth-ch
 
 /*════════ Sangatsu no Lion ════════*/
 body:has(a.favourite[href*="anime/21366/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/YD5dLbN.jpeg);
+    background: url(https://i.imgur.com/D0KEVzv.jpeg);
 }
 
 /*════════ Haibane Renmei ════════*/
@@ -334,7 +334,7 @@ body:has(a.favourite[href*="anime/387/"]:hover) .favourites .favourites:nth-chil
 
 /*════════ Hunter X Hunter ════════*/
 body:has(a.favourite[href*="anime/136/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/teG1NxR.jpeg);
+    background: url(https://i.imgur.com/OPA8Gyd.jpeg);
 }
 
 /*════════ Texhnolyze ════════*/
@@ -349,12 +349,12 @@ body:has(a.favourite[href*="anime/283/"]:hover) .favourites .favourites:nth-chil
 
 /*════════ Super Cub ════════*/
 body:has(a.favourite[href*="anime/113418/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/X5Sn9Dv.jpeg);
+    background: url(https://i.imgur.com/JKvvkjM.jpeg);
 }
 
 /*════════ Nana ════════*/
 body:has(a.favourite[href*="anime/877/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/7xb4543.jpeg);
+    background: url(https://i.imgur.com/qXp9T0g.jpeg);
 }
 
   /*════════════════════════════════════════════
@@ -363,7 +363,7 @@ body:has(a.favourite[href*="anime/877/"]:hover) .favourites .favourites:nth-chil
   
 /*════════ Bloom Into You ════════*/
 body:has(a.favourite[href*="manga/86218/"]:hover) .favourites .favourites:nth-child(2)::after {
-    background: url(https://i.imgur.com/IsV3dp3.jpeg);
+    background: url(https://i.imgur.com/KVI19Ek.jpeg);
 }
 
 /*════════ Oregairu ════════*/
@@ -388,12 +388,12 @@ body:has(a.favourite[href*="manga/30004/"]:hover) .favourites .favourites:nth-ch
 
 /*════════ Perfect World ════════*/
 body:has(a.favourite[href*="manga/93433/"]:hover) .favourites .favourites:nth-child(2)::after {
-    background: url(https://i.imgur.com/tSD2txO.jpeg);
+    background: url(https://i.imgur.com/aitP1vZ.jpeg);
 }
 
 /*════════ Girls' Last Tour ════════*/
 body:has(a.favourite[href*="manga/85412/"]:hover) .favourites .favourites:nth-child(2)::after {
-    background: url(https://i.imgur.com/pk5h85W.jpeg);
+    background: url(https://i.imgur.com/qYw8cWo.jpeg);
 }
 
 /*════════ Solanin ════════*/
@@ -403,10 +403,10 @@ body:has(a.favourite[href*="manga/33731/"]:hover) .favourites .favourites:nth-ch
 
 /*════════ Hyouka ════════*/
 body:has(a.favourite[href*="manga/65513/"]:hover) .favourites .favourites:nth-child(2)::after {
-    background: url(https://i.imgur.com/qh8mGit.jpeg);
+    background: url(https://i.imgur.com/CbNpjIn.jpeg);
 }
 
 /*════════ The Summit of the Gods ════════*/
 body:has(a.favourite[href*="manga/34625/"]:hover) .favourites .favourites:nth-child(2)::after {
-    background: url(https://i.imgur.com/h7cUPAi.jpeg);
+    background: url(https://i.imgur.com/E71mKGd.jpeg);
 }
