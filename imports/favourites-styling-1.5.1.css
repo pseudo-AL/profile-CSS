@@ -13,7 +13,7 @@ body::before { /* Background Changer */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    transition: background var(--master-transition-timer) var(--layout-delay) ease-in-out;
+    transition: background var(--master-transition-timer) ease-in-out;
 }
 body:has(a.favourite:hover)::before {
     transition: background var(--master-transition-timer) 0s ease-in-out;
