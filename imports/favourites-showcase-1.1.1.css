@@ -33,7 +33,7 @@
     height: 560px !important;
     background: var(--foreground) !important;
     border-radius: var(--border-radius);
-    border: 0.5px solid rgb(var(--color-blue)) !important;
+    border: var(--border) solid rgb(var(--color-blue)) !important;
     animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
 }
 
@@ -100,7 +100,7 @@ body:has(a.favourite:hover) .favourites .favourites:nth-child(1)::after {
     height: 560px !important;
     background: var(--foreground) !important;
     border-radius: var(--border-radius);
-    border: 0.5px solid rgb(var(--color-blue)) !important;
+    border: var(--border) solid rgb(var(--color-blue)) !important;
     animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
 }
 
