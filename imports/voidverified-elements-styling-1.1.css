@@ -158,7 +158,7 @@ input[type="range"].void-range:focus {
 }
 
 .void-quick-start-input-container, .void-select .void-option, .void-quick-start-results-list, .void-collapsible-container, .void-media-display-container, .void-input {
-    border: 1.5px solid rgb(var(--profile-color-rgb)) !important;
+    border: var(--border) solid rgb(var(--profile-color-rgb)) !important;
 }
 
 .void-quick-start-config-container {
