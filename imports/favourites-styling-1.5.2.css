@@ -121,7 +121,7 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
     overflow: hidden;
     transition: max-height var(--anime-grid-timer) ease-in-out, border var(--anime-grid-timer) ease-in-out, box-shadow var(--anime-grid-timer) ease-in-out;
     transition-delay: overflow calc(--anime-grid-timer - 0.05s);
-    border: 0.5px solid rgb(var(--color-blue));
+    border: var(--border) solid rgb(var(--color-blue));
 }
 .favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3) {
     opacity: 0;
@@ -216,7 +216,7 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[hr
 
 body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .favourites.preview .favourites-wrap.anime {
     max-height: 1165px !important;
-    border: 0.5px solid rgb(var(--color-blue-dim));
+    border: var(--border) solid rgb(var(--color-blue-dim));
 }
 
 body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3) {
@@ -297,7 +297,7 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
     max-height: 367px;
     overflow: hidden;
     transition: max-height var(--manga-grid-timer) ease-in-out, border var(--manga-grid-timer) ease-in-out, box-shadow var(--manga-grid-timer) ease-in-out;
-    border: 0.5px solid rgb(var(--color-blue));
+    border: var(--border) solid rgb(var(--color-blue));
 }
 .favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+3) {
     opacity: 0;
@@ -358,7 +358,7 @@ body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.fa
     max-height: 305px;
     overflow: hidden;
     transition: max-height var(--characters-grid-timer) ease-in-out, border var(--characters-grid-timer) ease-in-out, box-shadow var(--characters-grid-timer) ease-in-out;
-    border: 0.5px solid rgb(var(--color-blue));
+    border: var(--border) solid rgb(var(--color-blue));
 }
 .favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+9) {
     opacity: 0;
@@ -424,7 +424,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
     max-height: 305px;
     overflow: hidden;
     transition: max-height var(--staff-grid-timer) ease-in-out, border var(--staff-grid-timer) ease-in-out, box-shadow var(--staff-grid-timer) ease-in-out;
-    border: 0.5px solid rgb(var(--color-blue));
+    border: var(--border) solid rgb(var(--color-blue));
 }
 .favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+9) {
     opacity: 0;
@@ -457,7 +457,7 @@ body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favouri
 .favourites.preview .favourites-wrap.studios {
     background: var(--foreground) !important;
     margin-top: -5px;
-    border: 0.5px solid rgb(var(--color-blue));
+    border: var(--border) solid rgb(var(--color-blue));
     transition: border var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
 }
 .overview .favourite.studio {
