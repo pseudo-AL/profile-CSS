@@ -1,18 +1,7 @@
 /*--- User Badges (Thanks to @Anzu for most of the code structure) ---*/
 
-@keyframes pseudoglow {
-    0% {
-        box-shadow: 0 0 1px 0px rgba(var(--profile-color-rgb), 0.1);
-    }
-    100% {
-        box-shadow: 0 0 9px 1.5px rgba(var(--profile-color-rgb), 0.7);
-    }
-}
-
 .header > a[href="/user/pseudo/"].name:after, .container > .activity-entry a[href="/user/pseudo/"].name:after { /* Me */
     content: "that's me ♛";
-    animation: pseudoglow var(--glow-length) infinite alternate;
-    animation-delay: 0s !important;
     border: 1px solid rgb(var(--color-blue));
 }
 
