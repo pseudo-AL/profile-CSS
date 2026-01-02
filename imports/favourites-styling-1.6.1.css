@@ -127,6 +127,7 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
     opacity: 0;
     transform: translateY(20px);
     transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out;
+    pointer-events: none;
 }
 .favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+7) {
     transform: translateY(40px);
@@ -304,6 +305,7 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
     opacity: 0;
     transform: translateY(20px);
     transition: opacity var(--manga-grid-timer) ease-in-out, transform var(--manga-grid-timer) ease-in-out;
+    pointer-events: none;
 }
 .favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+7) {
     transform: translateY(40px);
