@@ -1,8 +1,23 @@
 /*--- User Badges (Thanks to @Anzu for most of the code structure) ---*/
 
+@keyframes pseudoglow {
+  0% {
+    text-shadow:
+      0 0 2px rgba(var(--pseudo-title), 0.1),
+      0 0 4px rgba(var(--pseudo-title), 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(var(--pseudo-title), 0.9),
+      0 0 12px rgba(var(--pseudo-title), 1),
+      0 0 20px rgba(var(--pseudo-title), 0.85);
+  }
+}
+
 .header > a[href="/user/pseudo/"].name:after, .container > .activity-entry a[href="/user/pseudo/"].name:after { /* Me */
-    content: "that's me ♛";
-    border: 1px solid rgb(var(--color-blue));
+    content: "utility pole";
+    color: rgb(var(--pseudo-title)) !important;
+    animation: pseudoglow 1.5s infinite alternate;
 }
 
 .header > .name:after { /* Non-mutuals and mutuals I either forgot or was too lazy to add */
@@ -100,105 +115,135 @@
 .header > a[href="/user/YukikoGamingHD/"].name:after,
 .header > a[href="/user/zeliha/"].name:after,
 .header > a[href="/user/ZetaBM/"].name:after,
-.header > a[href="/user/Zethkiel/"].name:after,
 .header > a[href="/user/ZNote/"].name:after {
     content: "friend ☺";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--mutuals-title)) !important;
 }
 /* Custom Titles (Again, feel free to request) */
 .header > a[href="/user/Animusswtor/"].name:after {
     content: "will miss Gintama in AMQ";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/befalt/"].name:after {
     content: "Old Man 👴";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/bibichu/"].name:after {
     content: "beep boop";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/Buttled/"].name:after {
     content: "<— Bad PA Works Takes";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/JMack24/"].name:after {
     content: "Alpha Hatsuseno";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/KinoKantRBD/"].name:after {
     content: "Gooner";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/mt2903/"].name:after {
     content: "consumes too much yuri";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/Palington/"].name:after {
     content: "日本語上手！";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/Pawec/"].name:after {
     content: "Big Business";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/planqton/"].name:after {
     content: "the world can be kind too";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/Rishon007/"].name:after {
     content: "doesn't know what Nashville or Hawaii are";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/sekuji/"].name:after {
     content: "CSS Goat 🐐";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/shubs/"].name:after {
     content: "don't ask me what Undertale or Herobrine are";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/SirEmanon/"].name:after {
     content: "Penguin Connoisseur 🐧";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/sumikasodomizer/"].name:after {
     content: "Hitler";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/tdbn/"].name:after {
     content: "toadbean";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/voidnyan/"].name:after {
     content: "voidnyan is a stick.";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 .header > a[href="/user/yesKiri/"].name:after {
     content: "ｗｉｄｅ";  
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 
 .header > a[href="/user/Sodachi/"].name:after,
 .header > a[href="/user/Slusher/"].name:after {
     content: "freak who enjoys 40°C weather (for some reason)";
-    border: 1px solid rgb(var(--color-blue-dim));
+    color: rgb(var(--custom-title)) !important;
 }
 
-.header > .name:after, .container > .activity-entry a[href="/user/pseudo/"].name:after {
-    background: rgb(1, 1, 1);
-    border-radius: var(--border-radius);
-    color: color-mix(in srgb,rgb(var(--color-blue)) var(--name-badge-mix), white) !important;
-    cursor: pointer;
-    font-family: var(--font);
-    font-size: 12px;
-    margin-left: 5px;
-    padding: 3px 7px 5px 7px;
+.reply .header > .avatar {
+    transform: scale(1.15);
+}
+
+.text > .header > .name {
     position: relative;
-    top: -1.5px;
+    bottom: 8px;
+    padding-bottom: 5px;
 }
 
-.header > .name[data-v-732ef224]:after {
-    font-size: 11px !important;
-    top: -0.5px !important;
+.header > .name, .container > .activity-entry a[href="/user/pseudo/"].name {
+    position: relative;
+    bottom: 6px;
+    padding-bottom: 5px;
+}
+
+.text > .header > .name:after {
+    display: inline-block;
+    width: 260px;
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 17px;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--name-badge-mix), white) !important;
+    font-size: 11.5px;
+}
+
+.reply .header > .name:after {
+    display: inline-block;
+    width: 260px; 
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 15.5px;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--name-badge-mix), white) !important;
+    font-size: 10.5px;
+}
+
+.header .donator-badge {
+    margin-bottom: 18px;
+    margin-left: 15px;
+}
+
+.reply .header .donator-badge {
+    position: relative;
+    bottom: 8px;
+    margin-left: 17px;
 }
