@@ -14,7 +14,7 @@
     top: -614px;
     left: 311px;
     visibility: visible;
-    color: var(--profile-color);
+    color: white;
     content: "anime & manga showcase images change upon hovering a favourite\A shift+scroll or use arrow keys to horizontally navigate the carousel";
     text-align: center;
     white-space: pre-wrap;
