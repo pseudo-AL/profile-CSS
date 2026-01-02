@@ -15,7 +15,7 @@
 }
 
 .header > a[href="/user/pseudo/"].name:after, .container > .activity-entry a[href="/user/pseudo/"].name:after { /* Me */
-    content: "utility pole";
+    content: "utility pole ♛";
     color: rgb(var(--pseudo-title)) !important;
     animation: pseudoglow 1.5s infinite alternate;
 }
@@ -32,15 +32,15 @@
 .header > a[href="/user/ames/"].name:after,
 .header > a[href="/user/anagapesis/"].name:after,
 .header > a[href="/user/AnimeDweeb/"].name:after,
-.header > a[href="/user/anjo/"].name:after,
 .header > a[href="/user/Asano/"].name:after,
 .header > a[href="/user/attqcktitan/"].name:after,
 .header > a[href="/user/Avanger/"].name:after,
 .header > a[href="/user/Axtrex/"].name:after,
+.header > a[href="/user/Ayuno/"].name:after,
+.header > a[href="/user/babymetal/"].name:after,
 .header > a[href="/user/Beatrice/"].name:after,
 .header > a[href="/user/bellemere/"].name:after,
 .header > a[href="/user/BlekDimon/"].name:after,
-.header > a[href="/user/blush/"].name:after,
 .header > a[href="/user/BrainyElric/"].name:after,
 .header > a[href="/user/bun/"].name:after,
 .header > a[href="/user/Christian/"].name:after,
@@ -82,9 +82,9 @@
 .header > a[href="/user/PapaB/"].name:after,
 .header > a[href="/user/personnel/"].name:after,
 .header > a[href="/user/phife/"].name:after,
-.header > a[href="/user/PinkCreature/"].name:after,
 .header > a[href="/user/Pksomuch/"].name:after,
 .header > a[href="/user/Plestik/"].name:after,
+.header > a[href="/user/Pratoshii/"].name:after,
 .header > a[href="/user/prispanda/"].name:after,
 .header > a[href="/user/RandomGuy595/"].name:after,
 .header > a[href="/user/Rew/"].name:after,
@@ -93,7 +93,7 @@
 .header > a[href="/user/Ryuseishun/"].name:after,
 .header > a[href="/user/saltflake/"].name:after,
 .header > a[href="/user/sanbe/"].name:after,
-.header > a[href="/user/SeojUno/"].name:after,
+.header > a[href="/user/seojuno/"].name:after,
 .header > a[href="/user/Septmb/"].name:after,
 .header > a[href="/user/shinraFN/"].name:after,
 .header > a[href="/user/SidVicious/"].name:after,
@@ -144,6 +144,10 @@
     content: "Gooner";
     color: rgb(var(--custom-title)) !important;
 }
+.header > a[href="/user/mermaid081/"].name:after {
+    content: "the world can be kind too";
+    color: rgb(var(--custom-title)) !important;
+}
 .header > a[href="/user/mt2903/"].name:after {
     content: "consumes too much yuri";
     color: rgb(var(--custom-title)) !important;
@@ -156,11 +160,7 @@
     content: "Big Business";
     color: rgb(var(--custom-title)) !important;
 }
-.header > a[href="/user/planqton/"].name:after {
-    content: "the world can be kind too";
-    color: rgb(var(--custom-title)) !important;
-}
-.header > a[href="/user/Rishon007/"].name:after {
+.header > a[href="/user/Rishooooo/"].name:after {
     content: "doesn't know what Nashville or Hawaii are";
     color: rgb(var(--custom-title)) !important;
 }
