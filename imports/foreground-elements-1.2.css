@@ -57,6 +57,14 @@ You're free to change these variables around for yourself if you paste this snip
     background: var(--foreground) !important;
 }
 
+/*════════ Direct Activity Foregrounds ════════*/
+.container > .activity-entry .wrap,
+.container > .activity-entry .reply,
+.container > .activity-entry .markdown-editor,
+.container > .activity-entry .el-textarea__inner {
+    background: var(--foreground) !important;
+}
+
 /*════════ List Editor Foreground ════════*/
 .body {
     background: var(--list-editor-foreground) !important;
