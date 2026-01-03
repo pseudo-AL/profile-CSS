@@ -3,37 +3,6 @@
   ════════════════════════════════════════════*/
 /*--- (This is long and VERY highly styled for my own profile. You're welcome to copy snippets, but you'll likely need to tinker around with stuff to get it working for yourself.) ---*/
 
-body::before { /* Background Changer */
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: var(--banner-url);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    transition: background var(--master-transition-timer) ease-in-out;
-}
-body:has(a.favourite:hover)::before {
-    transition: background var(--master-transition-timer) 0s ease-in-out;
-}
-
-body:has(.container > .activity-entry)::before { /* Fixes Direct Activities */
-    background-image: none;
-}
-body:has(.container > .activity-entry) {
-    background: var(--banner-url);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-body { /* Optional fallback background colour if there's a gap in transitions */
-    background-color: black;
-}
-
 /*--- Favourites Grid Layout (Studios excluded) ---*/
 .favourites.preview .favourites-wrap:not(.favourites.preview .favourites-wrap.studios) {
     position: relative;
