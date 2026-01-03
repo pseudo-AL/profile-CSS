@@ -212,13 +212,23 @@
     padding-bottom: 5px;
 }
 
-.header > .name, .container > .activity-entry a[href="/user/pseudo/"].name {
+.header > .name {
     position: relative;
     bottom: 6px;
     padding-bottom: 5px;
 }
 
-.text > .header > .name:after {
+.container > .activity-entry .details > a[href="/user/pseudo/"].name {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.container > .activity-entry .details > .donator-badge {
+    margin-left: 22px;
+    margin-top: -1px;
+}
+
+.text > .header > .name:after, .container > .activity-entry .details > .name:after {
     display: inline-block;
     width: 260px;
     margin-left: 0;
