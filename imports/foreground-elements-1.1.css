@@ -57,20 +57,6 @@ You're free to change these variables around for yourself if you paste this snip
     background: var(--foreground) !important;
 }
 
-/*════════ Direct Activity Foregrounds + Blur ════════*/
-.container > .activity-entry .wrap,
-.container > .activity-entry .reply,
-.container > .activity-entry .markdown-editor,
-.container > .activity-entry .el-textarea__inner {
-    background: var(--direct-activity-foreground) !important;
-}
-.container > .activity-entry .wrap:not(:has(.el-dialog__wrapper)),
-.container > .activity-entry .reply:not(:has(.el-dialog__wrapper)),
-.container > .activity-entry .markdown-editor:not(:has(.el-dialog__wrapper)),
-.container > .activity-entry .el-textarea__inner:not(:has(.el-dialog__wrapper)) {
-    backdrop-filter: var( --direct-activity-foreground-blur);
-}
-
 /*════════ List Editor Foreground ════════*/
 .body {
     background: var(--list-editor-foreground) !important;
