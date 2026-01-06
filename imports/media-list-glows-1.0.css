@@ -40,34 +40,6 @@
   }
 }
 
-@keyframes eightpointfive {
-  0% {
-    text-shadow:
-      0 0 2px rgba(162, 252, 215, 0.1),
-      0 0 4px rgba(162, 252, 215, 0.05);
-  }
-  100% {
-    text-shadow:
-      0 0 6px rgba(192, 255, 245, 0.9),
-      0 0 12px rgba(162, 252, 215, 1),
-      0 0 20px rgba(132, 232, 185, 0.85);
-  }
-}
-
-@keyframes eight {
-  0% {
-    text-shadow:
-      0 0 2px rgba(198, 255, 189, 0.1),
-      0 0 4px rgba(198, 255, 189, 0.05);
-  }
-  100% {
-    text-shadow:
-      0 0 6px rgba(228, 255, 219, 0.9),
-      0 0 12px rgba(198, 255, 189, 1),
-      0 0 20px rgba(168, 235, 159, 0.85);
-  }
-}
-
 .list-entries .score[score="10"] {
     animation: ten var(--glow-length) infinite alternate;
     animation-delay: 0s !important;
@@ -95,25 +67,5 @@
 
 .list-entries .entry.row:has(.score[score="9"]) .title > a {
     animation: nine var(--glow-length) infinite alternate;
-    animation-delay: 0s !important;
-}
-
-.list-entries .score[score="8.5"] {
-    animation: eightpointfive var(--glow-length) infinite alternate;
-    animation-delay: 0s !important;
-}
-
-.list-entries .entry.row:has(.score[score="8.5"]) .title > a {
-    animation: eightpointfive var(--glow-length) infinite alternate;
-    animation-delay: 0s !important;
-}
-
-.list-entries .score[score="8"] {
-    animation: eight var(--glow-length) infinite alternate;
-    animation-delay: 0s !important;
-}
-
-.list-entries .entry.row:has(.score[score="8"]) .title > a {
-    animation: eight var(--glow-length) infinite alternate;
     animation-delay: 0s !important;
 }
