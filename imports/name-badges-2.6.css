@@ -18,6 +18,7 @@
     content: "utility pole ♛";
     color: rgb(var(--pseudo-title)) !important;
     animation: pseudoglow 1.5s infinite alternate;
+    animation-delay: 0s !important;
 }
 
 .header > .name:after { /* Non-mutuals and mutuals I either forgot or was too lazy to add */
