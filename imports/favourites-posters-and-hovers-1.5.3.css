@@ -294,9 +294,9 @@
     box-shadow: var(--box-shadow) #f1c8a5;
 }
 
-/*--- Hachiman Hikigaya (Oregairu) ---*/
-.favourites a.favourite[href*="character/67065"]:hover {
-    box-shadow: var(--box-shadow) #575b5e;
+/*--- Kazusa Touma (White Album 2) ---*/
+.favourites a.favourite[href*="character/82119"]:hover {
+    box-shadow: var(--box-shadow) #2a4964;
 }
 
 /*--- Renge Miyauchi (Non Non Biyori) ---*/
