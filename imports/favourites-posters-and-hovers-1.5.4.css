@@ -190,6 +190,11 @@
     box-shadow: var(--box-shadow) #abd2d9;
 }
 
+/*--- Houseki no Kuni ---*/
+.favourites a.favourite[href*="manga/74489"]:hover {
+    box-shadow: var(--box-shadow) #97f4e1;
+}
+
 /*--- Perfect World ---*/
 .favourites a.favourite[href*="manga/93433"]:hover {
     box-shadow: var(--box-shadow) #ff6a88;
@@ -208,11 +213,6 @@
 /*--- Girls' Last Tour (Manga) ---*/
 .favourites a.favourite[href*="manga/85412"]:hover {
     box-shadow: var(--box-shadow) #919496;
-}
-
-/*--- Hyouka/Koten-bu (Light Novel) ---*/
-.favourites a.favourite[href*="manga/65513"]:hover {
-    box-shadow: var(--box-shadow) #95cc41;
 }
 
 /*--- Kamigami no Itadaki (The Summit of the Gods) ---*/
