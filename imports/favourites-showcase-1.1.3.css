@@ -386,6 +386,11 @@ body:has(a.favourite[href*="manga/30004/"]:hover) .favourites .favourites:nth-ch
     background: url(https://i.imgur.com/g9DLSTH.jpeg);
 }
 
+/*════════ Houseki no Kuni ════════*/
+body:has(a.favourite[href*="manga/74489/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/XjlRw7S.jpeg);
+}
+
 /*════════ Perfect World ════════*/
 body:has(a.favourite[href*="manga/93433/"]:hover) .favourites .favourites:nth-child(2)::after {
     background: url(https://i.imgur.com/aitP1vZ.jpeg);
@@ -399,11 +404,6 @@ body:has(a.favourite[href*="manga/85412/"]:hover) .favourites .favourites:nth-ch
 /*════════ Solanin ════════*/
 body:has(a.favourite[href*="manga/33731/"]:hover) .favourites .favourites:nth-child(2)::after {
     background: url(https://i.imgur.com/8SmwNwd.jpeg);
-}
-
-/*════════ Hyouka ════════*/
-body:has(a.favourite[href*="manga/65513/"]:hover) .favourites .favourites:nth-child(2)::after {
-    background: url(https://i.imgur.com/CbNpjIn.jpeg);
 }
 
 /*════════ The Summit of the Gods ════════*/
