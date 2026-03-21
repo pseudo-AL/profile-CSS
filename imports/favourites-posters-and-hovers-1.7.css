@@ -169,13 +169,21 @@
 
 /*--- White Album 2 (VN)---*/
 .favourites.preview a.favourite[href*="manga/91579/"] {
-    background-image: url(https://i.imgur.com/n6zk1zu.jpeg) !important;
+    background-image: url(https://i.imgur.com/Ygz1muy.jpeg) !important;
     grid-column: 1 / 5;
     min-height: 150px !important;
 }
 
+.favourites.preview a.favourite[href*="manga/91579"]:hover {
+    box-shadow: var(--box-shadow) #03214e;
+}
+
+.favourites a.favourite[href*="manga/91579"] {
+    background-image: url(https://i.imgur.com/cimoFig.jpeg) !important;
+}
+
 .favourites a.favourite[href*="manga/91579"]:hover {
-    box-shadow: var(--box-shadow) #40527d;
+    box-shadow: var(--box-shadow) #e4daf9;
 }
 
 /*--- Oregairu (Light Novel) ---*/
