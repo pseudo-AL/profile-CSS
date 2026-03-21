@@ -366,6 +366,11 @@ body:has(a.favourite[href*="manga/86218/"]:hover) .favourites .favourites:nth-ch
     background: url(https://i.imgur.com/KVI19Ek.jpeg);
 }
 
+/*════════ White Album 2 (VN) ════════*/
+body:has(a.favourite[href*="manga/91579/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/2UNVl5v.jpeg);
+}
+
 /*════════ Oregairu ════════*/
 body:has(a.favourite[href*="manga/70171/"]:hover) .favourites .favourites:nth-child(2)::after {
     background: url(https://i.imgur.com/ag6Y2HI.jpeg);
