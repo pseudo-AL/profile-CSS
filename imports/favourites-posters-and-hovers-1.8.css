@@ -310,6 +310,11 @@
     box-shadow: var(--box-shadow) #2a4964;
 }
 
+/*--- Setsuna Ogiso (White Album 2) ---*/
+.favourites a.favourite[href*="character/82115"]:hover {
+    box-shadow: var(--box-shadow) #bc7540;
+}
+
 /*--- Renge Miyauchi (Non Non Biyori) ---*/
 .favourites a.favourite[href*="character/54151"]:hover {
     box-shadow: var(--box-shadow) #bdaec8;
