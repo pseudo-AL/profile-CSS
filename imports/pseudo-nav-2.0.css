@@ -4,7 +4,7 @@
     background-color: var(--foreground) !important;
     transition: all 0s ease 0s, top 0.4s var(--cubic-bezier) 0s !important;
     left: calc((100% - 420px) / 2);
-    width: var(--nav-width);
+    width: 420px;
     margin-top: 20px;
     border-radius: var(--border-radius) !important;
     border: var(--border) solid rgb(var(--profile-color-rgb));
