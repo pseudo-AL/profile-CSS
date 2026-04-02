@@ -3,7 +3,7 @@
     height: 45px !important;
     background-color: var(--foreground) !important;
     transition: all 0s ease 0s, top 0.4s var(--cubic-bezier) 0s !important;
-    left: calc((100% - 420px / 2);
+    left: calc(100% - 420px / 2);
     width: var(--nav-width);
     margin-top: 20px;
     border-radius: var(--border-radius) !important;
