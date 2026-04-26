@@ -98,24 +98,20 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
     transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out;
     pointer-events: none;
 }
-.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+7) {
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+5) {
     transform: translateY(40px);
 }
-.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+11) {
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+9) {
     transform: translateY(60px);
 }
-.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+15) {
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+13) {
     transform: translateY(80px);
 }
-.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+19) {
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+17) {
     transform: translateY(100px);
 }
-.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+23) {
-    transform: translateY(120px);
-}
 .favourites.preview .favourites-wrap.anime:hover {
-    max-height: 1165px !important;
-    overflow: visible;
+    max-height: 1010px !important;
 }
 .favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+3) {
     opacity: 1;
@@ -125,118 +121,22 @@ body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favouri
     transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
     animation: enablePointerEvents 0s calc(var(--anime-grid-timer) - 0.075s) forwards;
 }
-.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+3):nth-child(-n+6) {
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+5):nth-child(-n+8) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.01s, transform var(--anime-grid-timer) ease-in-out 0.01s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
 }
-.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+7):nth-child(-n+10) {
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+9):nth-child(-n+12) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
 }
-.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+11):nth-child(-n+14) {
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+13):nth-child(-n+16) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.1s, transform var(--anime-grid-timer) ease-in-out 0.1s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
 }
-.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+15):nth-child(-n+18) {
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+17):nth-child(-n+20) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.15s, transform var(--anime-grid-timer) ease-in-out 0.15s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
-}
-.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+19) {
-    transition: opacity var(--anime-grid-timer) ease-in-out 0.20s, transform var(--anime-grid-timer) ease-in-out 0.20s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
-}
-.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+23) {
-    transition: opacity var(--anime-grid-timer) ease-in-out 0.25s, transform var(--anime-grid-timer) ease-in-out 0.25s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
 }
 .favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3):hover {
     background-size: var(--background-zoom) !important;
     filter: var(--cover-saturation-hover);
     transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
-}
-
-/* Extra Anime Favourite */
-
-.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"] {
-    position: absolute;
-    top: calc(var(--about-height) + 1401px);
-    left: 307px;
-    width: 85px;
-    height: 120px;
-    background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg);
-    background-size: 100%;
-    background-position: center;
-    border-radius: var(--border-radius);
-    opacity: 0;
-    z-index: 6;
-    visibility: hidden;
-    filter: var(--cover-saturation);
-    transition: filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out, opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out, visibility 0.06s ease-in-out;
-    transform: translateY(120px);
-}
-
-.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover {
-    box-shadow: var(--box-shadow) #a9e588;
-    background-size: var(--background-zoom) !important;
-    filter: var(--cover-saturation-hover);
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-}
-
-body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"] {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity var(--anime-grid-timer) ease-in-out 0.25s, transform var(--anime-grid-timer) ease-in-out 0.25s, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
-}
-
-body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .favourites.preview .favourites-wrap.anime {
-    max-height: 1165px !important;
-    border: var(--border) solid rgb(var(--color-blue-dim));
-}
-
-body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3) {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
-    opacity: 0;
-}
-
-.overview .about a[href="frierentooltip"]::before {
-    text-align: center;
-    content: "sousou no frieren";
-    white-space: nowrap;
-    font-weight: 700;
-    position: absolute;
-    top: calc(var(--about-height) + 1380px);
-    left: 349px;
-    transform: translate(-50%, -50%);
-    font-size: 13px;
-    background: rgba(10, 10, 10, 0.9);
-    padding: 6px 11px 6px 12px;
-    border-radius: var(--border-radius);
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.26s ease-in-out;
-    pointer-events: none;
-    color: white;
-    z-index: 15;
-}
-
-.overview .about a[href="frierentooltip"]::after {
-    content: "";
-    position: absolute;
-    top: calc(var(--about-height) + 1401px);
-    left: 349px;
-    transform: translate(-50%, -50%);
-    border-width: 6px;
-    border-style: solid;
-    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
-    opacity: 0;
-    transition: opacity 0.26s ease-in-out;
-    z-index: 15;
-    pointer-events: none;
-}
-
-body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="frierentooltip"]::before, body:has(.overview .about a[href="https://anilist.co/anime/154587/Sousou-no-Frieren/"]:hover) .overview .about a[href="frierentooltip"]::after {
-    opacity: 1;   
 }
 
 /*════════ Manga Grid ════════*/
