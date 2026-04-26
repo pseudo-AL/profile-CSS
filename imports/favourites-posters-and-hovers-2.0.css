@@ -12,7 +12,6 @@
 }
 
 /*--- Aria the Origination ---*/
-
 .favourites.preview a.favourite[href*="anime/3297"] {
     background-image: url(https://i.imgur.com/WdZRZ8z.jpeg) !important;
     grid-column: 1 / 5;
@@ -25,7 +24,26 @@
     box-shadow: var(--box-shadow) #5191f3;
 }
 
+/*--- Tamayura Ashita ---*/
+.favourites.preview a.favourite[href*="anime/21554"] {
+    background-image: url(https://i.imgur.com/uWP4CO2.jpeg) !important;
+    grid-column: 1 / 3;
+}
+.favourites.preview a.favourite[href*="anime/21554"]:hover {
+    box-shadow: var(--box-shadow) #f2dbd3;
+}
+.favourites a.favourite[href*="anime/21554"]:hover {
+    box-shadow: var(--box-shadow) #f9e6ec;
+}
+
 /*--- Mushishi ---*/
+.favourites.preview a.favourite[href*="anime/457/"] {
+    background-image: url(https://i.imgur.com/F8bIQDu.jpeg) !important;
+    grid-column: 3 / 5;
+}
+.favourites.preview a.favourite[href*="anime/457"]:hover {
+    box-shadow: var(--box-shadow) #523c29;
+}
 .favourites a.favourite[href*="anime/457"]:hover {
     box-shadow: var(--box-shadow) #434b39;
 }
@@ -48,11 +66,6 @@
 /*--- Non Non Biyori ---*/
 .favourites a.favourite[href*="anime/17549"]:hover {
     box-shadow: var(--box-shadow) #54c417;
-}
-
-/*--- Tamayura Ashita ---*/
-.favourites a.favourite[href*="anime/21554"]:hover {
-    box-shadow: var(--box-shadow) #f9e6ec;
 }
 /*--- Sonny Boy ---*/
 .favourites a.favourite[href*="anime/132126"]:hover {
@@ -93,15 +106,6 @@
 .favourites a.favourite[href*="anime/20812"]:hover {
     box-shadow: var(--box-shadow) #5287d7;
 }
-/*--- In This Corner Of The World ---*/
-.favourites a.favourite[href*="anime/15227"]:hover {
-    box-shadow: var(--box-shadow) #b2c989;
-}
-
-/*--- March Comes In Like A Lion ---*/
-.favourites a.favourite[href*="anime/21366"]:hover {
-    box-shadow: var(--box-shadow) #abdbec;
-}
 
 /*--- Haibane Renmei ---*/
 .favourites a.favourite[href*="anime/387"]:hover {
@@ -126,32 +130,22 @@
     box-shadow: var(--box-shadow) #7aa845;
 }
 
-/*--- Texhnolyze ---*/
-.favourites a.favourite[href*="anime/26"]:hover {
-    box-shadow: var(--box-shadow) #65907b;
-}
-
 /*--- Nana (Anime) ---*/
 .favourites a.favourite[href*="anime/877"]:hover {
     box-shadow: var(--box-shadow) #e3c690;
 }
 
-#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(25) {
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(20) {
     background-size: 105% !important;
 }
 
-#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(25):hover {
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(20):hover {
     background-size: 113% !important;
 }
 
 /*--- Sakura Quest ---*/
 .favourites a.favourite[href*="anime/97903"]:hover {
     box-shadow: var(--box-shadow) #c0cc68;
-}
-
-/*--- Super Cub ---*/
-.favourites a.favourite[href*="anime/113418"]:hover {
-    box-shadow: var(--box-shadow) #c7c6cc;
 }
 
 /*--- Bloom Into You (Manga)---*/
@@ -173,15 +167,12 @@
     grid-column: 1 / 5;
     min-height: 150px !important;
 }
-
 .favourites.preview a.favourite[href*="manga/91579"]:hover {
     box-shadow: var(--box-shadow) #03214e;
 }
-
 .favourites a.favourite[href*="manga/91579"] {
     background-image: url(https://i.imgur.com/cimoFig.jpeg) !important;
 }
-
 .favourites a.favourite[href*="manga/91579"]:hover {
     box-shadow: var(--box-shadow) #e4daf9;
 }
@@ -201,6 +192,11 @@
     box-shadow: var(--box-shadow) #abd2d9;
 }
 
+/*--- Flying Witch ---*/
+.favourites a.favourite[href*="manga/76258"]:hover {
+    box-shadow: var(--box-shadow) #7d6d5e;
+}
+
 /*--- Houseki no Kuni ---*/
 .favourites a.favourite[href*="manga/74489"]:hover {
     box-shadow: var(--box-shadow) #97f4e1;
@@ -211,11 +207,6 @@
     box-shadow: var(--box-shadow) #ff6a88;
 }
 
-/*--- Solanin ---*/
-.favourites a.favourite[href*="manga/33731"]:hover {
-    box-shadow: var(--box-shadow) #b5883b;
-}
-
 /*--- Chihayafuru (Manga) ---*/
 .favourites a.favourite[href*="manga/43245"]:hover {
     box-shadow: var(--box-shadow) #fa8d65;
@@ -224,11 +215,6 @@
 /*--- Girls' Last Tour (Manga) ---*/
 .favourites a.favourite[href*="manga/85412"]:hover {
     box-shadow: var(--box-shadow) #919496;
-}
-
-/*--- Kamigami no Itadaki (The Summit of the Gods) ---*/
-.favourites a.favourite[href*="manga/34625"]:hover {
-    box-shadow: var(--box-shadow) #85a497;
 }
 
 /*--- Akari Mizunashi (Aria) ---*/
@@ -320,11 +306,6 @@
     box-shadow: var(--box-shadow) #bdaec8;
 }
 
-/*--- Yui Yuigahama (Oregairu) ---*/
-.favourites a.favourite[href*="character/67069"]:hover {
-    box-shadow: var(--box-shadow) #e78479;
-}
-
 /*--- Nori (Hidamari Sketch) ---*/
 .favourites a.favourite[href*="character/14914"]:hover {
     box-shadow: var(--box-shadow) #9baeb4;
@@ -333,6 +314,11 @@
 /*--- Shimamura (AdaShima) ---*/
 .favourites a.favourite[href*="character/144718"]:hover {
     box-shadow: var(--box-shadow) #d6c8bf;
+}
+
+/*--- Makoto Kowata (Flying Witch) ---*/
+.favourites a.favourite[href*="character/89401"]:hover {
+    box-shadow: var(--box-shadow) #efd7d3;
 }
 
 /*--- Naoko Yamada ---*/
