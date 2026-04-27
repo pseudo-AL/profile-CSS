@@ -183,6 +183,9 @@
 }
 
 /*--- Adachi and Shimamura 99.9 ---*/
+.favourites.preview a.favourite[href*="manga/169725"] {
+    background-image: url(https://i.imgur.com/NS5bpx0.jpeg) !important;
+}
 .favourites a.favourite[href*="manga/169725"]:hover {
     box-shadow: var(--box-shadow) #9ac2c7;
 }
