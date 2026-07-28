@@ -126,9 +126,9 @@ body:has(a.favourite:hover) .favourites .favourites:nth-child(2)::after {
     transition: background var(--master-transition-timer) 0s ease-in-out;
 }
  
-/*════════ Favourites Grid ════════*/ 
+  /*════════ Favourites Grid ════════*/ 
 .favourites:not(.overview .favourites) .favourites-wrap.manga {
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
     width: unset;
     overscroll-behavior-x: contain;
@@ -139,8 +139,15 @@ body:has(a.favourite:hover) .favourites .favourites:nth-child(2)::after {
     padding-inline: 18px !important;
     scroll-padding-inline: 18px !important;
     scroll-snap-type: x proximity;
+    cursor: grab;
     position: relative;
     margin-bottom: 52px;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.manga:focus,
+.favourites:not(.overview .favourites) .favourites-wrap.manga:focus-within {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
 }
 
   /*════════════════════════════════════════════
