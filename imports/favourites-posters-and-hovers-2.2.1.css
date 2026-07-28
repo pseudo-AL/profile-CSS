@@ -135,11 +135,11 @@
     box-shadow: var(--box-shadow) #e3c690;
 }
 
-#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(20) {
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(19) {
     background-size: 105% !important;
 }
 
-#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(20):hover {
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(19):hover {
     background-size: 113% !important;
 }
 
