@@ -179,8 +179,11 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
 .favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+7) {
     transform: translateY(40px);
 }
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+11) {
+    transform: translateY(60px);
+}
 .favourites.preview .favourites-wrap.manga:hover {
-    max-height: 630px !important;
+    max-height: 741px !important;
 }
 .favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+3) {
     opacity: 1;
@@ -193,8 +196,14 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
 .favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+3):nth-child(-n+6) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.01s, transform var(--anime-grid-timer) ease-in-out 0.01s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
 }
-.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+7) {
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+7):nth-child(-n+10) {
     transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+11) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.1s, transform var(--anime-grid-timer) ease-in-out 0.1s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+15) {
+    visibility: hidden;
 }
 .favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+3):hover {
     background-size: var(--background-zoom) !important;
