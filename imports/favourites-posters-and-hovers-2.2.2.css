@@ -371,13 +371,9 @@
     box-shadow: var(--box-shadow) #8e7888;
 }
 
-/*--- Reiko Yoshida ---*/
-.favourites a.favourite[href*="staff/97076/"] {
-    background-image: url(https://i.imgur.com/G94ZngY.jpeg) !important;
-}
-
-.favourites a.favourite[href*="staff/97076/"]:hover {
-    box-shadow: var(--box-shadow) #737c43;
+/*--- yanaginagi ---*/
+.favourites a.favourite[href*="staff/109637/"]:hover {
+    box-shadow: var(--box-shadow) #afe9ed;
 }
 
 /*--- Kensuke Ushio ---*/
@@ -400,9 +396,9 @@
     box-shadow: var(--box-shadow) #b2b3c6;
 }
 
-/*--- Aoi Yuuki ---*/
-.favourites a.favourite[href*="staff/101686/"]:hover {
-    box-shadow: var(--box-shadow) #7d9abc;
+/*--- Morio Asaka ---*/
+.favourites a.favourite[href*="staff/100921/"]:hover {
+    box-shadow: var(--box-shadow) #939bcc;
 }
 
 /*--- marble ---*/
