@@ -358,22 +358,24 @@
 .favourites a.favourite[href*="staff/100393/"]:hover {
     box-shadow: var(--box-shadow) #9cb5d9;
 }
-/*--- Isao Takahata ---*/
-.favourites a.favourite[href*="staff/100579/"]:hover {
-    box-shadow: var(--box-shadow) #c0cee8;
+
+/*--- Kana Asumi ---*/
+.favourites a.favourite[href*="staff/95817/"]:hover {
+    box-shadow: var(--box-shadow) #feb7bb;
 }
 
 /*--- Hitoma Iruma ---*/
 .favourites a.favourite[href*="staff/99956/"] {
     background-image: url(https://i.imgur.com/KSDg3ur.jpeg) !important;
 }
+
 .favourites a.favourite[href*="staff/99956/"]:hover {
     box-shadow: var(--box-shadow) #8e7888;
 }
 
 /*--- yanaginagi ---*/
 .favourites a.favourite[href*="staff/109637/"]:hover {
-    box-shadow: var(--box-shadow) #afe9ed;
+    box-shadow: var(--box-shadow) #00c29c;
 }
 
 /*--- Kensuke Ushio ---*/
