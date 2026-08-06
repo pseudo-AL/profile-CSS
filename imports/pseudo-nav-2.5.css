@@ -244,3 +244,7 @@
 #nav:has(.user-wrap:hover) .dropdown .secondary-link:nth-child(4):hover svg {
     color: #a3100a;
 }
+
+#nav .dropdown .primary-link:hover .icon {
+    color: var(--profile-color);   
+}
