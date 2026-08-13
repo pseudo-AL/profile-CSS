@@ -125,9 +125,9 @@
     box-shadow: var(--box-shadow) #6f62a9;
 }
 
-/*--- Hunter x Hunter (1999) ---*/
-.favourites a.favourite[href*="anime/136/"]:hover {
-    box-shadow: var(--box-shadow) #7aa845;
+/*--- Awajima Hyakkei ---*/
+.favourites a.favourite[href*="anime/177501/"]:hover {
+    box-shadow: var(--box-shadow) #ffffff;
 }
 
 /*--- Nana (Anime) ---*/
