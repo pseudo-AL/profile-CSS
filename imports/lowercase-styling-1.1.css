@@ -24,7 +24,7 @@ If you see either of the aforementioned unintended behaviours, please feel free 
 .stats > .title,
 .filters,
 .section-header,
-.title > :not(.notes),
+.title > :not(.hover-icon),
 .list-head>div,
 .score,
 .progress,
