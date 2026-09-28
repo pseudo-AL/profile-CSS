@@ -1,0 +1,4296 @@
+/*════════════════════════════════════════════
+    Imports
+  ════════════════════════════════════════════*/
+@import url("https://voidnyan.github.io/anilist-css/css/social.css"); /* Voidnyan's Social Tab Enhancements */
+@import url('https://fonts.cdnfonts.com/css/cabinet-grotesk'); /* Custom Font */
+@import url("https://anzuftnw.github.io/files/simple-theme-framework.css"); /* Anzu's Simple Theme Framework */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"); /* Animations */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"); /* Icon Pack 1 */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"); /* Icon Pack 2 */
+
+/*════════════════════════════════════════════
+    Layout-specific Stuff
+  ════════════════════════════════════════════*/
+
+/*════════ Main Variables ════════*/
+:root {
+    --avatar-url: url(https://i.imgur.com/6BRQYCx.png); /* Avatar */
+    --avatar-padding: 170px; /* Avatar Size */
+    --banner-url: url(https://i.imgur.com/hD9Zf8T.jpeg); /* Background */
+    --profile-color: #e84176; /* Profile Colour, HEX */
+    --profile-color-rgb: 232, 65, 118; /* Profile Colour, RGB */
+    --about-height: 246px; /* Dependency for Spotify + preambles height calculations. */
+}
+
+/*════════ Body Styling ════════*/
+body {
+    background-color: rgba(14, 4, 6);
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fb437d' fill-opacity='0.125'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
+
+/*════════════════════════════════════════════
+    All Other Variables
+  ════════════════════════════════════════════*/
+  
+:root {
+/*════════ Colours and Transparencies ════════*/
+    --body-background: rgba(7, 9, 10, 1); /* Body Background. */
+    --foreground: rgba(24, 10, 12); /* Foreground Elements. */
+    --list-editor-foreground: rgba(24, 10, 12, 0.8); /* List Editor. */
+    --direct-activity-foreground: rgba(24, 10, 12, 0.95); /* Foreground for Direct Activities. */
+    --hoh-score-preview: rgba(20, 20, 20, 1); /* Hoh's/Automail's score preview, if enabled. */
+    --quick-search-results: rgba(24, 10, 12, 0.8); /* Results Columns in Quick Search. */
+    --activity-cover-arrow-dropdown: rgba(10, 10, 10, 0.95); /* Arrow Dropdowns in List Activity Covers. */
+    --activity-cover-arrow-dropdown-hover: rgba(70, 70, 70, 0.3); /* Aforementioned Dropdown when hovering options. */
+    
+/*════════ Blurs ════════*/
+    --popup-blur: blur(8px); /* Popups like List/Activity Editing, Quick Search. */
+    --global-nav-blur: blur(8px); /* Global Navbar.  */
+    --direct-activity-foreground-blur: blur(6px); /* Foreground for Direct Activities. */
+    
+/*════════ Timings ════════*/
+    --layout-delay: 10000s; /* How long favourite hover layout changes hold. */
+    --glow-length: 1.1s; /* How long the glow in media lists lasts. */
+    --master-transition-timer: 0.25s; /* (Nearly) ALL ease-in-out transitions. */
+    --anime-grid-timer: 0.3s; /* Anime favourites height expansion. */
+    --manga-grid-timer: 0.3s; /* Manga favourites height expansion. */
+    --characters-grid-timer: 0.3s; /* Staff favourites height expansion. */
+    --staff-grid-timer: 0.25s; /* Staff favourites height expansion. */
+    --animation-timer-overview: 0.8s; /* Overview load. */
+    --animation-timer-activityfeed: 0.8s; /* Activity Feed. */
+    --animation-timer-comments: 0.6s; /* Reply load. */
+    --animation-timer-replypreview: 0.6s; /* Reply previews. */
+    --animation-timer-edit: 0.5s; /* Editing windows, like activities or list media. */
+    --animation-timer-medialist: 1s; /* Anime and Manga lists load. */
+    --animation-timer-load: 1.2s; /* All loads to the right of the media lists. */
+    
+/*════════ Saturations ════════*/
+    --cover-saturation: saturate(75%); /* Initial Cover */
+    --cover-saturation-hover: saturate(135%); /* Hover Cover */
+    
+/*════════ Color-Mix Strengths ════════*/
+    --spoiler-mix: 85%; /* Spoiler tags. */
+    --activity-title-mix: 80%; /* List Activity titles on wrap hover. */
+    --stats-wrap-number-mix: 75%; /* Overview Stats Wrap numbers on hover. */
+    --stats-wrap-bar-mix: 90%; /* Overview Stats Wrap bar on hover. */
+    --list-items-mix: 70%; /* Rewatch arrows, releasing dot, counters, and grid view scores. */
+    --box-shadow-mix: 80%; /* Box shadows on image hovers (Lists, reviews, etc). */
+    
+/*════════ Banner Bubble ════════*/
+    --banner-bubble: url(); /* Initial banner-content bubble. */
+    --banner-bubble-x: -90px; /* X position of banner-content bubble. */
+    --banner-bubble-y: 170px; /* Y position of banner-content bubble. */
+    
+/*════════ Name Badges ════════*/
+    --name-badge-mix: 60%; /* Badges below usernames. */
+    --mutuals-title: 130, 217, 161; /* Colour for generic mutuals titles. */
+    --custom-title: 131, 202, 230; /* Generic colour for custom titles. */
+    --pseudo-title: 237, 213, 126; /* Colour for my title. */
+    
+/*════════ Miscellaneous ════════*/
+    --arrow-float: 7px; /* Vertical distance of the overview hover arrows. */
+    --background-zoom: 110%; /* How much backgrounds zoom when hovered. */
+    --border-radius: 8px; /* How "curved" corners are. */
+    --font: 'Cabinet Grotesk', sans-serif; /* Global Profile Font. */
+    --box-shadow: 0px 0px 9px 3px; /* Global Box Shadow for element hovers (colours are individually defined). */
+    --cubic-bezier: cubic-bezier(0.25,0.9,0.2,1); /* Cubic bezier for animations. */
+    --border: 0.5px; /* Thickness of border around foregrounds. */
+}
+
+/*════════════════════════════════════════════
+    Simple Theme Framework Colours
+  ════════════════════════════════════════════*/
+
+body,
+.site-theme-dark,
+.site-theme-contrast,
+:root {
+    --color-text: 255, 255, 255;
+    --color-text-light: 255, 255, 255;
+    --color-text-lighter: 255, 255, 255;
+    --color-foreground-grey-dark: 10, 10, 10, 0.6 !important;
+    --color-nav-text: 255, 255, 255;
+    --color-shadow-blue: 0, 0, 0;
+    --color-gray-100: 20, 20, 20, 0.9;
+    --color-gray-600: 255, 255, 255;
+    --color-gray-700: 255, 255, 255;
+    --color-nav-transparent-text: 255, 255, 255;
+    --color-overlay: 10, 10, 10;
+}
+
+/*════════════════════════════════════════════
+    VoidVerified Extra Elements Styling
+  ════════════════════════════════════════════*/
+
+.button[data-v-c574a71c], .void-button.void-self-message, .el-message-box .el-message-box__title {
+    font-weight: 650;
+}
+
+.void-tooltip, .void-mini-profile-donator-badge {
+    background-color: rgba(10, 10, 10, 0.8);
+}
+.void-tooltip::after {
+    border-top-color: rgba(10, 10, 10, 0.8) !important;
+    color: rgba(10, 10, 10, 0.8) !important;
+}
+
+.void-quick-start-results-title, .void-quick-start-results-list, .void-select .void-option, .void-quick-start-input-container input::placeholder, .void-collapsible-container-body, .void-collapsible-container-head, .void-button, .void-input::placeholder {
+    text-transform: lowercase;
+}
+
+.void-quick-start-nav-button svg {
+    color: #ffffff !important;
+    transition: color var(--master-transition-timer) ease-in-out;
+}
+
+.void-quick-start-nav-button:hover svg {
+    color: var(--profile-color) !important;
+}
+.void-quick-start-container.void-visible {
+    backdrop-filter: var(--popup-blur);
+    background-color: rgba(15, 15, 15, 0.85);
+    transition: opacity var(--master-transition-timer) ease;
+}
+
+.void-select .void-option {
+    background: var(--foreground);    
+}
+
+.void-quick-start-results-list, .void-quick-start-input-container, .void-option {
+    background-color: var(--foreground);
+    border-radius: var(--border-radius) !important;
+}
+
+.void-activity-entry .wrap, .void-activity-entry .reply {
+    background-color: var(--foreground);
+}
+
+.void-select {
+    column-gap: 20px !important;
+}
+.void-select .void-option.active {
+    background: var(--profile-color);   
+}
+
+.void-quick-start-result:hover, .void-quick-start-result:visited:hover, .void-button.void-quick-start-search-activity-button {
+    background: var(--profile-color) !important;   
+}
+
+.void-collapsible-container-head-wrap, .void-input, .void-media-display-container {
+    background-color: rgba(30, 30, 30, 0.6) !important;
+}
+
+.void-collapsible-container, .void-collapsible-container-body {
+    background-color: var(--foreground) !important;
+}
+
+.void-quick-start-head-container > div > div:nth-child(4) > div.void-collapsible-container-body-wrap > div > div, .void-quick-start-head-container > div > div:nth-child(5) > div.void-collapsible-container-body-wrap > div > div {
+    text-transform: initial !important;
+}
+
+.void-collapsible-container, .void-media-display-container, .void-input {
+    border-radius: var(--border-radius);    
+}
+
+.void-markdown-taskbar {
+    border-radius: var(--border-radius);
+    background: var(--foreground);
+    margin-top: 4px;
+    overflow: hidden;
+    transition: background var(--master-transition-timer) ease-in-out !important;
+}
+
+.container > .activity-entry .void-markdown-taskbar {
+    background: var(--direct-activity-foreground);
+}
+
+.void-dropdown-menu.top:after {
+    border-bottom-color: var(--foreground);
+}
+
+.void-markdown-taskbar > *:hover {
+    background: rgba(40, 40, 40, 0.5);
+    transition: background var(--master-transition-timer) ease-in-out !important;
+}
+
+.void-dropdown-menu {
+    text-transform: lowercase;
+    border-radius: var(--border-radius);
+    background: var(--foreground);
+    overflow: hidden;
+}
+
+.void-dialog {
+    text-transform: lowercase;
+    border-radius: var(--border-radius);
+    background: var(--foreground);
+}
+
+.void-button.void-slim {
+    background-color: var(--profile-color);
+}
+
+.void-input:focus {
+    border-color: var(--profile-color);
+}
+
+input[type="range"].void-range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 16px;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].void-range::-webkit-slider-runnable-track {
+  height: 6px;
+  background: var(--profile-color);
+  border-radius: 3px;
+}
+
+input[type="range"].void-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background: var(--profile-color);
+  border-radius: 50%;
+  border: none;
+  margin-top: -5px; 
+  cursor: pointer;
+  box-shadow: 0 0 0 2px white; 
+}
+
+input[type="range"].void-range::-moz-range-track {
+  height: 6px;
+  background: var(--profile-color);
+  border-radius: 3px;
+}
+
+input[type="range"].void-range::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background: var(--profile-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"].void-range:focus {
+  outline: none;
+}
+
+.void-quick-start-input-container, .void-select .void-option, .void-quick-start-results-list, .void-collapsible-container, .void-media-display-container, .void-input {
+    border: var(--border) solid rgb(var(--profile-color-rgb)) !important;
+}
+
+.void-quick-start-config-container {
+    background: var(--foreground);
+    border-radius: var(--border-radius);
+    text-transform: lowercase;
+}
+
+.void-activity-entry .title {
+    color: var(--profile-color);
+}
+
+.void-activity-entry .title:hover {
+    color: color-mix(in srgb,rgb(var(--profile-color)) var(--activity-title-mix), white) !important;
+}
+
+.void-activity-entry .donator-badge:not(.donator-badge.rainbow) {
+    background-color: rgba(var(--profile-color-rgb), 0.4) !important;
+    backdrop-filter: blur(4px);
+}
+
+/*════════════════════════════════════════════
+    Global (All Pages)
+  ════════════════════════════════════════════*/
+
+/*════════  Profile Animations (Credit to @Sekuji for inspiration! Selectors and timings are mine. ════════*/
+
+/* Overview and Activities/Comments + Edits */
+.overview:has(.section .about) {
+    animation: fadeInUp var(--animation-timer-overview) var(--cubic-bezier);
+}
+.activity-feed .activity-entry .reply-wrap {
+    overflow: hidden !important;
+}
+.activity-feed .activity-entry {
+    animation: fadeInUp var(--animation-timer-activityfeed) var(--cubic-bezier) !important;
+}
+.activity-replies .reply, .activity-feed .activity-entry .input {
+    animation: fadeInRight var(--animation-timer-comments) var(--cubic-bezier);
+}
+.container > .activity-entry .reply, .container > .activity-entry .input {
+    animation: fadeInUp var(--animation-timer-comments) var(--cubic-bezier);  
+}
+.reply.preview, .container > .activity-entry .reply.preivew, .activity-feed-wrap > .activity-edit > .activity-entry.preview {
+    animation: fadeInDown var(--animation-timer-replypreview) var(--cubic-bezier) !important; 
+}
+.activity-feed .activity-entry:has(.el-dialog__wrapper) .input, .activity-feed .activity-entry:has(.el-dialog__wrapper) .reply.preview, .reply.preview blockquote, .reply.preview img, .reply.preview .youtube, .reply.preview video {
+    animation: unset;
+}
+.el-dialog.list-editor, .el-dialog.activity-editor-unscoped {
+    animation: fadeInUp var(--animation-timer-edit) var(--cubic-bezier);    
+}
+/* Medialists */
+.medialist .lists, .medialist {
+    animation: fadeInUp var(--animation-timer-medialist) var(--cubic-bezier);
+}
+/* All other profile tab loads */
+.favourites:not(.overview .favourites) .favourites .favourites-wrap.anime, .favourites:not(.overview .favourites) .favourites .favourites-wrap.manga, .favourites:not(.overview .favourites) .favourites .favourites-wrap.characters, .favourites:not(.overview .favourites) .favourites .favourites-wrap.staff, .favourites .favourites-wrap.studios, .stats-wrap[data-v-1e00b9da], .user-social .user-follow .wrap, .user-social .user-threads .wrap, .user-social .user-comments .wrap, .user-reviews, .submissions, .user-moderation {
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+/*════════ Lowercase Styling ════════*/
+.details, .stats-wrap, .nav, .action.has-label, .stats > .title, .filters, .section-header, .title > :not(.hover-icon), .list-head>div, .score, .progress, .status, .format, .genres, .el-input__inner::placeholder, .el-input--small .el-input__inner, .el-scrollbar, .heading.score, .tooltip .title, .switch, .favourites-wrap, .read-review, .content > .header, .follower-badge, .action.has-label.active, .nav-btn:not(.nav-btn.donator-badge), .el-tooltip__popper, .pie-chart.vertical-layout > .title, .options > .option, .tooltip .content, textarea::placeholder, .el-dropdown-menu.el-popper.el-dropdown-menu--small, .el-dropdown-menu.el-popper.activity-extras-dropdown.el-dropdown-menu--medium, .el-dialog__body .title, .el-dialog__body .save-btn, .el-dialog__body .input-title, *.el-picker-panel.el-date-picker.el-popper, .quick-search input::placeholder, .result-col > .title, .embed, .primary-links, .footer, .pinned, .void-button.void-self-message, .void-toast, #nav.nav .links, *.el-message-box, .el-button.el-button--default.el-button--small, .el-button.el-button--default.el-button--small.el-button--primary, .delete-btn, .el-dropdown-menu.el-popper, .void-static-tooltip, *.checkbox-wrap, .stats .title, .filter-group span, .load-more, .markdown .markdown-spoiler:before, .rules-notice, .hohButton, .submissions, .actions:not(.banner-content .actions), .el-select-dropdown__empty, .el-message, body:has(.content > .overview, .favourites .favourites) .tooltip .content:has(.circle), .input-wrap.manga input[placeholder="Status"], .input-wrap.anime input[placeholder="Status"], .input-wrap .form.score input, .donator-badge:not(.donator-badge.rainbow), .void-tooltip, .void-mini-profile-donator-badge {
+    text-transform: lowercase !important;
+}
+
+/*═══ Border Radius Selector Spam ═══*/
+body:has(.content > .overview, .favourites .favourites) .tooltip, body:has(.content > .overview, .favourites .favourites) .tooltip .title, .stats-wrap > .content-wrap, .about > .content-wrap, .desktop > .content-wrap, .activity-entry > .wrap, .favourites-wrap > .favourite, .scroller > .load-more, .user-page-unscoped .markdown-editor, .el-textarea__inner, .input, .user-moderation .btn, .activity-replies > .reply, .donator-badge, .button, .el-dialog.list-editor, .el-dialog.list-editor *, .el-message-box, .el-message-box__btns *, .el-picker-panel__body-wrapper, .el-picker-panel.el-date-picker.el-popper, .el-select-dropdown.el-popper, .list-section, .filter-mobile-wrap *, .markdown .markdown-spoiler:before, .reply .markdown-spoiler::before, .filter-group *, .theme-switch, .void-static-tooltip, .donator-badge.private-badge.has-label::before, .medialist.table .entry .cover .image, .el-tooltip.random-btn, .compare[data-v-75f21ff1], .el-tooltip__popper, .action.has-label::before, .favourites .favourites-wrap, .stats .bar-chart-wrap, .stats .pie-chart, .stats .ps-container, .stats .stat-card, .user-comments .avatar, .user-threads .avatar, .favourites > .favourites .delete, .relation-card .image, .tooltip.animate-position.bottom, .tooltip.animate-position.bottom .title, .tooltip.animate-position.top, .tooltip.animate-position.top .title, .stat-cards.has-images .wrap > .image, .user-social .thread-card, .user-social .comment-wrap, .embed, .review-card, .medialist.cards .entry-card .cover .image, .users .user, .medialist.cards .entry-card .edit, .medialist .notes:before, .markdown img, .markdown .youtube, .markdown video, .void-mini-profile-container, .void-mini-profile-container *, .activity-feed-wrap blockquote, .comment blockquote, .container > .activity-entry blockquote, .el-dropdown-menu, #nav .dropdown, #nav .dropdown .footer, .medialist.table.compact .entry .edit, .history-day, .el-input, .el-input__inner, .quick-search.visible .result-col, .quick-search.visible .result-col:not(:nth-child(6)) .image, .markdown .markdown-spoiler:before, .mod-badge-wrap.follower-badge, .actions .nav-btn, .void-button, .filter-group.compare-btn, .el-message, .submissions-page .submission, .submission .status, .medialist.table .entry .edit, .reply.preview, .list-wrap .repeat::before, .el-dialog.activity-editor-unscoped, .el-dialog__body, .follow-card .avatar, .unfollow, .container > .activity-entry .markdown-editor, .activity-entry .avatar, #nav .avatar {
+    border-radius: var(--border-radius) !important;
+}
+
+/*═══ List Editor Header (the banner with the media image) ═══*/
+.el-dialog.list-editor .header {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+/*═══ List Editor Custom Lists ═══*/
+.el-dialog.list-editor .custom-lists {
+    border-radius: initial !important;
+}
+
+/*═══ Nav Dropdown Footers ═══*/
+#nav .dropdown .footer {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+/*═══ Medialists Final Row ═══*/
+/* (I leave list wrap overflows on to account for expanded list notes, but you could just turn overflow off instead to bypass the need for this) */
+.medialist.table .entry:last-child:hover {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/*═══ Stats Page Stats Bars ═══*/
+.bar-chart .bar-wrap .bar {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/*═══ Stats Page Tooltips ═══*/
+body:has(.stats-wrap > .overview > .highlights) .tooltip .title {
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+
+/*═══ Turning off overflow on Quick Search for hover border-radius to display as intended ═══*/
+.quick-search.visible > .results > .result-col {
+    overflow: hidden;
+}
+
+/*═══ Turning off overflow for dropdowns ═══*/
+.el-select-dropdown.el-popper {
+    overflow: hidden;
+}
+
+/*═══ Global Navbar ═══*/
+#nav.nav { 
+    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+}
+
+/*═══ Container Top ═══*/
+.header-wrap > .nav-wrap {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/*═══ Container Content ═══*/
+.content.container {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/*═══ Grid List View Title Background ═══*/
+.medialist.cards .entry-card .title {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/*═══ List Activity Covers (with overflow off) ═══*/
+.activity-feed .activity-entry.activity-anime_list .cover, .activity-feed .activity-entry.activity-manga_list .cover {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    overflow: hidden;
+}
+
+/*═══ List Activity Cover Arrow Dropdown ═══*/
+/* If you implement this, I would potentially recommend writing your own CSS to change the size of the arrow itself. It doesn't look that good left as-is with a more aggressive border-radius. */
+.list.small .entry-dropdown[data-v-04d66030] {
+    border-radius: 0 0 var(--border-radius) 0;
+}
+
+/*═══ Compare Page ═══*/
+[data-v-75f21ff1] .entry:first-child:hover {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+[data-v-75f21ff1] .entry:last-child:hover {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.markdown .markdown-spoiler:before, .reply .markdown-spoiler::before {
+    border-radius: var(--border-radius);
+}
+
+/*════════ Fixing a few more Border Radiuses ════════*/
+.list-editor-wrap .header .content {
+    background: rgba(1, 1, 1, 0.4) !important;
+    border-radius: unset !important;
+}
+.list-editor-wrap .list-editor .body {
+    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+}
+.list-editor-wrap .header {
+    box-shadow: unset;
+}
+
+/*═══ Automail Standardization ═══*/
+.hohDownload, 
+.hohDismiss { 
+    display: none !important; /* Hides the Banner Download and Dismiss buttons */
+}
+.hohButton { 
+    background: rgb(var(--color-blue)) !important;
+}
+.hohTable,
+.hohTable .header,
+.hohThemeSwitch,
+.hohActive,
+.hohDisplayBox {
+    background: var(--foreground) !important; /* Makes various elements adhere to my --foreground variable */
+}
+.activity-feed .details .hohScore {
+    border-radius: var(--border-radius) !important; /* Makes the score on profile overview adhere to my --border-radius variable */
+}
+
+/*═══ Automail/@Reina's Hollow Unliked Hearts ═══*/
+.action.likes .button,
+.like-wrap.thread_comment .button {
+	color: rgb(var(--color-blue-dim));
+}
+.action.likes .button:hover,
+.like-wrap.thread_comment .button:hover {
+	color: rgb(var(--color-blue));
+}
+.action.likes .button .fa-heart,
+.like-wrap.thread_comment .button .fa-heart {
+	color: #0000;
+	stroke: rgb(var(--color-blue-dim));
+	stroke-width: 70;
+	font-size: 0.87em;
+	padding-bottom: 0.08em;
+	padding-top: 0.05em;
+}
+.action.likes .button .fa-heart:hover,
+.like-wrap.thread_comment .button .fa-heart:hover {
+	stroke: rgb(var(--color-blue));
+}
+.action.likes .button.liked,
+.like-wrap.thread_comment .button.liked {
+	color: rgb(var(--color-red));
+}
+.action.likes .button.liked:hover,
+.like-wrap.thread_comment .button.liked:hover {
+	--color-red: 246, 124, 144;
+	color: rgb(var(--color-red));
+}
+.action.likes .button.liked:hover .fa-heart,
+.like-wrap.thread_comment .button.liked:hover .fa-heart {
+	color: rgb(var(--color-red));
+}
+.action.likes .button.liked .fa-heart,
+.like-wrap.thread_comment .button.liked .fa-heart {
+	color: var(--color-red);
+	stroke: rgba(0, 0, 0, 0);
+	stroke-width: 0;
+	font-size: 0.875em;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+.action.likes .button.liked .fa-heart:hover,
+.like-wrap.thread_comment .button.liked .fa-heart:hover {
+	color: rgb(var(--color-red));
+}
+
+/*═══ @hoh's/Automail's List Counters ═══*/
+.list-wrap {
+	counter-reset: listCounter;
+}
+.medialist.table.compact .entry .title::before, .medialist.table .entry .title::before {
+    counter-increment: listCounter;
+    content: counter(listCounter);
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: -19px;
+    opacity: 0.85;
+    text-align: right;
+    width: 25px;
+    min-width: 25px;
+    font-size: 70%;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--list-items-mix), white);
+}
+  
+/*════════ Avatar (Source: @voidnyan) ════════*/
+/* This snippet has the favourite hover change feature baked in, I just don't use it at the moment. */
+.banner .avatar {
+    width: 0 !important;
+    height: 0 !important;
+    padding: var(--avatar-padding) !important;
+    background: var(--avatar-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: background var(--master-transition-timer) ease-in-out;
+    position: absolute;
+    left: 40px;
+}
+
+.banner-content > .name-wrapper > .name {
+    left: 270px;
+}
+
+body:has(a.favourite:hover) .banner .avatar {
+    transition-delay: 0s;
+    transition-property: background;
+}
+
+/*════════ Hide Submissions Tab ════════*/
+.nav-wrap a.link:nth-child(8) { 
+    display: none;
+}
+  
+/*════════ Hide Original Profile Banner (Source: @Anzu) ════════*/
+.header-wrap > .banner {
+    background-image: var(--banner-url) !important;
+    background-size: cover;
+    border-bottom: 1.5px solid rgb(var(--color-blue));
+}
+.header-wrap > .banner .shadow {
+    visibility: hidden;
+}
+.banner > .container {
+    justify-content: center;
+}
+.review-card > .banner { /* Re-enables review card banners */
+    visibility: visible !important;
+}
+
+/*════════ Full Viewport Profile Banner (Source: @voidnyan) ════════*/
+.banner:not(.review-card > .banner) {
+    height: calc(100vh - 46px) !important;
+    transition: height 1.2s ease-out;
+}
+  
+/*════════ Hide Banner-Content Actions (Block, Report)  ════════*/  
+.banner-content .actions > :not(.follower-badge, .nav-btn, .donator-badge) {
+    display: none;
+}
+
+/*════════ Hide Footer ════════*/
+#app > div > .footer {
+    display: none;
+}
+
+/*════════ Change Font ════════*/
+/* A LOT of these selectors are redundant. I just don't feel like figuring out which ones. */
+*.overview, .stats-wrap, .nav, .lists, .filters, .user-follow, .user-reviews, .filter-group, .el-input__inner, .el-textarea__inner, .el-scrollbar, .el-tooltip__popper, .tooltip .content, .user-follow > .name, .section-header, .banner-content, .option, .content > .user-social, .content .submissions, .el-dropdown-menu.el-popper.el-dropdown-menu--small, .el-dropdown-menu.el-popper.activity-extras-dropdown.el-dropdown-menu--medium, .container > .activity-entry .wrap, .container > .activity-entry .reply, .el-dialog__body .title, .el-dialog__body .save-btn, .el-dialog__body .input-title, *.el-picker-panel.el-date-picker.el-popper, *.quick-search.visible, .has-label[data-v-04d66030]:before, .primary-links, .footer, #nav.nav .links, .hohNotificationCake *, *.el-message-box, .el-button.el-button--default.el-button--small, .el-button.el-button--default.el-button--small.el-button--primary, .load-more, .delete-btn, .hohButton, *.checkbox-wrap, .activity-feed .time, .el-select__input, .content.container > div > div:nth-child(1) > div:nth-child(2) > h2, .button[data-v-c574a71c], .donator-badge:not(.donator-badge.rainbow), * {
+    font-family: var(--font) !important;
+}
+
+/*════════ Loading Spinner ════════*/
+.emoji-spinner {
+    font: 0/0 a;
+}
+
+.emoji-spinner::after {
+    content: url(https://i.imgur.com/YxEFV2N.png);
+}
+
+/*════════ Container Styling (Source: @Anzu) ════════*/
+.header-wrap > .nav-wrap { /* Stretch Profile Navbar to Full Viewport Width */
+    max-width: 100vw !important;
+    margin: 0 auto;
+    position: relative;
+    background: unset !important;
+    border-radius: unset;
+}
+
+.content > .overview,
+.content > .medialist,
+.content > .stats,
+.content > .user-social,
+.content .submissions { /* Fixing Margins */
+    margin-top: 0 !important;
+}
+
+/*════════ More Container Styling (Inspired By: @voidnyan) ════════*/
+.container { /* Fixed width of container content */
+    max-width: 1240px !important;
+    padding-left: 75px !important;
+    padding-right: 75px !important;
+    position: relative;
+}
+
+.content.container { /* Transparent container, the patterning is handled by a pseudo-element */
+    padding: 30px 30px;
+}
+  
+/*════════ Add Underline to Profile Navbar Select + Hover (Source: @Anzu) ════════*/
+.nav > .link { 
+    position: relative;
+}
+.nav > .link::after { 
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 2.5px;
+    width: 0;
+    background: rgb(var(--color-blue));
+    transition: var(--master-transition-timer) ease-in-out;
+}
+.nav > .router-link-active::after, .nav > .link:hover::after {
+    left: 0;
+    width: 100%;
+    background: rgb(var(--color-blue));
+}
+
+/*════════ Rename Profile Navbar Tabs (Source: @voidnyan) ════════*/
+.nav-wrap :is(a[href*="/animelist"], a[href*="/mangalist"], a[href$="/pseudo/"], a[href*="/favorites"]) { 
+    visibility: hidden;
+    position: relative;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.nav-wrap :is(a[href*="/animelist"], a[href*="/mangalist"], a[href$="/pseudo/"], a[href*="/favorites"])::after {
+    visibility: visible;
+}
+.nav-wrap :is(a[href*="/animelist"], a[href*="/mangalist"], a[href$="/pseudo/"], a[href*="/favorites"])::before {
+    text-align: center;
+    display: inline-block;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+    position: absolute;
+}
+.nav-wrap a[href*="/animelist"]::before {
+    content: "anime";
+}
+.nav-wrap a[href*="/mangalist"]::before {
+    content: "manga";
+}
+.nav-wrap a[href$="/pseudo/"]::before {
+    content: "me";
+}
+.nav-wrap a[href*="/favorites"]::before {
+    content: "full favs";
+}
+.nav-wrap > div > a:nth-child(4):hover::after {
+    transform: scaleX(1.4);
+}
+.user .nav a[href*="/favorites"].link.router-link-exact-active.router-link-active::after {
+    transform: scaleX(1.4);
+}
+
+/*════════ Banner-Content Button Adjustments ════════*/
+.donator-badge:not(.donator-badge.rainbow), .follower-badge, .nav-btn {
+    background-color: rgba(var(--color-blue), 0.3) !important;
+    backdrop-filter: blur(3px);
+}
+
+/*════════ Extra Profile Navbar Styling (Source: @voidnyan) ════════*/
+.nav .link[data-v-1cc2919e] { /* Adjusts Margin between Links */
+    margin: 0 15px;
+}
+.nav-wrap a { /* Removes Background on link select */
+    background: unset !important;
+}
+
+/*════════ Popup Blur (the blur which targets everything behind popups) ════════*/
+.el-dialog__wrapper, .el-dialog__body, .el-message-box__wrapper {
+    backdrop-filter: var(--popup-blur) !important;
+}
+
+.el-dialog.list-editor .el-dialog__body {
+    background: unset;
+}
+
+.el-dialog.activity-editor-unscoped .el-dialog__body, .el-message-box {
+    background: var(--list-editor-foreground) !important;
+}
+
+/*════════ Adjusting Backgrounds ════════*/
+.ps-container.horizontal-scroller .area {
+    fill: rgba(var(--color-blue), 0.85) !important;
+}
+.stats .x-axis,
+.pie-chart .pie-chart,
+.stats .stat-card .relations-wrap,
+.el-dropdown-menu.el-popper.el-dropdown-menu--small .el-dropdown-menu__item,
+.el-dropdown-menu.el-popper.activity-extras-dropdown.el-dropdown-menu--medium .el-dropdown-menu__item,
+.el-textarea,
+.activity-feed .time,
+.container .time,
+.thread-card > .footer,
+.list-section .progress,
+div.filter-group
+div.el-select.format.el-select--small
+div.el-select__tags
+input.el-select__input.is-small {
+    background: unset !important;
+}
+.button.cancel, el-tooltip.el-slider__button {
+    background: rgb(20, 20, 20) !important;
+}
+.el-message-box__wrapper > div > div.el-message-box__btns > button:nth-child(1) {
+    background: rgb(10, 10, 10) !important;
+}
+
+/*════════ Dropdown Styling ════════*/
+.el-select-dropdown, .el-dropdown-menu:not(h2 ul), .el-dropdown-menu__item:not(h2 li) {
+    background: rgba(20, 20, 20) !important;
+}
+.el-select-dropdown.el-popper, .el-picker-panel.el-date-picker.el-popper {
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(6px);
+}
+.el-dropdown-menu__item.el-dropdown-menu__item--divided::before {
+    display: none !important;
+}
+.el-picker-panel.el-date-picker.el-popper {
+    border-color: rgba(0,0,0,0) !important;
+    background: rgba(20, 20, 20, 0.9) !important;
+}
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+    background-color: rgba(40, 40, 40, 0.5) !important;
+    background: rgba(40, 40, 40, 0.5) !important;
+}
+
+/*════════ Quick Search Styling ════════*/
+.quick-search[data-v-17620a08] {
+    transition: opacity var(--master-transition-timer) ease;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: var(--popup-blur) !important;
+}
+.quick-search .result-col .title {
+    color: rgba(255, 255, 255) !important;
+}
+.input .icon.right[data-v-17620a08]:hover {
+    color: rgba(170, 170, 170);
+}
+[data-v-17620a08] .result .open-list-editor {
+    color: rgb(220, 220, 220);
+    background: rgba(200, 200, 200, 0.5);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+[data-v-17620a08] .result .open-list-editor:hover {
+    color: rgb(255, 255, 255);
+    background: rgba(160, 160, 160, 0.5);
+}
+.quick-search > .results > :nth-child(6) {
+    text-transform: initial !important;
+}
+
+/*════════ Global Nav Avatar Chevron Styling ════════*/
+.user .chevron[data-v-62eacfff] {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    transition: color var(--master-transition-timer) ease-in-out;
+}
+.user:hover .chevron[data-v-62eacfff] {
+    color: var(--profile-color) !important;
+    opacity: 1 !important;
+}
+
+.user:has(.notification-dot[data-v-62eacfff]) .chevron[data-v-62eacfff] {
+    visibility: hidden;
+}
+
+/*════════ Banner Bubble Styling (Credit: @Sekuji) ════════*/
+.banner-content:hover::before {
+    opacity: 1;
+    transition: var(--master-transition-timer) ease-in-out;
+}
+.banner-content::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 217px;
+    height: 125px;
+    background: var(--banner-bubble);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: var(--banner-bubble-x);
+    bottom: var(--banner-bubble-y);
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, background var(--master-transition-timer) var(--layout-delay) ease-in-out, margin-left 0s var(--layout-delay) ease-in-out, bottom 0s var(--layout-delay) ease-in-out;
+}
+
+body:has(a.favourite:hover) .banner-content::before {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+}
+
+/*════════ Global Navbar Styling ════════*/
+#nav.nav { /* Sets height and width */
+    height: 45px !important;
+    background-color: var(--foreground) !important;
+    transition: all 0s ease 0s, top 0.4s var(--cubic-bezier) 0s !important;
+    left: calc((100% - 420px) / 2);
+    width: 420px;
+    margin-top: 20px;
+    border-radius: var(--border-radius) !important;
+    border: var(--border) solid rgb(var(--profile-color-rgb));
+}
+
+#nav .browse-wrap { /* Adjusts "Browse" */
+    position: absolute;
+    left: 262px;
+    width: 18px;
+}
+
+#nav .browse-wrap > .link {
+    left: 1px;
+}
+
+#nav .browse-wrap > .link:after { 
+    content: "";
+    position: absolute;
+    top: 21%;
+}
+
+#nav .logo { /* Hides the AL logo */
+    display: none;
+}
+
+#nav .void-quick-start-nav-button { /* Hides VoidVerified Quick Start */
+    display: none;
+}
+
+.transparent .search[data-v-62eacfff] svg, .search[data-v-62eacfff] svg { /* Initial svg */
+    color: #ffffff;
+    transition: color var(--master-transition-timer) ease-in-out;
+    transform: scale(0.79);
+    position: relative;
+    right: 1px;
+    bottom: 0.5px;
+}
+
+#nav .user .chevron {
+    display: none;
+}
+
+#nav > div.wrap > div.links > a:nth-child(6) {
+    display: none;
+}
+
+#nav .links > a, #nav > div.wrap > div.links > span > a {
+    position: relative;
+    visibility: hidden;
+}
+
+#nav .links > a::before, #nav > div.wrap > div.links > span > a::before {
+    visibility: visible;
+    font-family: "FontAwesome";
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: color var(--master-transition-timer);
+}
+
+#nav .links > a:hover::before, #nav > div.wrap > div.links > span > a:hover::before, #nav:has(.dropdown[data-v-38edf8f8]:hover) div.links > span > a::before, #nav .browse-wrap:hover .link::before {
+    color: var(--profile-color);
+}
+
+#nav .links > a:nth-child(1)::before {
+    content: "\f015";
+    font-size: 20px;
+    left: 55px;
+    padding-top: 0px;
+}
+
+#nav .links > a:nth-child(2)::before {
+    font-family: "bootstrap-icons";
+    content: "\F4DB";
+    font-size: 19px;
+    left: 43px;
+}
+
+#nav .links > a:nth-child(3)::before {
+    content: "\f04b";
+    font-size: 16px;
+    left: 24px;
+}
+
+#nav .links > a:nth-child(4)::before {
+    content: "\f02e";
+    font-size: 17px;
+    left: 0px;
+}
+
+#nav > div.wrap > div.links > span > a::before {
+    font-family: "bootstrap-icons";
+    content: "\F479";
+    font-size: 24px;
+}
+
+#nav > div.wrap > div.links > span > div {
+    left: -76px;
+}
+
+#nav .links {
+    position: relative;
+    left: -5%;
+    z-index: 1;
+}
+
+#nav .user .avatar {
+    transform: scale(0.7);
+    position: relative;
+    left: -5px;
+    transition: transform var(--master-transition-timer);
+}
+
+#nav .user .user-wrap {
+    left: 20px;
+}
+
+#nav .user .user-wrap:hover .avatar {
+    transform: scale(0.8) !important;
+}
+
+#nav .user .notification-dot {
+    position: absolute;
+    bottom: 23px;
+    left: 38px !important;
+    transform: scale(0.75);
+}
+
+#nav .user .notification-dot:hover {
+    transform: scale(0.85);
+}
+
+#nav .dropdown { 
+    background: var(--foreground);
+    transition: opacity var(--master-transition-timer) ease-in-out;
+}
+
+#nav .dropdown[data-v-38edf8f8] {
+    top: 46px;
+}
+
+#nav .links, #nav .search {
+    opacity: 1;
+    transition: opacity var(--master-transition-timer), transform var(--master-transition-timer);
+}
+
+#nav:has(.user-wrap:hover) .links, #nav:has(.user-wrap:hover) .search {
+    transform: translateX(-15px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#nav .user-wrap > .dropdown {
+    top: -3px;
+    right: 35px;
+    position: absolute;
+    min-width: 380px;
+    max-height: 45px;
+    visibility: hidden;
+    animation: none !important;
+}
+
+#nav .user-wrap::after {
+    display: none;
+}
+
+#nav .user-wrap > .dropdown > * {
+    visibility: visible;   
+}
+
+#nav .user-wrap > .dropdown .footer {
+    background-color: transparent !important;
+}
+
+#nav .user-wrap > .dropdown .secondary-link:nth-child(-n+3) {
+    display: none;   
+}
+
+#nav .user-wrap > .dropdown .primary-links .label {
+    display: none;
+    pointer-events: none;
+}
+
+#nav .user-wrap > .dropdown .primary-link {
+    max-width: 10px;
+    transform: scale(1.2) translateX(15px);
+    position: absolute;
+    top: 14px;
+    opacity: 0;
+    transition: all var(--master-transition-timer);
+}
+
+#nav:has(.user-wrap:hover) .user-wrap > .dropdown .primary-link:not(:nth-child(1)) {
+    opacity: 1;
+    transform: scale(1.2) translateX(0px);
+}
+
+#nav:has(.user-wrap:hover) .user-wrap > .dropdown .primary-link:nth-child(1) {
+    opacity: 1;
+    transform: scale(1.1) translateX(0px);
+}
+
+#nav .user-wrap > .dropdown .primary-link:nth-child(1) {
+    left: 74px;
+}
+
+#nav .user-wrap > .dropdown .primary-link:nth-child(2) {
+    left: 144px;
+}
+
+#nav .user-wrap > .dropdown .primary-link:nth-child(3) {
+    left: 212px;
+}
+
+#nav .user-wrap > .dropdown .secondary-link:nth-child(4) {
+    font-size: 0;
+    position: absolute;
+    top: 11px;
+    left: 280px;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: all var(--master-transition-timer);
+}
+
+#nav:has(.user-wrap:hover) .dropdown .secondary-link:nth-child(4) {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+#nav .user-wrap > .dropdown .secondary-link:nth-child(4) svg {
+    font-size: 20px;
+    transition: color var(--master-transition-timer);
+}
+
+#nav:has(.user-wrap:hover) .dropdown .secondary-link:nth-child(4):hover svg {
+    color: #a3100a;
+}
+
+#nav .dropdown .primary-link:hover .icon {
+    color: var(--profile-color);   
+}
+
+/*════════ Main Foregrounds ════════*/
+.markdown-editor,
+.el-textarea textarea,
+.list-section,
+.lists .theme-switch,
+.filter-group .active,
+.filters-wrap input,
+.el-slider__runway,
+.load-more,
+.favourites .favourites .favourites-wrap,
+.overview .favourites .favourites-wrap,
+.stats .circle,
+.stats .switch,
+.stats .bar-chart-wrap,
+.stats .pie-chart,
+.stats .line-chart-wrap,
+.filter-group .router-link-active,
+.ps-container.horizontal-scroller,
+.stats .stat-card,
+.review-card,
+.el-input__inner,
+.genre-overview.content-wrap,
+.activity-history.content-wrap,
+.content-wrap,
+.footer,
+.activity-feed-wrap .wrap,
+.activity-feed-wrap .reply,
+.el-input,
+.comment-wrap.depth-0.even,
+.thread-card,
+.activity-feed-wrap blockquote,
+.comment blockquote,
+.markdown-spoiler::before,
+.markdown-spoiler.spoiler-visible span,
+.embed,
+.container > .activity-entry blockquote,
+.input,
+.stats-wrap .progress,
+.submissions-page .submission,
+.scrollableContent *{
+    background: var(--foreground) !important;
+}
+
+/*════════ Direct Activity Foregrounds ════════*/
+.container > .activity-entry .wrap,
+.container > .activity-entry .reply,
+.container > .activity-entry .markdown-editor,
+.container > .activity-entry .el-textarea__inner {
+    background: var(--foreground) !important;
+}
+
+/*════════ List Editor Foreground ════════*/
+.body {
+    background: var(--list-editor-foreground) !important;
+}
+
+/*════════ Quick Search Foregrounds ════════*/
+.result-col {
+    background: var(--quick-search-results) !important;
+}
+
+/*════════ Popper Arrows Fixing ════════*/
+.el-tooltip__popper {
+    background: rgb(20, 20, 20) !important;
+}
+.el-tooltip__popper[x-placement^="top"] .popper__arrow,
+.el-tooltip__popper[x-placement^="top"] .popper__arrow::after {
+    border-top-color: rgba(10, 10, 10, 0.8) !important;
+}
+.el-tooltip__popper[x-placement^="bottom"] .popper__arrow,
+.el-tooltip__popper[x-placement^="bottom"] .popper__arrow::after {
+    border-bottom-color: rgba(10, 10, 10, 0.8) !important;
+}
+.el-popper[x-placement^="top"] .popper__arrow,
+.el-popper[x-placement^="top"] .popper__arrow::after{
+    border-top-color: rgba(10, 10, 10, 0.8) !important;
+}
+.el-popper[x-placement^="bottom"] .popper__arrow,
+.el-popper[x-placement^="bottom"] .popper__arrow::after{
+    border-bottom-color: rgba(10, 10, 10, 0.8) !important;
+}
+
+/*════════ Dropdown Placeholder Adjustments ════════*/
+.el-textarea__inner::placeholder {
+    color: #dbdbdb;
+}
+
+div.desktop:nth-child(3) { /* Hide Genre Overview */
+    display: none !important;
+}
+
+/*════════ Adding Tooltip Upon Username Hover ════════*/
+.banner-content .name {
+    position: relative;
+}
+
+.banner-content .name:before {
+    text-align: center;
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "joined: july 10th, 2022\A active: ~october 2022";
+    line-height: 21px;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 7px 12px 8px 12px;
+    border-radius: var(--border-radius);
+    white-space: pre;
+    opacity: 0; 
+    transition: opacity var(--master-transition-timer) ease-in-out; 
+    pointer-events: none;
+}
+
+.banner-content .name:after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--master-transition-timer) ease-in-out, visibility var(--master-transition-timer) ease-in-out;
+}
+
+.banner-content .name:hover:before, .banner-content .name:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*════════ Custom Follower Badge (Inspired By: @voidnyan)  ════════*/
+.follower-badge {
+    position: relative;
+    color: transparent !important;
+    margin-left: -5px;
+}
+
+.follower-badge::after {
+    display: block;
+    text-align: center;
+    width: 100%;
+    content: "mutuals  ☻";
+    position: absolute;
+    padding: 5px 8px;
+    top: 0;
+    left: 0px;
+    color: white;
+}
+
+/*════════ Add Shadow to Profile Name ════════*/
+.name-wrapper > .name {
+    text-shadow: 1px 1px 4px black;
+}
+
+/*════════ Automail Fix ════════*/
+.user .overview {
+	grid-template-columns: 450.5px auto !important;
+}
+
+/*════════ Add --color-blue Border To Foreground Elements ════════*/
+.activity-history.content-wrap {
+    margin-top: -10px;
+    margin-bottom: 173px !important;
+    border: var(--border) solid rgb(var(--color-blue));
+    transition: border var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about .content-wrap {
+    border: var(--border) solid rgb(var(--color-blue));
+    transition: border var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about .content-wrap:has(.markdown > center > p:nth-child(9):hover) {
+    border: var(--border) solid rgb(var(--color-blue));
+}
+
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(2) > h2 {
+    visibility: hidden;
+}
+
+.activity-entry .wrap, .activity-replies .reply, .list-stats.content-wrap, .markdown-editor, .el-textarea__inner, .void-markdown-taskbar.void-has-icon, .list-section:not(.medialist.cards .list-section), .favourites:not(.overview .favourites) .favourites-wrap, .el-input__inner, .filter-group > .active, .hover-icon::before, .theme-switch, .bar-chart-wrap, .pie-chart.vertical-layout, .ps-container, .switch, .filter-group .router-link-exact-active, .thread-card, .comment-wrap, .review-card, #nav .dropdown, .el-dialog__body, .quick-search .input, .quick-search .result-col, .load-more, .submission, .highlight .circle, .stat-cards .stat-card, .stat-card .count.circle {
+    border: var(--border) solid rgb(var(--profile-color-rgb)) !important;
+}
+
+#nav .dropdown::before {
+    display: none !important;
+}
+
+.list-stats .progress {
+    margin-right: 4px;
+    margin-left: 3px;
+}
+
+/*════════ Missing Profile Colour Hovers ════════*/
+
+/*--- Navbar and Overview ---*/
+#nav .primary-link-text {
+    color: #ffffff;
+}
+#app > div > div > div > .link:hover, .link[data-v-62eacfff]:hover, .primary-link .icon[data-v-38edf8f8]:hover, .primary-link-text[data-v-38edf8f8]:hover, .secondary-links a[data-v-38edf8f8]:hover, .primary-link:hover .icon[data-v-38edf8f8], .footer a[data-v-38edf8f8]:hover, .footer a:hover .icon[data-v-38edf8f8], .search[data-v-62eacfff]:hover svg, .primary-link[data-v-04b245e6]:hover, .primary-link:hover .icon[data-v-04b245e6], .secondary-link[data-v-04b245e6]:hover {
+    color: var(--profile-color) !important;
+    transition: var(--master-transition-timer) ease-in-out;
+}
+* {
+    scrollbar-color: rgb(var(--profile-color-rgb)) rgba(1, 1, 1, 0.1) !important;
+}
+.el-dropdown-menu__item:not(.is-disabled):hover svg {
+    color: var(--profile-color);
+    transition: var(--master-transition-timer) ease-in-out;
+}
+.void-static-tooltip.void-interactable:hover, .void-has-icon.void-icon-mr:hover {
+    color: var(--profile-color) !important;
+}
+.tooltip .circle.lv-1[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 65%);
+}
+.tooltip .circle.lv-3[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 45%);
+}
+.tooltip .circle.lv-5[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 25%);
+}
+.tooltip .circle.lv-7[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 5%);
+}
+.tooltip .circle.lv-9[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 0.1%);
+}
+
+/*--- Media List Dropdowns ---*/
+.el-select-dropdown__item.selected, .el-select-dropdown.is-multiple .el-select-dropdown__item.selected, .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: var(--profile-color);
+}
+.el-message-box__headerbtn:hover .el-message-box__close, .el-dialog__headerbtn:hover .el-dialog__close {
+    color: var(--profile-color) !important;
+    transition: var(--master-transition-timer) ease-in-out;
+}  
+.el-select__tags-text {
+    color: #ffffff;
+}
+.el-select__tags .el-tag, .el-select__tags .el-tag--info, .el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+    background: rgba(120, 120, 120, 0.3);
+}
+
+/*--- List Editor Body, Calendars, and Hovers ---*/
+.el-dialog__wrapper.list-editor-wrap .save-btn, .list-editor-wrap .list-editor .body .delete-btn {
+    background: rgb(var(--profile-color-rgb));
+}
+.list-editor-wrap .list-editor .body .delete-btn:hover {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)) 85%, white);
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: var(--profile-color);
+    border-color: var(--profile-color);
+}
+body > div.el-message-box__wrapper > div > div.el-message-box__btns > button.el-button.el-button--default.el-button--small.el-button--primary {
+    background-color: var(--profile-color);
+}
+.el-picker-panel, .el-picker-panel .el-date-picker__header-label, .el-picker-panel .el-picker-panel__icon-btn, .el-year-table td .cell, .el-month-table td .cell {
+    color: #ffffff;
+}
+.el-picker-panel .el-date-table td.next-month, .el-picker-panel .el-date-table td.prev-month {
+    color: #76777a;
+}
+.el-picker-panel .el-date-table th, .el-picker-panel .el-date-picker__header-label {
+    font-weight: 600;
+}
+.el-date-table td.available:hover, .el-picker-panel__icon-btn:hover, .el-date-picker__header-label:hover, .el-year-table td .cell:hover, .el-month-table td .cell:hover {
+    color: var(--profile-color);
+    transition: var(--master-transition-timer) ease-in-out;
+}
+.el-date-table td.today span, .el-picker-panel .el-date-table th, .el-year-table td.today .cell, .el-year-table td.current:not(.disabled) .cell, .el-month-table td.today .cell, .el-month-table td.current:not(.disabled) .cell {
+    color: var(--profile-color);   
+}
+.el-date-table td.current:not(.disabled) span, .el-picker-panel .el-date-table td.current:not(.disabled) span {
+    background-color: var(--profile-color);
+}
+
+/*--- Social Tab Numbers (only visible with Automail) ---*/
+.user-social .filter-group > span.active > span, .user-social .filter-group > span:nth-child(2) > span, .user-social .filter-group > span:nth-child(3) > span, .user-social .filter-group > span:nth-child(6) > span, .user-social .filter-group > span:nth-child(7) > span, .user-social .filter-group > span:nth-child(8) > span {
+    color: var(--profile-color);
+    font-weight: 550;
+}
+
+/*════════════════════════════════════════════
+    Overview (Minus Sidebar Favourites)
+  ════════════════════════════════════════════*/
+  
+/*════════ Arranging Overview Sections  ════════*/
+.section:first-child { /* Width: About section and below */
+    position: relative;
+    width: 408px !important;
+    right: 30px !important;
+}
+.section:last-child { /* Width: Stats Wrap and all Overview Actvities */
+    position: relative;
+    right: 65px !important;
+    width: 704px !important;
+}
+  
+/*════════ Remove Year and Media Type from Favourite Tooltips (Source: @voidnyan) ════════*/
+body:has(.content > .overview, .favourites .favourites) .tooltip .content {
+    display: none;
+}
+
+body:has(.content > .overview, .favourites .favourites) .tooltip .content:has(.circle) { /* Re-enables Activity History Tooltips */
+    display: block;
+}
+
+/*════════ Center Favourite Hover Tooltips (Source: @voidnyan) ════════*/
+.tooltip .title, .favourites .favourites > .tooltip .title {
+    padding-right: 12px !important;
+}
+
+/*════════ Compress Activity History (Source: @voidnyan) ════════*/
+.history-day:nth-of-type(-n + 21) {
+    display: none;
+}
+
+/*════════ Make List Activities Take Entire Row (Source: @voidnyan) ════════*/
+.activity-entry:has(.small) {
+    grid-column-start: 1 !important;
+    grid-column-end: 3 !important;
+}
+
+/*════════ Force Anime and Manga Overview Stats to be side-by-side (Source: @voidnyan) ════════*/
+.section > .stats-wrap {
+    grid-template-columns: 1fr 1fr !important;
+    grid-column-gap: 30px !important;
+}
+
+/*════════ Overview Stats Numbers Adjustments ════════*/
+.stats-wrap .footer {
+    background: unset !important;
+}
+.stats-wrap[data-v-815ccddc] {
+    padding-bottom: 11px;
+}
+
+.stats-wrap .stat .value {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+.stats-wrap .stat .label {
+    font-size: 0.95rem;
+}
+
+/*════════ Overview Stats Wrap Hover Popups (Inspired By: @Sekuji) ════════*/
+.list-stats.content-wrap {
+    overflow: visible;
+}
+.list-stats.content-wrap .footer .progress {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    left: -3px;
+}
+.list-stats.content-wrap .stats-wrap .stat {
+    position: relative;
+    transition: transform var(--master-transition-timer) ease-in-out;
+}
+.list-stats.content-wrap .stats-wrap .stat .value {
+    transition: color var(--master-transition-timer) ease-in-out;  
+}
+.list-stats.content-wrap .stats-wrap .stat:hover .value {
+    color: color-mix(in srgb, rgb(var(--color-blue)) var(--stats-wrap-number-mix), white) !important; 
+}
+.list-stats.content-wrap .stats-wrap .stat .label {
+    position: relative;
+}
+.list-stats.content-wrap .stats-wrap .stat::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 140%;
+    transform: translate(-50%, -50%);
+    background-color: color-mix(in srgb, var(--foreground) 80%, black);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer); 
+    border-radius: var(--border-radius);
+}
+.list-stats.content-wrap .stats-wrap .stat:hover {
+    transform: translateY(-4px); 
+}
+.list-stats.content-wrap .stats-wrap .stat:hover::after {
+    opacity: 1; 
+}
+.list-stats.content-wrap .stat .label::before {
+    position: absolute;
+    top: -68px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 9px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--master-transition-timer) ease-in-out;
+    pointer-events: none;
+}
+.list-stats.content-wrap .stat .label::after {
+    content: "";
+    position: absolute;
+    top: -52px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--master-transition-timer) ease-in-out, visibility var(--master-transition-timer) ease-in-out;
+}
+.list-stats.content-wrap .stat:hover .label::before {
+    opacity: 1;
+}
+.list-stats.content-wrap .stat:hover .label::after {
+    opacity: 1;
+    visibility: visible;
+}
+/* Anime */
+.list-stats.content-wrap:nth-child(1) .stat:nth-child(1) .label::before {
+    content: "would be higher if i didn't rewatch so often";
+}
+.list-stats.content-wrap:nth-child(1) .stat:nth-child(2) .label::before {
+    content: "watchtime since march 2020";
+}
+.list-stats.content-wrap:nth-child(1) .stat:nth-child(3) .label::before {
+    content: "4 is my floor for \"acceptable,\" and 5 is my floor for shows i enjoyed";
+}
+/* Manga */
+.list-stats.content-wrap:nth-child(2) .stat:nth-child(1) .label::before {
+    content: "started reading more in late 2024, working on increasing this count";
+}
+.list-stats.content-wrap:nth-child(2) .stat:nth-child(2) .label::before {
+    content: "quite a few of these are light novel chapters";
+}
+.list-stats.content-wrap:nth-child(2) .stat:nth-child(3) .label::before {
+    content: "looser scores than anime; and i'm more selective as to what i read";
+}
+
+/*════════ Spoiler Tag Adjustments ════════*/
+.markdown .markdown-spoiler {
+    border: var(--border) solid rgb(var(--color-blue));
+    border-radius: var(--border-radius);
+}
+
+.markdown .markdown-spoiler.spoiler-visible {
+    border: unset;
+}
+
+.markdown .markdown-spoiler:before, .reply .markdown-spoiler::before {
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--spoiler-mix), white); !important;
+    content: "click to reveal spoiler";
+    transition: all var(--master-transition-timer);
+    text-align: center;
+    white-space: nowrap;
+    display: inline-block;
+    width: 140px;
+    padding: 3px 0px 3px 0px;
+}
+
+.markdown .markdown-spoiler:hover:before, .reply .markdown-spoiler:hover:before, .reply:has(a.name[href*="/pseudo/"]) .markdown-spoiler:hover:before {
+    width: 150px;
+}
+
+.hide-spoiler.el-icon-circle-close {
+    left: 20px;
+}
+
+/*════════ Adjusting Block Quotes ════════*/
+.markdown blockquote, .reply-markdown .markdown blockquote {
+    background: black !important;
+    border-radius: var(--border-radius);
+}
+
+/*════════ Activity Feed Filter Styling ════════*/
+.overview .section-header {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.details .title {
+    font-weight: 600;
+}
+
+.home .activity-feed-wrap .section-header .el-dropdown-menu__item, .user .activity-feed-wrap .section-header .el-dropdown-menu__item {
+    background: none !important;
+}
+.overview .section:first-child .section-header {
+    text-align: center;
+    justify-content: center;
+    font-style: italic;
+}
+
+/*════════ Remove Bio Scrollbars + Automail Extra Content ════════*/
+.user .about > div.content-wrap {
+    scrollbar-width: none;
+}
+.about .content-wrap .markdown::after {
+    content: unset !important;
+}
+
+/*════════ Activity History Days Styling ════════*/
+.history-day {
+    transform: scale(1.1);
+}
+.history-day:not(.history-day.lv-0):hover {
+    transition: transform var(--master-transition-timer) ease-in-out;
+    transform: scale(1.3);
+}
+
+/*════════ List Activities Animations ════════*/
+.activity-feed .activity-entry.activity-anime_list .cover, .activity-feed .activity-entry.activity-manga_list .cover {
+    background-size: 100% !important;
+    filter: var(--cover-saturation);
+}
+.activity-feed .activity-entry.activity-anime_list .wrap:hover .cover, .activity-feed .activity-entry.activity-manga_list .wrap:hover .cover, .activity-feed .activity-entry.activity-anime_list:has(.reply:hover) .cover, .activity-feed .activity-entry.activity-manga_list:has(.reply:hover) .cover, .activity-feed .activity-entry.activity-anime_list:has(.activity-edit:hover) .cover, .activity-feed .activity-entry.activity-manga_list:has(.activity-edit:hover) .cover {
+    background-size: 110% !important;
+    filter: var(--cover-saturation-hover);
+}
+.activity-feed .activity-entry.activity-anime_list .wrap:hover .details .title, .activity-feed .activity-entry.activity-manga_list .wrap:hover .details .title, .activity-feed .activity-entry.activity-anime_list:has(.reply:hover) .title, .activity-feed .activity-entry.activity-manga_list:has(.reply:hover) .title, .activity-feed .activity-entry.activity-anime_list:has(.activity-edit:hover) .title, .activity-feed .activity-entry.activity-manga_list:has(.activity-edit:hover) .title {
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--activity-title-mix), white) !important;
+}
+
+/*════════ List Activity Thumbnail Dropdowns (Credit: @Sekuji) ════════*/
+.list.small .entry-dropdown.el-dropdown {
+    border-radius: var(--border-radius) 0 0 0;
+    height: 17px;
+    width: 62.5px;
+}
+.entry-dropdown.el-dropdown:hover {
+    transform: scale(1) !important;
+    background: rgba(var(--color-overlay),.7);
+    transition: var(--master-transition-timer);
+    height: 22px !important;
+}
+.entry-dropdown.el-dropdown svg {
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+.entry-dropdown.el-dropdown:hover svg {
+    color: var(--profile-color);
+}
+.entry-dropdown.el-dropdown .el-dropdown-link {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 100%;
+}
+.activity-feed .activity-entry:has(.small):hover:not(:has(.cover:hover)) .entry-dropdown.el-dropdown {
+    opacity: 0;
+    pointer-events: none;
+}
+.activity-feed .activity-entry:has(.small):hover:not(:has(.cover:hover)) .entry-dropdown.el-dropdown:hover {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+.el-dropdown-menu.el-popper.el-dropdown-menu--small,
+.el-dropdown-menu.el-popper.activity-extras-dropdown.el-dropdown-menu--medium {
+    background: var(--activity-cover-arrow-dropdown) !important;
+    overflow: hidden;
+}
+.el-dropdown-menu.el-popper.el-dropdown-menu--small .el-dropdown-menu__item:hover,
+.el-dropdown-menu.el-popper.activity-extras-dropdown.el-dropdown-menu--medium .el-dropdown-menu__item:hover,
+.result:hover {
+    background: var(--activity-cover-arrow-dropdown-hover) !important;
+    transition: var(--master-transition-timer) ease-in-out;
+}
+
+/*════════ List Activity Size Adjustments ════════*/
+.overview .activity-anime_list .wrap, .overview .activity-manga_list .wrap {
+    height: 90px;
+}
+.list.small .cover {
+    transform: scale(1.25);
+    transform-origin: left;
+}
+.list.small .details .status {
+    margin-left: 15px;
+}
+
+/*════════ Remove Divider from "Open List Editor" in Overview Media Dropdowns ════════*/
+.el-dropdown-menu__item.el-dropdown-menu__item--divided {
+    border-top: none !important;
+}
+
+/*════════ Making Activity Actions Larger ════════*/
+.activity-entry .actions { 
+    transform: scale(1.2) !important;
+    transform-origin: right !important;
+}
+.wrap[data-v-04d66030] {
+    overflow: visible;
+}
+.container > .activity-entry .wrap[data-v-04d66030] {
+    overflow: hidden; 
+}
+.users {
+    background: transparent !important;    
+}
+.activity-entry .like-wrap .users {
+    margin-top: -3px;
+}
+.activity-entry .reply-wrap .like-wrap .users {
+    margin-top: 37px;
+    margin-right: 38px;
+}
+.activity-entry > .reply-wrap .actions {
+    z-index: 3 !important;  
+}
+
+/*════════ Activity Icon Replacements (Inspired By: @Sekuji) ════════*/
+.activity-entry > .wrap > .actions > .action.replies svg {
+    display: none;
+}
+.activity-entry > .wrap > .actions {
+    display: flex;
+}
+.activity-entry > .wrap > .actions > .action.likes {
+    display: inline-block;
+    margin-top: 10px
+}
+.activity-entry > .wrap > .actions > .action.replies {
+    display: inline-block;
+    margin-top: 11px;
+}
+.activity-entry > .wrap > .actions > .action.replies .count {
+    position: relative;
+    bottom: 1px;
+    margin-right: 1px;
+    font-size: 13px;
+}
+.activity-entry > .wrap > .actions > .action.replies::after {
+    display: inline-block;
+    font-family: "bootstrap-icons";
+    font-size: 10px;
+    content: "\F25F";
+    margin-right: 4px;
+    margin-top: -10px;
+}
+.activity-entry > .wrap > .actions > .action.has-label {
+  margin-top: 12px;
+}
+
+/*════════ Recolour Subscribe Button ════════*/
+.time .action.active[data-v-04d66030] {
+    color: rgba(94, 230, 130);   
+}
+
+/*════════ Recolour Hoh/Automail Score Preview ════════*/
+.activity-feed .details .hohScore {
+    background: var(--hoh-score-preview) !important;
+    border: var(--border) solid rgb(var(--color-blue));
+    padding: 2px 6px;
+}
+
+/*════════ Spotify Embed (Inspired By: @Sekuji) ════════*/
+.overview .about a[href="https://telegra.ph/now-playing-landing-page-04-28"]::before { /* Background */
+    position: absolute;
+    top: calc(var(--about-height) + 244px);
+    content: "";
+    display: block;
+    background: var(--foreground);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 408px;
+    height: 120px;
+    left: 0px;
+    border-radius: var(--border-radius);
+    opacity: 1;
+    border: var(--border) solid rgb(var(--color-blue));
+    transition: border var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about a[href="https://telegra.ph/now-playing-landing-page-04-28"]::after { /* Now Playing Widget */
+    position: absolute;
+    top: calc(var(--about-height) + 253px);
+    content: "";
+    display: block;
+    background-position: center;
+    background-image: url("https://spotify-github-profile.kittinanx.com/api/view?uid=31bi23c76vxshhzdiyyyndxrfbba&cover_image=true&theme=natemoo-re&show_offline=false&background_color=121212&interchange=false&profanity=false&hide_remaster=false&bar_color=53b14f&bar_color_cover=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 103px;
+    right: 16px;
+    opacity: 1;
+}
+
+/*════════ Change Private Message Label ════════*/
+.donator-badge.private-badge.has-label {
+    position: relative;
+    color: transparent !important;
+    width: 134px;
+}
+
+.donator-badge.private-badge.has-label svg {
+    color: white !important;
+}
+
+.donator-badge.private-badge.has-label::after {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 23px;
+    padding: 5px 8px;
+    white-space: nowrap;
+    text-align: center;
+    content: "for our eyes only";
+    color: white;
+}
+.input[data-v-c574a71c] .el-textarea__inner::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+/*════════ Fixing AL Media Embeds ════════*/
+.media-embed .embed .wrap {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    border-left: none !important; 
+    background-color: color-mix(in srgb, var(--foreground) 80%, black) !important;
+}
+
+.media-embed .embed .cover {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border: var(--border) solid rgb(var(--profile-color-rgb));
+    border-right: none !important; 
+}
+
+.embed .wrap > .title {
+    color: var(--profile-color);    
+}
+
+/*════════ User Titles/Name Badges ════════*/
+@keyframes pseudoglow {
+  0% {
+    text-shadow:
+      0 0 2px rgba(var(--pseudo-title), 0.1),
+      0 0 4px rgba(var(--pseudo-title), 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(var(--pseudo-title), 0.9),
+      0 0 12px rgba(var(--pseudo-title), 1),
+      0 0 20px rgba(var(--pseudo-title), 0.85);
+  }
+}
+
+.header > a[href="/user/pseudo/"].name:after, .container > .activity-entry a[href="/user/pseudo/"].name:after { /* Me */
+    content: "utility pole ♛";
+    color: rgb(var(--pseudo-title)) !important;
+    animation: pseudoglow 1.5s infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.header > .name:after { /* Non-mutuals and mutuals I either forgot or was too lazy to add */
+    content: "visitor ✧";
+}
+
+/* General title for mutuals. If you want a custom title, please feel free to message me! */
+.header > a[href="/user/Adeleine007/"].name:after,
+.header > a[href="/user/ahirushi/"].name:after,
+.header > a[href="/user/akilel/"].name:after,
+.header > a[href="/user/Amaterasu02/"].name:after,
+.header > a[href="/user/ames/"].name:after,
+.header > a[href="/user/AnimeDweeb/"].name:after,
+.header > a[href="/user/Asano/"].name:after,
+.header > a[href="/user/asianhummus/"].name:after,
+.header > a[href="/user/attqcktitan/"].name:after,
+.header > a[href="/user/Avanger/"].name:after,
+.header > a[href="/user/Axtrex/"].name:after,
+.header > a[href="/user/Ayuno/"].name:after,
+.header > a[href="/user/babymetal/"].name:after,
+.header > a[href="/user/babytron147/"].name:after,
+.header > a[href="/user/Beatrice/"].name:after,
+.header > a[href="/user/bellemere/"].name:after,
+.header > a[href="/user/BitFruit/"].name:after,
+.header > a[href="/user/BlekDimon/"].name:after,
+.header > a[href="/user/BrainyElric/"].name:after,
+.header > a[href="/user/bun/"].name:after,
+.header > a[href="/user/Capri/"].name:after,
+.header > a[href="/user/Christian/"].name:after,
+.header > a[href="/user/ChronoLytte/"].name:after,
+.header > a[href="/user/Cosmos/"].name:after,
+.header > a[href="/user/daddytoji/"].name:after,
+.header > a[href="/user/Dan1811/"].name:after,
+.header > a[href="/user/darcy/"].name:after,
+.header > a[href="/user/das/"].name:after,
+.header > a[href="/user/DomG26/"].name:after,
+.header > a[href="/user/DOSS300/"].name:after,
+.header > a[href="/user/draiu/"].name:after,
+.header > a[href="/user/Ejs14/"].name:after,
+.header > a[href="/user/Estus/"].name:after,
+.header > a[href="/user/flashpool/"].name:after,
+.header > a[href="/user/GeneralMills/"].name:after,
+.header > a[href="/user/GreenRevue/"].name:after,
+.header > a[href="/user/hachiko/"].name:after,
+.header > a[href="/user/Hadowz/"].name:after,
+.header > a[href="/user/HeadlessHorseman/"].name:after,
+.header > a[href="/user/Helix101/"].name:after,
+.header > a[href="/user/HibikeEuphonium/"].name:after,
+.header > a[href="/user/hsasaki853/"].name:after,
+.header > a[href="/user/ibitsu/"].name:after,
+.header > a[href="/user/IceofBlizzard/"].name:after,
+.header > a[href="/user/inhibited/"].name:after,
+.header > a[href="/user/itte/"].name:after,
+.header > a[href="/user/jiahn/"].name:after,
+.header > a[href="/user/JyojiFujisaki/"].name:after,
+.header > a[href="/user/kapokikko/"].name:after,
+.header > a[href="/user/KeyserElric/"].name:after,
+.header > a[href="/user/Kkobe/"].name:after,
+.header > a[href="/user/Kumiko/"].name:after,
+.header > a[href="/user/LordSozin/"].name:after,
+.header > a[href="/user/Lynnx/"].name:after,
+.header > a[href="/user/mikumi/"].name:after,
+.header > a[href="/user/nabieuryseiko/"].name:after,
+.header > a[href="/user/Naszon/"].name:after,
+.header > a[href="/user/NinosThighs/"].name:after,
+.header > a[href="/user/nocturner/"].name:after,
+.header > a[href="/user/nony/"].name:after,
+.header > a[href="/user/Ofzen/"].name:after,
+.header > a[href="/user/PapaB/"].name:after,
+.header > a[href="/user/personnel/"].name:after,
+.header > a[href="/user/phife/"].name:after,
+.header > a[href="/user/Pksomuch/"].name:after,
+.header > a[href="/user/PratGreninja/"].name:after,
+.header > a[href="/user/prispanda/"].name:after,
+.header > a[href="/user/probablyalamp/"].name:after,
+.header > a[href="/user/RandomGuy595/"].name:after,
+.header > a[href="/user/rewsula/"].name:after,
+.header > a[href="/user/rice/"].name:after,
+.header > a[href="/user/Rinymn/"].name:after,
+.header > a[href="/user/Ryuseishun/"].name:after,
+.header > a[href="/user/saltflake/"].name:after,
+.header > a[href="/user/sanbe/"].name:after,
+.header > a[href="/user/seojuno/"].name:after,
+.header > a[href="/user/Septmb/"].name:after,
+.header > a[href="/user/shinraFN/"].name:after,
+.header > a[href="/user/SidVicious/"].name:after,
+.header > a[href="/user/SiriusStarlight/"].name:after,
+.header > a[href="/user/Soccerguy77/"].name:after,
+.header > a[href="/user/Sourtsunami/"].name:after,
+.header > a[href="/user/soyusauce/"].name:after,
+.header > a[href="/user/tin/"].name:after,
+.header > a[href="/user/Tofflan/"].name:after,
+.header > a[href="/user/Ushio/"].name:after,
+.header > a[href="/user/uzolio/"].name:after,
+.header > a[href="/user/Vensito/"].name:after,
+.header > a[href="/user/vintagedeathscythe/"].name:after,
+.header > a[href="/user/waty/"].name:after,
+.header > a[href="/user/Wavieff/"].name:after,
+.header > a[href="/user/Wing/"].name:after,
+.header > a[href="/user/xloic13/"].name:after,
+.header > a[href="/user/YukikoGamingHD/"].name:after,
+.header > a[href="/user/zeliha/"].name:after,
+.header > a[href="/user/ZetaBM/"].name:after,
+.header > a[href="/user/ZNote/"].name:after {
+    content: "friend ☺";
+    color: rgb(var(--mutuals-title)) !important;
+}
+/* Custom Titles (Again, feel free to request) */
+.header > a[href="/user/Animusswtor/"].name:after {
+    content: "will miss AoT in AMQ";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/befalt/"].name:after {
+    content: "Old Man 👴";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/bibichu/"].name:after {
+    content: "beep boop";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/Buttled/"].name:after {
+    content: "<— Bad PA Works Takes";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/JMack24/"].name:after {
+    content: "Alpha Hatsuseno";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/KinoKantRBD/"].name:after {
+    content: "Gooner";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/mermaid081/"].name:after {
+    content: "the world can be kind too";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/mt2903/"].name:after {
+    content: "consumes too much yuri";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/Palington/"].name:after {
+    content: "日本語上手！";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/Pawec/"].name:after {
+    content: "Big Business";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/Plestik/"].name:after {
+    content: "friend ☺";
+    color: #ffb6c1 !important;
+}
+.header > a[href="/user/Rishooooo/"].name:after {
+    content: "doesn't know what Nashville or Hawaii are";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/sekuji/"].name:after {
+    content: "CSS Goat 🐐";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/shubs/"].name:after {
+    content: "don't ask me what Undertale or Herobrine are";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/SirEmanon/"].name:after {
+    content: "Penguin Connoisseur 🐧";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/sumikasodomizer/"].name:after {
+    content: "Hitler";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/tdbn/"].name:after {
+    content: "toadbean";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/voidnyan/"].name:after {
+    content: "voidnyan is a stick.";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/yesKiri/"].name:after {
+    content: "ｗｉｄｅ";  
+    color: rgb(var(--custom-title)) !important;
+}
+
+.header > a[href="/user/Sodachi/"].name:after,
+.header > a[href="/user/Slusher/"].name:after {
+    content: "freak who enjoys 40°C weather (for some reason)";
+    color: rgb(var(--custom-title)) !important;
+}
+
+.reply .header > .avatar {
+    transform: scale(1.15);
+}
+
+.text > .header > .name {
+    position: relative;
+    bottom: 8px;
+    padding-bottom: 5px;
+}
+
+.header > .name {
+    position: relative;
+    bottom: 6px;
+    padding-bottom: 5px;
+}
+
+.container > .activity-entry .details > a[href="/user/pseudo/"].name {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.container > .activity-entry .details > .donator-badge {
+    margin-left: 22px;
+    margin-top: -1px;
+}
+
+.text > .header > .name:after, .container > .activity-entry .details > .name:after {
+    display: inline-block;
+    width: 260px;
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 17px;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--name-badge-mix), white) !important;
+    font-size: 11.5px;
+}
+
+.reply .header > .name:after {
+    display: inline-block;
+    width: 260px; 
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 15.5px;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--name-badge-mix), white) !important;
+    font-size: 10.5px;
+}
+
+.header .donator-badge {
+    margin-bottom: 18px;
+    margin-left: 15px;
+}
+
+.reply .header .donator-badge {
+    position: relative;
+    bottom: 8px;
+    margin-left: 17px;
+}
+
+/*════════ YagaKimi Star Animations ════════*/
+@keyframes sparkle-glow {
+    0% {
+        transform: scale(0.0);
+        text-shadow:
+          0 0 0px white,
+          0 0 0px white,
+          0 0 0px white,
+          0 0 0px rgba(255,255,255,0.0),
+          0 0 0px rgba(255,255,255,0.0);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        text-shadow:
+          0 0 2px  white,
+          0 0 4px  white,
+          0 0 8px  white,
+          0 0 12px rgba(255,255,255,0.8),
+          0 0 16px rgba(255,255,255,0.6);
+        opacity: 1;
+    }
+}
+
+.overview .about a[href^="star"]::before {
+  content: "✦";
+  position: absolute;
+  color: white;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 9;
+  transition: margin-top var(--anime-grid-timer) ease-in-out, top var(--master-transition-timer) ease-in-out, left var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out;
+}
+
+.overview .about a[href="star1"]::before {
+  top: calc(var(--about-height) + 829px);
+  left: 236px;
+  font-size: 6px;
+  animation: sparkle-glow 1.35s ease infinite alternate;
+  animation-delay: 0.3s;
+  rotate: 12deg;
+}
+
+.overview .about a[href="star2"]::before {
+  top: calc(var(--about-height) + 961px);
+  left: 367px;
+  font-size: 5px;
+  animation: sparkle-glow 0.92s ease infinite alternate;
+  animation-delay: 0.9s;
+  rotate: 77deg;
+}
+
+.overview .about a[href="star3"]::before {
+  top: calc(var(--about-height) + 868px);
+  left: 41px;
+  font-size: 7px;
+  animation: sparkle-glow 1.48s ease infinite alternate;
+  animation-delay: 0.2s;
+  rotate: 45deg;
+}
+
+.overview .about a[href="star4"]::before {
+  top: calc(var(--about-height) + 892px);
+  left: 321px;
+  font-size: 6px;
+  animation: sparkle-glow 1.73s ease infinite alternate;
+  animation-delay: 1.1s;
+  rotate: 30deg;
+}
+
+.overview .about a[href="star5"]::before {
+  top: calc(var(--about-height) + 829px);
+  left: 145px;
+  font-size: 7px;
+  animation: sparkle-glow 1.17s ease infinite alternate;
+  animation-delay: 0.6s;
+  rotate: 63deg;
+}
+
+.overview .about a[href="star6"]::before {
+  top: calc(var(--about-height) + 959px);
+  left: 100px;
+  font-size: 6px;
+  animation: sparkle-glow 1.6s ease infinite alternate;
+  animation-delay: 0.1s;
+  rotate: 18deg;
+}
+
+.overview .about a[href="star7"]::before {
+  top: calc(var(--about-height) + 892px);
+  left: 372px;
+  font-size: 7px;
+  animation: sparkle-glow 1.58s ease infinite alternate;
+  animation-delay: 1.4s;
+  rotate: 85deg;
+}
+
+.overview .about a[href="star8"]::before {
+  top: calc(var(--about-height) + 950px);
+  left: 22px;
+  font-size: 5px;
+  animation: sparkle-glow 1.41s ease infinite alternate;
+  animation-delay: 0.5s;
+  rotate: 9deg;
+}
+
+.overview .about a[href="star9"]::before {
+  top: calc(var(--about-height) + 854px);
+  left: 358px;
+  font-size: 6px;
+  animation: sparkle-glow 0.74s ease infinite alternate;
+  animation-delay: 0.7s;
+  rotate: 70deg;
+}
+
+.overview .about a[href="star10"]::before {
+  top: calc(var(--about-height) + 906px);
+  left: 41px;
+  font-size: 6px;
+  animation: sparkle-glow 1.67s ease infinite alternate;
+  animation-delay: 1.2s;
+  rotate: 41deg;
+}
+
+.overview .about a[href="star11"]::before {
+  top: calc(var(--about-height) + 835px);
+  left: 26px;
+  font-size: 7px;
+  animation: sparkle-glow 1.29s ease infinite alternate;
+  animation-delay: 0.95s;
+  rotate: 22deg;
+}
+
+.overview .about a[href="star12"]::before {
+  top: calc(var(--about-height) + 956px);
+  left: 259px;
+  font-size: 8px;
+  animation: sparkle-glow 1.8s ease infinite alternate;
+  animation-delay: 0.15s;
+  rotate: 88deg;
+}
+
+.overview .about a[href="star13"]::before {
+  top: calc(var(--about-height) + 846px);
+  left: 266px;
+  font-size: 7px;
+  animation: sparkle-glow 0.96s ease infinite alternate;
+  animation-delay: 0.65s;
+  rotate: 37deg;
+}
+
+.overview .about a[href="star14"]::before {
+  top: calc(var(--about-height) + 884px);
+  left: 272px;
+  font-size: 5px;
+  animation: sparkle-glow 1.44s ease infinite alternate;
+  animation-delay: 0.05s;
+  rotate: 15deg;
+}
+
+.overview .about a[href="star15"]::before {
+  top: calc(var(--about-height) + 875px);
+  left: 131px;
+  font-size: 7px;
+  animation: sparkle-glow 1.09s ease infinite alternate;
+  animation-delay: 1.0s;
+  rotate: 59deg;
+}
+
+.overview .about a[href="star16"]::before {
+  top: calc(var(--about-height) + 936px);
+  left: 297px;
+  font-size: 6px;
+  animation: sparkle-glow 1.62s ease infinite alternate;
+  animation-delay: 0.55s;
+  rotate: 27deg;
+}
+
+.overview .about a[href="star17"]::before {
+  top: calc(var(--about-height) + 837px);
+  left: 322px;
+  font-size: 7px;
+  animation: sparkle-glow 1.38s ease infinite alternate;
+  animation-delay: 1.35s;
+  rotate: 74deg;
+}
+
+.overview .about a[href="star18"]::before {
+  top: calc(var(--about-height) + 920px);
+  left: 341px;
+  font-size: 7px;
+  animation: sparkle-glow 0.88s ease infinite alternate;
+  animation-delay: 0.45s;
+  rotate: 34deg;
+}
+
+.overview .about a[href="star19"]::before {
+  top: calc(var(--about-height) + 870px);
+  left: 301px;
+  font-size: 6px;
+  animation: sparkle-glow 1.52s ease infinite alternate;
+  animation-delay: 0.85s;
+  rotate: 11deg;
+}
+
+.overview .about a[href="star20"]::before {
+  top: calc(var(--about-height) + 935px);
+  left: 68px;
+  font-size: 7px;
+  animation: sparkle-glow 1.07s ease infinite alternate;
+  animation-delay: 1.25s;
+  rotate: 81deg;
+}
+
+.overview .about a[href="star21"]::before {
+  top: calc(var(--about-height) + 852px);
+  left: 78px;
+  font-size: 5px;
+  animation: sparkle-glow 1.33s ease infinite alternate;
+  animation-delay: 0.35s;
+  rotate: 24deg;
+}
+
+.overview .about a[href="star22"]::before {
+  top: calc(var(--about-height) + 856px);
+  left: 104px;
+  font-size: 5px;
+  animation: sparkle-glow 1.67s ease infinite alternate;
+  animation-delay: 1.15s;
+  rotate: 67deg;
+}
+
+.overview .about a[href="star23"]::before {
+  top: calc(var(--about-height) + 870px);
+  left: 88px;
+  font-size: 7px;
+  animation: sparkle-glow 1.46s ease infinite alternate;
+  animation-delay: 0.05s;
+  rotate: 39deg;
+}
+
+.overview .about a[href="star24"]::before {
+  top: calc(var(--about-height) + 843px);
+  left: 193px;
+  font-size: 6px;
+  animation: sparkle-glow 1.57s ease infinite alternate;
+  animation-delay: 0.5s;
+  rotate: 20deg;
+}
+
+.overview .about a[href="star25"]::before {
+  top: calc(var(--about-height) + 963px);
+  left: 52px;
+  font-size: 8px;
+  animation: sparkle-glow 1.57s ease infinite alternate;
+  animation-delay: 0.5s;
+  rotate: 88deg;
+}
+
+.overview .about a[href="star26"]::before {
+  top: calc(var(--about-height) + 953px);
+  left: 312px;
+  font-size: 7px;
+  animation: sparkle-glow 1.3s ease infinite alternate;
+  animation-delay: 0.2s;
+  rotate: 52deg;
+}
+
+.overview .about a[href="star27"]::before {
+  top: calc(var(--about-height) + 876px);
+  left: 345px;
+  font-size: 6px;
+  animation: sparkle-glow 1.3s ease infinite alternate;
+  animation-delay: 0.2s;
+  rotate: 29deg;
+}
+
+body:has(.favourites.preview .favourites-wrap.anime:hover) .overview .about a[href^="star"]::before {
+    margin-top: 637px;
+}
+
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star1"]::before {
+  top: calc(var(--about-height) + 821.50px);
+  left: 240.80px;
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star2"]::before {
+  top: calc(var(--about-height) + 966.70px);
+  left: 384.90px;
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star3"]::before {
+  top: calc(var(--about-height) + 864.40px);
+  left: 26.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star4"]::before {
+  top: calc(var(--about-height) + 890.80px);
+  left: 334.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star5"]::before {
+  top: calc(var(--about-height) + 821.50px);
+  left: 140.70px;
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star6"]::before {
+  top: calc(var(--about-height) + 964.50px);
+  left: 91.20px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star7"]::before {
+  top: calc(var(--about-height) + 890.80px);
+  left: 390.40px;
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star8"]::before {
+  top: calc(var(--about-height) + 954.60px);
+  left: 5.40px;
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star9"]::before {
+  top: calc(var(--about-height) + 849.00px);
+  left: 375.00px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star10"]::before {
+  top: calc(var(--about-height) + 906.20px);
+  left: 26.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star11"]::before {
+  top: calc(var(--about-height) + 828.10px);
+  left: 9.80px;
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star12"]::before {
+  top: calc(var(--about-height) + 961.20px);
+  left: 266.10px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star13"]::before {
+  top: calc(var(--about-height) + 840.20px);
+  left: 273.80px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star14"]::before {
+  top: calc(var(--about-height) + 882.00px);
+  left: 280.40px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star15"]::before {
+  top: calc(var(--about-height) + 872.10px);
+  left: 125.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star16"]::before {
+  top: calc(var(--about-height) + 939.20px);
+  left: 307.90px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star17"]::before {
+  top: calc(var(--about-height) + 830.30px);
+  left: 335.40px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star18"]::before {
+  top: calc(var(--about-height) + 921.60px);
+  left: 356.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star19"]::before {
+  top: calc(var(--about-height) + 866.60px);
+  left: 312.30px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star20"]::before {
+  top: calc(var(--about-height) + 938.10px);
+  left: 56.00px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star21"]::before {
+  top: calc(var(--about-height) + 846.80px);
+  left: 67.00px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star22"]::before {
+  top: calc(var(--about-height) + 851.20px);
+  left: 95.60px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star23"]::before {
+  top: calc(var(--about-height) + 866.60px);
+  left: 78.00px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star24"]::before {
+  top: calc(var(--about-height) + 836.90px);
+  left: 193.50px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star25"]::before {
+  top: calc(var(--about-height) + 968.90px);
+  left: 38.40px;
+  filter: opacity(0);
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star26"]::before {
+  top: calc(var(--about-height) + 957.90px);
+  left: 324.40px;
+}
+body:has(.favourites.preview a.favourite[href*="manga/86218"]:hover) .overview .about a[href="star27"]::before {
+  top: calc(var(--about-height) + 873.20px);
+  left: 360.70px;
+}
+
+  /*════════════════════════════════════════════
+    Favourites Styling (Both Sidebar and Tab)
+  ════════════════════════════════════════════*/
+
+/*--- Favourites Grid Layout (Studios excluded) ---*/
+.favourites.preview .favourites-wrap:not(.favourites.preview .favourites-wrap.studios) {
+    position: relative;
+    display: grid !important;
+    grid-gap: 12px !important;
+    column-gap: 12px !important;
+    grid-template-columns: repeat(4, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important; 
+    padding: 0 !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    margin-bottom: 40px !important;
+    background: var(--foreground) !important;
+    justify-content: center !important;
+    width: 408px !important;
+}
+.favourites.preview .favourites-wrap a.favourite:not(.favourites.preview .favourites-wrap.studios a.favourite) {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 60px;
+}
+
+/*--- Global Favourite Hover Transitions (with backup box-shadow that takes --color-blue) ---*/
+.favourites a.favourite {
+    filter: var(--cover-saturation);
+    transition: all var(--master-transition-timer) ease-in-out;
+    background-size: 100% !important;
+    background-color: transparent !important;
+}
+
+.favourites a.favourite:hover {
+    box-shadow: var(--box-shadow) color-mix(in srgb,rgb(var(--color-blue)) var(--box-shadow-mix), white);
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+}
+
+.favourites.preview a.favourite {
+    height: unset !important;
+}
+/*--- Hide Favs Until Hover Grid Styling ---*/
+
+@keyframes arrowfloat {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(var(--arrow-float));
+    }
+}
+
+@keyframes enablePointerEvents {
+    to { pointer-events: auto; }
+}
+
+/*════════ Anime Grid ════════*/
+.overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 364px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("https://i.imgur.com/TfoigpS.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: visible;
+    z-index: 5;
+    animation: arrowfloat 1.8s linear infinite;
+    animation-delay: 0s !important;
+    opacity: 1;
+    transition: opacity var(--anime-grid-timer) ease-in-out;
+}
+
+body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
+    opacity: 0;
+}
+
+.favourites.preview .favourites-wrap.anime {
+    max-height: 367px;
+    overflow: hidden;
+    transition: max-height var(--anime-grid-timer) ease-in-out, border var(--anime-grid-timer) ease-in-out, box-shadow var(--anime-grid-timer) ease-in-out;
+    transition-delay: overflow calc(--anime-grid-timer - 0.05s);
+    border: var(--border) solid rgb(var(--color-blue));
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out;
+    pointer-events: none;
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+5) {
+    transform: translateY(40px);
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+9) {
+    transform: translateY(60px);
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+13) {
+    transform: translateY(80px);
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+17) {
+    transform: translateY(100px);
+}
+.favourites.preview .favourites-wrap.anime:hover {
+    max-height: 1010px !important;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+3) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: var(--cover-saturation);
+    background-size: 100% !important;
+    transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s calc(var(--anime-grid-timer) - 0.075s) forwards;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+5):nth-child(-n+8) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.01s, transform var(--anime-grid-timer) ease-in-out 0.01s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+9):nth-child(-n+12) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+13):nth-child(-n+16) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.1s, transform var(--anime-grid-timer) ease-in-out 0.1s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+17):nth-child(-n+20) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.15s, transform var(--anime-grid-timer) ease-in-out 0.15s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3):hover {
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+    transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+/*════════ Manga Grid ════════*/
+.overview div.favourites:nth-child(5) > h2:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 364px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("https://i.imgur.com/TfoigpS.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: visible;
+    z-index: 5;
+    animation: arrowfloat 1.8s linear infinite;
+    animation-delay: 0s !important;
+    opacity: 1;
+    transition: opacity var(--manga-grid-timer) ease-in-out;
+}
+
+body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favourites:nth-child(5) > h2:nth-child(1)::before {
+    opacity: 0;
+}
+
+.favourites.preview .favourites-wrap.manga {
+    max-height: 367px;
+    overflow: hidden;
+    transition: max-height var(--manga-grid-timer) ease-in-out, border var(--manga-grid-timer) ease-in-out, box-shadow var(--manga-grid-timer) ease-in-out;
+    border: var(--border) solid rgb(var(--color-blue));
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+3) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--manga-grid-timer) ease-in-out, transform var(--manga-grid-timer) ease-in-out;
+    pointer-events: none;
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+7) {
+    transform: translateY(40px);
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+11) {
+    transform: translateY(60px);
+}
+.favourites.preview .favourites-wrap.manga:hover {
+    max-height: 741px !important;
+}
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+3) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: var(--cover-saturation);
+    background-size: 100% !important;
+    transition: opacity var(--manga-grid-timer) ease-in-out, transform var(--manga-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s calc(var(--manga-grid-timer) - 0.075s) forwards;
+}
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+3):nth-child(-n+6) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.01s, transform var(--anime-grid-timer) ease-in-out 0.01s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+7):nth-child(-n+10) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+11) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.1s, transform var(--anime-grid-timer) ease-in-out 0.1s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+15) {
+    visibility: hidden;
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+3):hover {
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+    transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+/*════════ Characters Grid ════════*/
+.overview div.favourites:nth-child(6) > h2:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 302px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("https://i.imgur.com/TfoigpS.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: visible;
+    z-index: 5;
+    animation: arrowfloat 1.8s linear infinite;
+    animation-delay: 0s !important;
+    opacity: 1;
+    transition: opacity var(--characters-grid-timer) ease-in-out;
+}
+
+body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.favourites:nth-child(6) > h2:nth-child(1)::before {
+    opacity: 0;
+}
+
+.favourites.preview .favourites-wrap.characters {
+    max-height: 305px;
+    overflow: hidden;
+    transition: max-height var(--characters-grid-timer) ease-in-out, border var(--characters-grid-timer) ease-in-out, box-shadow var(--characters-grid-timer) ease-in-out;
+    border: var(--border) solid rgb(var(--color-blue));
+}
+.favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+9) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--characters-grid-timer) ease-in-out, transform var(--characters-grid-timer) ease-in-out;
+    pointer-events: none;
+}
+.favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+13) {
+    transform: translateY(40px);
+}
+.favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+17) {
+    transform: translateY(60px);
+}
+.favourites.preview .favourites-wrap.characters:hover {
+    max-height: 680px !important;
+}
+.favourites.preview .favourites-wrap.characters:hover .favourite.character:nth-child(n+9) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: var(--cover-saturation);
+    background-size: 100% !important;
+    transition: opacity var(--characters-grid-timer) ease-in-out, transform var(--characters-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s calc(var(--characters-grid-timer) - 0.075s) forwards;
+}
+.favourites.preview .favourites-wrap.characters:hover .favourite.character:nth-child(n+13):nth-child(-n+16) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.characters:hover .favourite.character:nth-child(n+17) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.1s, transform var(--anime-grid-timer) ease-in-out 0.1s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+9):hover {
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+    transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+/*════════ Staff Grid ════════*/
+.overview div.favourites:nth-child(7) > h2:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 302px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("https://i.imgur.com/TfoigpS.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: visible;
+    z-index: 5;
+    animation: arrowfloat 1.8s linear infinite;
+    animation-delay: 0s !important;
+    opacity: 1;
+    transition: opacity var(--staff-grid-timer) ease-in-out;
+}
+
+body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favourites:nth-child(7) > h2:nth-child(1)::before {
+    opacity: 0;
+}
+
+.favourites.preview .favourites-wrap.staff {
+    max-height: 305px;
+    overflow: hidden;
+    transition: max-height var(--staff-grid-timer) ease-in-out, border var(--staff-grid-timer) ease-in-out, box-shadow var(--staff-grid-timer) ease-in-out;
+    border: var(--border) solid rgb(var(--color-blue));
+}
+.favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+9) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--staff-grid-timer) ease-in-out, transform var(--staff-grid-timer) ease-in-out;
+    pointer-events: none;
+}
+.favourites.preview .favourites-wrap.staff:hover {
+    max-height: 420px !important;
+}
+.favourites.preview .favourites-wrap.staff:hover .favourite.staff:nth-child(n+9) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: var(--cover-saturation);
+    background-size: 100% !important;
+    transition: opacity var(--staff-grid-timer) ease-in-out, transform var(--staff-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s calc(var(--staff-grid-timer) - 0.075s) forwards;
+}
+.favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+9):hover {
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+    transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+13) {
+    visibility: hidden;
+}
+
+/*--- Favourites Studio Styling (Wrap, Grid) ---*/
+.favourites.preview .favourites-wrap.studios {
+    background: var(--foreground) !important;
+    margin-top: -5px;
+    border: var(--border) solid rgb(var(--color-blue));
+    transition: border var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+.overview .favourite.studio {
+    min-height: 150px;
+    font-size: 1.8rem;
+    display: grid;
+    grid-gap: 10px;
+    padding: 2px !important;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    color: transparent;
+    margin-bottom: 12px !important;
+    box-shadow: none !important;
+}
+
+/*--- General Studio + Hover Styling ---*/
+.favourites a.favourite.studio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    transition: filter var(--master-transition-timer) ease-in-out, transform var(--master-transition-timer) ease-in-out;
+    transform: scale(1);
+    border-radius: var(--border-radius) !important;
+}
+
+.favourites a.favourite.studio::after {
+    content: "" !important; 
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transition: box-shadow var(--master-transition-timer) ease-in-out !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/*--- Stuff to Specifically Fix Automail 5-Width Fuckery For Studios ---*/
+.overview .favourites > .favourites-wrap.studios {
+    column-gap: 25px !important;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    height: 355px !important;
+    row-gap: 48px !important;
+    width: 408px !important;
+    padding: 15px !important;
+    padding-top: 20px !important;
+} 
+.overview .favourite.studio {
+    width: 376px !important;
+}
+.overview .favourite.studio::after, .favourites .favourite.studio::after {
+    all: unset !important;
+}
+/*--- Section Headers for Favourites ---*/
+.overview div.favourites:nth-child(4) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(5) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(6) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(6) > h2:nth-child(1)::after {
+    top: 11px;
+    right: 96px;
+}
+.overview div.favourites:nth-child(7) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(7) > h2:nth-child(1)::after {
+    top: 11px;
+    right: 116px;
+}
+.overview div.favourites:nth-child(8) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(8) > h2:nth-child(1)::after {
+    top: 11px;
+    right: 149px;
+}
+/*--- Fix Margins for Titles/Wraps ---*/
+.overview div.favourites h2:not(.favourites:nth-child(4) > h2:nth-child(1)) {
+    margin-top: -25px;
+}
+
+  /*════════════════════════════════════════════
+    Favourites Posters
+  ════════════════════════════════════════════*/
+
+/*--- Hidamari Sketch x Honeycomb (HidaSketch) ---*/
+.favourites.preview a.favourite[href*="anime/11239/"] {
+    background-image: url(https://i.imgur.com/Drih9ok.jpeg) !important;
+    grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="anime/11239/"]:hover {
+    box-shadow: var(--box-shadow) #978b53;
+}
+.favourites a.favourite[href*="anime/11239/"]:hover {
+    box-shadow: var(--box-shadow) #89d191;
+}
+
+/*--- Aria the Origination ---*/
+.favourites.preview a.favourite[href*="anime/3297/"] {
+    background-image: url(https://i.imgur.com/WdZRZ8z.jpeg) !important;
+    grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="anime/3297/"]:hover {
+    box-shadow: var(--box-shadow) #bea5a7;
+}
+.favourites a.favourite[href*="anime/3297/"]:hover {
+    box-shadow: var(--box-shadow) #5191f3;
+}
+
+/*--- Tamayura Ashita ---*/
+.favourites.preview a.favourite[href*="anime/21554/"] {
+    background-image: url(https://i.imgur.com/uWP4CO2.jpeg) !important;
+    grid-column: 1 / 3;
+}
+.favourites.preview a.favourite[href*="anime/21554/"]:hover {
+    box-shadow: var(--box-shadow) #f2dbd3;
+}
+.favourites a.favourite[href*="anime/21554/"]:hover {
+    box-shadow: var(--box-shadow) #f9e6ec;
+}
+
+/*--- Mushishi ---*/
+.favourites.preview a.favourite[href*="anime/457/"] {
+    background-image: url(https://i.imgur.com/F8bIQDu.jpeg) !important;
+    grid-column: 3 / 5;
+}
+.favourites.preview a.favourite[href*="anime/457"]:hover {
+    box-shadow: var(--box-shadow) #523c29;
+}
+.favourites a.favourite[href*="anime/457/"]:hover {
+    box-shadow: var(--box-shadow) #434b39;
+}
+
+/*--- Liz and the Blue Bird ---*/
+.favourites a.favourite[href*="anime/100178/"]:hover {
+    box-shadow: var(--box-shadow) #87cbde;
+}
+
+/*--- Sorayori (A Place Further Than The Universe) ---*/
+.favourites a.favourite[href*="anime/99426/"]:hover {
+    box-shadow: var(--box-shadow) #ea8025;
+}
+
+/*--- Ashita no Joe 2 ---*/
+.favourites a.favourite[href*="anime/2921/"]:hover {
+    box-shadow: var(--box-shadow) #d72a35;
+}
+
+/*--- Non Non Biyori ---*/
+.favourites a.favourite[href*="anime/17549/"]:hover {
+    box-shadow: var(--box-shadow) #54c417;
+}
+/*--- Sonny Boy ---*/
+.favourites a.favourite[href*="anime/132126/"]:hover {
+    box-shadow: var(--box-shadow) #b9b496;
+}
+
+/*--- Tamako Love Story ---*/
+.favourites a.favourite[href*="anime/20519/"]:hover {
+    box-shadow: var(--box-shadow) #c1f378;
+}
+
+/*--- Oregairu Zoku (Anime) ---*/
+.favourites a.favourite[href*="anime/20698/"]:hover {
+    box-shadow: var(--box-shadow) #aa7984;
+}
+
+/*--- Hyouka (Anime)---*/
+.favourites a.favourite[href*="anime/12189/"]:hover {
+    box-shadow: var(--box-shadow) #f4c1be;
+}
+
+/*--- Akage no Anne ---*/
+.favourites a.favourite[href*="anime/283/"]:hover {
+    box-shadow: var(--box-shadow) #f9e8d9;
+}
+
+/*--- Girls' Last Tour (Anime) ---*/
+.favourites a.favourite[href*="anime/99420/"]:hover {
+    box-shadow: var(--box-shadow) #475652;
+}
+
+/*--- Chihayafuru (Anime) ---*/
+.favourites a.favourite[href*="anime/10800/"]:hover {
+    box-shadow: var(--box-shadow) #94c83b;
+}
+
+/*--- Shirobako ---*/
+.favourites a.favourite[href*="anime/20812/"]:hover {
+    box-shadow: var(--box-shadow) #5287d7;
+}
+
+/*--- Haibane Renmei ---*/
+.favourites a.favourite[href*="anime/387/"]:hover {
+    box-shadow: var(--box-shadow) #88a7b0;
+}
+
+/*--- Yuru Camp ---*/
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(17) {
+    background-size: 102% !important;
+}
+
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(17):hover {
+    background-size: 110% !important;
+}
+
+.favourites a.favourite[href*="anime/98444/"]:hover {
+    box-shadow: var(--box-shadow) #6f62a9;
+}
+
+/*--- Awajima Hyakkei ---*/
+.favourites a.favourite[href*="anime/177501/"]:hover {
+    box-shadow: var(--box-shadow) #ffffff;
+}
+
+/*--- Nana (Anime) ---*/
+.favourites a.favourite[href*="anime/877/"]:hover {
+    box-shadow: var(--box-shadow) #e3c690;
+}
+
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(19) {
+    background-size: 105% !important;
+}
+
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(19):hover {
+    background-size: 113% !important;
+}
+
+/*--- Sakura Quest ---*/
+.favourites a.favourite[href*="anime/97903/"]:hover {
+    box-shadow: var(--box-shadow) #c0cc68;
+}
+
+/*--- Bloom Into You (Manga)---*/
+.favourites.preview a.favourite[href*="manga/86218/"] {
+    background-image: url(https://i.imgur.com/BoMyBZW.jpeg) !important;
+    grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="manga/86218/"]:hover {
+    box-shadow: var(--box-shadow) #29325a;
+}
+.favourites a.favourite[href*="manga/86218/"]:hover {
+    box-shadow: var(--box-shadow) #e9978c;
+}
+
+/*--- White Album 2 (VN)---*/
+.favourites.preview a.favourite[href*="manga/91579/"] {
+    background-image: url(https://i.imgur.com/Ygz1muy.jpeg) !important;
+    grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="manga/91579/"]:hover {
+    box-shadow: var(--box-shadow) #03214e;
+}
+.favourites a.favourite[href*="manga/91579/"] {
+    background-image: url(https://i.imgur.com/cimoFig.jpeg) !important;
+}
+.favourites a.favourite[href*="manga/91579"]:hover {
+    box-shadow: var(--box-shadow) #e4daf9;
+}
+
+/*--- Oregairu (Light Novel) ---*/
+.favourites a.favourite[href*="manga/70171/"]:hover {
+    box-shadow: var(--box-shadow) #9c99ad;
+}
+
+/*--- Saeki Sayaka ni Tsuite (Regarding Sayaka Saeki) (Light Novel) ---*/
+.favourites a.favourite[href*="manga/105388/"]:hover {
+    box-shadow: var(--box-shadow) #d9ab89;
+}
+
+/*--- Adachi and Shimamura 99.9 ---*/
+.favourites.preview a.favourite[href*="manga/169725/"] {
+    background-image: url(https://i.imgur.com/NS5bpx0.jpeg) !important;
+}
+.favourites a.favourite[href*="manga/169725/"]:hover {
+    box-shadow: var(--box-shadow) #9ac2c7;
+}
+
+/*--- Chihayafuru (Manga) ---*/
+.favourites a.favourite[href*="manga/43245/"]:hover {
+    box-shadow: var(--box-shadow) #fa8d65;
+}
+
+/*--- Yokohama Kaidashi Kikou (YKK) ---*/
+.favourites a.favourite[href*="manga/30004/"]:hover {
+    box-shadow: var(--box-shadow) #abd2d9;
+}
+
+/*--- Flying Witch ---*/
+.favourites a.favourite[href*="manga/76258/"]:hover {
+    box-shadow: var(--box-shadow) #7d6d5e;
+}
+
+/*--- Girls' Last Tour (Manga) ---*/
+.favourites a.favourite[href*="manga/85412/"]:hover {
+    box-shadow: var(--box-shadow) #919496;
+}
+
+/*--- Emma ---*/
+.favourites a.favourite[href*="manga/30729/"]:hover {
+    box-shadow: var(--box-shadow) #8b675b;
+}
+
+/*--- AniYome ---*/
+.favourites a.favourite[href*="manga/97708/"]:hover {
+    box-shadow: var(--box-shadow) #f8e893;
+}
+
+/*--- Houseki no Kuni ---*/
+.favourites a.favourite[href*="manga/74489/"]:hover {
+    box-shadow: var(--box-shadow) #97f4e1;
+}
+
+/*--- Perfect World ---*/
+.favourites a.favourite[href*="manga/93433/"]:hover {
+    box-shadow: var(--box-shadow) #ff6a88;
+}
+
+/*--- Kamigami no Itadaki ---*/
+.favourites a.favourite[href*="manga/34625/"]:hover {
+    box-shadow: var(--box-shadow) #80aa9e;
+}
+
+/*--- Akari Mizunashi (Aria) ---*/
+.favourites a.favourite[href*="character/378/"]:hover {
+    box-shadow: var(--box-shadow) #e883cb;
+}
+
+/*--- Yuu Koito (Bloom Into You) ---*/
+.favourites a.favourite[href*="character/123528/"]:hover {
+    box-shadow: var(--box-shadow) #f6aa93;
+}
+
+/*--- Taichi Mashima (Chihayafuru) ---*/
+.favourites a.favourite[href*="character/47167/"]:hover {
+    box-shadow: var(--box-shadow) #fcd189;
+}
+
+/*--- Joe Yabuki (Ashita no Joe) ---*/
+.favourites a.favourite[href*="character/11804/"]:hover {
+    box-shadow: var(--box-shadow) #de3622;
+}
+
+/*--- Kazuho Miyauchi/Kazu-nee (Non Non Biyori) ---*/
+.favourites a.favourite[href*="character/87832/"]:hover {
+    box-shadow: var(--box-shadow) #8d7682;
+}
+
+/*--- Alice Carroll (Aria) ---*/
+.favourites a.favourite[href*="character/382/"]:hover {
+    box-shadow: var(--box-shadow) #90aaae;
+}
+
+/*--- Fuu Sawatari/Potte (Tamayura) ---*/
+.favourites a.favourite[href*="character/35468/"]:hover {
+    box-shadow: var(--box-shadow) #e7dfda;
+}
+
+/*--- Rin Shima (Yuru Camp) ---*/
+.favourites a.favourite[href*="character/124586/"]:hover {
+    box-shadow: var(--box-shadow) #667190;
+}
+
+/*--- Aoi Miyamori (Shirobako) ---*/
+.favourites a.favourite[href*="character/88651/"]:hover {
+    box-shadow: var(--box-shadow) #ebaf69;
+}
+/*--- Kaoru Hanawa (Tamayura) ---*/
+.favourites a.favourite[href*="character/35469/"]:hover {
+    box-shadow: var(--box-shadow) #7a4651;
+}
+
+/*--- Yoshino (Sakura Quest) ---*/
+.favourites a.favourite[href*="character/121530/"]:hover {
+    box-shadow: var(--box-shadow) #f2c3c4;
+}
+
+/*--- Touko Nanami (Bloom Into You/Yagate Kimi Ni Naru/YagaKimi) ---*/
+.favourites a.favourite[href*="character/123529/"]:hover {
+    box-shadow: var(--box-shadow) #847676;
+}
+
+/*--- Saeki Sayaka (Character) (Bloom Into You/Saeki Sayaka ni Tsuite) ---*/
+.favourites a.favourite[href*="character/123530/"]:hover {
+    box-shadow: var(--box-shadow) #c69885;
+}
+
+/*--- Yuno (Hidamari Sketch/HidaSketch) ---*/
+.favourites a.favourite[href*="character/2528/"]:hover {
+    box-shadow: var(--box-shadow) #a58760;
+}
+
+/*--- Hiro (Hidamari Sketch/HidaSketch) ---*/
+.favourites a.favourite[href*="character/3216/"]:hover {
+    box-shadow: var(--box-shadow) #f1c8a5;
+}
+
+/*--- Kazusa Touma (White Album 2) ---*/
+.favourites a.favourite[href*="character/82119/"]:hover {
+    box-shadow: var(--box-shadow) #2a4964;
+}
+
+/*--- Setsuna Ogiso (White Album 2) ---*/
+.favourites a.favourite[href*="character/82115/"]:hover {
+    box-shadow: var(--box-shadow) #bc7540;
+}
+
+/*--- Renge Miyauchi (Non Non Biyori) ---*/
+.favourites a.favourite[href*="character/54151/"]:hover {
+    box-shadow: var(--box-shadow) #bdaec8;
+}
+
+/*--- Nori (Hidamari Sketch) ---*/
+.favourites a.favourite[href*="character/14914/"]:hover {
+    box-shadow: var(--box-shadow) #9baeb4;
+}
+
+/*--- Shimamura (AdaShima) ---*/
+.favourites a.favourite[href*="character/144718/"]:hover {
+    box-shadow: var(--box-shadow) #d6c8bf;
+}
+
+/*--- Makoto Kowata (Flying Witch) ---*/
+.favourites a.favourite[href*="character/89401/"]:hover {
+    box-shadow: var(--box-shadow) #efd7d3;
+}
+
+/*--- Naoko Yamada ---*/
+.favourites a.favourite[href*="staff/102498/"]:hover {
+    box-shadow: var(--box-shadow) #bf9983;
+}
+
+/*--- Junichi Satou ---*/
+.favourites a.favourite[href*="staff/99002/"]:hover {
+    box-shadow: var(--box-shadow) #f7e8c9;
+}
+
+/*--- Osamu Dezaki ---*/
+.favourites a.favourite[href*="staff/100393/"]:hover {
+    box-shadow: var(--box-shadow) #9cb5d9;
+}
+
+/*--- Kana Asumi ---*/
+.favourites a.favourite[href*="staff/95817/"]:hover {
+    box-shadow: var(--box-shadow) #feb7bb;
+}
+
+/*--- Hitoma Iruma ---*/
+.favourites a.favourite[href*="staff/99956/"] {
+    background-image: url(https://i.imgur.com/KSDg3ur.jpeg) !important;
+}
+
+.favourites a.favourite[href*="staff/99956/"]:hover {
+    box-shadow: var(--box-shadow) #8e7888;
+}
+
+/*--- yanaginagi ---*/
+.favourites a.favourite[href*="staff/109637/"]:hover {
+    box-shadow: var(--box-shadow) #00c29c;
+}
+
+/*--- Kensuke Ushio ---*/
+.favourites a.favourite[href*="staff/119254/"]:hover {
+    box-shadow: var(--box-shadow) #a1b2c8;
+}
+
+/*--- Choro Club ---*/
+.favourites a.favourite[href*="staff/101379/"]:hover {
+    box-shadow: var(--box-shadow) #a88a62;
+}
+
+/*--- Kana Hanazawa ---*/
+.favourites a.favourite[href*="staff/95185/"]:hover {
+    box-shadow: var(--box-shadow) #dcba19;
+}
+
+/*--- Ayane Sakura ---*/
+.favourites a.favourite[href*="staff/106622/"]:hover {
+    box-shadow: var(--box-shadow) #b2b3c6;
+}
+
+/*--- Morio Asaka ---*/
+.favourites a.favourite[href*="staff/100921/"]:hover {
+    box-shadow: var(--box-shadow) #939bcc;
+}
+
+/*--- marble ---*/
+.favourites a.favourite[href*="staff/104831/"]:hover {
+    box-shadow: var(--box-shadow) #eaecea;
+}
+
+/*--- Ponkan 8 ---*/
+.favourites a.favourite[href*="staff/114844/"] {
+    background-image: url(https://i.imgur.com/KWIFF0I.jpeg) !important;
+}
+.favourites a.favourite[href*="staff/114844/"]:hover {
+    box-shadow: var(--box-shadow) #f18a78;
+}
+
+/*--- Akiyuki Shinbou ---*/
+.favourites a.favourite[href*="staff/100089/"]:hover {
+    box-shadow: var(--box-shadow) #e2dcdf;
+}
+
+/*--- Ume Aoki ---*/
+.favourites a.favourite[href*="staff/97969/"] {
+    background-image: url(https://i.imgur.com/jkB9w75.jpeg) !important;
+}
+.favourites a.favourite[href*="staff/97969/"]:hover {
+    box-shadow: var(--box-shadow) #4c5784;
+}
+
+/*--- Kyoto Animation (KyoAni) ---*/
+a.favourite[href*="studio/2/"] {
+    background-image: url(https://i.imgur.com/gEHSbUA.jpeg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.favourites a.favourite.studio[href*="studio/2/"]:hover::after {
+    box-shadow: var(--box-shadow) #c9aea7 !important;
+}
+.overview .about a[href="kyoanitooltip"]::before {
+    text-align: center;
+    content: "kyoto animation";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 1904px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 11px 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15;
+}
+.overview .about a[href="kyoanitooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 1925px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+body:has(.favourites a.favourite.studio[href*="studio/2/"]:hover) .overview .about a[href="kyoanitooltip"]::before, body:has(.favourites a.favourite.studio[href*="studio/2/"]:hover) .overview .about a[href="kyoanitooltip"]::after {
+    opacity: 1;
+}
+
+/*--- P.A. Works (PA Works) ---*/
+a.favourite[href*="studio/132/"] {
+    background-image: url("https://i.imgur.com/VSpqiBv.jpeg") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.favourites a.favourite.studio[href*="studio/132/"]:hover::after {
+    box-shadow: var(--box-shadow) #ffffff !important;
+}
+.overview .about a[href="paworkstooltip"]::before {
+    text-align: center;
+    content: "p.a. works";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2066px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 11px 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15;
+}
+.overview .about a[href="paworkstooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2087px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+body:has(.favourites a.favourite.studio[href*="studio/132/"]:hover) .overview .about a[href="paworkstooltip"]::before, body:has(.favourites a.favourite.studio[href*="studio/132/"]:hover) .overview .about a[href="paworkstooltip"]::after {
+    opacity: 1;
+}
+
+/*════════════════════════════════════════════
+    Favourites Tab Showcase
+  ════════════════════════════════════════════*/
+
+/*════════ Opening Message ════════*/
+.favourites:not(.overview .favourites) {
+    margin-top: 39px;
+}
+
+.favourites .favourites:nth-child(1) .section-header::before {
+    position: absolute;
+    font-size: 16px;
+    font-style: italic;
+    top: -614px;
+    left: 311px;
+    visibility: visible;
+    color: white;
+    content: "anime & manga showcase images change upon hovering a favourite\A shift+scroll or use arrow keys to horizontally navigate the carousel";
+    text-align: center;
+    white-space: pre-wrap;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+}
+
+  /*════════════════════════════════════════════
+    Anime Grid
+  ════════════════════════════════════════════*/
+  
+/*════════ Showcase Box ════════*/
+.favourites:not(.overview .favourites) .favourites:nth-child(1)::before {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 560px !important;
+    background: var(--foreground) !important;
+    border-radius: var(--border-radius);
+    border: var(--border) solid rgb(var(--color-blue)) !important;
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+/*════════ Showcase Image ════════*/
+.favourites:not(.overview .favourites) .favourites:nth-child(1)::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 86px;
+    left: 94px;
+    width: 1054px;
+    height: 524px;
+    background: url(https://i.imgur.com/ufGkqzT.jpeg);
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: var(--border-radius);
+    background-size: cover !important;
+    z-index: 2;
+    transition: background var(--master-transition-timer) var(--layout-delay) ease-in-out;
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+body:has(a.favourite:hover) .favourites .favourites:nth-child(1)::after {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+}
+ 
+/*════════ Favourites Grid ════════*/ 
+.favourites:not(.overview .favourites) .favourites-wrap.anime {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: unset;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: flex-start;
+    gap: 22.5px;
+    padding-inline: 18px !important;
+    scroll-padding-inline: 18px !important;
+    scroll-snap-type: x proximity;
+    cursor: grab;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.anime:focus,
+.favourites:not(.overview .favourites) .favourites-wrap.anime:focus-within {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.favourites:not(.overview .favourites) .favourite {
+    min-width: 85px;
+    scroll-snap-align: start;
+}
+
+  /*════════════════════════════════════════════
+    Manga Grid
+  ════════════════════════════════════════════*/
+  
+/*════════ Showcase Box ════════*/
+.favourites:not(.overview .favourites) .favourites:nth-child(2)::before {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 560px !important;
+    background: var(--foreground) !important;
+    border-radius: var(--border-radius);
+    border: var(--border) solid rgb(var(--color-blue)) !important;
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+/*════════ Showcase Image ════════*/
+.favourites:not(.overview .favourites) .favourites:nth-child(2)::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 909px;
+    left: 94px;
+    width: 1054px;
+    height: 524px;
+    background: url(https://i.imgur.com/cfq1gDT.jpeg);
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: var(--border-radius);
+    background-size: cover !important;
+    z-index: 2;
+    transition: background var(--master-transition-timer) var(--layout-delay) ease-in-out;
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+body:has(a.favourite:hover) .favourites .favourites:nth-child(2)::after {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+}
+ 
+  /*════════ Favourites Grid ════════*/ 
+.favourites:not(.overview .favourites) .favourites-wrap.manga {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: unset;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: flex-start;
+    gap: 22.5px;
+    padding-inline: 18px !important;
+    scroll-padding-inline: 18px !important;
+    scroll-snap-type: x proximity;
+    cursor: grab;
+    position: relative;
+    margin-bottom: 52px;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.manga:focus,
+.favourites:not(.overview .favourites) .favourites-wrap.manga:focus-within {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+  /*════════════════════════════════════════════
+    Characters Grid
+  ════════════════════════════════════════════*/
+
+.favourites:not(.overview .favourites) .favourites-wrap.characters {
+    display: grid !important;
+    grid-gap: 12px !important;
+    grid-template-columns: repeat(5, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important;
+    column-gap: 17px !important;
+    padding: 13px !important;
+    padding-top: 18px !important;
+    justify-content: center !important;
+    width: 530px !important;
+    max-height: 417px;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-padding: 18px !important;
+    padding-inline: 18px !important;
+}
+
+  /*════════════════════════════════════════════
+    Staff Grid
+  ════════════════════════════════════════════*/
+
+.favourites:not(.overview .favourites) .favourites-wrap.staff {
+    position: absolute !important;
+    top: 1713.5px !important;
+    left: 635px;
+    display: grid !important;
+    grid-gap: 12px !important;
+    grid-template-columns: repeat(5, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important;
+    column-gap: 17px !important;
+    padding: 13px !important;
+    padding-top: 18px !important;
+    justify-content: center;
+    width: 530px !important;
+}
+
+  /*════════════════════════════════════════════
+    Studios Grid
+  ════════════════════════════════════════════*/
+
+.favourites:not(.overview .favourites) .favourites-wrap.studios {
+    margin-top: -70px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 376px) !important; 
+    grid-template-rows: unset !important;
+    grid-auto-rows: minmax(120px, auto) !important;
+    justify-items: center; 
+    justify-content: center; 
+    max-width: 100%; 
+    width: 100%; 
+    column-gap: 119px !important; 
+}
+
+.favourites:not(.overview .favourites) .favourite.studio {
+    top: 5px;
+    min-height: 135px;
+    position: relative;
+    color: transparent;
+    margin-top: -5px !important;
+    margin-bottom: 6px !important;
+    box-shadow: none !important;
+    width: 416px !important; 
+}
+
+  /*════════════════════════════════════════════
+    Hide Category Titles
+  ════════════════════════════════════════════*/
+
+.favourites:not(.overview .favourites) .favourites:nth-child(1) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(2) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(3) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(4) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(5) .section-header .actions {
+    display: none !important;
+}
+
+.favourites .favourites:nth-child(1) .section-header, .favourites .favourites:nth-child(2) .section-header, .favourites .favourites:nth-child(3) .section-header, .favourites .favourites:nth-child(4) .section-header, .favourites .favourites:nth-child(5) .section-header {
+    position: relative !important;
+    visibility: hidden !important;
+}
+
+  /*════════════════════════════════════════════
+    Anime Showcase Images
+  ════════════════════════════════════════════*/
+
+/*════════ Hidamari Sketch ════════*/
+body:has(a.favourite[href*="anime/11239/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/N5LDIa5.jpeg);
+}
+
+/*════════ Aria ════════*/
+body:has(a.favourite[href*="anime/3297/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/Rc1lhHC.jpeg);
+}
+
+/*════════ Mushishi ════════*/
+body:has(a.favourite[href*="anime/457/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/qQSJ8ZH.jpeg);
+}
+
+/*════════ Liz ════════*/
+body:has(a.favourite[href*="anime/100178/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/R7dQHM6.jpeg);
+}
+
+/*════════ Tamayura ════════*/
+body:has(a.favourite[href*="anime/21554/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/sr3RJ0N.jpeg);
+}
+
+/*════════ Ashita no Joe ════════*/
+body:has(a.favourite[href*="anime/2921/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/xHASVPj.jpeg);
+}
+
+/*════════ Sorayori ════════*/
+body:has(a.favourite[href*="anime/99426/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/mExwESd.jpeg);
+}
+
+/*════════ Non Non Biyori ════════*/
+body:has(a.favourite[href*="anime/17549/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/2hMkF3a.jpeg);
+}
+
+/*════════ Tamako Love Story ════════*/
+body:has(a.favourite[href*="anime/20519/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/HdxRCtD.jpeg);
+}
+
+/*════════ Hyouka ════════*/
+body:has(a.favourite[href*="anime/12189/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/L1ELEOR.jpeg);
+}
+
+/*════════ Sonny Boy ════════*/
+body:has(a.favourite[href*="anime/132126/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/U08i10U.jpeg);
+}
+
+/*════════ Oregairu ════════*/
+body:has(a.favourite[href*="anime/20698/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/lyJHZAO.jpeg);
+}
+
+/*════════ Chihayafuru ════════*/
+body:has(a.favourite[href*="anime/10800/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/G4mdONT.jpeg);
+}
+
+/*════════ Sakura Quest ════════*/
+body:has(a.favourite[href*="anime/97903/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/3mMsdmO.jpeg);
+}
+
+/*════════ Girls' Last Tour ════════*/
+body:has(a.favourite[href*="anime/99420/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/l6Nxgoy.jpeg);
+}
+
+/*════════ Shirobako ════════*/
+body:has(a.favourite[href*="anime/20812/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/mYL9Edc.jpeg);
+}
+
+/*════════ Yuru Camp ════════*/
+body:has(a.favourite[href*="anime/98444/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/a8tYn4k.jpeg);
+}
+
+/*════════ In This Corner Of The World ════════*/
+body:has(a.favourite[href*="anime/15227/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/NGHFjAu.jpeg);
+}
+
+/*════════ Sangatsu no Lion ════════*/
+body:has(a.favourite[href*="anime/21366/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/D0KEVzv.jpeg);
+}
+
+/*════════ Haibane Renmei ════════*/
+body:has(a.favourite[href*="anime/387/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/Qq8N3br.jpeg);
+}
+
+/*════════ Hunter X Hunter ════════*/
+body:has(a.favourite[href*="anime/136/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/OPA8Gyd.jpeg);
+}
+
+/*════════ Texhnolyze ════════*/
+body:has(a.favourite[href*="anime/26/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/XKFfoqN.jpeg);
+}
+
+/*════════ Akage no Anne ════════*/
+body:has(a.favourite[href*="anime/283/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/VCnoZ2U.jpeg);
+}
+
+/*════════ Super Cub ════════*/
+body:has(a.favourite[href*="anime/113418/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/JKvvkjM.jpeg);
+}
+
+/*════════ Nana ════════*/
+body:has(a.favourite[href*="anime/877/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/qXp9T0g.jpeg);
+}
+
+  /*════════════════════════════════════════════
+    Manga Showcase Images
+  ════════════════════════════════════════════*/
+  
+/*════════ Bloom Into You ════════*/
+body:has(a.favourite[href*="manga/86218/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/KVI19Ek.jpeg);
+}
+
+/*════════ White Album 2 (VN) ════════*/
+body:has(a.favourite[href*="manga/91579/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/2UNVl5v.jpeg);
+}
+
+/*════════ Oregairu ════════*/
+body:has(a.favourite[href*="manga/70171/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/ag6Y2HI.jpeg);
+}
+
+/*════════ Adashima ════════*/
+body:has(a.favourite[href*="manga/169725/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/Y5aREoK.jpeg);
+}
+
+/*════════ Chihayafuru ════════*/
+body:has(a.favourite[href*="manga/43245/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/Jq0TX3H.jpeg);
+}
+
+/*════════ Yokohama Kaidashi Kikou ════════*/
+body:has(a.favourite[href*="manga/30004/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/g9DLSTH.jpeg);
+}
+
+/*════════ Houseki no Kuni ════════*/
+body:has(a.favourite[href*="manga/74489/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/XjlRw7S.jpeg);
+}
+
+/*════════ Perfect World ════════*/
+body:has(a.favourite[href*="manga/93433/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/aitP1vZ.jpeg);
+}
+
+/*════════ Girls' Last Tour ════════*/
+body:has(a.favourite[href*="manga/85412/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/qYw8cWo.jpeg);
+}
+
+/*════════ Solanin ════════*/
+body:has(a.favourite[href*="manga/33731/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/8SmwNwd.jpeg);
+}
+
+/*════════ The Summit of the Gods ════════*/
+body:has(a.favourite[href*="manga/34625/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/E71mKGd.jpeg);
+}
+
+  /*════════════════════════════════════════════
+    Media Lists
+  ════════════════════════════════════════════*/
+
+/*════════ Glows ════════*/
+
+@keyframes ten {
+  0% {
+    text-shadow:
+      0 0 2px rgba(228, 161, 255, 0.1),
+      0 0 4px rgba(228, 161, 255, 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(245, 190, 255, 0.9),
+      0 0 12px rgba(228, 161, 255, 1),
+      0 0 20px rgba(198, 131, 225, 0.85);
+  }
+}
+
+@keyframes ninepointfive {
+  0% {
+    text-shadow:
+      0 0 2px rgba(179, 220, 255, 0.1),
+      0 0 4px rgba(179, 220, 255, 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(205, 240, 255, 0.9),
+      0 0 12px rgba(179, 220, 255, 1),
+      0 0 20px rgba(149, 190, 225, 0.85);
+  }
+}
+
+@keyframes nine {
+  0% {
+    text-shadow:
+      0 0 2px rgba(185, 255, 179, 0.1),
+      0 0 4px rgba(185, 255, 179, 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(215, 255, 205, 0.9),
+      0 0 12px rgba(185, 255, 179, 1),
+      0 0 20px rgba(155, 225, 149, 0.85);
+  }
+}
+
+.list-entries .score[score="10"] {
+    animation: ten var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .entry.row:has(.score[score="10"]) .title > a {
+    animation: ten var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .score[score="9.5"] {
+    animation: ninepointfive var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .entry.row:has(.score[score="9.5"]) .title > a {
+    animation: ninepointfive var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .score[score="9"] {
+    animation: nine var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .entry.row:has(.score[score="9"]) .title > a {
+    animation: nine var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+  
+/*════════ "All Categories" Label Styling ════════*/
+#pseudo > div.filters-wrap > div.filters.mobile-nav-hidden > div:nth-child(1) > span:nth-child(2) {
+    color: transparent;
+}
+#pseudo > div.filters-wrap > div.filters.mobile-nav-hidden > div:nth-child(1) > span:nth-child(2)::before {
+    content: "all";
+    color: #ffffff;
+    margin-right: -15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+#pseudo > div.filters-wrap > div.filters.mobile-nav-hidden > div:nth-child(1) > span:nth-child(2) {
+    position: absolute;
+    top: 84px;
+    left: 145px;
+}
+
+#pseudo > div.filters-wrap > div.filters.mobile-nav-hidden > div:nth-child(1) > span:nth-child(2) > span {
+    opacity: 0;
+}
+/*════════ Repeat Arrow Colour ════════*/
+.list-wrap .hover-icon:not(.hover-icon.clickable) {
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--list-items-mix), white);
+}
+
+/*════════ Hiding Dividers in "All Categories" Scroll ════════*/
+.list-wrap:has(a:is(a[href*="anime/154122"])) {
+    display: none;
+}
+.list-wrap:has(a:is(a[href*="anime/1269"])) {
+    display: none;
+}
+
+/*════════ List Categories Numbers Colour ════════*/
+.medialist .filter-group:first-child span.count {
+    color: rgb(var(--color-blue));
+    font-weight: 500
+}
+
+/*════════ Delete Button ════════*/
+.list-editor-wrap .list-editor .body .delete-btn {
+    background: rgb(var(--color-blue-dim));
+}
+  
+/*════════ Widen List Notes (Default and Compact Tables) ════════*/
+.medialist .hover-icon:before {
+    width: max-content;
+    max-width: 40vw;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(7px) !important;
+    padding: 12px;
+    border-radius: var(--border-radius);
+}
+
+/*════════ List Category Titles ════════*/
+.list-head>div {
+    color: rgb(var(--color-blue));
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*════════ Make Titles Italic ════════*/
+.title > :not(.hover-icon) {
+    font-style: italic;
+}
+
+/*════════ Release Dot ════════*/
+.medialist .release-status.RELEASING {
+    background: color-mix(in srgb,rgb(var(--color-blue)) var(--list-items-mix), white);
+    box-shadow: 0 0 5px rgb(var(--color-blue-dim));
+}
+
+/*════════ Dropdown Placeholders ════════*/
+.el-input--small .el-input__inner::placeholder, .el-input__inner::placeholder, .el-input__prefix, .el-select-dropdown__empty {
+    color: #ffffff;
+}
+
+/*════════ Clickable Notes Styling ════════*/
+
+.notes-dialog {
+    box-shadow: none;
+}
+
+.notes-dialog > .el-dialog__header {
+    background: none;
+    text-transform: lowercase;
+}
+
+.notes-dialog > .el-dialog__body {
+    background: var(--foreground);
+}
+
+/*════════ Grid View Adjustments ════════*/
+.medialist.cards .list-section {
+    background: unset !important;
+}
+.medialist.cards .entry-card .notes:before {
+    min-width: fit-content;
+    max-width: 35vw !important;
+}
+.medialist.cards .entry-card:nth-child(5n) .notes:before {
+  left: auto;
+  right: 100%;
+  transform: translateX(-10px);
+}
+.medialist.cards .entry-card .title {
+    background: rgba(var(--color-overlay), .7);
+    backdrop-filter: blur(3px);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+.medialist.cards .entry-card:hover .title {
+    background: rgba(var(--color-overlay), .9);
+    backdrop-filter: blur(9px);
+}
+.medialist.cards .entry-card .image {
+    background-size: 100% !important;
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+.medialist.cards .entry-card:hover .image {
+    background-size: 110% !important;
+    box-shadow: var(--box-shadow) color-mix(in srgb,rgb(var(--color-blue)) var(--box-shadow-mix), white);
+}
+.medialist.cards .entry-card .progress, .medialist.cards .entry-card .score {
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--list-items-mix), white);
+}
+.medialist.cards .entry-card .edit {
+    background: rgba(var(--color-overlay), .7);
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+.medialist.cards .entry-card .edit:hover {
+    background: rgba(var(--color-overlay), .85);
+    backdrop-filter: blur(3px);
+}
+
+.medialist.cards:has(.entry-card .notes:hover) .notes svg, .medialist.cards:has(.entry-card .notes:hover) .repeat svg {
+    opacity: 0;
+}
+
+.medialist.cards .entry-card:has(.notes:hover) .notes svg, .medialist.cards .entry-card:has(.notes:hover) .repeat svg {
+    opacity: 1;
+}
+
+/*════════ List Category Divider Styling ════════*/
+div.user:has(a.router-link-active[href="/user/pseudo/animelist"]) div.filters.mobile-nav-hidden > div:nth-child(1) > span:nth-child(22) > span {
+    display: none !important;
+}
+div.user:has(a.router-link-active[href="/user/pseudo/animelist"]) div.filters-wrap > div.filters.mobile-nav-hidden > div:nth-child(1) > span:nth-child(22) {
+    color: rgb(var(--color-blue));
+    pointer-events: none !important;
+    text-align: center;
+}
+div.user:has(a.router-link-active[href="/user/pseudo/mangalist"]) div.filters-wrap > div.filters.mobile-nav-hidden > div:nth-child(1) > span:nth-child(12) > span {
+    display: none !important;
+}
+div.user:has(a.router-link-active[href="/user/pseudo/mangalist"]) div.filters-wrap > div.filters.mobile-nav-hidden > div:nth-child(1) > span:nth-child(12) {
+    color: rgb(var(--color-blue));
+    pointer-events: none !important;
+    text-align: center;
+}
+
+/*════════ Year Slider ════════*/
+.el-slider__button {
+    background-color: rgb(var(--color-blue)) !important;
+}
+
+/*════════ Compare Feature Styling  ════════*/
+.compare[data-v-75f21ff1] {
+    background: var(--foreground);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+[data-v-75f21ff1] .entry {
+    text-transform: lowercase;
+    transition: all var(--master-transition-timer) ease;
+}
+
+[data-v-75f21ff1] .entry.header {
+    font-weight: 600;
+    color: var(--profile-color);
+}
+
+[data-v-75f21ff1] .entry.header:hover {
+    color: var(--color-text);
+}
+
+/*════════ Replace 9+'s with Icons ════════*/
+
+.entry.row:has(.title > a[href*="anime/11239/"]) .score, .entry.row:has(.title > a[href*="anime/3297/"]) .score, .entry.row:has(.title > a[href*="manga/86218/"]) .score, .entry.row:has(.title > a[href*="anime/457/"]) .score, .entry.row:has(.title > a[href*="anime/21554/"]) .score, .entry.row:has(.title > a[href*="anime/2921/"]) .score, .entry.row:has(.title > a[href*="anime/100178/"]) .score, .entry.row:has(.title > a[href*="anime/109403/"]) .score, .entry.row:has(.title > a[href*="anime/99426/"]) .score, .entry.row:has(.title > a[href*="anime/21324/"]) .score {
+    visibility: hidden;    
+}
+.entry.row:has(.title > a[href*="anime/11239/"]) .score::after, .entry.row:has(.title > a[href*="anime/3297/"]) .score::after, .entry.row:has(.title > a[href*="manga/86218/"]) .score::after, .entry.row:has(.title > a[href*="anime/457/"]) .score::after, .entry.row:has(.title > a[href*="anime/21554/"]) .score::after {
+    content: "❤︎";
+    visibility: visible;
+    margin-right: 15px;
+}
+
+.entry.row:has(.title > a[href*="anime/457/"]) .score::after, .entry.row:has(.title > a[href*="anime/21554/"]) .score::after {
+    content: "❀︎";
+    visibility: visible;
+    margin-right: 21px;
+}
+
+.entry.row:has(.title > a[href*="anime/2921/"]) .score::after, .entry.row:has(.title > a[href*="anime/100178/"]) .score::after, .entry.row:has(.title > a[href*="anime/109403/"]) .score::after, .entry.row:has(.title > a[href*="anime/99426/"]) .score::after, .entry.row:has(.title > a[href*="anime/21324/"]) .score::after {
+    content: "✦︎";
+    visibility: visible;
+    margin-right: 10.5px;
+}
+
+  /*════════════════════════════════════════════
+    Stats
+  ════════════════════════════════════════════*/
+  
+/*════════ Fix Stat Cards on 1240px Profile Width  ════════*/
+.stat-cards { 
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+.stat-card[data-v-686e8358] {
+    padding: 20px;
+}
+.stat-cards.has-images[data-v-e74f4a6a] {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: unset;
+}
+.header.has-images[data-v-e74f4a6a] {
+    max-width: unset; 
+}
+.stat-cards.has-images .wrap > .image {
+    width: 108px;
+    height: 166px;
+    margin-top: 19px !important;
+}
+.has-image .relations-wrap[data-v-686e8358] {
+    padding-top: 4px;
+}
+.stat-cards.has-images .relations-wrap > .button.circle.previous, .stat-cards.has-images .relations-wrap > .button.circle.next {
+    top: 39px;
+}
+.stats .details .value[data-v-686e8358] {
+    color: var(--profile-color); 
+}
+.stat-cards.has-images h2 {
+    padding-bottom: 0px !important;
+}
+.has-image .wrap[data-v-686e8358] {
+    grid-gap: 0px;
+}
+.highlights { /* Fixes Overview Highlights on Stats */
+    display: grid !important;
+    grid-gap: 40px 30px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    margin-left: 5% !important;
+    width: 90% !important;
+}
+
+/*════════ Miscellaneous Stats Styling ════════*/
+.el-select__input.is-small {
+    color: #ffffff;
+}
+.stats .filter-group {
+    font-weight: 400;
+}
+.stats .filter-group .group-header, .filter-group[data-v-e4963b98] .group-header, .filter-group .group-header[data-v-170179fc] {
+    font-weight: 700;
+    color: var(--profile-color);
+}
+.highlight .icon[data-v-72dc5b51], .highlight .label[data-v-72dc5b51] {
+    color: #ffffff;
+}
+
+  /*════════════════════════════════════════════
+    Social
+  ════════════════════════════════════════════*/
+  
+/*════════ Remove Avatar Backgrounds ════════*/
+.follow-card {
+    background: unset !important;
+}
+
+  /*════════════════════════════════════════════
+    Reviews
+  ════════════════════════════════════════════*/
+
+/*════════ Review Card Adjustments ════════*/
+.review-card .header {
+    font-weight: bold !important;
+}
+.user .review-card:hover .banner[data-src*="/media/anime/"] + .content > .header {
+    color: rgb(var(--color-blue));
+    transition: var(--master-transition-timer) ease-in-out;
+}
+.banner .read-review[data-v-0369a0cf] {
+    transition: var(--master-transition-timer) ease-in-out;
+}
+.review-card svg:not(:root).svg-inline--fa {
+    color: rgb(var(--color-blue));
+}
+.review-card .content {
+    text-align: center;
+}
+.review-wrap {
+    margin-top: 0px !important;
+    overflow: visible !important;
+}
+.review-card[data-v-0369a0cf]:hover {
+    transition: all var(--master-transition-timer) ease-in-out !important;
+    box-shadow: var(--box-shadow) color-mix(in srgb,rgb(var(--color-blue)) var(--box-shadow-mix), white); !important;
+}
+.banner .read-review[data-v-0369a0cf] span {
+    transition: all var(--master-transition-timer) ease-in-out;
+}
+.banner .read-review[data-v-0369a0cf] span:hover {
+    color: rgb(var(--color-blue-dim));
+}
+
+  /*════════════════════════════════════════════
+    CSS END
+  ════════════════════════════════════════════*/
