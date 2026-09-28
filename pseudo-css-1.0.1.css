@@ -4021,13 +4021,14 @@ body:has(a.favourite[href*="manga/34625/"]:hover) .favourites .favourites:nth-ch
 }
   
 /*════════ Widen List Notes (Default and Compact Tables) ════════*/
-.medialist .hover-icon:before {
-    width: max-content;
-    max-width: 40vw;
-    background: rgba(10, 10, 10, 0.7);
+.hover-icon-tooltip {
+    width: max-content !important;
+    max-width: 40vw !important;
+    background: var(--foreground);
     backdrop-filter: blur(7px) !important;
     padding: 12px;
     border-radius: var(--border-radius);
+    border: var(--border) solid rgb(var(--profile-color-rgb));
 }
 
 /*════════ List Category Titles ════════*/
