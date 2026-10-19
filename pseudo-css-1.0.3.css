@@ -95,7 +95,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     --font: 'Cabinet Grotesk', sans-serif; /* Global Profile Font. */
     --box-shadow: 0px 0px 9px 3px; /* Global Box Shadow for element hovers (colours are individually defined). */
     --cubic-bezier: cubic-bezier(0.25,0.9,0.2,1); /* Cubic bezier for animations. */
-    --border: 0.5px; /* Thickness of border around foregrounds. */
+    --border: 1px; /* Thickness of border around foregrounds. */
 }
 
 /*════════════════════════════════════════════
