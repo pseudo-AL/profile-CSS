@@ -527,7 +527,7 @@ body:has(.stats-wrap > .overview > .highlights) .tooltip .title {
 .list-wrap {
 	counter-reset: listCounter;
 }
-.medialist.table .entry .title::before {
+.medialist .entry .title::before {
     counter-increment: listCounter;
     content: counter(listCounter);
     display: inline-block;
@@ -4010,6 +4010,11 @@ body:has(a.favourite[href*="manga/34625/"]:hover) .favourites .favourites:nth-ch
     font-style: italic;
 }
 
+/*════════ New Layout Switch Border ════════*/
+.layout-switch {
+	border: var(--border) solid rgb(var(--profile-color-rgb));
+}
+
 /*════════ Release Dot ════════*/
 .medialist .release-status.RELEASING {
     background: color-mix(in srgb,rgb(var(--color-blue)) var(--list-items-mix), white);
@@ -4022,7 +4027,6 @@ body:has(a.favourite[href*="manga/34625/"]:hover) .favourites .favourites:nth-ch
 }
 
 /*════════ Clickable Notes Styling ════════*/
-
 .notes-dialog {
     box-shadow: none;
 }
