@@ -4010,8 +4010,9 @@ body:has(a.favourite[href*="manga/34625/"]:hover) .favourites .favourites:nth-ch
     font-style: italic;
 }
 
-/*════════ New Layout Switch Border ════════*/
+/*════════ New Layout Switch Styling ════════*/
 .layout-switch {
+	border-radius: var(--border-radius) !important;
 	border: var(--border) solid rgb(var(--profile-color-rgb));
 }
 
