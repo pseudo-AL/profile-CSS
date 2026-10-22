@@ -1104,6 +1104,7 @@ body:has(a.favourite:hover) .banner-content::before {
 .filters-wrap input,
 .el-slider__runway,
 .load-more,
+.layout-switch,
 .favourites .favourites .favourites-wrap,
 .overview .favourites .favourites-wrap,
 .stats .circle,
