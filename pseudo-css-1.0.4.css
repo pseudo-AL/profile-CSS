@@ -527,7 +527,7 @@ body:has(.stats-wrap > .overview > .highlights) .tooltip .title {
 .list-wrap {
 	counter-reset: listCounter;
 }
-.medialist.table.compact .entry .title::before, .medialist.table .entry .title::before {
+.medialist.table .entry .title::before {
     counter-increment: listCounter;
     content: counter(listCounter);
     display: inline-block;
