@@ -188,9 +188,13 @@ body,
 .void-markdown-taskbar {
     border-radius: var(--border-radius);
     background: var(--foreground);
-    margin-top: 4px;
+    margin-top: 7px;
     overflow: hidden;
     transition: background var(--master-transition-timer) ease-in-out !important;
+}
+
+.activity-edit > .input.el-textarea {
+    background: transparent !important;
 }
 
 .container > .activity-entry .void-markdown-taskbar {
