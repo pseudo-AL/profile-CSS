@@ -304,6 +304,7 @@ input[type="range"].void-range:focus {
 /*════════ Page Background ════════*/
 body {
     background-image: var(--body-url);
+	background-color: rgb(0, 0, 0);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
