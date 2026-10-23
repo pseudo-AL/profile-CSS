@@ -2689,7 +2689,7 @@ body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favouri
 .overview div.favourites:nth-child(6) > h2:nth-child(1)::before {
     content: "";
     position: absolute;
-    top: 333px;
+    top: 334px;
     left: 50%;
     transform: translateX(-50%);
     width: 12px;
@@ -2711,7 +2711,7 @@ body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.fa
 }
 
 .favourites.preview .favourites-wrap.characters {
-    max-height: 336px;
+    max-height: 337px;
     overflow: hidden;
     transition: max-height var(--characters-grid-timer) ease-in-out, border var(--characters-grid-timer) ease-in-out, box-shadow var(--characters-grid-timer) ease-in-out;
     border: var(--border) solid rgb(var(--color-blue));
