@@ -14,12 +14,12 @@
 
 /*════════ Main Variables ════════*/
 :root {
-    --avatar-url: url(https://i.imgur.com/oZXcPlk.png); /* Avatar */
+    --avatar-url: url(https://i.imgur.com/AiRPdMD.png); /* Avatar */
     --avatar-padding: 170px; /* Avatar Size */
-    --banner-url: url(https://i.imgur.com/rEPkZoN.jpeg); /* Banner */
-	--body-url: url(https://i.imgur.com/8es7Q1f.jpeg); /* Page Background */
-    --profile-color: #ce914d; /* Profile Colour, HEX */
-    --profile-color-rgb: 206, 145, 77; /* Profile Colour, RGB */
+    --banner-url: url(https://i.imgur.com/JKl0aoq.jpeg); /* Banner */
+	--body-url: url(https://i.imgur.com/emPDRYL.jpeg); /* Page Background */
+    --profile-color: #d3dcef; /* Profile Colour, HEX */
+    --profile-color-rgb: 211, 220, 239; /* Profile Colour, RGB */
     --about-height: 129px; /* Dependency for bio-anchored element height calculations. */
 }
 
@@ -29,11 +29,11 @@
   
 :root {
 /*════════ Colours and Transparencies ════════*/
-    --foreground: rgba(31, 25, 17); /* Foreground Elements. */
-    --list-editor-foreground: rgba(26, 20, 12, 0.8); /* List Editor. */
-    --direct-activity-foreground: rgba(26, 20, 12); /* Foreground for Direct Activities. */
+    --foreground: rgba(16, 31, 44, 0.85); /* Foreground Elements. */
+    --list-editor-foreground: rgba(16, 31, 44); /* List Editor. */
+    --direct-activity-foreground: rgba(16, 31, 44); /* Foreground for Direct Activities. */
     --hoh-score-preview: rgba(20, 20, 20, 1); /* Hoh's/Automail's score preview, if enabled. */
-    --quick-search-results: rgba(26, 20, 12, 0.8); /* Results Columns in Quick Search. */
+    --quick-search-results: rgba(16, 31, 44, 0.8); /* Results Columns in Quick Search. */
     --activity-cover-arrow-dropdown: rgba(10, 10, 10); /* Arrow Dropdowns in List Activity Covers. */
     --activity-cover-arrow-dropdown-hover: rgba(70, 70, 70, 0.3); /* Aforementioned Dropdown when hovering options. */
     
@@ -310,7 +310,7 @@ body {
     background-image: var(--body-url);
 	background-color: rgb(0, 0, 0);
     background-size: cover;
-    background-position: center;
+    background-position: center 80%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -882,13 +882,17 @@ body:has(a.favourite:hover) .banner-content::before {
     display: none;
 }
 
-.transparent .search[data-v-62eacfff] svg, .search[data-v-62eacfff] svg { /* Initial svg */
+#nav > div.wrap > div.search > svg { /* Initial search svg */
     color: #ffffff;
     transition: color var(--master-transition-timer) ease-in-out;
-    transform: scale(0.79);
+    transform: scale(0.9);
     position: relative;
     right: 1px;
     bottom: 0.5px;
+}
+
+#nav > div.wrap > div.search:hover > svg {
+    color: var(--profile-color);
 }
 
 #nav .user .chevron {
