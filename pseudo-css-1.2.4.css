@@ -20,7 +20,7 @@
 	--body-url: url(https://i.imgur.com/emPDRYL.jpeg); /* Page Background */
     --profile-color: #d3dcef; /* Profile Colour, HEX */
     --profile-color-rgb: 211, 220, 239; /* Profile Colour, RGB */
-    --about-height: 129px; /* Dependency for bio-anchored element height calculations. */
+    --about-height: 70px; /* Dependency for bio-anchored element height calculations. */
 }
 
 /*════════════════════════════════════════════
