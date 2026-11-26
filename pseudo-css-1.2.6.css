@@ -1896,7 +1896,7 @@ body:has(.content > .overview, .favourites .favourites) .tooltip .content:has(.c
 .header > a[href="/user/personnel/"].name:after,
 .header > a[href="/user/phife/"].name:after,
 .header > a[href="/user/Pksomuch/"].name:after,
-.header > a[href="/user/Plestik/"].name:after
+.header > a[href="/user/Plestik/"].name:after,
 .header > a[href="/user/PratGreninja/"].name:after,
 .header > a[href="/user/prispanda/"].name:after,
 .header > a[href="/user/probablyalamp/"].name:after,
